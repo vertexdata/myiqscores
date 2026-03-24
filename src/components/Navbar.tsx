@@ -6,7 +6,7 @@ const Navbar = () => (
       <div className="flex items-center gap-2">
         <Brain className="w-7 h-7 text-primary" />
         <span className="font-heading font-bold text-lg tracking-tight text-foreground">
-          Mind<span className="text-primary">Metric</span>
+          My<span className="text-primary">IQ</span>Scores
         </span>
       </div>
       <span className="text-xs text-muted-foreground hidden sm:block">Discover your cognitive edge.</span>
