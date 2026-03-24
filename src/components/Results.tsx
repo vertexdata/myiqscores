@@ -83,7 +83,7 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
   const percentile = getPercentile(iq);
   const catScores = getCategoryScores(answers);
 
-  const shareText = `I scored ${iq} on the MindMetric IQ Test! 🧠 Take yours:`;
+  const shareText = `const shareText = `I scored ${iq} on the MyIQScores IQ Test! 🧠 Take yours:`; 🧠 Take yours:`;
   const shareUrl = window.location.href;
 
   const handleCopy = () => {
