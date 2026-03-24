@@ -7,7 +7,7 @@ const stagger = {
 };
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 const ageRanges = ["Under 18", "18-24", "25-34", "35-44", "45-54", "55+"];

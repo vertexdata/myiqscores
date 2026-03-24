@@ -13,7 +13,7 @@ type Screen = "landing" | "leadCapture" | "quiz" | "processing" | "results";
 
 const pageTransition = {
   initial: { opacity: 0, scale: 0.98 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" as const } },
   exit: { opacity: 0, scale: 0.98, transition: { duration: 0.25 } },
 };
 
