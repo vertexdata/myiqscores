@@ -1,0 +1,17 @@
+import { Brain } from "lucide-react";
+
+const Navbar = () => (
+  <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-[rgba(255,255,255,0.06)]">
+    <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        <Brain className="w-7 h-7 text-primary" />
+        <span className="font-heading font-bold text-lg tracking-tight text-foreground">
+          Mind<span className="text-primary">Metric</span>
+        </span>
+      </div>
+      <span className="text-xs text-muted-foreground hidden sm:block">Discover your cognitive edge.</span>
+    </div>
+  </nav>
+);
+
+export default Navbar;
