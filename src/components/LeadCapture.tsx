@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const stagger = {
   hidden: {},
