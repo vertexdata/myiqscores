@@ -78,7 +78,13 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
 
         <motion.div variants={fadeUp} className="mt-8">
           <button
-            onClick={() => isValid && onSubmit({ name, email, ageRange })}
+            onClick={() => {
+              if (isValid) {
+                // Save lead to database
+                supabase.from("leads").insert({ name, email, age_range: ageRange }).then(() => {});
+                onSubmit({ name, email, ageRange });
+              }
+            }}
             disabled={!isValid}
             className="glow-button w-full text-base"
           >
