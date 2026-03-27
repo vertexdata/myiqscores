@@ -5,3 +5,4 @@ Disallow: /admin/
 Disallow: /auth/
 
 Sitemap: https://myiqscores.com/sitemap.xml
+Sitemap: https://www.myiqscores.com/sitemap.xml
