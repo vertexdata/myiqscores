@@ -21,8 +21,9 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [ageRange, setAgeRange] = useState("");
+  const [consent, setConsent] = useState(false);
 
-  const isValid = name.trim() && email.includes("@") && ageRange;
+  const isValid = name.trim() && email.includes("@") && ageRange && consent;
 
   return (
     <motion.div
@@ -76,11 +77,28 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
           </div>
         </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-8">
+        <motion.div variants={fadeUp} className="mt-5">
+          <label className="flex items-start gap-3 cursor-pointer group">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-0.5 w-4 h-4 rounded border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.04)] text-primary focus:ring-primary/30 accent-primary"
+            />
+            <span className="text-xs text-muted-foreground leading-relaxed">
+              I agree to the{" "}
+              <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Privacy Policy
+              </a>
+              . I consent to MyIQScores collecting my name, email, and age range to deliver my IQ test results and personalized reports.
+            </span>
+          </label>
+        </motion.div>
+
+        <motion.div variants={fadeUp} className="mt-6">
           <button
             onClick={() => {
               if (isValid) {
-                // Save lead to database
                 supabase.from("leads").insert({ name, email, age_range: ageRange }).then(() => {});
                 onSubmit({ name, email, ageRange });
               }
