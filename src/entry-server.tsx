@@ -4,7 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { AppContent } from "./App";
 
 export function render(url: string) {
-  const helmetContext = {} as FilledContext;
+  const helmetContext = {} as any;
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
