@@ -16,17 +16,17 @@ const ContentPage = ({
 
     {/* Navbar */}
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-[rgba(255,255,255,0.06)]">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <Brain className="w-7 h-7 text-primary" />
-          <span className="font-heading font-bold text-lg tracking-tight text-foreground">
+          <Brain className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+          <span className="font-heading font-bold text-base sm:text-lg tracking-tight text-foreground">
             My<span className="text-primary">IQ</span>Scores
           </span>
         </Link>
-        <div className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
-          <Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link>
-          <Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">Score Ranges</Link>
-          <Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">By Country</Link>
+        <div className="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
+          <Link to="/what-is-iq" className="hover:text-foreground transition-colors hidden sm:block">What Is IQ?</Link>
+          <Link to="/iq-score-ranges" className="hover:text-foreground transition-colors hidden sm:block">Score Ranges</Link>
+          <Link to="/average-iq-by-country" className="hover:text-foreground transition-colors hidden sm:block">By Country</Link>
           <Link to="/test" className="text-primary hover:text-primary/80 transition-colors font-medium">Take Test</Link>
         </div>
       </div>
