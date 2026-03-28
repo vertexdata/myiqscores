@@ -100,6 +100,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 90 IQ enough for college?", answer: "Yes. An IQ of 90 is sufficient for most college programs. While elite academic programs may be more challenging, community colleges, state universities, and many private institutions are well within reach. Study skills and persistence matter more than a few IQ points." },
     ],
   },
+  94: {
+    score: 94,
+    classification: "Average",
+    percentile: "34th",
+    rarity: "Very common",
+    detailedExplanation: "An IQ of 94 is solidly average, just 6 points below the mean. You score higher than about 34% of people. This is an extremely common score — so common that the difference between 94 and 100 is invisible in any real-world setting. IQ tests have a standard error of 3-5 points, meaning a 94 could easily be a 97 or 100 on a different day.",
+    careerContext: "A 94 IQ places no restrictions on career choice. You are squarely in the average range where IQ is simply not a factor in career outcomes. Skills, training, and effort determine success.",
+    faqItems: [
+      { question: "Is 94 a good IQ score?", answer: "Yes, 94 is a perfectly average score. The 6-point gap from 100 is within testing error and has no practical significance." },
+      { question: "Is 94 below average IQ?", answer: "By 6 points technically, but it's within the average range (90-109). No psychologist would describe 94 as meaningfully below average." },
+      { question: "What careers suit a 94 IQ?", answer: "Any career you're interested in. A 94 IQ is entirely average and doesn't limit professional options in any way." },
+    ],
+  },
   95: {
     score: 95,
     classification: "Average",
@@ -204,6 +217,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "What is the best IQ for leadership?", answer: "Research suggests IQs in the 115-125 range may be optimal for leadership. Leaders in this range are smart enough to understand complex systems but not so far above their teams cognitively that communication becomes strained. A 120 IQ sits right in this sweet spot." },
     ],
   },
+  124: {
+    score: 124,
+    classification: "Superior",
+    percentile: "95th",
+    rarity: "1 in 18",
+    detailedExplanation: "An IQ of 124 is in the superior range at the 95th percentile — only about 5% of people score higher. You are solidly in the 'smart' category by any definition. Academic work comes naturally, you handle abstract reasoning with ease, and you have strong analytical capabilities. Research suggests this range (120-125) may be optimal for leadership effectiveness.",
+    careerContext: "At 124, the most demanding intellectual careers are fully accessible: law, medicine, engineering, research, and executive leadership. The key differentiator at this level is no longer cognitive ability but passion, specialization, and interpersonal skills.",
+    faqItems: [
+      { question: "Is 124 a good IQ score?", answer: "Yes, 124 is excellent — superior range at the 95th percentile. You score higher than about 95% of people. This is a strong cognitive advantage for any academic or professional pursuit." },
+      { question: "Is 124 close to gifted?", answer: "Getting there — gifted begins at 130. A 124 is 6 points below the threshold. While not yet gifted by formal definitions, 124 represents very strong intellectual ability that exceeds the vast majority of people." },
+      { question: "What is the best IQ for leadership?", answer: "Research suggests 115-125 is optimal for leadership. Leaders in this range can handle complexity while still communicating naturally with their teams. At 124, you're right in this sweet spot." },
+    ],
+  },
   125: {
     score: 125,
     classification: "Superior",
@@ -228,6 +254,32 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 130 a good IQ score?", answer: "A 130 IQ is an outstanding score. It is classified as very superior or gifted, at the 98th percentile. Only 2% of the population scores this high. It qualifies you for Mensa and indicates exceptional cognitive ability across most intellectual domains." },
       { question: "Can I join Mensa with a 130 IQ?", answer: "Yes. Mensa requires a score at or above the 98th percentile on a standardized IQ test, which corresponds to approximately 130 on most tests using the standard deviation of 15. A score of 130 meets this threshold." },
       { question: "Are there challenges with being gifted?", answer: "Yes. Research on giftedness shows that highly intelligent individuals sometimes experience perfectionism, heightened sensitivity, difficulty finding intellectual peers, and existential anxiety. However, these challenges are manageable, and giftedness is overwhelmingly a cognitive advantage." },
+    ],
+  },
+  133: {
+    score: 133,
+    classification: "Very Superior / Gifted",
+    percentile: "98th",
+    rarity: "1 in 60",
+    detailedExplanation: "An IQ of 133 is solidly in the gifted range, above the Mensa threshold of 130. At the 98th percentile, only about 2% of people score this high. People at this level experience a genuine cognitive difference from the general population — learning comes unusually fast, abstract concepts feel intuitive, and there's often an insatiable intellectual curiosity.",
+    careerContext: "At 133, you have the cognitive foundation for the most demanding intellectual work available. Research, advanced law, specialized medicine, and technology innovation are all natural fits. The challenge is often finding work stimulating enough rather than capable enough.",
+    faqItems: [
+      { question: "Is 133 a good IQ score?", answer: "133 is outstanding — gifted range at the 98th percentile. Only 2% of people score this high. It qualifies for Mensa and indicates exceptional cognitive ability." },
+      { question: "Can I join Mensa with a 133 IQ?", answer: "Yes. Mensa requires the 98th percentile (approximately 130). A 133 comfortably exceeds this threshold." },
+      { question: "What does it feel like to have a 133 IQ?", answer: "People at this level often report learning quickly, seeing patterns others miss, enjoying complex problems, and sometimes feeling understimulated by typical work and conversation. Finding intellectual peers can be challenging." },
+    ],
+  },
+  136: {
+    score: 136,
+    classification: "Very Superior / Gifted",
+    percentile: "99th",
+    rarity: "1 in 100",
+    detailedExplanation: "An IQ of 136 places you deep in the gifted range at the 99th percentile — higher than 99% of people. Only about 1 in 100 people reach this level. At 136, cognitive processing is noticeably faster and more complex than the vast majority of the population. Abstract reasoning, rapid learning, and deep analytical capability are hallmarks of this level.",
+    careerContext: "At 136, the most demanding intellectual careers are comfortable fits. Research, advanced technology, academic scholarship, and strategic leadership are common paths. Many at this level gravitate toward work that pushes the boundaries of their field.",
+    faqItems: [
+      { question: "Is 136 a good IQ score?", answer: "136 is exceptional — 99th percentile, only 1 in 100 people score this high. It's well above the Mensa threshold and deep in the gifted range." },
+      { question: "Is 136 genius level?", answer: "Not by the most common definition (140+), but it's approaching it. The gap between 136 and 140 is small and within testing error. By any practical measure, 136 represents exceptional cognitive ability." },
+      { question: "How rare is 136 IQ?", answer: "About 1 in 100 people. In a school of 500 students, you'd expect roughly 5 to score at this level. It's rare enough to be exceptional but common enough that you'll find peers in selective academic settings." },
     ],
   },
   135: {
@@ -436,6 +488,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 88 a good IQ score?", answer: "An IQ of 88 is low average, at the 21st percentile. It is extremely close to the average range (90-109) and represents no practical limitation for most life and career goals. The 12-point gap from 100 is smaller in real life than it sounds." },
       { question: "How does 88 compare to average?", answer: "An IQ of 88 is only 12 points below the mean of 100 — less than one standard deviation. In daily life, the difference between 88 and 100 is barely noticeable. Both scores allow for independent living, successful careers, and typical social functioning." },
       { question: "Can someone with an 88 IQ be successful?", answer: "Yes. An IQ of 88 is well within the range of normal functioning. Many business owners, supervisors, and skilled professionals have IQs in this range. Motivation, work ethic, and social skills are much stronger predictors of success at this level than the 12-point gap from average." },
+    ],
+  },
+  91: {
+    score: 91,
+    classification: "Average",
+    percentile: "27th",
+    rarity: "Common",
+    detailedExplanation: "An IQ of 91 is solidly in the average range, just 9 points below the mean. At the 27th percentile, about 27% of people score at or below this level. This is an entirely normal score with no cognitive limitations for everyday life. The 9-point gap from 100 is barely detectable in any practical context.",
+    careerContext: "At 91, every mainstream career is accessible. Teachers, nurses, managers, small business owners, and technicians all commonly fall in this range. Success depends on skills and motivation, not 9 IQ points.",
+    faqItems: [
+      { question: "Is 91 a good IQ score?", answer: "Yes, 91 is perfectly average. It falls within the 90-109 average range and represents normal cognitive functioning. No life or career goals are limited by a 91 IQ." },
+      { question: "Is 91 IQ below average?", answer: "By 9 points, but it's classified as average (90-109 range). The difference from 100 is too small to affect daily life or career prospects in any meaningful way." },
+      { question: "What can I do with a 91 IQ?", answer: "Everything someone with 100 IQ can do. College, professional careers, entrepreneurship — the 9-point difference is negligible. Focus on building skills and expertise in your areas of interest." },
     ],
   },
   92: {
