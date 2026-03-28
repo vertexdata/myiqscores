@@ -40,7 +40,7 @@ const ContentPage = ({
 
       {/* CTA Section */}
       <div className="max-w-3xl mx-auto mt-16">
-        <div className="glass-card p-8 text-center rounded-2xl">
+        <div className="glass-card p-6 sm:p-8 text-center rounded-2xl">
           <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
             {ctaText}
           </h2>
