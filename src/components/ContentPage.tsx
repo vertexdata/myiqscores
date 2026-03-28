@@ -33,8 +33,8 @@ const ContentPage = ({
     </nav>
 
     {/* Article Content */}
-    <main className="relative z-10 pt-24 pb-16 px-4">
-      <article className="max-w-3xl mx-auto prose-content">
+    <main className="relative z-10 pt-20 sm:pt-24 pb-16 px-4">
+      <article className="max-w-3xl mx-auto prose-content overflow-x-hidden">
         {children}
       </article>
 
