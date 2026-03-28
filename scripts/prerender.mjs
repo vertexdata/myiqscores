@@ -84,6 +84,21 @@ const routes = [
   "/average-iq-by-state/new-jersey",
   "/average-iq-by-state/virginia",
   "/average-iq-by-state/wisconsin",
+  "/average-iq-by-state/colorado",
+  "/average-iq-by-state/california",
+  "/average-iq-by-state/new-york",
+  "/average-iq-by-state/illinois",
+  "/average-iq-by-state/pennsylvania",
+  "/average-iq-by-state/ohio",
+  "/average-iq-by-state/texas",
+  "/average-iq-by-state/florida",
+  "/average-iq-by-state/georgia",
+  "/average-iq-by-state/alabama",
+  "/average-iq-by-state/louisiana",
+  "/average-iq-by-state/mississippi",
+  "/average-iq-by-state/north-carolina",
+  "/average-iq-by-state/michigan",
+  "/average-iq-by-state/arizona",
 ];
 
 async function prerender() {
