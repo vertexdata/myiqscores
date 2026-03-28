@@ -308,6 +308,45 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How smart is LeBron off the court?", answer: "Very. LeBron has built a billion-dollar business portfolio including a media company, restaurant chain, and numerous investments. He is politically engaged, runs a school for at-risk youth, and negotiates his own business deals — all requiring genuine cognitive ability." },
     ],
   },
+  {
+    name: "Donald Trump",
+    slug: "donald-trump",
+    estimatedIQ: "120–135",
+    knownFor: "45th & 47th US President, real estate, media",
+    description: "Donald Trump's IQ is estimated between 120 and 135. He attended the Wharton School at UPenn (though not its MBA program, as sometimes claimed) and built a multi-billion dollar real estate and media brand. Trump's cognitive strengths appear to lie in persuasion, branding, and intuitive understanding of mass media — skills that don't map neatly onto traditional IQ subtests but represent genuine cognitive ability in specific domains.",
+    iqContext: "Trump's IQ estimate is debated. His supporters point to his Wharton degree and business success; critics note his preference for short, simple communication and impulsive decision-making. The reality is likely that Trump has above-average to superior cognitive ability applied in a non-traditional way — his particular intelligence is social and persuasive rather than analytical or academic.",
+    faqItems: [
+      { question: "What is Donald Trump's IQ?", answer: "Trump's IQ is estimated at 120-135. He attended UPenn's Wharton School and built a major real estate brand. His cognitive strengths appear strongest in persuasion, branding, and media intuition rather than traditional analytical domains." },
+      { question: "Is Trump smarter than other presidents?", answer: "Most estimates place Trump in the middle-to-upper range of presidential IQs (which typically range from 120-145). His intelligence appears more practical and socially oriented than the academic/analytical intelligence of presidents like Obama or Clinton." },
+      { question: "Did Trump go to an Ivy League school?", answer: "Yes, Trump attended the Wharton School at the University of Pennsylvania for his undergraduate degree in economics. UPenn is an Ivy League school, though Trump attended the undergraduate program, not the MBA program that Wharton is most famous for." },
+    ],
+  },
+  {
+    name: "Garry Kasparov",
+    slug: "garry-kasparov",
+    estimatedIQ: "190",
+    knownFor: "Chess world champion, political activist",
+    description: "Garry Kasparov has a tested IQ of approximately 190, making him one of the highest verified scores among living people. Kasparov dominated world chess for over 20 years (1985-2005), and his legendary 1997 matches against IBM's Deep Blue were pivotal moments in AI history. His ability to calculate dozens of moves ahead while simultaneously evaluating millions of positions demonstrates extraordinary pattern recognition and working memory.",
+    iqContext: "Kasparov's 190 IQ is one of the few extremely high scores that has been verified through formal testing. His chess ability represents a near-perfect application of pattern recognition, working memory, and strategic thinking — cognitive skills that IQ tests directly measure. After retiring from chess, Kasparov became a political activist and AI commentator, demonstrating that his intelligence extends well beyond the chessboard.",
+    faqItems: [
+      { question: "What is Garry Kasparov's IQ?", answer: "Kasparov has a tested IQ of approximately 190, one of the highest verified scores ever recorded. This is consistent with his extraordinary chess abilities and his success in multiple intellectual domains after retirement from competitive chess." },
+      { question: "Is Kasparov the smartest chess player?", answer: "By IQ, likely yes — his 190 is the highest known among chess players. Magnus Carlsen, the current world champion, is estimated at 180-190. Bobby Fischer was estimated around 180. All are in the profoundly gifted range." },
+      { question: "How does chess relate to IQ?", answer: "Chess ability correlates with IQ at about 0.4-0.5 — a moderate correlation. Top grandmasters almost always have very high IQs (140+), but chess also requires extensive practice and memorization. High IQ is necessary but not sufficient for chess mastery." },
+    ],
+  },
+  {
+    name: "Beyoncé",
+    slug: "beyonce",
+    estimatedIQ: "115–125",
+    knownFor: "Singer, performer, business mogul, cultural icon",
+    description: "Beyoncé's IQ is estimated between 115 and 125 based on her demonstrated abilities in creative direction, business strategy, and performance complexity. Beyoncé is not just a singer — she directs her own visual albums, choreographs complex shows, manages multiple businesses, and strategically controls her public image with a sophistication that requires genuine cognitive ability. Her 'visual album' concept pioneered a new format in the music industry.",
+    iqContext: "Beyoncé demonstrates that creative and strategic intelligence can be as impactful as traditional academic intelligence. Her ability to conceptualize and execute multi-sensory artistic experiences (Lemonade, Renaissance) while simultaneously managing a business empire requires strong planning, coordination, and vision. Her cognitive strengths likely lie in spatial-creative and interpersonal domains that IQ tests partially but not fully capture.",
+    faqItems: [
+      { question: "What is Beyoncé's IQ?", answer: "Beyoncé's IQ is estimated at 115-125 based on her demonstrated creative direction, business acumen, and performance complexity. No verified score exists. Her strengths in creative vision and strategic brand management suggest above-average cognitive ability." },
+      { question: "Is Beyoncé intelligent?", answer: "By multiple measures, yes. Directing visual albums, choreographing stadium tours, managing multiple businesses, and strategically controlling a global brand all require genuine cognitive ability — particularly in creative, spatial, and interpersonal intelligence domains." },
+      { question: "How does Beyoncé compare to other entertainers intellectually?", answer: "Among entertainers, Beyoncé stands out for her strategic control and creative direction ability. While many performers have musical talent, few demonstrate her level of business sophistication and artistic conceptualization." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {

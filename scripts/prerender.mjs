@@ -28,7 +28,8 @@ const careerSlugs = [
   "data-scientist", "architect", "pharmacist", "dentist", "firefighter",
   "military-officer", "professor", "social-worker", "pilot", "judge",
   "psychologist", "veterinarian", "surgeon", "scientist", "graphic-designer",
-  "chef", "real-estate-agent", "paramedic",
+  "chef", "real-estate-agent", "paramedic", "truck-driver", "journalist",
+  "mathematician", "professional-athlete", "welder",
 ];
 
 // Routes to pre-render
@@ -73,6 +74,9 @@ const routes = [
   "/famous-iq/benjamin-franklin",
   "/famous-iq/marilyn-monroe",
   "/famous-iq/lebron-james",
+  "/famous-iq/donald-trump",
+  "/famous-iq/garry-kasparov",
+  "/famous-iq/beyonce",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",
