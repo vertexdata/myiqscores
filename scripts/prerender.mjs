@@ -7,7 +7,7 @@ const distDir = path.resolve(__dirname, "../dist");
 const serverEntry = path.resolve(distDir, "server/entry-server.js");
 
 // IQ score pages
-const iqScores = [40, 45, 50, 55, 60, 65, 68, 70, 72, 74, 75, 76, 78, 80, 82, 84, 85, 86, 87, 88, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 132, 133, 134, 135, 136, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 150, 155, 160, 165, 170, 180, 200];
+const iqScores = [40, 45, 50, 55, 60, 65, 68, 70, 72, 74, 75, 76, 78, 80, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 132, 133, 134, 135, 136, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 150, 155, 160, 165, 170, 180, 200];
 
 // Country pages
 const countrySlugs = [
@@ -104,6 +104,11 @@ const routes = [
   "/famous-iq/michael-jordan",
   "/famous-iq/nikola-jokic",
   "/famous-iq/kendrick-lamar",
+  "/famous-iq/michio-kaku",
+  "/famous-iq/magnus-carlsen",
+  "/famous-iq/gordon-ramsay",
+  "/famous-iq/alexandria-ocasio-cortez",
+  "/famous-iq/pablo-picasso",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",

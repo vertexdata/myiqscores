@@ -633,6 +633,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does Kendrick compare to other rappers intellectually?", answer: "Among rappers, Lamar's lyrical complexity and conceptual depth are at the highest level. His Pulitzer win places him in unique intellectual territory. His verbal intelligence appears to be in the superior range, similar to Jay-Z's estimated business intelligence." },
     ],
   },
+  {
+    name: "Michio Kaku",
+    slug: "michio-kaku",
+    estimatedIQ: "145–155",
+    knownFor: "Theoretical physicist, futurist, author",
+    description: "Michio Kaku's IQ is estimated at 145-155 based on his achievements in theoretical physics and exceptional ability to communicate complex science. Kaku is a professor of theoretical physics at CUNY, co-founder of string field theory, and one of the most recognized science communicators in the world. He built a particle accelerator in his parents' garage as a teenager, earning a scholarship to Harvard.",
+    iqContext: "Kaku's garage particle accelerator story alone suggests extraordinary childhood cognitive ability. His subsequent career in string field theory — one of the most abstract and mathematically demanding areas of physics — confirms gifted-range intelligence. His particular genius, like Carl Sagan and Neil deGrasse Tyson, combines deep scientific understanding with exceptional communication ability.",
+    faqItems: [
+      { question: "What is Michio Kaku's IQ?", answer: "Kaku's IQ is estimated at 145-155 based on his string field theory work, Harvard scholarship (earned by building a particle accelerator as a teen), and career in theoretical physics." },
+      { question: "Did Kaku really build a particle accelerator as a kid?", answer: "Yes. As a teenager, Kaku built a 2.3 million electron-volt atom smasher in his parents' garage for a science fair. This caught the attention of physicist Edward Teller, who helped Kaku get a scholarship to Harvard." },
+      { question: "How does Kaku compare to other physicists?", answer: "Kaku's estimated IQ (145-155) places him below Einstein (~160) and Hawking (~160) but in the same profoundly gifted range. His unique contribution is combining cutting-edge theoretical physics with world-class science communication." },
+    ],
+  },
+  {
+    name: "Magnus Carlsen",
+    slug: "magnus-carlsen",
+    estimatedIQ: "180–190",
+    knownFor: "Chess world champion, highest-rated player ever",
+    description: "Magnus Carlsen's IQ is estimated at 180-190, making him one of the most cognitively gifted living people. Carlsen became a chess grandmaster at 13 and the world champion at 22. His peak chess rating of 2882 is the highest in history. Carlsen's ability to calculate dozens of moves ahead while maintaining positional intuition represents extraordinary cognitive processing that extends well beyond what standard IQ tests measure.",
+    iqContext: "Carlsen has reportedly been tested at an IQ of 186. His chess achievements require extraordinary pattern recognition, working memory, and strategic calculation — cognitive abilities directly related to IQ. Unlike many chess prodigies who burn out, Carlsen has sustained his dominance for over a decade, suggesting not just high ability but exceptional cognitive stamina.",
+    faqItems: [
+      { question: "What is Magnus Carlsen's IQ?", answer: "Carlsen's IQ is reportedly 186, among the highest verified scores of any living person. His chess achievements — highest rating in history, world champion at 22 — are consistent with this extraordinary cognitive ability." },
+      { question: "Is Carlsen smarter than Kasparov?", answer: "Their estimated IQs are similar (Carlsen ~186, Kasparov ~190). Carlsen has a higher peak chess rating but Kasparov dominated for longer. Both represent the extreme upper end of human cognitive ability applied to chess." },
+      { question: "Does chess IQ equal general IQ?", answer: "They correlate moderately (~0.4-0.5). Elite chess requires very high IQ, but chess-specific training and memory also matter. Carlsen's reportedly high general IQ suggests his chess ability reflects broad cognitive gifts, not just domain-specific skill." },
+    ],
+  },
+  {
+    name: "Gordon Ramsay",
+    slug: "gordon-ramsay",
+    estimatedIQ: "110–120",
+    knownFor: "Celebrity chef, restaurateur, TV personality",
+    description: "Gordon Ramsay's IQ is estimated at 110-120 based on his demonstrated abilities in restaurant management, television production, and global brand building. Beyond his cooking skills, Ramsay has built a multi-billion dollar empire spanning 35+ restaurants, multiple TV shows across several countries, cookbooks, and a digital media presence. Managing this complexity requires genuine strategic and organizational intelligence.",
+    iqContext: "Ramsay's success demonstrates that high average to superior intelligence combined with extreme drive and domain expertise can produce extraordinary results. His ability to simultaneously manage dozens of restaurants across multiple countries, produce television content, and build consumer brands requires the kind of executive function and multitasking ability that correlates with above-average IQ.",
+    faqItems: [
+      { question: "What is Gordon Ramsay's IQ?", answer: "Ramsay's IQ is estimated at 110-120. His ability to manage 35+ restaurants globally, produce multiple TV shows, and build a multi-billion dollar brand demonstrates genuine strategic intelligence beyond culinary skills." },
+      { question: "Is Gordon Ramsay smart?", answer: "In business and organizational intelligence, very much so. Building a global restaurant and media empire from scratch requires strategic thinking, financial management, and leadership ability that go well beyond cooking talent." },
+      { question: "How does Ramsay compare to other celebrity chefs?", answer: "Ramsay's business empire is among the largest of any chef. His ability to succeed across restaurants, TV, publishing, and digital media suggests stronger strategic intelligence than most celebrity chefs, who typically focus on one or two domains." },
+    ],
+  },
+  {
+    name: "Alexandria Ocasio-Cortez",
+    slug: "alexandria-ocasio-cortez",
+    estimatedIQ: "120–130",
+    knownFor: "US Congresswoman, political communicator",
+    description: "AOC's IQ is estimated at 120-130 based on her academic record (Boston University cum laude, double major in international relations and economics) and demonstrated communication abilities. She won a congressional primary against a 10-term incumbent at age 28, becoming the youngest woman ever elected to Congress. Her ability to communicate complex policy issues accessibly through social media has reshaped political communication.",
+    iqContext: "AOC's particular intelligence manifests in verbal and interpersonal domains — she is widely regarded as one of the most effective communicators in American politics regardless of political affiliation. Her ability to distill complex economic and policy concepts into viral social media content requires genuine analytical understanding combined with exceptional verbal intelligence.",
+    faqItems: [
+      { question: "What is AOC's IQ?", answer: "AOC's IQ is estimated at 120-130 based on her cum laude economics degree from Boston University and demonstrated analytical and communication abilities. No verified test score exists." },
+      { question: "Is AOC smart?", answer: "Her academic credentials (cum laude, double major) and political achievements suggest above-average to superior intelligence. Her particular strength is in communicating complex ideas accessibly — a skill requiring both analytical and verbal intelligence." },
+      { question: "How does AOC compare to other politicians?", answer: "AOC's estimated IQ (120-130) is typical for successful politicians. Her distinguishing trait is exceptional communication ability rather than raw cognitive power — she connects policy analysis with emotional resonance more effectively than most political figures." },
+    ],
+  },
+  {
+    name: "Pablo Picasso",
+    slug: "pablo-picasso",
+    estimatedIQ: "150–170",
+    knownFor: "Revolutionary artist, Cubism co-founder",
+    description: "Pablo Picasso's IQ is estimated between 150 and 170, reflecting his extraordinary ability to revolutionize visual art multiple times over a 70-year career. Picasso co-founded Cubism, influenced virtually every art movement of the 20th century, and produced over 50,000 works across painting, sculpture, ceramics, and printmaking. His ability to see and represent three-dimensional space in radically new ways suggests exceptional spatial-visual intelligence.",
+    iqContext: "Picasso's genius was primarily spatial-visual and creative — types of intelligence that standard IQ tests measure only partially. His ability to deconstruct and reconstruct visual reality (Cubism) required cognitive processing of three-dimensional space at a level most people cannot approach. The sheer volume and diversity of his output (50,000+ works) also suggests extraordinary creative fluency and cognitive stamina.",
+    faqItems: [
+      { question: "What was Picasso's IQ?", answer: "Picasso's IQ is estimated at 150-170. He never took an IQ test, but his revolutionary contributions to art — particularly his spatial-visual innovations in Cubism — suggest extraordinary cognitive ability in visual-spatial domains." },
+      { question: "Was Picasso a genius?", answer: "In visual-spatial intelligence, unquestionably. Picasso fundamentally changed how humans represent visual reality. His 70-year career of continuous innovation and 50,000+ works represent creative genius by any definition." },
+      { question: "How does artistic genius relate to IQ?", answer: "Standard IQ tests partially measure spatial-visual intelligence but miss much of creative ability. Picasso's genius was in seeing spatial relationships differently than anyone before him — a cognitive gift that goes beyond what IQ scores capture." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {

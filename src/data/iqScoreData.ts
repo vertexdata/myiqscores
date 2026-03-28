@@ -61,6 +61,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Can someone with an 80 IQ go to college?", answer: "Some individuals with an IQ of 80 do attend community college or vocational programs, particularly in hands-on fields. Success in higher education at this level often depends on study habits, motivation, and available academic support rather than IQ alone." },
     ],
   },
+  83: {
+    score: 83,
+    classification: "Low Average",
+    percentile: "13th",
+    rarity: "1 in 8",
+    detailedExplanation: "An IQ of 83 is in the low average range at the 13th percentile. About 1 in 8 people score at or below this level. People at 83 handle daily tasks independently — managing money, following instructions, maintaining relationships. The 17-point gap from 100 sounds large but in practice the functional differences are modest.",
+    careerContext: "Many practical careers are accessible: skilled trades, retail, food service, transportation, manufacturing, and healthcare support. Practical skills, reliability, and people skills drive career success at this level.",
+    faqItems: [
+      { question: "Is 83 a good IQ score?", answer: "An IQ of 83 is low average at the 13th percentile. It's a functional score for independent living and most careers. About 1 in 8 people score at or below this level." },
+      { question: "Is 83 IQ normal?", answer: "Yes. Low average is within the normal range of human intelligence. Most people with an 83 IQ live entirely normal, productive lives without functional limitations." },
+      { question: "What jobs suit an 83 IQ?", answer: "Many practical careers: trades, retail, food service, transportation, warehousing. Success depends on work ethic and practical skills more than IQ at this level." },
+    ],
+  },
   84: {
     score: 84,
     classification: "Low Average",
@@ -98,6 +111,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 86 a good IQ score?", answer: "An IQ of 86 is low average at the 18th percentile. It is a completely functional score for daily life and most careers. The 14-point gap from 100 is smaller in practice than it sounds." },
       { question: "Can someone with an 86 IQ go to college?", answer: "Yes. Community colleges and many four-year programs are accessible at this level, particularly in practical fields. Study skills and motivation matter more than the 14-point difference from average." },
       { question: "How does 86 compare to 90?", answer: "The 4-point gap between 86 and 90 crosses from low average to average classification, but functionally the difference is negligible. Both support independent living and most career paths." },
+    ],
+  },
+  89: {
+    score: 89,
+    classification: "Low Average",
+    percentile: "23rd",
+    rarity: "1 in 4",
+    detailedExplanation: "An IQ of 89 is at the very top of the low average range — one single point below average classification at 90. At the 23rd percentile, about 23% of people score at or below this level. The distinction between 89 (low average) and 90 (average) is purely classificatory and has zero practical significance. You are effectively average.",
+    careerContext: "At 89, every career available to someone with a 90 or 95 IQ is equally accessible to you. The 1-point gap between classifications is meaningless. Focus on skills and interests, not labels.",
+    faqItems: [
+      { question: "Is 89 a good IQ score?", answer: "Yes, 89 is perfectly functional — one point from being classified as average. The distinction between 89 and 90 has no practical significance whatsoever." },
+      { question: "Is 89 below average?", answer: "By 11 points technically, and classified as low average. But 89 is at the very top of low average, one point from the average range. In practice, 89 and 90 are identical." },
+      { question: "What's the difference between 89 and 90 IQ?", answer: "Nothing meaningful. The 1-point gap crosses a classificatory boundary (low average to average) but represents zero difference in real-world cognitive ability. You could score 89 one day and 92 the next." },
     ],
   },
   90: {
