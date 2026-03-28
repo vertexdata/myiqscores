@@ -48,6 +48,14 @@ const routes = [
   "/iq-by-age/adults",
   "/iq-by-age/older-adults",
   "/iq-by-age/seniors",
+  "/famous-iq/albert-einstein",
+  "/famous-iq/stephen-hawking",
+  "/famous-iq/elon-musk",
+  "/famous-iq/leonardo-da-vinci",
+  "/famous-iq/nikola-tesla",
+  "/famous-iq/bill-gates",
+  "/famous-iq/marie-curie",
+  "/famous-iq/isaac-newton",
 ];
 
 async function prerender() {

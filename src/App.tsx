@@ -16,12 +16,14 @@ import IQvsEQ from "./pages/IQvsEQ.tsx";
 import SATtoIQ from "./pages/SATtoIQ.tsx";
 import HowToImproveIQ from "./pages/HowToImproveIQ.tsx";
 import AgeIQ from "./pages/AgeIQ.tsx";
+import FamousIQ from "./pages/FamousIQ.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
 import { careerSlugs } from "./data/careerIQData";
 import { ageGroupSlugs } from "./data/ageIQData";
+import { famousPersonSlugs } from "./data/famousIQData";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +49,9 @@ export const AppRoutes = () => (
     <Route path="/how-to-improve-iq" element={<HowToImproveIQ />} />
     {ageGroupSlugs.map((slug) => (
       <Route key={slug} path={`/iq-by-age/${slug}`} element={<AgeIQ />} />
+    ))}
+    {famousPersonSlugs.map((slug) => (
+      <Route key={slug} path={`/famous-iq/${slug}`} element={<FamousIQ />} />
     ))}
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
