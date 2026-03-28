@@ -296,6 +296,66 @@ export const iqMythData: IQMythInfo[] = [
       { question: "Does education increase IQ?", answer: "Modestly, yes. Research suggests each year of education adds approximately 1-3 IQ points through improved vocabulary, reasoning practice, and cognitive stimulation. The effect is strongest during childhood and adolescence." },
     ],
   },
+  {
+    title: "Does Exercise Increase IQ?",
+    slug: "does-exercise-increase-iq",
+    myth: "Physical exercise has no real effect on intelligence — brains and brawn are separate.",
+    reality: "Aerobic exercise is the single most evidence-backed intervention for improving cognitive function. Regular exercise can improve performance by 2-5 IQ points through increased brain blood flow, neurogenesis, and BDNF release.",
+    explanation: "Exercise is arguably the closest thing to a real 'smart pill.' Meta-analyses consistently show that aerobic exercise improves executive function, memory, and processing speed. The mechanisms are well-understood: exercise increases cerebral blood flow, stimulates release of BDNF (brain-derived neurotrophic factor, which promotes neuron growth), triggers neurogenesis in the hippocampus (the brain's memory center), and reduces inflammation that impairs cognition. A landmark study of 1.2 million Swedish military conscripts found that cardiovascular fitness at age 18 strongly predicted IQ — and that improving fitness between 15 and 18 was associated with IQ gains. Even a single 20-minute session of moderate exercise temporarily boosts cognitive performance. The practical implication is clear: if you want to perform at your cognitive best, regular aerobic exercise is the most evidence-backed strategy available.",
+    faqItems: [
+      { question: "Does exercise increase IQ?", answer: "Yes — aerobic exercise is the most evidence-backed cognitive enhancer. Regular exercise improves executive function, memory, and processing speed through increased brain blood flow, BDNF release, and neurogenesis. The effect is equivalent to 2-5 IQ points." },
+      { question: "What type of exercise is best for the brain?", answer: "Aerobic exercise (running, cycling, swimming, brisk walking) has the strongest evidence. 150+ minutes per week of moderate aerobic activity produces significant cognitive benefits. Resistance training also helps but has less evidence for IQ-type improvements." },
+      { question: "How quickly does exercise improve brain function?", answer: "A single 20-minute session temporarily boosts cognitive performance. Structural brain changes (increased hippocampal volume, new neuron growth) appear within 6-12 weeks of regular exercise. Long-term exercisers show the largest cumulative benefits." },
+    ],
+  },
+  {
+    title: "Can You Have Multiple Types of Intelligence?",
+    slug: "multiple-types-of-intelligence",
+    myth: "IQ measures all forms of intelligence — if your IQ is average, you're average at everything.",
+    reality: "Howard Gardner identified 8+ types of intelligence. IQ primarily measures logical-mathematical and linguistic intelligence, missing musical, bodily-kinesthetic, interpersonal, and other forms entirely.",
+    explanation: "Howard Gardner's theory of Multiple Intelligences (1983) proposed that human intelligence is not a single dimension but includes at least eight distinct types: Linguistic (word smart), Logical-Mathematical (number/reasoning smart), Spatial (picture smart), Musical (music smart), Bodily-Kinesthetic (body smart), Interpersonal (people smart), Intrapersonal (self smart), and Naturalistic (nature smart). Standard IQ tests primarily assess linguistic and logical-mathematical intelligence, with some spatial components. This means a person with average IQ could have exceptional musical intelligence (like many professional musicians), extraordinary bodily-kinesthetic intelligence (like elite athletes), or remarkable interpersonal intelligence (like gifted therapists or salespeople). The theory remains controversial — some psychologists argue these are talents rather than intelligences, and that 'g' (general intelligence) underlies all cognitive performance. But Gardner's framework usefully reminds us that IQ captures only a portion of human cognitive capability.",
+    faqItems: [
+      { question: "How many types of intelligence are there?", answer: "Howard Gardner proposed 8: linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, and naturalistic. Some researchers add existential intelligence as a 9th. IQ tests primarily measure only 2-3 of these." },
+      { question: "Can you be smart in one area and not another?", answer: "Absolutely. A brilliant musician might score average on an IQ test. An elite athlete might have extraordinary spatial and bodily intelligence but average verbal ability. Different types of intelligence are partially independent." },
+      { question: "Is Gardner's theory scientifically accepted?", answer: "It's influential but debated. Some psychologists argue these are talents or skills rather than intelligences, and that a general factor (g) underlies all cognition. Regardless, the theory usefully highlights that IQ doesn't capture all forms of human cognitive ability." },
+    ],
+  },
+  {
+    title: "Does Breastfeeding Increase IQ?",
+    slug: "breastfeeding-and-iq",
+    myth: "Breastfed children have significantly higher IQs than formula-fed children.",
+    reality: "Research shows a small IQ advantage (2-4 points) for breastfed children, but much of this is explained by maternal IQ and socioeconomic factors rather than breast milk itself.",
+    explanation: "Early studies found breastfed children scored 3-7 IQ points higher than formula-fed children. However, more rigorous research has significantly narrowed this gap. A large randomized trial in Belarus (PROBIT study) found only a 2-3 point advantage for breastfed children — and even this was influenced by the fact that mothers who breastfeed tend to have higher IQs, more education, and higher socioeconomic status (all of which independently boost children's IQ). Sibling studies (comparing breastfed and formula-fed siblings within the same family) find little to no IQ difference, suggesting the apparent benefit comes from family environment rather than breast milk itself. That said, breast milk does contain fatty acids (DHA, ARA) important for brain development, and the close physical contact during breastfeeding may have developmental benefits. The honest conclusion: breastfeeding may provide a small cognitive advantage (1-3 points), but the effect is much smaller than claimed and largely confounded by socioeconomic factors.",
+    faqItems: [
+      { question: "Does breastfeeding increase IQ?", answer: "Probably by a small amount (1-3 IQ points), but much of the observed advantage is explained by maternal IQ and socioeconomic status rather than breast milk itself. Sibling studies show minimal differences." },
+      { question: "How much does breastfeeding affect intelligence?", answer: "The best evidence suggests 1-3 IQ points at most, with much of this confounded by family factors. This is far smaller than the 5-7 points claimed in earlier, less rigorous studies." },
+      { question: "Should I breastfeed for brain development?", answer: "Breastfeeding has many health benefits beyond any IQ effect. But if you can't breastfeed, modern formula provides adequate nutrition for brain development. The IQ difference, if any, is very small and shouldn't cause guilt." },
+    ],
+  },
+  {
+    title: "Does Poverty Lower IQ?",
+    slug: "poverty-and-iq",
+    myth: "Poor people are less intelligent — poverty is a result of low IQ rather than a cause of it.",
+    reality: "Poverty directly impairs cognitive development through malnutrition, stress, pollution exposure, and reduced educational access. Research shows poverty reduces IQ by 5-13 points — poverty causes lower IQ, not the other way around.",
+    explanation: "The relationship between poverty and IQ is one of the most important and misunderstood topics in intelligence research. While it's true that IQ correlates with income, the causal arrow runs strongly from poverty to lower IQ — not just from lower IQ to poverty. Here's the evidence: Children adopted from orphanages into middle-class families gain 10-15 IQ points. Lead exposure (more common in poor neighborhoods) can reduce IQ by 5-7 points. Childhood malnutrition impairs brain development. Chronic stress from poverty increases cortisol, which damages the hippocampus. A Princeton study found that financial stress alone temporarily reduces effective IQ by 13 points — equivalent to losing a full night's sleep. The scarcity mindset created by poverty consumes cognitive bandwidth that would otherwise be available for reasoning and decision-making. The Flynn Effect provides further evidence: as societies become wealthier, IQ scores rise across the entire population. Alleviating poverty is, in effect, an IQ intervention.",
+    faqItems: [
+      { question: "Does poverty affect IQ?", answer: "Yes, significantly. Poverty reduces IQ through malnutrition, stress, lead exposure, reduced education access, and cognitive load from financial scarcity. Research shows effects of 5-13 IQ points. Poverty causes lower IQ, not just the reverse." },
+      { question: "How much does poverty reduce IQ?", answer: "Estimates range from 5-13 IQ points. A Princeton study found financial stress alone temporarily reduces effective IQ by 13 points. Childhood poverty has lasting effects through malnutrition, stress, and reduced educational access." },
+      { question: "Can escaping poverty increase IQ?", answer: "Yes. Children adopted from poverty into middle-class families gain 10-15 IQ points. Cash transfer programs that reduce financial stress show cognitive improvements. The Flynn Effect shows that societal wealth increases raise population IQ over time." },
+    ],
+  },
+  {
+    title: "Is There an IQ Gene?",
+    slug: "iq-genetics",
+    myth: "There's a single 'smart gene' that determines your IQ.",
+    reality: "IQ is influenced by thousands of genes, each with a tiny effect. There is no single 'IQ gene.' Genetics account for 50-80% of IQ variation, but through a complex polygenic architecture.",
+    explanation: "The genetics of intelligence are among the most complex in human biology. Genome-wide association studies (GWAS) have identified over 1,000 genetic variants associated with IQ, each contributing a fraction of an IQ point. The largest study to date (2023, over 3 million participants) found that all known genetic variants combined explain about 10-15% of IQ variation — far less than the 50-80% estimated from twin studies. This 'missing heritability' problem suggests that much of IQ's genetic influence comes from rare variants, gene-gene interactions, and epigenetic effects that current methods can't detect. The practical implication: you cannot determine someone's IQ from their DNA. Even the best polygenic scores (combining all known variants) predict IQ only slightly better than knowing a parent's education level. The genetic architecture of intelligence is distributed across the entire genome — there is no 'smart gene,' just thousands of tiny genetic nudges in various directions.",
+    faqItems: [
+      { question: "Is there a single gene for intelligence?", answer: "No. IQ is influenced by over 1,000 known genetic variants, each contributing a tiny fraction of an IQ point. Intelligence is highly polygenic — distributed across the entire genome rather than controlled by any single gene." },
+      { question: "How much of IQ is genetic?", answer: "Twin studies suggest 50-80% of IQ variation is genetic in adults (40% in children). However, this is through thousands of genes with small effects, not a few 'smart genes.' Environmental factors account for the remaining 20-50%." },
+      { question: "Can genetic testing predict IQ?", answer: "Very poorly. The best current polygenic scores explain about 10-15% of IQ variation — barely better than guessing from parental education level. Genetic IQ prediction is unlikely to become accurate in the foreseeable future due to the extreme complexity of the genetic architecture." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {
