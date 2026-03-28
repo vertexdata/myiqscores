@@ -124,6 +124,10 @@ const routes = [
   "/average-iq-by-state/oklahoma",
   "/average-iq-by-state/arkansas",
   "/average-iq-by-state/new-mexico",
+  "/highest-iq-ever",
+  "/good-iq-score",
+  "/genius-iq",
+  "/mensa-iq-test",
 ];
 
 async function prerender() {

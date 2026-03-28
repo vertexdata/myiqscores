@@ -19,6 +19,10 @@ import AgeIQ from "./pages/AgeIQ.tsx";
 import FamousIQ from "./pages/FamousIQ.tsx";
 import IQMyth from "./pages/IQMyth.tsx";
 import StateIQ from "./pages/StateIQ.tsx";
+import HighestIQEver from "./pages/HighestIQEver.tsx";
+import GoodIQScore from "./pages/GoodIQScore.tsx";
+import GeniusIQ from "./pages/GeniusIQ.tsx";
+import MensaIQ from "./pages/MensaIQ.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
@@ -63,6 +67,10 @@ export const AppRoutes = () => (
     {stateSlugs.map((slug) => (
       <Route key={slug} path={`/average-iq-by-state/${slug}`} element={<StateIQ />} />
     ))}
+    <Route path="/highest-iq-ever" element={<HighestIQEver />} />
+    <Route path="/good-iq-score" element={<GoodIQScore />} />
+    <Route path="/genius-iq" element={<GeniusIQ />} />
+    <Route path="/mensa-iq-test" element={<MensaIQ />} />
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
