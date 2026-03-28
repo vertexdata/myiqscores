@@ -15,11 +15,13 @@ import CareerIQ from "./pages/CareerIQ.tsx";
 import IQvsEQ from "./pages/IQvsEQ.tsx";
 import SATtoIQ from "./pages/SATtoIQ.tsx";
 import HowToImproveIQ from "./pages/HowToImproveIQ.tsx";
+import AgeIQ from "./pages/AgeIQ.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
 import { careerSlugs } from "./data/careerIQData";
+import { ageGroupSlugs } from "./data/ageIQData";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,9 @@ export const AppRoutes = () => (
     <Route path="/iq-vs-eq" element={<IQvsEQ />} />
     <Route path="/sat-to-iq" element={<SATtoIQ />} />
     <Route path="/how-to-improve-iq" element={<HowToImproveIQ />} />
+    {ageGroupSlugs.map((slug) => (
+      <Route key={slug} path={`/iq-by-age/${slug}`} element={<AgeIQ />} />
+    ))}
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

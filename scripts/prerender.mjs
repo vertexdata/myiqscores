@@ -42,6 +42,12 @@ const routes = [
   "/iq-vs-eq",
   "/sat-to-iq",
   "/how-to-improve-iq",
+  "/iq-by-age/children",
+  "/iq-by-age/teenagers",
+  "/iq-by-age/young-adults",
+  "/iq-by-age/adults",
+  "/iq-by-age/older-adults",
+  "/iq-by-age/seniors",
 ];
 
 async function prerender() {
