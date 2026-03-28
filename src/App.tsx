@@ -18,6 +18,7 @@ import HowToImproveIQ from "./pages/HowToImproveIQ.tsx";
 import AgeIQ from "./pages/AgeIQ.tsx";
 import FamousIQ from "./pages/FamousIQ.tsx";
 import IQMyth from "./pages/IQMyth.tsx";
+import StateIQ from "./pages/StateIQ.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
@@ -26,6 +27,7 @@ import { careerSlugs } from "./data/careerIQData";
 import { ageGroupSlugs } from "./data/ageIQData";
 import { famousPersonSlugs } from "./data/famousIQData";
 import { mythSlugs } from "./data/iqMythData";
+import { stateSlugs } from "./data/stateIQData";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +59,9 @@ export const AppRoutes = () => (
     ))}
     {mythSlugs.map((slug) => (
       <Route key={slug} path={`/iq-myths/${slug}`} element={<IQMyth />} />
+    ))}
+    {stateSlugs.map((slug) => (
+      <Route key={slug} path={`/average-iq-by-state/${slug}`} element={<StateIQ />} />
     ))}
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />

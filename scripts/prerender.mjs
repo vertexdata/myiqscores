@@ -74,6 +74,16 @@ const routes = [
   "/iq-myths/does-iq-determine-success",
   "/iq-myths/iq-gender-differences",
   "/iq-myths/brain-size-and-iq",
+  "/average-iq-by-state/massachusetts",
+  "/average-iq-by-state/new-hampshire",
+  "/average-iq-by-state/vermont",
+  "/average-iq-by-state/connecticut",
+  "/average-iq-by-state/minnesota",
+  "/average-iq-by-state/oregon",
+  "/average-iq-by-state/washington",
+  "/average-iq-by-state/new-jersey",
+  "/average-iq-by-state/virginia",
+  "/average-iq-by-state/wisconsin",
 ];
 
 async function prerender() {
