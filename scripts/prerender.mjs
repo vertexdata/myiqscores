@@ -114,6 +114,16 @@ const routes = [
   "/average-iq-by-state/nebraska",
   "/average-iq-by-state/missouri",
   "/average-iq-by-state/south-dakota",
+  "/average-iq-by-state/maine",
+  "/average-iq-by-state/north-dakota",
+  "/average-iq-by-state/idaho",
+  "/average-iq-by-state/delaware",
+  "/average-iq-by-state/rhode-island",
+  "/average-iq-by-state/wyoming",
+  "/average-iq-by-state/alaska",
+  "/average-iq-by-state/oklahoma",
+  "/average-iq-by-state/arkansas",
+  "/average-iq-by-state/new-mexico",
 ];
 
 async function prerender() {
