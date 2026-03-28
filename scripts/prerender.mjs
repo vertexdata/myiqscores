@@ -159,6 +159,8 @@ const routes = [
   "/good-iq-score",
   "/genius-iq",
   "/mensa-iq-test",
+  "/types-of-iq-tests",
+  "/iq-percentile-chart",
 ];
 
 async function prerender() {
