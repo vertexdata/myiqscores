@@ -236,6 +236,66 @@ export const iqMythData: IQMythInfo[] = [
       { question: "Is it racist to discuss IQ and race?", answer: "Discussing the data honestly is not racist. What is racist is misusing the data to claim innate genetic inferiority — a claim the evidence does not support. Responsible discussion acknowledges environmental causes and opposes the use of IQ data to justify discrimination." },
     ],
   },
+  {
+    title: "Does Sleep Affect IQ?",
+    slug: "does-sleep-affect-iq",
+    myth: "Sleep has no real effect on IQ — your intelligence is the same whether you sleep 4 hours or 8.",
+    reality: "Sleep deprivation can reduce effective cognitive performance by 5-15 IQ points. Chronic poor sleep may permanently impair brain development in children and adolescents.",
+    explanation: "Sleep is one of the most powerful influences on cognitive performance. A single night of poor sleep (less than 6 hours) can reduce effective IQ by 5-8 points through impaired working memory, attention, and processing speed. Chronic sleep deprivation (consistently less than 7 hours) compounds this effect, with studies showing cumulative cognitive impairment equivalent to 10-15 IQ points. A landmark study in Sleep journal found that people limited to 6 hours of sleep for two weeks performed as poorly as those who had been awake for 48 hours straight — but crucially, they didn't feel impaired. This means millions of people are operating at significantly reduced cognitive capacity without realizing it. For children and adolescents, the stakes are even higher: sleep is when the brain consolidates learning and undergoes critical development. Chronic sleep deprivation during these years may permanently affect cognitive potential.",
+    faqItems: [
+      { question: "Does sleep affect IQ?", answer: "Dramatically. Sleep deprivation can reduce effective cognitive performance by 5-15 IQ points. A single night of poor sleep impairs working memory, attention, and processing speed. Chronic sleep deprivation has cumulative effects that worsen over time." },
+      { question: "How much sleep do you need for optimal IQ?", answer: "Adults need 7-9 hours. Teenagers need 8-10 hours. Children need 9-12 hours. Getting consistently less than the minimum can reduce effective cognitive performance equivalent to several IQ points." },
+      { question: "Can better sleep increase your IQ score?", answer: "If you're currently sleep-deprived, yes — getting adequate sleep can restore the IQ points lost to poor sleep. This is one of the easiest and most effective ways to improve cognitive performance." },
+    ],
+  },
+  {
+    title: "Does Meditation Increase IQ?",
+    slug: "does-meditation-increase-iq",
+    myth: "Meditation significantly increases your IQ and makes you permanently smarter.",
+    reality: "Meditation improves specific cognitive functions (attention, working memory, emotional regulation) but evidence for broad IQ increases is limited. It's excellent for cognitive optimization but not a magic IQ booster.",
+    explanation: "Meditation has real, measurable effects on the brain — MRI studies show increased cortical thickness in areas related to attention and sensory processing after just 8 weeks of regular practice. Research shows meditation improves sustained attention, working memory, and emotional regulation — cognitive functions that overlap with what IQ tests measure. A University of California study found that 4 days of meditation training improved working memory and executive function scores. However, the evidence for permanent broad IQ increases is weaker. Most studies show improvements in specific cognitive domains rather than general intelligence. The practical benefits are significant even without dramatic IQ gains: better focus, reduced stress (which itself impairs cognition), and improved emotional regulation all contribute to better cognitive performance in daily life. Meditation is best understood as a cognitive optimization tool rather than an IQ enhancer.",
+    faqItems: [
+      { question: "Does meditation increase IQ?", answer: "Meditation improves specific cognitive functions (attention, working memory, emotional regulation) that overlap with IQ subtests. Whether it increases overall IQ is less clear. It's a genuine cognitive optimization tool but not a magic bullet." },
+      { question: "How long does it take for meditation to affect the brain?", answer: "MRI studies show measurable brain changes after just 8 weeks of regular practice (about 20 minutes daily). Cognitive performance improvements can appear within days of starting. Long-term meditators show the most significant changes." },
+      { question: "What type of meditation is best for cognitive function?", answer: "Focused attention meditation (concentrating on breath or a single point) and mindfulness meditation both show cognitive benefits. Open monitoring meditation may better improve creativity. Even 10 minutes daily produces measurable benefits." },
+    ],
+  },
+  {
+    title: "Is There a Link Between IQ and Mental Health?",
+    slug: "iq-and-mental-health",
+    myth: "High-IQ people are more likely to be mentally ill — the 'mad genius' stereotype.",
+    reality: "The relationship between IQ and mental health is complex. Higher IQ is generally protective against most mental illnesses, but some studies suggest slightly elevated rates of anxiety and existential concerns among the very gifted.",
+    explanation: "The 'mad genius' stereotype is largely a myth, but the reality is nuanced. Overall, higher IQ is associated with better mental health outcomes — lower rates of depression, substance abuse, and PTSD. This is likely because higher cognitive ability helps people understand and manage their emotions, access mental health resources, and problem-solve through difficult situations. However, research from Pitzer College found that members of Mensa (IQ 130+) reported higher rates of mood disorders, anxiety, and ADHD compared to the general population. A large Swedish study found that very high IQ (above 130) was associated with slightly higher rates of bipolar disorder. The proposed explanation is 'intellectual overexcitability' — highly gifted individuals may be more sensitive to stimuli, more prone to existential questioning, and more aware of life's complexities. But this doesn't mean most gifted people have mental health problems — the elevated rates are modest, and the majority of high-IQ individuals report good mental health.",
+    faqItems: [
+      { question: "Are smart people more likely to be depressed?", answer: "Overall, no — higher IQ is generally protective against depression. However, very high IQ (130+) may be associated with slightly elevated anxiety and existential concerns. The 'tortured genius' is mostly a myth; most high-IQ people have good mental health." },
+      { question: "Does high IQ cause anxiety?", answer: "Not directly. Some research suggests very gifted individuals (130+) may experience more existential anxiety and intellectual overexcitability. But the effect is modest, and higher IQ also provides better coping tools. Correlation doesn't mean causation." },
+      { question: "Is the 'mad genius' stereotype true?", answer: "Mostly no. Research shows higher IQ generally predicts better mental health. Some studies find slightly elevated rates of certain conditions (bipolar, anxiety) among the very gifted, but the vast majority of high-IQ individuals are psychologically healthy." },
+    ],
+  },
+  {
+    title: "Can You Increase IQ with Supplements?",
+    slug: "iq-supplements-nootropics",
+    myth: "Nootropic supplements and 'brain pills' can significantly increase your IQ.",
+    reality: "Most nootropic supplements have little to no evidence for increasing IQ. Some nutrients (omega-3s, vitamin D) may help if you're deficient, but no supplement dramatically boosts intelligence in healthy individuals.",
+    explanation: "The nootropics industry generates billions of dollars selling the promise of enhanced intelligence, but the evidence is largely disappointing. Most popular 'brain supplements' — ginkgo biloba, bacopa monnieri, lion's mane mushroom, various racetams — show mixed results at best in clinical trials, with effect sizes too small to meaningfully impact IQ scores. What does have evidence: correcting nutritional deficiencies. If you're deficient in omega-3 fatty acids, iron, iodine, zinc, vitamin D, or B vitamins, supplementation can restore cognitive function to your baseline — but this is fixing a deficiency, not enhancing beyond normal. Caffeine genuinely improves alertness and working memory temporarily (see our page on coffee and IQ). Creatine may modestly improve short-term memory and reasoning in vegetarians. But nothing legally available produces the dramatic cognitive enhancement that supplement marketing implies. The best 'nootropics' remain free: exercise, sleep, and challenging mental activity.",
+    faqItems: [
+      { question: "Can supplements increase IQ?", answer: "No supplement has been shown to significantly increase IQ in healthy, well-nourished individuals. Correcting nutrient deficiencies (omega-3s, vitamin D, iron) can restore baseline cognitive function, but that's different from enhancement. The best 'brain boosters' are exercise, sleep, and learning." },
+      { question: "Do nootropics actually work?", answer: "Most have little evidence. Caffeine genuinely improves alertness temporarily. Creatine may modestly help some people. But popular supplements like ginkgo biloba, lion's mane, and racetams show mixed results in clinical trials with effect sizes too small to impact IQ meaningfully." },
+      { question: "What's the best way to boost brain function?", answer: "Exercise (strongest evidence), adequate sleep (7-9 hours), proper nutrition, continuous learning, and social engagement. These free activities have far more evidence than any supplement. Fix deficiencies first, then focus on lifestyle." },
+    ],
+  },
+  {
+    title: "Does Class Size Affect Student IQ?",
+    slug: "class-size-and-iq",
+    myth: "Smaller class sizes lead to higher IQ scores for students.",
+    reality: "Smaller classes improve academic achievement modestly, but don't directly increase IQ. The benefit comes from more individual attention, not from changing innate cognitive ability.",
+    explanation: "The famous Tennessee STAR experiment (Student/Teacher Achievement Ratio) randomly assigned students to small (13-17) or large (22-25) classes and found that small-class students performed better on standardized tests, with the effect strongest for disadvantaged students. However, the improvement was in achievement (learned skills) rather than in IQ (cognitive ability). The distinction matters: smaller classes allow more individualized instruction, which helps students learn the curriculum better. This shows up on achievement tests but doesn't necessarily change underlying cognitive capacity. That said, the cumulative effect of better education can modestly improve IQ-related skills over time — better vocabulary, stronger reasoning from more practice, and greater confidence in intellectual tasks. The effect is strongest in early grades (K-3) and for disadvantaged students who benefit most from additional attention.",
+    faqItems: [
+      { question: "Do smaller classes increase IQ?", answer: "Not directly. Smaller classes improve academic achievement through more individual attention, but don't change innate cognitive ability. Over time, better education can modestly improve IQ-related skills, particularly for disadvantaged students." },
+      { question: "What is the ideal class size?", answer: "Research suggests the strongest benefits come from reducing classes below 20 students, with the STAR experiment finding significant gains at 13-17 students. The benefits are strongest in early grades (K-3) and for economically disadvantaged students." },
+      { question: "Does education increase IQ?", answer: "Modestly, yes. Research suggests each year of education adds approximately 1-3 IQ points through improved vocabulary, reasoning practice, and cognitive stimulation. The effect is strongest during childhood and adolescence." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {
