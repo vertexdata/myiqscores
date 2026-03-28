@@ -25,6 +25,8 @@ import GeniusIQ from "./pages/GeniusIQ.tsx";
 import MensaIQ from "./pages/MensaIQ.tsx";
 import TypesOfIQTests from "./pages/TypesOfIQTests.tsx";
 import IQPercentile from "./pages/IQPercentile.tsx";
+import FamousIQHub from "./pages/FamousIQHub.tsx";
+import CareerIQHub from "./pages/CareerIQHub.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
@@ -75,6 +77,8 @@ export const AppRoutes = () => (
     <Route path="/mensa-iq-test" element={<MensaIQ />} />
     <Route path="/types-of-iq-tests" element={<TypesOfIQTests />} />
     <Route path="/iq-percentile-chart" element={<IQPercentile />} />
+    <Route path="/famous-iq" element={<FamousIQHub />} />
+    <Route path="/iq-by-career" element={<CareerIQHub />} />
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -179,6 +179,8 @@ const routes = [
   "/mensa-iq-test",
   "/types-of-iq-tests",
   "/iq-percentile-chart",
+  "/famous-iq",
+  "/iq-by-career",
 ];
 
 async function prerender() {

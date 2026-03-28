@@ -75,6 +75,8 @@ const ContentPage = ({
               <li><Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link></li>
               <li><Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">IQ Score Ranges</Link></li>
               <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
+              <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ by Career</Link></li>
+              <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Famous People IQs</Link></li>
             </ul>
           </div>
           <div>
