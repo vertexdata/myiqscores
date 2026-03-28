@@ -22,6 +22,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "What jobs suit someone with a 70 IQ?", answer: "Hands-on roles that allow learning through practice are often a great fit. This includes positions in agriculture, food service, retail stocking, cleaning services, and manufacturing assembly. Many people in this range build long, successful careers in these fields." },
     ],
   },
+  74: {
+    score: 74,
+    classification: "Borderline",
+    percentile: "4th",
+    rarity: "1 in 25",
+    detailedExplanation: "An IQ of 74 is in the borderline range at the 4th percentile. About 1 in 25 people score at or below this level. People at 74 can manage daily tasks, hold jobs, and live independently in many cases. The borderline range represents a transition zone — individuals may benefit from extra support but typically do not qualify for disability services.",
+    careerContext: "Many structured careers are accessible: food service, retail, landscaping, custodial work, and warehouse positions. On-the-job training and hands-on learning approaches work best. Reliability and work ethic matter more than test scores.",
+    faqItems: [
+      { question: "Is 74 a good IQ score?", answer: "An IQ of 74 is in the borderline range at the 4th percentile. While below average, many people at this level live independently and work regular jobs. IQ doesn't define your potential." },
+      { question: "Is 74 IQ a disability?", answer: "No. The intellectual disability threshold is generally IQ 70 with significant adaptive limitations. An IQ of 74 is above this threshold and in the borderline range." },
+      { question: "What jobs suit a 74 IQ?", answer: "Practical, structured roles: food service, retail stocking, landscaping, cleaning services, warehouse work. Many people at this level build stable, long-term careers through reliability and practical skill." },
+    ],
+  },
   75: {
     score: 75,
     classification: "Borderline",
@@ -100,6 +113,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 90 IQ enough for college?", answer: "Yes. An IQ of 90 is sufficient for most college programs. While elite academic programs may be more challenging, community colleges, state universities, and many private institutions are well within reach. Study skills and persistence matter more than a few IQ points." },
     ],
   },
+  93: {
+    score: 93,
+    classification: "Average",
+    percentile: "32nd",
+    rarity: "Common",
+    detailedExplanation: "An IQ of 93 is solidly average at the 32nd percentile. The 7-point gap from 100 is within normal variation and has no practical significance for daily life or career prospects. You are well within the range where most working professionals score.",
+    careerContext: "Every mainstream career is accessible at 93. The difference from 100 is invisible in any workplace. Focus on building specific skills and domain expertise.",
+    faqItems: [
+      { question: "Is 93 a good IQ score?", answer: "Yes, 93 is average. The 7-point difference from 100 has no practical significance. You are in the range where the majority of successful professionals score." },
+      { question: "Is 93 below average?", answer: "By 7 points technically, but it's classified as average (90-109). No one would describe 93 as meaningfully below average." },
+      { question: "What careers suit a 93 IQ?", answer: "Any career you're interested in. A 93 IQ places no restrictions on career choice. Success depends on skills, training, and effort." },
+    ],
+  },
   94: {
     score: 94,
     classification: "Average",
@@ -124,6 +150,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 95 a good IQ score?", answer: "Yes, 95 is a perfectly good score. It is average, falling at the 37th percentile. In practical terms, there is no meaningful difference between a 95 and a 100. Both represent typical human cognitive ability, and neither predicts success or failure on its own." },
       { question: "How close is 95 to the average IQ?", answer: "Very close. The average IQ is 100, and 95 is only one-third of a standard deviation below the mean. This difference is so small that it falls within the margin of error on most IQ tests. You could test at 95 one day and 100 the next." },
       { question: "Should I be concerned about an IQ of 95?", answer: "Not at all. A score of 95 is well within the normal range and indicates typical cognitive functioning. IQ tests have a standard error of measurement of about 3-5 points, meaning a 95 could easily be a 98 or 100 on a different day." },
+    ],
+  },
+  99: {
+    score: 99,
+    classification: "Average",
+    percentile: "47th",
+    rarity: "Most common",
+    detailedExplanation: "An IQ of 99 is one single point below the mean — a difference so small it's literally within rounding error. At the 47th percentile, you are effectively average by every meaningful measure. The distinction between 99 and 100 has zero practical significance.",
+    careerContext: "At 99, you are at the average. Every career is accessible, and your success depends entirely on factors other than IQ.",
+    faqItems: [
+      { question: "Is 99 a good IQ score?", answer: "Yes, 99 is average — one point from the exact mean. The difference between 99 and 100 is completely meaningless in practice." },
+      { question: "Is 99 below average?", answer: "By one single point. This is within rounding error of any IQ test and has absolutely zero practical significance." },
+      { question: "What does 99 IQ mean?", answer: "It means you have perfectly normal cognitive ability. The one-point gap from 100 is invisible in every context. Focus on your strengths and interests, not on a single IQ point." },
     ],
   },
   100: {
@@ -477,6 +516,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Can someone with an 82 IQ attend college?", answer: "Yes, particularly community colleges and vocational programs. Hands-on degree programs in trades, culinary arts, or healthcare support are strong options. Some four-year programs are also achievable with good study habits and motivation." },
     ],
   },
+  87: {
+    score: 87,
+    classification: "Low Average",
+    percentile: "19th",
+    rarity: "1 in 5",
+    detailedExplanation: "An IQ of 87 is in the low average range at the 19th percentile. About 1 in 5 people score at or below this level. The 13-point gap from 100 is relatively small in daily life — people at 87 handle finances, follow news, navigate relationships, and manage work responsibilities effectively. This is a common, functional score.",
+    careerContext: "Most blue-collar and many white-collar careers are accessible at 87. Sales, office work, supervisory roles, skilled trades, and service industry positions are all realistic. At this level, practical skills and interpersonal abilities drive career success more than cognitive test scores.",
+    faqItems: [
+      { question: "Is 87 a good IQ score?", answer: "An IQ of 87 is low average at the 19th percentile. It's a functional score for daily life and most careers. About 1 in 5 people score at or below this level — it's more common than many think." },
+      { question: "Can someone with 87 IQ succeed?", answer: "Absolutely. The 13-point gap from average has minimal practical impact. Many successful workers, business owners, and community leaders have IQs in this range. Motivation and skills matter far more." },
+      { question: "Is 87 IQ below average?", answer: "Technically yes, by 13 points. It's classified as low average (80-89 range). But low average is still within the normal range — no functional limitations for everyday life." },
+    ],
+  },
   88: {
     score: 88,
     classification: "Low Average",
@@ -529,6 +581,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "What can I achieve with a 96 IQ?", answer: "Anything someone with a 100 IQ can achieve. The difference is negligible. College, professional careers, entrepreneurship — none of these are affected by a 4-point difference from the mean." },
     ],
   },
+  97: {
+    score: 97,
+    classification: "Average",
+    percentile: "42nd",
+    rarity: "Most common",
+    detailedExplanation: "An IQ of 97 is virtually identical to 100. At the 42nd percentile, the 3-point gap is well within the standard error of any IQ test. You could score 97 today and 101 tomorrow just from normal testing variation. This is the definition of average — normal, healthy cognitive functioning.",
+    careerContext: "At 97, IQ is not a factor in career planning. You are in the dead center of the normal range. Every career path is fully accessible.",
+    faqItems: [
+      { question: "Is 97 a good IQ score?", answer: "Yes, 97 is perfectly average. The 3-point gap from 100 is within testing error. You are statistically indistinguishable from someone scoring 100." },
+      { question: "Is 97 below average?", answer: "By 3 points, which is meaningless. IQ tests have a standard error of 3-5 points. A 97 could be a 100 or 101 on a different day." },
+      { question: "Should I worry about a 97 IQ?", answer: "Absolutely not. 97 is the definition of normal. Your IQ is not a bottleneck for any life goal." },
+    ],
+  },
   98: {
     score: 98,
     classification: "Average",
@@ -542,6 +607,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Should I worry about a 98 IQ?", answer: "Absolutely not. A 98 is the definition of normal. It places you in the most common range of human intelligence. Your IQ is not a bottleneck for any life goal." },
     ],
   },
+  101: {
+    score: 101,
+    classification: "Average",
+    percentile: "53rd",
+    rarity: "Most common",
+    detailedExplanation: "An IQ of 101 is one point above the mean — functionally identical to 100. At the 53rd percentile, you score higher than 53% of people. The difference from 100 is within rounding error. If someone tells you their IQ is 101, they are average — and average is perfectly good.",
+    careerContext: "At 101, IQ is a complete non-factor in your career. Every path is open. Invest your energy in skills, relationships, and experience rather than thinking about one IQ point.",
+    faqItems: [
+      { question: "Is 101 a good IQ score?", answer: "Yes, 101 is average — one point above the mean. It's functionally identical to 100 and represents normal cognitive ability." },
+      { question: "Is 101 above average?", answer: "By one point, technically. But this is within testing error and completely meaningless in practice. Psychologists would call this average without qualification." },
+      { question: "What can I do with a 101 IQ?", answer: "Anything someone with 100 IQ can do — which is essentially anything. The one-point difference is invisible." },
+    ],
+  },
   102: {
     score: 102,
     classification: "Average",
@@ -553,6 +631,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 102 a good IQ score?", answer: "Yes, 102 is a good, average score at the 55th percentile. It is functionally identical to 100. You are right in the middle of normal human cognitive ability." },
       { question: "Is 102 above average?", answer: "Technically yes, by 2 points. But this difference is within the margin of error of IQ tests. Psychologists classify 90-109 as average. At 102, you are in the center of the average range — neither notably above nor below." },
       { question: "What does a 102 IQ mean for my life?", answer: "It means IQ is not a factor you need to think about. A 102 places you squarely in the middle of normal cognitive ability. Your life outcomes will depend on your choices, opportunities, work ethic, and relationships — not on 2 IQ points above the mean." },
+    ],
+  },
+  103: {
+    score: 103,
+    classification: "Average",
+    percentile: "58th",
+    rarity: "Common",
+    detailedExplanation: "An IQ of 103 is 3 points above average — a difference within testing error. At the 58th percentile, you score higher than about 58% of people. This is squarely in the middle of the average range and represents completely normal cognitive ability.",
+    careerContext: "At 103, every career path is accessible. Your 3-point edge over the mean is invisible in any professional context. Skills and experience determine your success.",
+    faqItems: [
+      { question: "Is 103 a good IQ score?", answer: "Yes, 103 is average at the 58th percentile. The 3-point difference from 100 is within testing error and has no practical significance." },
+      { question: "Is 103 above average?", answer: "By 3 points technically, but within the average range (90-109). No meaningful distinction from 100." },
+      { question: "What does 103 IQ mean for my life?", answer: "It means IQ isn't something you need to think about. You have normal cognitive ability and your life outcomes depend on your choices, skills, and opportunities." },
     ],
   },
   104: {
