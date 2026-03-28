@@ -33,6 +33,7 @@ export const AppRoutes = () => (
       <Route key={slug} path={`/average-iq/${slug}`} element={<CountryIQ />} />
     ))}
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+    <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>

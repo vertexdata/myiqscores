@@ -92,21 +92,40 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
   const shareText = `I scored ${iq} on the MyIQScores IQ Test! 🧠 Take yours:`;
   const shareUrl = "https://myiqscores.com";
 
-  // Save score to database
+  // Save score to database and send results email
   useEffect(() => {
-    const saveScore = async () => {
+    const saveAndEmail = async () => {
       try {
+        const id = crypto.randomUUID();
         await supabase.from("leads").insert({
+          id,
           name: userName,
           email: userEmail,
           iq_score: iq,
           correct_answers: correctCount,
         });
+
+        // Send IQ results email
+        await supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "iq-results",
+            recipientEmail: userEmail,
+            idempotencyKey: `iq-results-${id}`,
+            templateData: {
+              name: userName,
+              iqScore: iq,
+              label,
+              percentile,
+              correctCount,
+              totalQuestions: questions.length,
+            },
+          },
+        });
       } catch (e) {
-        console.error("Failed to save score:", e);
+        console.error("Failed to save score or send email:", e);
       }
     };
-    saveScore();
+    saveAndEmail();
   }, []);
 
   const handleCopy = () => {
