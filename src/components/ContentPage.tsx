@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 import { Brain, ArrowRight } from "lucide-react";
 import BackgroundEffect from "./BackgroundEffect";
+import AdUnit from "./AdUnit";
+import { AD_SLOTS } from "@/config/adsense";
 
 interface ContentPageProps {
   children: React.ReactNode;
   ctaText?: string;
   relatedPages?: { title: string; href: string }[];
+  showLeaderboard?: boolean;
+  showSidebar?: boolean;
 }
 
 const ContentPage = ({
   children,
   ctaText = "Think you can score higher? Take the free IQ test",
   relatedPages,
+  showLeaderboard = true,
+  showSidebar = true,
 }: ContentPageProps) => (
   <div className="relative min-h-screen">
     <BackgroundEffect />
@@ -47,9 +53,39 @@ const ContentPage = ({
 
     {/* Article Content */}
     <main className="relative z-10 pt-20 sm:pt-24 pb-16 px-4 sm:pb-16 pb-24">
-      <article className="max-w-3xl mx-auto prose-content overflow-x-hidden">
-        {children}
-      </article>
+      {/* Leaderboard ad — top of content */}
+      {showLeaderboard && (
+        <div className="max-w-3xl mx-auto mb-6">
+          <AdUnit
+            slotId={AD_SLOTS.leaderboard}
+            format="display"
+            size="responsive"
+            className="!my-0 hidden sm:block"
+          />
+          <AdUnit
+            slotId={AD_SLOTS.leaderboard}
+            format="display"
+            size="320x50"
+            className="!my-0 sm:hidden"
+          />
+        </div>
+      )}
+
+      <div className="max-w-5xl mx-auto flex gap-8">
+        {/* Main content */}
+        <article className="max-w-3xl w-full prose-content overflow-x-hidden">
+          {children}
+        </article>
+
+        {/* Sticky sidebar ad — desktop only */}
+        {showSidebar && (
+          <aside className="hidden lg:block w-[300px] flex-shrink-0">
+            <div className="sticky top-20">
+              <AdUnit slotId={AD_SLOTS.sidebar} format="display" size="300x250" />
+            </div>
+          </aside>
+        )}
+      </div>
 
       {/* Related Pages Section */}
       {relatedPages && relatedPages.length > 0 && (
@@ -87,6 +123,11 @@ const ContentPage = ({
         </div>
       </div>
     </main>
+
+    {/* Multiplex ad — above footer */}
+    <div className="max-w-5xl mx-auto px-4">
+      <AdUnit slotId={AD_SLOTS.multiplex} format="multiplex" size="responsive" />
+    </div>
 
     {/* Footer */}
     <footer className="relative z-10 border-t border-[rgba(255,255,255,0.06)] mt-8">

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Shield, Twitter, Facebook, Linkedin, Copy, Check, Lock, Award } from "lucide-react";
+import AdUnit from "./AdUnit";
+import { AD_SLOTS } from "@/config/adsense";
 import { questions } from "@/data/questions";
 import { calculateIQ, getIQLabel, getPercentile, getCategoryScores, categories } from "@/data/questions";
 import { supabase } from "@/integrations/supabase/client";
@@ -168,7 +170,8 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
       animate="show"
     >
       <div className="max-w-2xl mx-auto">
-        {/* Ad slot — enable when traffic reaches 10K/mo */}
+        {/* Bottom results ad */}
+        <AdUnit slotId={AD_SLOTS.resultsBottom} format="display" size="responsive" className="mt-6" />
 
         {/* SECTION A: Free Results */}
         <motion.div variants={fadeUp} className="text-center mb-10">
@@ -203,6 +206,9 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
         </motion.div>
 
         <motion.div variants={fadeUp} className="glass-card p-6 mb-8">
+          {/* Ad after score reveal */}
+          <AdUnit slotId={AD_SLOTS.resultsTop} format="display" size="responsive" className="mb-6" />
+
           <h3 className="font-heading font-bold text-foreground mb-4">Category Breakdown</h3>
           <div className="space-y-3">
             {categories.map((cat) => {
@@ -359,7 +365,8 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
           </p>
         </motion.div>
 
-        {/* Ad slot — enable when traffic reaches 10K/mo */}
+        {/* Bottom results ad */}
+        <AdUnit slotId={AD_SLOTS.resultsBottom} format="display" size="responsive" className="mt-6" />
       </div>
     </motion.div>
   );

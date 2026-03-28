@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { questions } from "@/data/questions";
 import { Check } from "lucide-react";
+import AdUnit from "./AdUnit";
+import { AD_SLOTS } from "@/config/adsense";
 
 interface QuizProps {
   onComplete: (answers: (number | null)[]) => void;
@@ -135,6 +137,14 @@ const Quiz = ({ onComplete }: QuizProps) => {
                 })}
               </div>
             </div>
+
+            {/* Ad between every 5th question */}
+            {(currentQ === 4 || currentQ === 9 || currentQ === 14 || currentQ === 19 || currentQ === 24) && (
+              <div className="mt-6 border-t border-[rgba(255,255,255,0.06)] pt-4">
+                <AdUnit slotId={AD_SLOTS.betweenQuestions} format="display" size="responsive" className="!my-2" />
+                <div className="border-b border-[rgba(255,255,255,0.06)] mt-4" />
+              </div>
+            )}
 
             <div className="mt-6 flex justify-end">
               <button

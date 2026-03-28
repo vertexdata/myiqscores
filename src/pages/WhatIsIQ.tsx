@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
+import InArticleAd from "@/components/InArticleAd";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -176,6 +177,8 @@ const WhatIsIQ = () => (
       <Link to="/iq-score-ranges">complete IQ score ranges guide</Link>.
     </p>
 
+    <InArticleAd slot="first" />
+
     <h2>The IQ Bell Curve Explained</h2>
     <p>
       IQ scores follow a <strong>normal distribution</strong> (also called a Gaussian distribution or
@@ -251,6 +254,8 @@ const WhatIsIQ = () => (
       social contexts effectively. This "street smarts" is often poorly correlated with IQ test
       performance but highly predictive of real-world success.
     </p>
+
+    <InArticleAd slot="second" />
 
     <h2>Can You Improve Your IQ?</h2>
     <p>

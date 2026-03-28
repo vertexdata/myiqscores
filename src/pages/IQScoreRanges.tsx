@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
+import InArticleAd from "@/components/InArticleAd";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -237,6 +238,8 @@ const IQScoreRanges = () => {
         <Link to="/is-115-iq-good">IQ 115</Link>.
       </p>
 
+      <InArticleAd slot="first" />
+
       {/* IQ 90-109 */}
       <h2>IQ 90–109 — Average</h2>
       <p>
@@ -317,6 +320,8 @@ const IQScoreRanges = () => {
         on <Link to="/is-70-iq-good">IQ 70</Link> and{" "}
         <Link to="/is-75-iq-good">IQ 75</Link>.
       </p>
+
+      <InArticleAd slot="second" />
 
       {/* IQ Scores by Career */}
       <h2>IQ Scores by Career</h2>
