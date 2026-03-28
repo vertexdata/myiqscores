@@ -243,6 +243,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does Buffett's IQ compare to other billionaires?", answer: "Buffett's estimated 130-145 is lower than some tech billionaires (Bezos ~145-155, Gates ~150-160) but well into the gifted range. His particular strength is sustained analytical discipline over decades rather than rapid innovation." },
     ],
   },
+  {
+    name: "Kanye West",
+    slug: "kanye-west",
+    estimatedIQ: "115–130",
+    knownFor: "Rapper, producer, fashion designer, Yeezy",
+    description: "Kanye West's IQ is estimated between 115 and 130 based on his demonstrated creative and business abilities. West revolutionized hip-hop production multiple times, built a billion-dollar fashion brand, and has shown an ability to synthesize ideas across music, fashion, architecture, and culture. His creative output suggests strong spatial reasoning and pattern recognition, while his business ventures demonstrate strategic thinking.",
+    iqContext: "West is a polarizing figure, but his cognitive abilities are significant. His capacity to master multiple creative domains — producing Grammy-winning albums while simultaneously building a fashion empire — requires genuine intellectual versatility. However, West also demonstrates that high cognitive ability doesn't guarantee sound judgment in all areas, as his public controversies illustrate the gap between intelligence and wisdom.",
+    faqItems: [
+      { question: "What is Kanye West's IQ?", answer: "Kanye's IQ is estimated at 115-130. No verified score exists. This estimate reflects his demonstrated creative genius across music production, fashion design, and brand building — domains that require genuine cognitive ability." },
+      { question: "Is Kanye West a genius?", answer: "In music production and creative design, Kanye has demonstrated genius-level innovation. Whether his estimated IQ of 115-130 reaches the formal 140+ genius threshold is debatable, but his creative output and cultural impact are undeniable." },
+      { question: "How does Kanye compare to other musicians?", answer: "Among musicians, Kanye's business acumen and cross-domain creativity are exceptional. His ability to succeed in both music and fashion suggests cognitive versatility that goes beyond typical musical talent." },
+    ],
+  },
+  {
+    name: "Shakira",
+    slug: "shakira",
+    estimatedIQ: "130–140",
+    knownFor: "Singer, songwriter, speaks 7 languages",
+    description: "Shakira's IQ is estimated between 130 and 140, placing her in the gifted range. The Colombian singer speaks seven languages (Spanish, English, Portuguese, French, Italian, Arabic, and Catalan), writes her own music and lyrics, and has built a global entertainment empire. Speaking multiple languages at high proficiency is strongly correlated with cognitive ability, as it requires exceptional working memory, pattern recognition, and cognitive flexibility.",
+    iqContext: "Shakira's multilingualism alone suggests above-average cognitive ability — research shows polyglots tend to have significantly higher IQs than monolinguals. Her additional skills in songwriting, dance choreography, business management, and philanthropic work (she founded the Pies Descalzos Foundation building schools in Colombia) demonstrate the broad cognitive versatility characteristic of gifted individuals.",
+    faqItems: [
+      { question: "What is Shakira's IQ?", answer: "Shakira's IQ is estimated at 130-140 based on her demonstrated cognitive abilities, particularly her fluency in seven languages. Multilingualism at this level is strongly associated with gifted-range IQ." },
+      { question: "How many languages does Shakira speak?", answer: "Shakira speaks seven languages: Spanish (native), English, Portuguese, French, Italian, Arabic, and Catalan. This level of multilingualism requires exceptional working memory and cognitive flexibility." },
+      { question: "Is Shakira one of the smartest celebrities?", answer: "By cognitive indicators, yes. Her seven-language fluency, songwriting ability, and business success suggest IQ in the gifted range. She combines creative talent with intellectual depth rarely seen among entertainers." },
+    ],
+  },
+  {
+    name: "Benjamin Franklin",
+    slug: "benjamin-franklin",
+    estimatedIQ: "160",
+    knownFor: "Founding Father, inventor, scientist, diplomat",
+    description: "Benjamin Franklin is estimated to have had an IQ of approximately 160, making him one of the most intellectually gifted of America's Founding Fathers. Franklin was a true polymath: he was a leading scientist (electricity experiments), inventor (bifocals, lightning rod, Franklin stove), writer (Poor Richard's Almanack), printer, postmaster, diplomat, and political theorist. His ability to excel across science, literature, business, and statecraft reflects extraordinary cognitive versatility.",
+    iqContext: "Franklin's estimated 160 IQ places him in Einstein's range. His particular genius was practical — he excelled not at abstract theory but at applying intelligence to real-world problems. From inventing the lightning rod to negotiating France's crucial support during the American Revolution, Franklin demonstrated that the highest intelligence is most valuable when applied practically. He is arguably the most well-rounded genius in American history.",
+    faqItems: [
+      { question: "What was Benjamin Franklin's IQ?", answer: "Franklin's IQ is estimated at approximately 160. This estimate reflects his extraordinary achievements across science, invention, writing, diplomacy, and political theory — a breadth of accomplishment matched by very few historical figures." },
+      { question: "Was Franklin smarter than other Founding Fathers?", answer: "Franklin is generally estimated as having the highest or second-highest IQ among the Founders, alongside Thomas Jefferson (estimated 150-160). Franklin's particular strength was practical application of intelligence across diverse domains." },
+      { question: "What made Franklin a genius?", answer: "Franklin's genius was his extraordinary versatility — he made world-class contributions to science, invention, literature, and diplomacy. His practical intelligence and curiosity drove him to master whatever subject captured his interest." },
+    ],
+  },
+  {
+    name: "Marilyn Monroe",
+    slug: "marilyn-monroe",
+    estimatedIQ: "163",
+    knownFor: "Actress, cultural icon, Hollywood legend",
+    description: "Marilyn Monroe reportedly had an IQ of 163 — higher than Einstein's estimated 160. This surprising fact challenges the stereotype of the 'dumb blonde' that Monroe herself helped create as a Hollywood persona. Monroe was an avid reader with a personal library of over 400 books, studied at UCLA, and was known for her sharp wit in private. Her public persona was a carefully constructed performance that masked genuine intellectual depth.",
+    iqContext: "Monroe's case powerfully illustrates how public perception can diverge from reality. Her reported 163 IQ would place her in the profoundly gifted range — smarter than approximately 99.99% of the population. Yet she was consistently perceived as unintelligent because of her blonde bombshell image. Monroe's story is a cautionary tale about judging intelligence by appearance, and about how gender stereotypes can mask cognitive ability.",
+    faqItems: [
+      { question: "What was Marilyn Monroe's IQ?", answer: "Monroe reportedly had an IQ of 163, though the source and test methodology are debated. If accurate, this would place her higher than Einstein's estimated 160. She was a voracious reader with a 400+ book library." },
+      { question: "Was Marilyn Monroe really smart?", answer: "Evidence suggests yes. Beyond the reported 163 IQ, Monroe studied at UCLA, was known for intellectual curiosity in private, maintained a substantial personal library, and her private letters reveal sophisticated thinking. Her 'dumb blonde' persona was a deliberate performance." },
+      { question: "How did Monroe hide her intelligence?", answer: "Monroe cultivated a public persona as a sex symbol and comedic actress, which audiences interpreted as unintelligent. In an era when female intelligence was often threatening to men, playing down her intellect may have been a survival strategy in Hollywood." },
+    ],
+  },
+  {
+    name: "LeBron James",
+    slug: "lebron-james",
+    estimatedIQ: "110–120",
+    knownFor: "NBA legend, 4x champion, business mogul",
+    description: "LeBron James' IQ is estimated between 110 and 120 based on his demonstrated cognitive abilities both on and off the basketball court. James is renowned for his photographic memory of basketball plays — he can recall specific sequences from games years ago. Off the court, he has built a billion-dollar business empire spanning media (SpringHill), restaurants, and investments, requiring strategic and financial intelligence that goes far beyond athletics.",
+    iqContext: "LeBron's basketball IQ is widely considered the highest in NBA history. He processes game situations faster than virtually any player, anticipates plays several steps ahead, and makes optimal decisions under extreme pressure. While 'basketball IQ' isn't the same as general IQ, research shows elite athletes score above average on cognitive tests measuring executive function and spatial processing. LeBron's business success further suggests above-average general cognitive ability.",
+    faqItems: [
+      { question: "What is LeBron James' IQ?", answer: "LeBron's IQ is estimated at 110-120 based on his demonstrated cognitive abilities. His photographic memory, basketball decision-making, and business empire suggest above-average general intelligence combined with exceptional domain-specific skills." },
+      { question: "Does LeBron have a photographic memory?", answer: "LeBron has demonstrated remarkable memory for basketball plays, recalling specific sequences from games years prior in press conferences. Whether this constitutes true 'photographic memory' is debated, but his recall ability is exceptional by any standard." },
+      { question: "How smart is LeBron off the court?", answer: "Very. LeBron has built a billion-dollar business portfolio including a media company, restaurant chain, and numerous investments. He is politically engaged, runs a school for at-risk youth, and negotiates his own business deals — all requiring genuine cognitive ability." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {

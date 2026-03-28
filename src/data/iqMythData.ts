@@ -80,6 +80,54 @@ export const iqMythData: IQMythInfo[] = [
       { question: "If brain size doesn't matter much, what does?", answer: "Neural efficiency (processing speed per neuron), white matter integrity (quality of connections), cortical thickness in frontal and parietal regions, and the overall organization of neural networks are stronger predictors of cognitive ability than brain volume." },
     ],
   },
+  {
+    title: "Does Reading Make You Smarter?",
+    slug: "does-reading-make-you-smarter",
+    myth: "Reading books significantly increases your IQ and makes you more intelligent.",
+    reality: "Reading builds crystallized intelligence (vocabulary, knowledge) and may modestly improve fluid intelligence. It's one of the best cognitive activities but won't dramatically raise IQ.",
+    explanation: "Reading is genuinely one of the best activities for cognitive development, but its effects on IQ are more nuanced than the simple claim suggests. Reading consistently builds crystallized intelligence — vocabulary, general knowledge, and verbal reasoning — which is directly measured by IQ tests. Studies show that children who read regularly score 5-10 points higher on verbal IQ subtests. For fluid intelligence (abstract reasoning), the evidence is weaker but still positive: complex reading material exercises working memory, attention, and analytical thinking. A study at Emory University found that reading fiction creates measurable changes in brain connectivity lasting days after reading. The key distinction: reading makes you more knowledgeable and verbally skilled (which shows up on IQ tests) rather than fundamentally increasing your raw processing power. But since IQ tests measure both crystallized and fluid intelligence, regular reading can genuinely improve your score, particularly on verbal subtests.",
+    faqItems: [
+      { question: "Does reading increase IQ?", answer: "Reading primarily builds crystallized intelligence (vocabulary, knowledge), which is measured by IQ tests. Regular readers score 5-10 points higher on verbal IQ subtests. Effects on fluid intelligence (abstract reasoning) are smaller but still positive." },
+      { question: "What type of reading is best for intelligence?", answer: "Complex material that challenges your comprehension — literary fiction, science non-fiction, philosophy, and long-form journalism. Easy, repetitive reading (simple genre fiction, social media) provides less cognitive benefit. The key is reading material that stretches your current ability." },
+      { question: "How much reading is needed to see IQ benefits?", answer: "Studies suggest 30+ minutes of daily reading produces measurable cognitive benefits. The effects are cumulative — lifelong readers show the strongest advantages. Even starting a reading habit in adulthood produces benefits, though the effects are strongest when reading begins in childhood." },
+    ],
+  },
+  {
+    title: "Is IQ Fixed at Birth?",
+    slug: "is-iq-fixed-at-birth",
+    myth: "Your IQ is completely determined by your genes and fixed at birth — it never changes.",
+    reality: "IQ has a strong genetic component (50-80%) but is significantly influenced by environment, especially during childhood. IQ can change, particularly in youth.",
+    explanation: "The nature vs. nurture debate about IQ is one of the most studied topics in psychology, and the answer is clear: it's both. Twin studies show that genetics account for approximately 50-80% of IQ variation in adults, with the genetic contribution increasing from childhood (about 40%) to adulthood (about 80%). However, this leaves 20-50% influenced by environment. The Flynn Effect — the 3-point-per-decade rise in IQ scores across populations — proves that environmental factors like nutrition, education, healthcare, and cultural complexity significantly impact cognitive development. A study from University College London tracked teenagers' IQ scores over 4 years and found individual changes of up to 20 points, with corresponding changes visible in brain structure on MRI scans. Adoption studies show that children moved from deprived to enriched environments gain 10-15 IQ points. The bottom line: your genes set a range of potential, but your environment determines where within that range you land.",
+    faqItems: [
+      { question: "Is IQ determined at birth?", answer: "Partially. Genetics set a range of potential (estimated 50-80% influence), but environment, nutrition, education, and enrichment determine where within that range a person scores. IQ is not fixed — it can change, especially during childhood and adolescence." },
+      { question: "Can IQ change over a lifetime?", answer: "Yes. IQ scores can change by 10-20 points during childhood and adolescence. In adulthood, scores are more stable but can still shift by 3-10 points through lifestyle changes. The Flynn Effect proves that populations' IQ scores change over generations." },
+      { question: "What percentage of IQ is genetic?", answer: "Approximately 50-80% of IQ variation is attributable to genetics in adults. In children, the genetic contribution is lower (~40%), with environment playing a larger role. This means environment matters most during the critical developmental years." },
+    ],
+  },
+  {
+    title: "Do Bilingual People Have Higher IQs?",
+    slug: "bilingual-iq",
+    myth: "Speaking two or more languages automatically means you have a higher IQ.",
+    reality: "Bilingualism doesn't cause higher IQ, but it does enhance executive function, and bilinguals perform slightly better on certain cognitive tasks. The relationship is complex.",
+    explanation: "The relationship between bilingualism and intelligence is more nuanced than either 'bilinguals are smarter' or 'language doesn't affect intelligence.' Research shows bilingual individuals perform better on tasks requiring executive function — inhibitory control, task switching, and working memory — skills that overlap with what IQ tests measure. A meta-analysis published in Psychological Bulletin found small but consistent advantages for bilinguals on non-verbal reasoning tasks. However, it's unclear whether bilingualism causes these advantages or whether people with higher cognitive ability are more likely to successfully learn a second language. What is clear: bilingualism delays dementia onset by approximately 4-5 years, suggesting lasting neuroprotective effects. The cognitive demands of constantly managing two language systems appear to strengthen neural networks involved in executive control. So while bilingualism may not 'increase IQ' in a simple sense, it does enhance specific cognitive skills and protect brain health long-term.",
+    faqItems: [
+      { question: "Do bilingual people have higher IQs?", answer: "Bilinguals show advantages in executive function (task switching, inhibitory control) but not necessarily higher overall IQ. The relationship is complex — higher cognitive ability may make language learning easier, and bilingualism may also enhance certain cognitive skills." },
+      { question: "Does learning a language increase IQ?", answer: "Learning a new language exercises working memory, attention, and pattern recognition — skills measured by IQ tests. While dramatic IQ increases are unlikely, language learning is one of the best cognitive activities and may modestly improve performance on certain IQ subtests." },
+      { question: "Does bilingualism prevent dementia?", answer: "Yes — research consistently shows bilingualism delays dementia onset by approximately 4-5 years. The constant cognitive exercise of managing two language systems strengthens neural networks and builds cognitive reserve that protects brain function in aging." },
+    ],
+  },
+  {
+    title: "Are Only Children Smarter?",
+    slug: "only-child-iq",
+    myth: "Only children are smarter than children with siblings because they get all the parental attention.",
+    reality: "Only children score slightly higher on IQ tests on average (1-3 points), likely due to more parental resources and attention, but the difference is trivially small.",
+    explanation: "Research does show that only children score about 1-3 IQ points higher than children with siblings on average. However, this tiny difference is driven by resource dilution theory — parents of one child can invest more time, money, and educational resources per child than parents of multiple children. It's not that being an only child makes you smarter; it's that having more resources directed at you gives a slight cognitive boost. The effect is comparable to birth order effects (first-borns also score slightly higher) and for the same reason — undivided parental attention during early development. Importantly, the 1-3 point advantage is so small that it's undetectable at the individual level. Many children with siblings score higher than many only children. The effect only appears in large population studies. Additionally, children with siblings may develop stronger social skills, emotional intelligence, and conflict resolution abilities — traits that IQ tests don't measure but that matter enormously for life success.",
+    faqItems: [
+      { question: "Are only children smarter?", answer: "Only children score about 1-3 IQ points higher on average in large studies. This tiny advantage is attributed to more parental resources and attention, not to any inherent cognitive difference. The effect is too small to matter at the individual level." },
+      { question: "Does having siblings lower your IQ?", answer: "Very slightly, on average. Each additional sibling is associated with about a 1-point decrease in average IQ, likely due to diluted parental resources. But the effect is so small that it's irrelevant for any individual comparison." },
+      { question: "Do only children have any disadvantages?", answer: "Only children may have less practice with social skills, conflict resolution, and sharing that naturally develop through sibling interactions. While they score marginally higher on IQ tests, they may score lower on measures of social competence and emotional resilience." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {
