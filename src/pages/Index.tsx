@@ -18,6 +18,19 @@ const pageTransition = {
   exit: { opacity: 0, scale: 0.98, transition: { duration: 0.25 } },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "MyIQScores",
+  url: "https://www.myiqscores.com",
+  description: "Free online IQ test with instant results. No sign-up required.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.myiqscores.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 const Index = () => {
   const [screen, setScreen] = useState<Screen>("landing");
   const [userData, setUserData] = useState({ name: "", email: "", ageRange: "" });
@@ -45,7 +58,8 @@ const Index = () => {
       <SEOHead
         title="Free IQ Test — Get Your Score Instantly | MyIQScores"
         description="Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall. Discover your cognitive edge."
-        canonicalUrl="https://myiqscores.com"
+        canonicalUrl="https://www.myiqscores.com"
+        jsonLd={websiteSchema}
       />
       <BackgroundEffect />
       <Navbar />

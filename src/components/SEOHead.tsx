@@ -10,7 +10,7 @@ interface SEOHeadProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const SITE_URL = "https://myiqscores.com";
+const SITE_URL = "https://www.myiqscores.com";
 const DEFAULT_IMAGE =
   "https://storage.googleapis.com/gpt-engineer-file-uploads/WYMU4VtnINe1xcVzzfyuW3Rd4m22/social-images/social-1774334778648-ChatGPT_Image_Mar_24,_2026,_02_46_00_AM.webp";
 

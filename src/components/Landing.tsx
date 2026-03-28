@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Brain, FlaskConical, Timer, Globe, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Brain, FlaskConical, Timer, Globe, ChevronDown, BookOpen, BarChart3, MapPin } from "lucide-react";
 
 const stagger = {
   hidden: {},
@@ -81,6 +82,25 @@ const Landing = ({ onStart }: LandingProps) => {
       <motion.p variants={fadeUp} className="mt-16 text-muted-foreground text-sm text-center">
         Join <span className="text-foreground font-semibold"><CountUp target={2147832} /></span> people who've discovered their IQ
       </motion.p>
+
+      {/* Internal links to content pages */}
+      <motion.div variants={fadeUp} className="mt-12 w-full max-w-3xl">
+        <p className="text-center text-sm text-muted-foreground mb-4">Learn more about IQ</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link to="/what-is-iq" className="glass-card p-4 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
+            <BookOpen className="w-5 h-5 text-primary mx-auto mb-2" />
+            <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">What Is IQ?</span>
+          </Link>
+          <Link to="/iq-score-ranges" className="glass-card p-4 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
+            <BarChart3 className="w-5 h-5 text-primary mx-auto mb-2" />
+            <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">IQ Score Ranges</span>
+          </Link>
+          <Link to="/average-iq-by-country" className="glass-card p-4 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
+            <MapPin className="w-5 h-5 text-primary mx-auto mb-2" />
+            <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">IQ by Country</span>
+          </Link>
+        </div>
+      </motion.div>
 
       <motion.div
         variants={fadeUp}

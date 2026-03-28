@@ -35,7 +35,7 @@ const IsXIQGood = () => {
     publisher: {
       "@type": "Organization",
       name: "MyIQScores",
-      url: "https://myiqscores.com",
+      url: "https://www.myiqscores.com",
     },
   };
 
