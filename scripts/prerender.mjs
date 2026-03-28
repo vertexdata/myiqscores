@@ -36,7 +36,8 @@ const careerSlugs = [
   "project-manager", "occupational-therapist", "master-electrician",
   "physician-assistant", "ux-designer", "financial-analyst", "radiologist",
   "clinical-pharmacist", "actuary", "economist", "nurse-practitioner",
-  "speech-language-pathologist",
+  "speech-language-pathologist", "personal-trainer", "anesthesiologist",
+  "content-creator", "retail-pharmacist", "veterinary-technician",
 ];
 
 // Routes to pre-render
@@ -111,6 +112,10 @@ const routes = [
   "/famous-iq/gordon-ramsay",
   "/famous-iq/alexandria-ocasio-cortez",
   "/famous-iq/pablo-picasso",
+  "/famous-iq/elon-musk-children-iq",
+  "/famous-iq/andrew-tate",
+  "/famous-iq/cardi-b",
+  "/famous-iq/joe-rogan",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",

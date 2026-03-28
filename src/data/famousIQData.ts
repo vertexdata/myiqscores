@@ -698,6 +698,58 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does artistic genius relate to IQ?", answer: "Standard IQ tests partially measure spatial-visual intelligence but miss much of creative ability. Picasso's genius was in seeing spatial relationships differently than anyone before him — a cognitive gift that goes beyond what IQ scores capture." },
     ],
   },
+  {
+    name: "Elon Musk's Children",
+    slug: "elon-musk-children-iq",
+    estimatedIQ: "140–160",
+    knownFor: "Children of the world's richest person",
+    description: "Elon Musk's children are frequently searched in the context of IQ inheritance. With Musk's estimated IQ of 150-155 and his partners' high intelligence (Grimes studied neuroscience, Justine Musk is a published author), genetic research suggests his children likely inherited above-average cognitive ability. However, IQ inheritance is complex — children's IQs tend to regress toward the mean, typically scoring closer to average than their parents.",
+    iqContext: "The genetics of IQ are polygenic (influenced by thousands of genes), meaning even two genius-level parents can have children with a wide range of IQs. Research shows children's IQs correlate about 0.4-0.6 with their parents' average IQ. For a parent with a 155 IQ, this predicts children averaging roughly 127-140 — gifted but not necessarily at the same extreme level. Environmental factors like education, nutrition, and stimulation also play significant roles.",
+    faqItems: [
+      { question: "What IQ do Elon Musk's children have?", answer: "No verified IQ scores exist for Musk's children. Based on parental IQ estimates and genetic research, their IQs are likely in the gifted range (130-150) but with wide individual variation due to the complexity of IQ inheritance." },
+      { question: "Do smart parents have smart kids?", answer: "On average, yes — parental IQ correlates 0.4-0.6 with children's IQ. But regression to the mean means children of very high-IQ parents tend to score closer to average than their parents. Two 150-IQ parents might have children averaging 130-140." },
+      { question: "Is IQ genetic?", answer: "About 50-80% of IQ variation is attributed to genetics in adults. However, IQ inheritance is polygenic (thousands of genes involved), making it much more complex than simple traits like eye color. Environment matters significantly, especially in childhood." },
+    ],
+  },
+  {
+    name: "Andrew Tate",
+    slug: "andrew-tate",
+    estimatedIQ: "110–120",
+    knownFor: "Internet personality, former kickboxer, controversial figure",
+    description: "Andrew Tate's IQ is estimated at 110-120 based on his demonstrated abilities in debate, business building, and content strategy. Tate built a large online following through provocative content and has shown strategic thinking in marketing and brand building. He is a four-time world kickboxing champion, which requires significant spatial and tactical intelligence. His rhetorical ability suggests above-average verbal intelligence.",
+    iqContext: "Tate's intelligence manifests primarily in persuasion, debate tactics, and marketing strategy. His ability to generate massive engagement through provocative content — regardless of its merits — requires understanding of audience psychology and platform algorithms. This represents a form of social and strategic intelligence that standard IQ tests only partially capture. His controversial views should be evaluated separately from his cognitive ability.",
+    faqItems: [
+      { question: "What is Andrew Tate's IQ?", answer: "Tate's IQ is estimated at 110-120. His debate skills, marketing strategy, and kickboxing career suggest above-average cognitive ability, particularly in verbal and strategic domains." },
+      { question: "Is Andrew Tate smart?", answer: "In terms of marketing, persuasion, and content strategy, Tate demonstrates above-average intelligence. His ability to build a massive brand through provocative content requires genuine strategic thinking. His views are a separate matter from his cognitive ability." },
+      { question: "How does debate skill relate to IQ?", answer: "Effective debating requires strong verbal reasoning, rapid information processing, and the ability to construct and deconstruct arguments in real time. These skills correlate moderately with IQ, particularly verbal IQ subtests." },
+    ],
+  },
+  {
+    name: "Cardi B",
+    slug: "cardi-b",
+    estimatedIQ: "105–115",
+    knownFor: "Grammy-winning rapper, reality TV, social media personality",
+    description: "Cardi B's IQ is estimated at 105-115 based on her demonstrated business acumen and cultural intelligence. Despite limited formal education, Cardi built a music career that includes a Grammy Award, multiple platinum albums, and lucrative brand partnerships. Her ability to leverage social media, navigate the music industry, and build an authentic personal brand demonstrates practical intelligence that exceeds what her educational background might suggest.",
+    iqContext: "Cardi represents a type of intelligence often overlooked in IQ discussions — social and practical intelligence. Her ability to connect authentically with massive audiences, negotiate business deals, and stay culturally relevant requires genuine cognitive ability in interpersonal and strategic domains. She demonstrates that formal education and IQ are not the same thing.",
+    faqItems: [
+      { question: "What is Cardi B's IQ?", answer: "Cardi B's IQ is estimated at 105-115. Her Grammy success, business deals, and masterful social media strategy suggest above-average practical and social intelligence despite limited formal education." },
+      { question: "Is Cardi B smart?", answer: "In social intelligence and business strategy, yes. Building a Grammy-winning career from reality TV, negotiating major brand deals, and maintaining massive cultural influence requires genuine cognitive ability — just not the kind typically measured by IQ tests." },
+      { question: "Does education equal intelligence?", answer: "No. Cardi B is a prime example — she didn't complete college but has demonstrated exceptional practical, social, and business intelligence. IQ and formal education are correlated but not the same thing." },
+    ],
+  },
+  {
+    name: "Joe Rogan",
+    slug: "joe-rogan",
+    estimatedIQ: "115–125",
+    knownFor: "Podcaster (JRE), UFC commentator, comedian",
+    description: "Joe Rogan's IQ is estimated at 115-125 based on his demonstrated ability to engage deeply with experts across dozens of fields. Rogan hosts the world's most popular podcast, interviewing neuroscientists, physicists, historians, and politicians with genuine comprehension. His ability to quickly grasp complex topics, ask insightful follow-up questions, and explain technical concepts to a lay audience suggests strong verbal comprehension and intellectual curiosity.",
+    iqContext: "Rogan's particular intelligence is in rapid learning and knowledge synthesis. He engages with more diverse expert knowledge in a year than most people encounter in a lifetime. While he lacks formal academic credentials, his demonstrated ability to comprehend and discuss quantum physics, neuroscience, evolutionary biology, and geopolitics at an informed level suggests genuine intellectual capacity in the superior range.",
+    faqItems: [
+      { question: "What is Joe Rogan's IQ?", answer: "Rogan's IQ is estimated at 115-125. His ability to engage meaningfully with experts across dozens of fields — from neuroscience to astrophysics to martial arts — suggests superior verbal comprehension and learning speed." },
+      { question: "Is Joe Rogan intelligent?", answer: "His podcast demonstrates genuine intellectual capacity. Engaging with world-class experts in physics, neuroscience, history, and dozens of other fields — and asking insightful questions — requires strong cognitive ability. His intelligence is broad rather than deep." },
+      { question: "How does podcast hosting relate to intelligence?", answer: "Hosting long-form expert interviews requires rapid comprehension, active listening, synthesis of complex information, and the verbal ability to ask meaningful questions. These skills correlate strongly with verbal IQ and intellectual curiosity." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
