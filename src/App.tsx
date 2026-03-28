@@ -12,6 +12,7 @@ import IsXIQGood from "./pages/IsXIQGood.tsx";
 import CountryIQ from "./pages/CountryIQ.tsx";
 import AverageIQByCountry from "./pages/AverageIQByCountry.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
 
@@ -32,6 +33,7 @@ export const AppRoutes = () => (
       <Route key={slug} path={`/average-iq/${slug}`} element={<CountryIQ />} />
     ))}
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+    <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>
