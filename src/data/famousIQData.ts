@@ -347,6 +347,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does Beyoncé compare to other entertainers intellectually?", answer: "Among entertainers, Beyoncé stands out for her strategic control and creative direction ability. While many performers have musical talent, few demonstrate her level of business sophistication and artistic conceptualization." },
     ],
   },
+  {
+    name: "Snoop Dogg",
+    slug: "snoop-dogg",
+    estimatedIQ: "130–145",
+    knownFor: "Rapper, actor, entrepreneur, cultural icon",
+    description: "Snoop Dogg's IQ is reportedly between 130 and 145, which would place him in the gifted range — a fact that surprises many people given his laid-back persona. Snoop has built an entertainment empire spanning music, film, television, consumer products, and cannabis business. His ability to maintain cultural relevance across four decades, reinvent his brand repeatedly, and build successful businesses across diverse industries suggests genuine strategic intelligence.",
+    iqContext: "Snoop's case illustrates how public persona can mask cognitive ability. His relaxed, playful image belies a sharp business mind that has navigated the entertainment industry for 30+ years. He has investments in tech companies, launched successful consumer brands, and hosted major network TV shows — achievements requiring strategic thinking and adaptability that go far beyond musical talent.",
+    faqItems: [
+      { question: "What is Snoop Dogg's IQ?", answer: "Snoop Dogg's IQ is reportedly 130-145, placing him in the gifted range. While this surprises many people, his four-decade career spanning music, business, television, and branding demonstrates genuine strategic intelligence." },
+      { question: "Is Snoop Dogg actually smart?", answer: "His business track record suggests yes. Snoop has maintained cultural relevance for 30+ years, built multiple successful brands, invested in tech companies, and successfully pivoted across entertainment mediums — achievements requiring real cognitive ability." },
+      { question: "How did Snoop Dogg build his empire?", answer: "Snoop leveraged his musical fame into diversified business ventures: Martha & Snoop's TV show, cannabis brands, media company (Death Row Records acquisition), tech investments, and consumer products. This cross-domain brand extension requires strategic thinking most celebrities don't possess." },
+    ],
+  },
+  {
+    name: "Jodie Foster",
+    slug: "jodie-foster",
+    estimatedIQ: "132",
+    knownFor: "Academy Award actress, director, Yale graduate",
+    description: "Jodie Foster reportedly has an IQ of 132, placing her in the gifted range. Foster graduated magna cum laude from Yale University with a degree in literature while simultaneously maintaining her acting career. She is fluent in French (having attended a French-language prep school) and has directed multiple films. Her ability to excel in both the intellectual rigor of Yale and the creative demands of Hollywood demonstrates exceptional cognitive versatility.",
+    iqContext: "Foster's 132 IQ places her above the Mensa threshold and reflects her demonstrated academic and creative abilities. Her Yale education (magna cum laude in literature) proves that her intelligence extends well beyond acting. She has described her approach to roles as analytical — studying characters with the rigor of a literary scholar. Foster represents the intersection of traditional academic intelligence with creative and emotional intelligence.",
+    faqItems: [
+      { question: "What is Jodie Foster's IQ?", answer: "Jodie Foster reportedly has an IQ of 132, placing her in the gifted range above the Mensa threshold. She graduated magna cum laude from Yale while maintaining a successful film career." },
+      { question: "Is Jodie Foster one of the smartest actors?", answer: "By academic credentials and reported IQ, yes. Her Yale magna cum laude degree, fluent French, and analytical approach to film direction place her among the most intellectually accomplished people in entertainment." },
+      { question: "Did Jodie Foster really go to Yale?", answer: "Yes. Foster earned a Bachelor's degree in Literature from Yale University, graduating magna cum laude. She attended Yale from 1980-1985, continuing to act during school breaks. She has spoken about how the analytical skills from her education informed her acting and directing." },
+    ],
+  },
+  {
+    name: "Dolph Lundgren",
+    slug: "dolph-lundgren",
+    estimatedIQ: "160",
+    knownFor: "Actor (Rocky IV), chemical engineer, martial artist",
+    description: "Dolph Lundgren, famous for playing Ivan Drago in Rocky IV, reportedly has an IQ of 160. Before his acting career, Lundgren earned a master's degree in chemical engineering from the University of Sydney and was awarded a Fulbright Scholarship to MIT. He speaks five languages and holds a 3rd dan black belt in karate. Lundgren is perhaps the most striking example of an action star whose intellectual achievements far exceed public perception.",
+    iqContext: "Lundgren's reported 160 IQ — matching Einstein's estimate — combined with his physical abilities makes him one of the most intellectually gifted actors in Hollywood history. His chemical engineering background, Fulbright Scholarship, and multilingualism demonstrate cognitive ability that his action movie roles completely obscure. Lundgren's story shows how dramatically public image can diverge from actual intelligence.",
+    faqItems: [
+      { question: "What is Dolph Lundgren's IQ?", answer: "Lundgren reportedly has an IQ of 160 — matching Einstein's estimate. He holds a master's in chemical engineering, was awarded a Fulbright Scholarship to MIT, and speaks five languages. He may be the most intellectually accomplished action star in film history." },
+      { question: "Did Dolph Lundgren go to MIT?", answer: "Lundgren was awarded a Fulbright Scholarship to MIT for chemical engineering. He began the program but left to pursue acting after being encouraged by his then-girlfriend, singer Grace Jones. His academic credentials are extraordinary for any profession, let alone acting." },
+      { question: "How many languages does Dolph Lundgren speak?", answer: "Lundgren speaks five languages: Swedish (native), English, German, French, and some Japanese. Combined with his master's degree and reported 160 IQ, his linguistic abilities reflect genuine intellectual versatility." },
+    ],
+  },
+  {
+    name: "James Woods",
+    slug: "james-woods",
+    estimatedIQ: "180",
+    knownFor: "Academy Award-nominated actor, MIT attendee",
+    description: "James Woods reportedly has an IQ of 180, which would place him among the highest ever recorded. Before his acting career, Woods was accepted to MIT where he studied political science, though he ultimately left to pursue acting. He scored a perfect 800 on the verbal SAT and near-perfect on the math section. His reputation for rapid-fire dialogue delivery and complex character portrayals in films like Casino and Once Upon a Time in America reflects exceptional verbal processing speed.",
+    iqContext: "If Woods' reported 180 IQ is accurate, he would be among the most cognitively gifted people alive — rarer than 1 in 20 million. His perfect verbal SAT and MIT acceptance are consistent with this claim. Woods chose acting over academia or science, demonstrating that high IQ individuals don't always follow stereotypical 'genius' career paths. His case raises the interesting question of how many extremely high-IQ individuals work in fields where their intelligence isn't obvious.",
+    faqItems: [
+      { question: "What is James Woods' IQ?", answer: "James Woods reportedly has an IQ of 180, among the highest ever claimed by a public figure. He scored 800 (perfect) on the verbal SAT and attended MIT. If accurate, his IQ would be higher than Einstein's estimate." },
+      { question: "Did James Woods go to MIT?", answer: "Yes, Woods was accepted to MIT where he studied political science. He left before graduating to pursue acting. His MIT acceptance and perfect verbal SAT are consistent with extraordinary cognitive ability." },
+      { question: "Is James Woods the smartest actor?", answer: "By reported IQ (180), possibly the highest among verified claims by actors. Other notably high-IQ actors include Dolph Lundgren (160), Jodie Foster (132), and Natalie Portman (Harvard graduate). However, reported celebrity IQ scores are not always verified through standard testing." },
+    ],
+  },
+  {
+    name: "Natalie Portman",
+    slug: "natalie-portman",
+    estimatedIQ: "135–145",
+    knownFor: "Academy Award actress, Harvard graduate, researcher",
+    description: "Natalie Portman's IQ is estimated between 135 and 145 based on her exceptional academic record. Portman graduated from Harvard with a degree in psychology, co-authored published neuroscience research, and speaks six languages (Hebrew, English, French, Japanese, German, and Arabic). She has managed to balance an Oscar-winning acting career with genuine academic pursuits, including studying at Hebrew University of Jerusalem.",
+    iqContext: "Portman's Harvard degree, published research, and multilingualism all independently suggest gifted-range cognitive ability. Her ability to maintain academic rigor while building a world-class acting career demonstrates not just intelligence but extraordinary time management and intellectual versatility. Among actors, Portman's academic credentials are nearly unmatched.",
+    faqItems: [
+      { question: "What is Natalie Portman's IQ?", answer: "Portman's IQ is estimated at 135-145 based on her Harvard psychology degree, published neuroscience research, and fluency in six languages. No verified IQ test score has been publicly disclosed." },
+      { question: "Did Natalie Portman really go to Harvard?", answer: "Yes. Portman earned a bachelor's degree in psychology from Harvard University in 2003. She also co-authored two published research papers in neuroscience. She attended Harvard despite already being a successful actress (she starred in Star Wars while at Harvard)." },
+      { question: "How many languages does Natalie Portman speak?", answer: "Portman speaks six languages: Hebrew (native), English, French, Japanese, German, and Arabic. This exceptional multilingualism is strongly correlated with high cognitive ability and is consistent with her estimated gifted-range IQ." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
