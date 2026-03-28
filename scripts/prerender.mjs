@@ -63,6 +63,12 @@ const routes = [
   "/famous-iq/barack-obama",
   "/famous-iq/kim-kardashian",
   "/famous-iq/cristiano-ronaldo",
+  "/iq-myths/do-video-games-make-you-smarter",
+  "/iq-myths/mozart-effect-iq",
+  "/iq-myths/birth-order-and-iq",
+  "/iq-myths/does-iq-determine-success",
+  "/iq-myths/iq-gender-differences",
+  "/iq-myths/brain-size-and-iq",
 ];
 
 async function prerender() {
