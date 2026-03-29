@@ -1478,58 +1478,6 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "What is the highest IQ ever recorded?", answer: "The highest reliably verified IQ scores are in the 180-200 range, depending on the test and methodology. Many psychologists argue that scores above 160 are not meaningfully comparable and should be treated as 'very high' rather than precise measurements." },
     ],
   },
-  165: {
-    score: 165,
-    classification: "Exceptionally Advanced",
-    percentile: "99.999th",
-    rarity: "1 in 200,000",
-    detailedExplanation: "An IQ of 165 is extraordinarily rare — about 1 in 200,000 people. Standard IQ tests cannot reliably measure at this level. People scoring here are among the most cognitively gifted humans alive.",
-    careerContext: "People at 165 are found at the absolute forefront of their fields — pioneering researchers, transformative technologists, and revolutionary thinkers.",
-    faqItems: [
-      { question: "Is 165 a good IQ score?", answer: "165 is extraordinarily rare at the 99.999th percentile. Only about 1 in 200,000 people reach this level. It represents the extreme upper limit of measured human cognition." },
-      { question: "Who has a 165 IQ?", answer: "Very few verified scores exist. Some Nobel laureates and elite mathematicians are estimated in this range." },
-      { question: "How rare is 165 IQ?", answer: "About 1 in 200,000 people. In a country of 330 million, roughly 1,650 people would score at this level." },
-    ],
-  },
-  170: {
-    score: 170,
-    classification: "Exceptionally Advanced",
-    percentile: "99.999th",
-    rarity: "1 in 650,000",
-    detailedExplanation: "An IQ of 170 is so rare that only about 1 in 650,000 people reach this level — roughly 500 people in the entire United States. Standard IQ tests cannot measure at this height; specialized assessments are required. People at this level process information in ways that are fundamentally different from the general population, often making intuitive leaps that take others months or years to follow logically.",
-    careerContext: "People at the 170 level are found among Nobel laureates, Fields Medal winners, and transformative innovators. Many create entirely new fields or paradigms rather than working within existing ones. Traditional career structures are often inadequate for this level of ability.",
-    faqItems: [
-      { question: "Is 170 a good IQ score?", answer: "A 170 IQ is among the rarest cognitive abilities documented. Only about 1 in 650,000 people score this high. It represents extraordinary processing ability at the extreme edge of human cognition." },
-      { question: "Who has a 170 IQ?", answer: "Very few verified scores exist at this level. Some estimates place chess champion Garry Kasparov near 190 and various Nobel laureates in the 160-180 range. Precise measurement at these extremes is inherently difficult." },
-      { question: "What is life like with a 170 IQ?", answer: "People at this level often describe profound intellectual isolation, frustration with the pace of normal interaction, and an overwhelming drive to understand complex systems. Finding intellectual peers is one of the biggest challenges." },
-    ],
-  },
-  180: {
-    score: 180,
-    classification: "Exceptionally Advanced",
-    percentile: "99.99997th",
-    rarity: "1 in 20 million",
-    detailedExplanation: "An IQ of 180 is almost incomprehensibly rare — estimated at about 1 in 20 million people. Fewer than 400 people alive today may have this level of cognitive ability. Standard IQ tests are completely incapable of measuring at this level. People estimated at 180+ include Isaac Newton, Leonardo da Vinci, and a handful of modern mathematicians. At this level, the individual's thinking is so far from the norm that communication with average-intelligence people becomes its own challenge.",
-    careerContext: "Historical figures estimated at this level fundamentally changed human knowledge: Newton invented calculus, da Vinci anticipated inventions centuries ahead, and modern 180+ individuals make contributions that reshape entire disciplines. Career is not really the right concept — these individuals define their own paths.",
-    faqItems: [
-      { question: "Is 180 IQ possible?", answer: "While some individuals clearly demonstrate cognitive abilities at this extreme, precisely measuring 180 IQ is essentially impossible with current tests. The score represents a theoretical estimate of extraordinary cognitive ability rather than a precise measurement." },
-      { question: "Who has a 180 IQ?", answer: "Historical estimates at or near 180 include Isaac Newton, Leonardo da Vinci, and Garry Kasparov. Among living people, certain mathematicians and theoretical physicists may approach this level, though verified scores are nearly impossible to obtain." },
-      { question: "How rare is a 180 IQ?", answer: "Approximately 1 in 20 million. In the entire world population of 8 billion, perhaps 400 people have this level of cognitive ability. It is so rare that meaningful statistical analysis is impossible." },
-    ],
-  },
-  200: {
-    score: 200,
-    classification: "Unmeasurable",
-    percentile: "~100th",
-    rarity: "Fewer than 1 in 1 billion",
-    detailedExplanation: "An IQ of 200 is largely a theoretical construct rather than a measurable reality. No standard or specialized IQ test can reliably assess at this level. Claims of 200+ IQs (William James Sidis at 250-300, Terence Tao at 220-230) are based on childhood ratio scores or extrapolations that most psychologists consider unreliable. If someone truly had a 200 IQ, their cognitive processing would be so far from the norm that we may lack the framework to fully comprehend it — analogous to an average person trying to understand what it's like to be Einstein.",
-    careerContext: "If anyone truly operates at this cognitive level, they would be among the 1-2 most intellectually gifted humans alive. At this theoretical extreme, the concept of career becomes meaningless — such individuals would be redefining human knowledge rather than filling professional roles.",
-    faqItems: [
-      { question: "Is a 200 IQ possible?", answer: "Theoretically, but it's essentially unmeasurable. No IQ test can reliably assess at this level. Claims of 200+ IQs are based on extrapolations and childhood ratio scores that most psychologists consider unreliable. A few individuals may have abilities at this level, but assigning a precise number is scientifically questionable." },
-      { question: "Who has a 200 IQ?", answer: "William James Sidis (estimated 250-300, highly disputed) and Terence Tao (estimated 220-230, childhood test) are most commonly cited. These estimates are controversial and should be treated as rough approximations rather than precise measurements." },
-      { question: "What would a 200 IQ person be like?", answer: "If someone truly had a 200 IQ, their cognitive distance from the average person (100) would equal the distance between the average person and someone with severe cognitive limitations (IQ ~0). They would process information in ways that are essentially incomprehensible to most people." },
-    ],
-  },
 };
 
 export const iqScores = Object.keys(iqScoreData).map(Number).sort((a, b) => a - b);
