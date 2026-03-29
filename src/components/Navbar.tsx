@@ -10,7 +10,7 @@ const Navbar = () => (
           My<span className="text-primary">IQ</span>Scores
         </span>
       </Link>
-      <span className="text-xs text-muted-foreground hidden sm:block">Discover your cognitive edge.</span>
+      <span className="text-xs text-muted-foreground hidden sm:block">The Most Accurate Free IQ Test Online</span>
     </div>
   </nav>
 );
