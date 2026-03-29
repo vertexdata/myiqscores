@@ -416,6 +416,66 @@ export const iqMythData: IQMythInfo[] = [
       { question: "Can the brain recover from trauma's cognitive effects?", answer: "Partially. Therapy (especially trauma-focused CBT and EMDR), stable relationships, and supportive environments can help restore cognitive function. Recovery is more complete when trauma is addressed earlier and when childhood environments improve." },
     ],
   },
+  {
+    title: "Does IQ Predict Creativity?",
+    slug: "iq-and-creativity",
+    myth: "High IQ people are automatically more creative. IQ and creativity are the same thing.",
+    reality: "IQ and creativity are partially independent. Above an IQ of about 120, additional IQ points don't predict additional creativity. Many highly creative people have average IQs.",
+    explanation: "The relationship between IQ and creativity follows what researchers call the 'threshold theory.' Below an IQ of about 120, IQ and creativity correlate moderately — you need sufficient cognitive ability to be creative. But above 120, the correlation largely disappears. This means a person with a 130 IQ is not more creative than one with 120 — other factors (openness to experience, divergent thinking, domain expertise, risk tolerance) become dominant. Studies using divergent thinking tests (generating multiple solutions to open-ended problems) find these are only weakly correlated with IQ. Many of history's most creative people — artists, musicians, entrepreneurs — had average or modestly above-average IQs. Creativity requires the ability to make novel connections, which is a different cognitive process from the convergent reasoning that IQ tests measure.",
+    faqItems: [
+      { question: "Does high IQ mean more creativity?", answer: "Only up to a point. Below IQ 120, there's a moderate correlation. Above 120, additional IQ doesn't predict additional creativity. Creativity depends more on personality traits like openness and on divergent thinking ability." },
+      { question: "Can someone be creative with an average IQ?", answer: "Absolutely. Many of history's most creative people had average or modestly above-average IQs. Creativity requires novel connection-making and divergent thinking — cognitive processes that are partially independent of IQ." },
+      { question: "What's the difference between IQ and creativity?", answer: "IQ measures convergent thinking (finding the one correct answer). Creativity involves divergent thinking (generating many possible answers). These are different cognitive processes that draw on overlapping but distinct brain networks." },
+    ],
+  },
+  {
+    title: "Does Cold Weather Make You Smarter?",
+    slug: "cold-weather-and-iq",
+    myth: "People in cold climates have higher IQs because cold weather forced evolutionary cognitive development.",
+    reality: "The correlation between latitude and IQ exists but is primarily explained by economic development, education access, and nutrition rather than climate directly selecting for intelligence.",
+    explanation: "There is a real correlation between distance from the equator and national average IQ scores — countries in northern latitudes tend to score higher. However, claiming cold weather 'causes' higher intelligence is a classic correlation-causation error. The actual explanatory factors are primarily socioeconomic: northern countries (Europe, Northeast Asia) industrialized earlier, developed universal education sooner, and achieved better nutrition and healthcare — all of which raise IQ scores. The Flynn Effect proves this: as developing tropical countries improve education and nutrition, their IQ scores rise rapidly, sometimes faster than northern countries. If cold climate genetically selected for intelligence, these scores couldn't change within a few generations. Additionally, the highest-scoring regions (Singapore, Hong Kong) are tropical, directly contradicting the cold-climate theory.",
+    faqItems: [
+      { question: "Does cold weather increase IQ?", answer: "No. The correlation between cold climate and higher national IQ is explained by earlier economic development, education access, and nutrition — not climate directly affecting intelligence. Tropical Singapore scores higher than most cold-climate countries." },
+      { question: "Why do northern countries score higher on IQ tests?", answer: "Northern countries industrialized earlier, developed universal education sooner, and achieved better nutrition and healthcare. These environmental factors raise IQ scores. The Flynn Effect shows IQ rising rapidly in developing nations as conditions improve." },
+      { question: "Does the 'cold winter theory' of IQ have scientific support?", answer: "Very limited. While proposed by some researchers, the theory fails to explain why tropical Singapore and Hong Kong score among the highest globally. Economic development and education access are much stronger explanatory variables." },
+    ],
+  },
+  {
+    title: "Is There an Ideal IQ?",
+    slug: "ideal-iq-score",
+    myth: "The higher your IQ, the better your life will be in every way.",
+    reality: "Research suggests an IQ around 115-125 may be 'optimal' for life satisfaction, leadership effectiveness, and social functioning. Very high IQs (140+) can bring unique challenges.",
+    explanation: "The assumption that 'higher IQ = better life' is intuitive but not fully supported by research. Studies find that life satisfaction does increase with IQ — but only up to a point, around IQ 115-130. Beyond this, the benefits plateau and some challenges increase. Research on leadership finds the optimal IQ for effective leadership is about 115-125 — smart enough to handle complexity but not so far above team members as to create communication barriers. Very high IQ (140+) individuals report higher rates of existential anxiety, social isolation, and difficulty finding peers. The 'optimal' IQ depends on context: for raw career achievement, higher tends to be better. For social relationships and life satisfaction, 115-125 appears to be a sweet spot. For leadership, 115-125 is optimal. There is no single ideal IQ — the 'best' IQ is one that serves your specific life goals and context.",
+    faqItems: [
+      { question: "Is there an ideal IQ score?", answer: "Research suggests 115-125 may be a 'sweet spot' — associated with good career outcomes, effective leadership, and social ease. Very high IQs (140+) bring advantages but also unique challenges like social isolation." },
+      { question: "Is higher IQ always better?", answer: "Not always. Above 120-130, additional IQ points provide diminishing returns for life satisfaction and social functioning. Very high IQ can bring existential anxiety, social isolation, and difficulty relating to most people." },
+      { question: "What IQ is best for leadership?", answer: "Research consistently points to 115-125 as optimal for leadership. Leaders at this level can handle complexity while still communicating naturally with their teams. Both lower and higher IQs can be effective, but this range correlates best with leadership outcomes." },
+    ],
+  },
+  {
+    title: "Does Dyslexia Affect IQ?",
+    slug: "dyslexia-and-iq",
+    myth: "People with dyslexia have lower IQs and are less intelligent.",
+    reality: "Dyslexia does not affect IQ. It's a specific reading difficulty that exists independently of general intelligence. Many dyslexic people have average or above-average IQs.",
+    explanation: "Dyslexia is a specific learning disability affecting reading accuracy and fluency — it is NOT a general intelligence deficit. IQ and dyslexia are independent: dyslexic individuals span the full IQ range from below average to genius. Famous dyslexic individuals include Albert Einstein (estimated 160 IQ), Richard Branson, Steven Spielberg, and Charles Schwab. The confusion arises because IQ tests include verbal subtests that may be affected by dyslexia, potentially lowering the full-scale IQ score. When non-verbal IQ is measured separately, dyslexic individuals score at the same level as the general population. Dyslexia is a difference in how the brain processes written language, not a deficit in intelligence. Many dyslexic individuals develop exceptional spatial reasoning, creative thinking, and problem-solving abilities — possibly because they learn to compensate for reading challenges by developing alternative cognitive strategies.",
+    faqItems: [
+      { question: "Does dyslexia lower IQ?", answer: "No. Dyslexia is a specific reading difficulty independent of general intelligence. Dyslexic people span the full IQ range. Verbal IQ subtests may be affected, but non-verbal IQ is unaffected." },
+      { question: "Can you have dyslexia and a high IQ?", answer: "Yes. Many famous high-IQ individuals have dyslexia, including Einstein, Richard Branson, and Steven Spielberg. Dyslexia and IQ are independent — you can have any IQ level with or without dyslexia." },
+      { question: "Do dyslexic people have cognitive advantages?", answer: "Some research suggests dyslexic individuals may develop stronger spatial reasoning, creative thinking, and big-picture processing — possibly as compensation for reading challenges. These strengths can be significant advantages in many careers." },
+    ],
+  },
+  {
+    title: "Does Wealth Equal Intelligence?",
+    slug: "wealth-and-intelligence",
+    myth: "Rich people are smarter — wealth is a direct measure of intelligence.",
+    reality: "IQ correlates weakly with income (about 0.3) and even less with wealth. Inheritance, opportunity, social capital, risk tolerance, and luck play larger roles than IQ in wealth accumulation.",
+    explanation: "The correlation between IQ and income is about 0.3 — meaning IQ explains only about 9% of income variation. For wealth (net worth), the correlation is even weaker because wealth accumulation depends heavily on factors IQ doesn't capture: inheritance, family connections, risk tolerance, investment timing, social capital, and luck. Studies show that above an IQ of about 100-110, additional IQ points contribute diminishing returns to income. A person with a 130 IQ earns only modestly more than someone with 110, on average. Meanwhile, personality traits like conscientiousness and agreeableness predict income comparably to IQ. The richest people in the world are not the smartest by IQ — they had the right combination of ability, timing, opportunity, and risk tolerance. Many high-IQ individuals (professors, scientists) earn modest incomes by choice, while many average-IQ entrepreneurs become wealthy through business acumen, social skills, and fortunate timing.",
+    faqItems: [
+      { question: "Are rich people smarter?", answer: "Slightly, on average — IQ correlates with income at about 0.3. But this means IQ explains only 9% of income variation. Inheritance, connections, risk tolerance, and luck explain far more. Many wealthy people have average IQs." },
+      { question: "Does IQ predict income?", answer: "Weakly. Each IQ point above average is associated with a small income premium, but the effect is modest. Above IQ 110, additional points provide diminishing returns. Personality, education, field of work, and opportunity matter more." },
+      { question: "Why are some geniuses poor?", answer: "Because IQ doesn't determine career choices, financial risk tolerance, or business skill. Many high-IQ individuals choose lower-paying intellectual careers (academia, research, arts) or lack the social/business skills that drive wealth accumulation." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {
