@@ -596,6 +596,66 @@ export const iqMythData: IQMythInfo[] = [
       { question: "Will IQ tests be replaced?", answer: "Unlikely in the near future. No alternative measure comes close to IQ's predictive validity for academic and cognitive outcomes. However, IQ testing is increasingly supplemented with measures of executive function, emotional intelligence, and domain-specific abilities." },
     ],
   },
+  {
+    title: "Does Chess Make You Smarter?",
+    slug: "does-chess-increase-iq",
+    myth: "Playing chess significantly increases your IQ and general intelligence.",
+    reality: "Chess improves chess-specific skills and may modestly boost working memory and planning, but evidence for broad IQ transfer is limited. Chess makes you better at chess, not necessarily smarter in general.",
+    explanation: "The chess-IQ relationship is frequently overstated. While chess requires high IQ to play at elite levels (grandmasters typically have IQs of 130+), playing chess does not reliably increase IQ. A 2016 meta-analysis found that chess instruction in schools produced small improvements in math and reading scores, but the effects were modest and may have resulted from general enrichment rather than chess-specific cognitive transfer. What chess does well: it exercises working memory, planning, and pattern recognition within the chess domain. Expert chess players show faster processing and better memory — but only for chess positions, not for general information. This 'domain specificity' is key. Chess builds chess expertise, not general intelligence.",
+    faqItems: [
+      { question: "Does chess increase IQ?", answer: "Evidence is limited. Chess exercises working memory and planning within the chess domain but doesn't reliably transfer to broader IQ improvement. It makes you better at chess-like reasoning, not necessarily smarter in general." },
+      { question: "Do chess players have higher IQs?", answer: "Elite chess players do — grandmasters typically have IQs of 130+. But this reflects self-selection (high-IQ people are drawn to chess and succeed at it) rather than chess increasing IQ." },
+      { question: "Should kids learn chess for brain development?", answer: "Chess is a worthwhile enrichment activity that teaches planning, patience, and strategic thinking. But don't expect dramatic IQ gains. The benefits are modest and primarily within chess-like reasoning domains." },
+    ],
+  },
+  {
+    title: "Are Night Owls Smarter?",
+    slug: "night-owls-smarter",
+    myth: "Night owls are more intelligent than morning people — staying up late is a sign of high IQ.",
+    reality: "Some studies find a small correlation between evening preference and higher IQ, but the effect is tiny and may reflect cultural factors rather than a real cognitive advantage.",
+    explanation: "A few studies have found that people with evening chronotypes (night owls) score slightly higher on IQ tests than morning types. However, the effect is small (2-3 points) and may be confounded by several factors: evening types tend to be younger (IQ peaks in early adulthood), more likely to live in urban environments (higher average IQ), and more likely to be exposed to intellectually stimulating activities late at night. The evolutionary explanation sometimes offered — that smarter ancestors could adapt to novel nighttime behaviors — is speculative. What is clear: sleep quality and duration matter far more than timing. A well-rested morning person will outperform a sleep-deprived night owl on any cognitive test. The 'night owl genius' stereotype likely persists because many creative workers happen to work late — but that's a lifestyle choice, not evidence of higher intelligence.",
+    faqItems: [
+      { question: "Are night owls smarter?", answer: "A small correlation exists (2-3 IQ points), but it may reflect confounding factors rather than a real advantage. Sleep quality and total duration matter far more than timing for cognitive performance." },
+      { question: "Why do some studies link night owls to higher IQ?", answer: "Confounders: evening types tend to be younger, more urban, and exposed to more late-night intellectual stimulation. The actual causal relationship between chronotype and IQ is unclear and likely very small." },
+      { question: "Is it better to study at night?", answer: "Study when you're most alert — which varies by person. Night owls may perform better in the evening, morning people in the morning. The key is adequate sleep and studying during your peak alertness window." },
+    ],
+  },
+  {
+    title: "Does Listening to Podcasts Increase IQ?",
+    slug: "podcasts-and-iq",
+    myth: "Listening to educational podcasts can increase your IQ by exposing you to new information.",
+    reality: "Podcasts build crystallized intelligence (knowledge, vocabulary) but passive listening is less cognitively demanding than reading. They're a good supplement but not a primary cognitive enhancer.",
+    explanation: "Educational podcasts provide genuine learning benefits — they expand vocabulary, introduce new concepts, and build general knowledge. This contributes to crystallized intelligence, which IQ tests do measure. However, passive listening is less cognitively demanding than active reading. Research on learning modalities shows that reading requires more active cognitive engagement — you must decode text, build mental models, and manage attention with fewer external cues than audio provides. For IQ improvement specifically: podcasts are better than passive entertainment (TV scrolling) but less effective than challenging reading. The best use is as a supplement — listen during commutes and exercise when reading isn't possible, but prioritize reading for maximum cognitive engagement.",
+    faqItems: [
+      { question: "Do podcasts increase IQ?", answer: "They build knowledge and vocabulary (crystallized intelligence) but passive listening is less cognitively demanding than reading. Podcasts are a good supplement for learning but not the most efficient cognitive enhancer." },
+      { question: "Are educational podcasts good for the brain?", answer: "Yes — they're better than passive entertainment and build genuine knowledge. However, reading challenging material produces stronger cognitive engagement. Use podcasts when reading isn't possible (commutes, exercise)." },
+      { question: "What's better for the brain: podcasts or books?", answer: "Reading is more cognitively demanding and produces stronger learning and memory retention. Podcasts are more convenient and provide good passive learning. Ideally, do both — read for deep engagement, listen for supplementary learning." },
+    ],
+  },
+  {
+    title: "Does Having a Big Vocabulary Mean High IQ?",
+    slug: "vocabulary-and-iq",
+    myth: "People with large vocabularies are always more intelligent than those with smaller ones.",
+    reality: "Vocabulary correlates strongly with IQ (~0.8 for verbal IQ), making it one of the best single predictors of intelligence. But vocabulary reflects both innate ability and educational opportunity.",
+    explanation: "Vocabulary is actually one of the strongest single correlates of IQ — the vocabulary subtest correlates about 0.8 with full-scale IQ on the WAIS, making it the most predictive individual subtest. There's a reason for this: acquiring a large vocabulary requires working memory (to learn new words), verbal reasoning (to infer meaning from context), and long-term memory (to retain thousands of words). These are core cognitive abilities that IQ tests measure. However, vocabulary is also heavily influenced by environment — reading habits, education quality, language exposure, and socioeconomic status all affect vocabulary size independently of innate ability. A brilliant person raised without access to books may have a smaller vocabulary than an average-IQ person raised in a literacy-rich environment. So vocabulary is a strong IQ indicator but not a perfect one.",
+    faqItems: [
+      { question: "Does big vocabulary mean high IQ?", answer: "Strong correlation (~0.8 with verbal IQ) — vocabulary is one of the best single predictors of intelligence. But vocabulary also reflects education and reading habits, so it's not a perfect IQ measure." },
+      { question: "Why does vocabulary predict IQ so well?", answer: "Learning vocabulary requires working memory, verbal reasoning, and long-term memory — core cognitive abilities. Plus, people with higher IQs tend to read more and engage with more complex language, creating a reinforcing cycle." },
+      { question: "Can you increase IQ by building vocabulary?", answer: "Building vocabulary through reading improves performance on verbal IQ subtests and builds crystallized intelligence. It won't dramatically change fluid IQ, but it's one of the most direct ways to improve IQ test scores." },
+    ],
+  },
+  {
+    title: "Do Animals Have IQ?",
+    slug: "animal-intelligence-iq",
+    myth: "Animals don't have IQ — intelligence is a uniquely human trait.",
+    reality: "Animals demonstrate many forms of intelligence. While they can't take human IQ tests, researchers measure animal cognitive abilities using adapted assessments. Some species show remarkable problem-solving, tool use, and social cognition.",
+    explanation: "Comparing animal and human intelligence is complex, but animals clearly demonstrate cognitive abilities that parallel components of human IQ. Dolphins, great apes, elephants, corvids (crows, ravens), and octopuses all show problem-solving, tool use, self-awareness, and social cognition. Border collies can learn 1,000+ words. Chimpanzees outperform humans on certain short-term memory tasks. Crows make and use tools, plan for the future, and understand cause-and-effect. If we adapted IQ test components for animal testing: working memory (chimps and parrots excel), pattern recognition (corvids are exceptional), problem-solving (octopuses and primates), and social cognition (dolphins and elephants). Of course, human IQ encompasses abstract reasoning, language, and mathematical ability that no animal approaches. But dismissing animal intelligence entirely ignores genuine cognitive complexity across species.",
+    faqItems: [
+      { question: "Do animals have IQ?", answer: "Animals can't take human IQ tests, but many species demonstrate remarkable cognitive abilities: tool use (crows, chimps), self-awareness (dolphins, elephants), working memory (chimps outperform humans on some tasks), and social cognition." },
+      { question: "What is the smartest animal?", answer: "Depends on the measure. Dolphins, chimpanzees, elephants, and corvids (crows, ravens) are consistently ranked highest. Border collies can learn 1,000+ words. Octopuses solve complex physical puzzles. Each species excels in different cognitive domains." },
+      { question: "Can animal IQ be measured?", answer: "Not with human tests, but researchers use adapted assessments: maze navigation, tool use, mirror self-recognition, delayed gratification, and social problem-solving. These measure cognitive abilities analogous to components of human IQ." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {

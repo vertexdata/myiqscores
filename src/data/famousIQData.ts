@@ -1348,6 +1348,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "Is Tyler Perry a business genius?", answer: "His results suggest yes. Building a 330-acre studio worth $1B+, maintaining creative control over all projects, and achieving billionaire status entirely independently demonstrates business intelligence rivaling any traditional media mogul." },
     ],
   },
+  {
+    name: "Bad Bunny",
+    slug: "bad-bunny",
+    estimatedIQ: "108–118",
+    knownFor: "Most streamed artist globally, reggaeton pioneer, cultural icon",
+    description: "Bad Bunny's IQ is estimated at 108-118. He studied audiovisual communication at the University of Puerto Rico before becoming the world's most streamed artist. His ability to blend reggaeton with trap, rock, and experimental genres — while singing entirely in Spanish to a global audience — demonstrates cultural intelligence that transcends language barriers.",
+    iqContext: "Bad Bunny's achievement of becoming the world's most streamed artist while singing exclusively in Spanish required understanding global music markets at a deep level. His genre-blending approach and cultural positioning show strategic intelligence in navigating an industry that historically required English-language music for global success.",
+    faqItems: [
+      { question: "What is Bad Bunny's IQ?", answer: "Bad Bunny's IQ is estimated at 108-118. His university education, genre innovation, and achievement of global streaming dominance while singing in Spanish suggest above-average creative and cultural intelligence." },
+      { question: "Did Bad Bunny go to college?", answer: "Yes — he studied audiovisual communication at the University of Puerto Rico before his music career took off. This background in media production informs his sophisticated visual aesthetics and music video direction." },
+      { question: "How did Bad Bunny succeed globally in Spanish?", answer: "By understanding that streaming platforms removed the English-language barrier for global reach. His timing, genre innovation, and cultural authenticity created a new model for non-English artists — a strategic insight requiring genuine market intelligence." },
+    ],
+  },
+  {
+    name: "Yo-Yo Ma",
+    slug: "yo-yo-ma",
+    estimatedIQ: "135–150",
+    knownFor: "World's greatest cellist, 19 Grammys, cultural ambassador",
+    description: "Yo-Yo Ma's IQ is estimated at 135-150 based on his extraordinary musical and academic achievements. He entered Juilliard at age 5, performed for President Kennedy at age 7, and graduated from Harvard with a degree in anthropology. His ability to master virtually every genre of music — classical, bluegrass, Brazilian, Chinese, and electronic — suggests exceptional cognitive flexibility.",
+    iqContext: "Ma's Harvard anthropology degree (not music!) provides concrete evidence of strong academic ability beyond musical talent. His cross-genre mastery — performing world-class music in a dozen genres — requires the kind of cognitive flexibility that correlates with the highest IQ ranges. His Silk Road Ensemble project, connecting musicians across cultures, demonstrates sophisticated cultural and social intelligence.",
+    faqItems: [
+      { question: "What is Yo-Yo Ma's IQ?", answer: "Ma's IQ is estimated at 135-150. Harvard anthropology degree, Juilliard at age 5, cross-genre musical mastery, and 19 Grammys all suggest exceptional cognitive ability across multiple domains." },
+      { question: "Did Yo-Yo Ma go to Harvard?", answer: "Yes — he graduated from Harvard with a degree in anthropology, not music. This demonstrates intellectual breadth beyond his musical genius. He chose anthropology to understand the human context of music-making." },
+      { question: "Is Yo-Yo Ma the smartest musician?", answer: "By academic credentials and cross-genre mastery, he's among the most intellectually accomplished musicians in history. His Harvard degree, cultural projects, and ability to master every genre he attempts suggest truly exceptional cognitive ability." },
+    ],
+  },
+  {
+    name: "Giannis Antetokounmpo",
+    slug: "giannis-antetokounmpo",
+    estimatedIQ: "105–115",
+    knownFor: "NBA MVP, champion, from street vendor to basketball legend",
+    description: "Giannis Antetokounmpo's IQ is estimated at 105-115. His journey from selling goods on Athens streets to NBA MVP represents extraordinary adaptation and learning ability. Giannis learned basketball relatively late (age 12), yet his ability to continuously add skills to his game — evolving from a raw athlete to a complete player — demonstrates exceptional motor learning and tactical intelligence.",
+    iqContext: "Giannis speaks four languages (Greek, English, Spanish, and Nigerian Pidgin), suggesting above-average cognitive ability. His basketball development arc — adding new skills each season in a way that continuously improved his effectiveness — shows a systematic learning approach that goes beyond pure athleticism. His business decisions and family management show practical intelligence.",
+    faqItems: [
+      { question: "What is Giannis's IQ?", answer: "Giannis's IQ is estimated at 105-115. His four-language fluency, extraordinary athletic learning curve (started basketball at 12), and systematic skill development suggest above-average cognitive ability." },
+      { question: "How did Giannis develop so quickly?", answer: "Systematic skill addition — he identified weaknesses, worked to improve them each offseason, and continuously expanded his game. This deliberate, analytical approach to development suggests strong self-directed learning intelligence." },
+      { question: "Is Giannis smart off the court?", answer: "His four-language fluency and the way he manages his family and business interests suggest solid practical intelligence. The journey from street vendor to NBA MVP also required extraordinary adaptability and social navigation." },
+    ],
+  },
+  {
+    name: "J.K. Rowling",
+    slug: "jk-rowling",
+    estimatedIQ: "125–140",
+    knownFor: "Harry Potter author, billionaire writer",
+    description: "J.K. Rowling's IQ is estimated at 125-140 based on her extraordinary literary achievement. The Harry Potter series — 500+ million copies sold, translated into 80 languages — represents one of the most complex fictional worlds ever created. Rowling held the entire plot of seven books (4,224 pages) in her head for years, with intricate foreshadowing and interconnected plot threads that reward re-reading. She studied French and Classics at the University of Exeter.",
+    iqContext: "Rowling's cognitive achievement in world-building is staggering. She maintained consistency across 7 books, 4,224 pages, and hundreds of characters over a decade of writing — requiring extraordinary working memory and long-term planning. Her Exeter degree in Classics (Latin and Greek literature) demonstrates strong verbal-academic ability. Building a $1B+ empire from a single manuscript written on napkins in cafes shows remarkable strategic and creative intelligence.",
+    faqItems: [
+      { question: "What is J.K. Rowling's IQ?", answer: "Rowling's IQ is estimated at 125-140. Creating the Harry Potter universe — 4,224 pages of interconnected plot across 7 books — required extraordinary working memory, planning, and verbal intelligence." },
+      { question: "Is J.K. Rowling a literary genius?", answer: "The complexity of the Harry Potter world — intricate foreshadowing, hundreds of consistent characters, and a 7-book story arc planned from the beginning — represents genuine literary-cognitive achievement regardless of one's opinion of the prose itself." },
+      { question: "How did Rowling plan Harry Potter?", answer: "She famously planned the entire 7-book arc before publishing the first. Character backstories, plot threads, and foreshadowing were embedded from book one. Maintaining this complexity over a decade of writing required extraordinary cognitive architecture." },
+    ],
+  },
+  {
+    name: "Sachin Tendulkar",
+    slug: "sachin-tendulkar",
+    estimatedIQ: "108–118",
+    knownFor: "Greatest cricket batsman ever, 100 international centuries",
+    description: "Sachin Tendulkar's IQ is estimated at 108-118. His cricket intelligence was unmatched — he could read bowlers' intentions from their grip, anticipate deliveries before release, and construct innings with mathematical precision across all formats. Tendulkar scored 100 international centuries, a record that may never be broken. His post-retirement business ventures and political career show broader cognitive ability.",
+    iqContext: "Tendulkar's cricketing brain processed ball trajectories, spin variations, field positions, and match situations simultaneously at extraordinary speed. His ability to succeed in cricket for 24 years — adapting as the game evolved — required continuous cognitive adaptation. His 100 centuries record required not just talent but the strategic intelligence to manage pressure across 24 years of international cricket.",
+    faqItems: [
+      { question: "What is Sachin Tendulkar's IQ?", answer: "Tendulkar's IQ is estimated at 108-118. His 24-year international career, unmatched run-scoring records, and ability to adapt to evolving cricket suggest above-average cognitive ability applied to athletics." },
+      { question: "Was Tendulkar the smartest cricketer?", answer: "His ability to read bowlers, construct innings, and adapt across 24 years of changes in cricket suggests exceptional domain-specific intelligence. Whether this translates to general IQ is debatable, but his cricketing brain was unmatched." },
+      { question: "How did Tendulkar stay elite for 24 years?", answer: "Continuous adaptation — he modified his technique, strategy, and approach as cricket evolved and as he aged. This 24-year sustained excellence required cognitive flexibility and strategic self-analysis beyond what pure talent provides." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
