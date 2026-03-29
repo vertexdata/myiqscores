@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { questions } from "@/data/questions";
-import { Check } from "lucide-react";
+import { Check, TrendingUp, Shield, Zap } from "lucide-react";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
 
@@ -138,8 +138,52 @@ const Quiz = ({ onComplete }: QuizProps) => {
               </div>
             </div>
 
-            {/* Ad between every 5th question */}
-            {(currentQ === 4 || currentQ === 9 || currentQ === 14 || currentQ === 19 || currentQ === 24) && (
+            {/* Progress milestone after Q5 */}
+            {currentQ === 4 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6 glass-card p-4 rounded-xl border border-primary/20"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <span className="font-heading font-semibold text-foreground text-sm">Great start! You're 17% done.</span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Your progress is saved automatically. Keep going — your full IQ score report will be ready in about 10 minutes.
+                </p>
+                <div className="flex items-center gap-4 mt-3">
+                  <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground/60">
+                    <Shield className="w-3 h-3 text-green-500" />
+                    <span>Your data is private</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground/60">
+                    <Zap className="w-3 h-3 text-yellow-400" />
+                    <span>Instant results</span>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Progress milestone after Q15 */}
+            {currentQ === 14 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="mt-6 glass-card p-4 rounded-xl border border-primary/20"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <Zap className="w-5 h-5 text-yellow-400" />
+                  <span className="font-heading font-semibold text-foreground text-sm">Halfway there! Looking sharp.</span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  You're doing great. 15 more questions and you'll have your complete IQ score with percentile ranking and category breakdown.
+                </p>
+              </motion.div>
+            )}
+
+            {/* Ad between every 10th question (reduced frequency) */}
+            {(currentQ === 9 || currentQ === 19 || currentQ === 24) && (
               <div className="mt-6 border-t border-[rgba(255,255,255,0.06)] pt-4">
                 <AdUnit slotId={AD_SLOTS.betweenQuestions} format="display" size="responsive" className="!my-2" />
                 <div className="border-b border-[rgba(255,255,255,0.06)] mt-4" />

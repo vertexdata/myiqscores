@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Shield, Lock, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 const stagger = {
@@ -36,8 +37,8 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
         <motion.h2 variants={fadeUp} className="font-heading text-2xl sm:text-3xl font-bold text-foreground mb-2">
           Before we begin...
         </motion.h2>
-        <motion.p variants={fadeUp} className="text-muted-foreground text-sm mb-8">
-          Set up your profile to personalize your results.
+        <motion.p variants={fadeUp} className="text-muted-foreground text-sm mb-6">
+          Set up your profile so we can personalize your results and send your score report.
         </motion.p>
 
         <motion.div variants={fadeUp} className="space-y-5">
@@ -60,7 +61,10 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
               placeholder="you@email.com"
               className="w-full bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary focus:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all"
             />
-            <p className="text-xs text-muted-foreground/60 mt-1">We'll send your detailed results report here.</p>
+            <p className="text-xs text-muted-foreground/60 mt-1">
+              <Mail className="w-3 h-3 inline mr-1" />
+              We'll send your detailed score breakdown here.
+            </p>
           </div>
           <div>
             <label className="block text-xs text-muted-foreground mb-1.5 font-medium">Age Range</label>
@@ -90,7 +94,7 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
               <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Privacy Policy
               </a>
-              . I consent to MyIQScores collecting my name, email, and age range to deliver my IQ test results and personalized reports.
+              . I consent to receiving my IQ test results and score report via email.
             </span>
           </label>
         </motion.div>
@@ -110,8 +114,20 @@ const LeadCapture = ({ onSubmit }: LeadCaptureProps) => {
           </button>
         </motion.div>
 
+        {/* Trust badges */}
+        <motion.div variants={fadeUp} className="mt-6 space-y-2">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground/70">
+            <Shield className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
+            <span>We <strong className="text-foreground/80">never sell</strong> your data. Ever. Your information stays private.</span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground/70">
+            <Lock className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
+            <span>No spam. No third parties. Unsubscribe anytime with one click.</span>
+          </div>
+        </motion.div>
+
         <motion.p variants={fadeUp} className="text-center text-xs text-muted-foreground/50 mt-4">
-          Free to take. No credit card required.
+          100% free. No credit card. No hidden charges.
         </motion.p>
       </motion.div>
     </motion.div>
