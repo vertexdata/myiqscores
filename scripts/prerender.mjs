@@ -44,7 +44,9 @@ const careerSlugs = [
   "insurance-actuary", "social-media-manager", "dermatologist",
   "athletic-trainer", "clinical-psychologist", "film-director",
   "psychiatric-nurse", "dental-assistant", "emt", "orthodontist",
-  "epidemiologist", "landscape-architect", "chiropractor", "biomedical-engineer",
+  "epidemiologist", "landscape-architect", "management-consultant",
+  "audiologist", "art-director", "genetic-counselor",
+  "interpreter-translator", "chiropractor", "biomedical-engineer",
   "real-estate-appraiser", "primary-care-physician", "video-game-developer",
 ];
 
@@ -150,6 +152,11 @@ const routes = [
   "/famous-iq/post-malone",
   "/famous-iq/michelle-obama",
   "/famous-iq/novak-djokovic",
+  "/famous-iq/travis-scott",
+  "/famous-iq/zendaya",
+  "/famous-iq/roger-federer",
+  "/famous-iq/ronda-rousey",
+  "/famous-iq/neil-armstrong",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",

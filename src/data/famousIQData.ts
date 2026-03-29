@@ -1088,6 +1088,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "Is Djokovic the smartest tennis player?", answer: "His 11-language fluency and legendary tactical adaptability suggest he may be. Tennis requires real-time strategic adjustment, pattern recognition, and decision-making under pressure — cognitive skills directly related to IQ." },
     ],
   },
+  {
+    name: "Travis Scott",
+    slug: "travis-scott",
+    estimatedIQ: "108–118",
+    knownFor: "Rapper, producer, Astroworld creator, brand architect",
+    description: "Travis Scott's IQ is estimated at 108-118 based on his creative and business achievements. Scott has built one of music's most immersive brands — from Astroworld concerts to McDonald's partnerships to his own Cactus Jack label. His ability to conceptualize multi-sensory experiences that merge music, visual art, gaming (Fortnite concert with 12M+ viewers), and fashion demonstrates genuine creative-strategic intelligence.",
+    iqContext: "Scott's particular intelligence is in experiential design — creating immersive worlds across multiple media simultaneously. His Fortnite concert reached 12.3 million concurrent players, pioneering virtual entertainment. His brand partnerships (McDonald's, Nike, PlayStation) are strategically curated rather than random endorsements, showing real brand architecture thinking.",
+    faqItems: [
+      { question: "What is Travis Scott's IQ?", answer: "Scott's IQ is estimated at 108-118. His immersive brand building, pioneering virtual concerts, and strategic partnerships demonstrate above-average creative and business intelligence." },
+      { question: "Is Travis Scott a creative genius?", answer: "In experiential design and brand architecture, his work is genuinely innovative. The Fortnite concert, Astroworld concept, and strategic brand partnerships show creative thinking that goes beyond typical music production." },
+      { question: "How does Scott's business compare to other rappers?", answer: "Scott's Cactus Jack brand and partnership strategy are among the most sophisticated in hip-hop. His approach to brand architecture — creating immersive experiences rather than just endorsements — shows genuine strategic intelligence." },
+    ],
+  },
+  {
+    name: "Zendaya",
+    slug: "zendaya",
+    estimatedIQ: "112–122",
+    knownFor: "Emmy-winning actress, fashion icon, producer",
+    description: "Zendaya's IQ is estimated at 112-122 based on her strategic career management and demonstrated intellectual engagement. She became the youngest two-time Emmy winner for Euphoria, transitioned from Disney Channel to prestige television and blockbuster films, and has built a fashion brand that influences global trends. Her career decisions show sophisticated strategic thinking rarely seen in young Hollywood.",
+    iqContext: "Zendaya's intelligence manifests in career strategy and creative selectivity. Unlike many child actors who struggle with transition, she deliberately chose challenging dramatic roles (Euphoria, Challengers) and strategic blockbusters (Spider-Man, Dune). This pattern of intentional career management suggests strong analytical thinking about long-term positioning.",
+    faqItems: [
+      { question: "What is Zendaya's IQ?", answer: "Zendaya's IQ is estimated at 112-122. Her strategic career management — transitioning from Disney to Emmy-winning prestige drama — and fashion influence suggest above-average analytical and creative intelligence." },
+      { question: "Is Zendaya smart?", answer: "Her career choices suggest genuine strategic intelligence. Deliberately choosing challenging roles, building a fashion influence platform, and managing a career transition that most child actors fail to make all require real analytical thinking." },
+      { question: "How has Zendaya managed her career so well?", answer: "Strategic selectivity — choosing roles that build dramatic credibility (Euphoria) while maintaining commercial appeal (Spider-Man, Dune). This balancing act requires understanding of industry dynamics that suggests above-average analytical ability." },
+    ],
+  },
+  {
+    name: "Roger Federer",
+    slug: "roger-federer",
+    estimatedIQ: "108–118",
+    knownFor: "Tennis legend, 20 Grand Slam titles, sportsman icon",
+    description: "Roger Federer's IQ is estimated at 108-118. Federer speaks four languages fluently (Swiss German, French, English, Standard German) and has built a post-retirement business empire including On Running (now a $10B+ company) and various luxury brand partnerships. His tennis intelligence was legendary — his ability to construct points with chess-like precision and adapt to any opponent's style reflected extraordinary spatial and strategic processing.",
+    iqContext: "Federer's four-language fluency strongly suggests above-average cognitive ability. His investment in On Running before its explosive growth shows genuine business judgment. On the court, his tactical versatility — winning on all surfaces with different strategies — required the kind of adaptive strategic thinking that correlates with higher cognitive ability.",
+    faqItems: [
+      { question: "What is Roger Federer's IQ?", answer: "Federer's IQ is estimated at 108-118. His four-language fluency, strategic business investments (On Running), and legendary tennis tactical intelligence suggest above-average cognitive ability across multiple domains." },
+      { question: "How many languages does Federer speak?", answer: "Federer speaks four languages fluently: Swiss German, Standard German, French, and English. Multilingualism at this level is correlated with above-average cognitive ability." },
+      { question: "How smart is Federer off the court?", answer: "His investment in On Running (now $10B+) before it was mainstream, his luxury brand partnerships, and four-language fluency demonstrate genuine business and analytical intelligence beyond athletics." },
+    ],
+  },
+  {
+    name: "Ronda Rousey",
+    slug: "ronda-rousey",
+    estimatedIQ: "108–118",
+    knownFor: "UFC champion, Olympic medalist, actress, pioneer",
+    description: "Ronda Rousey's IQ is estimated at 108-118. Beyond her athletic achievements (first American woman to win an Olympic medal in judo, first UFC women's champion), Rousey demonstrated strategic intelligence in pioneering women's MMA. She understood that combining athletic dominance with media personality could create an entirely new market for women's fighting — a strategic insight that transformed the UFC.",
+    iqContext: "Rousey's intelligence was most evident in her market-creating ability. She didn't just compete in women's MMA — she essentially created the mainstream market for it through strategic media appearances, personality cultivation, and timing. Recognizing and executing on this opportunity required genuine strategic and social intelligence.",
+    faqItems: [
+      { question: "What is Ronda Rousey's IQ?", answer: "Rousey's IQ is estimated at 108-118. Her Olympic medal, UFC championship, and strategic role in creating women's MMA as a mainstream sport suggest above-average cognitive ability applied to athletics and media." },
+      { question: "Is Ronda Rousey smart?", answer: "In strategic thinking and market creation, yes. She didn't just win fights — she understood how to build an audience for women's fighting through media, personality, and timing. This market-creation ability requires genuine strategic intelligence." },
+      { question: "How did Rousey change the UFC?", answer: "She proved there was a massive audience for women's MMA by combining athletic dominance with media savvy. The UFC added women's divisions largely because of her — a strategic outcome that required understanding audience psychology, not just fighting skill." },
+    ],
+  },
+  {
+    name: "Neil Armstrong",
+    slug: "neil-armstrong",
+    estimatedIQ: "135–145",
+    knownFor: "First person to walk on the Moon, NASA astronaut",
+    description: "Neil Armstrong's IQ is estimated at 135-145 based on his academic record (Purdue aeronautical engineering) and extraordinary career as a test pilot and astronaut. Armstrong flew the X-15 rocket plane to the edge of space, performed the first successful space docking on Gemini 8, and manually landed the Eagle lunar module with less than 25 seconds of fuel remaining. His ability to remain calm and make precise decisions under the most extreme pressure in human history reflects exceptional cognitive ability.",
+    iqContext: "Armstrong's cognitive ability was tested in the most extreme conditions ever faced by a human — landing on the Moon with alarms firing and fuel running out. His ability to override the automatic system and manually land the Eagle demonstrated processing speed and decision-making under pressure that few humans could match. His Purdue engineering degree and test pilot career provide further evidence of superior analytical ability.",
+    faqItems: [
+      { question: "What was Neil Armstrong's IQ?", answer: "Armstrong's IQ is estimated at 135-145 based on his Purdue engineering degree, test pilot career, and extraordinary performance during the Moon landing — making critical decisions under the most extreme conditions in human history." },
+      { question: "How smart did you have to be to be an astronaut?", answer: "Early NASA astronauts were selected from the most accomplished test pilots and engineers. The combination of advanced engineering education, flight expertise, and extreme decision-making ability meant astronauts like Armstrong were among the most cognitively gifted people of their generation." },
+      { question: "Was the Moon landing decision-making evidence of high IQ?", answer: "Absolutely. Armstrong manually landed the Eagle with 25 seconds of fuel left while alarms were firing — overriding the automatic system in real-time. This required extraordinary processing speed, spatial reasoning, and composure under pressure that few humans could match." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
