@@ -958,6 +958,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How did RBG succeed despite discrimination?", answer: "Despite facing severe gender discrimination in law (she was rejected from law firms despite graduating first at Columbia), her extraordinary intellectual ability eventually overcame barriers. Her story demonstrates that exceptional intelligence can partially — though not easily — overcome systemic discrimination." },
     ],
   },
+  {
+    name: "Dwayne 'The Rock' Johnson",
+    slug: "dwayne-johnson",
+    estimatedIQ: "105–118",
+    knownFor: "Actor, wrestler, entrepreneur, highest-paid actor",
+    description: "Dwayne Johnson's IQ is estimated at 105-118. While not typically discussed as an intellectual, Johnson has built one of Hollywood's most successful brands through exceptional strategic thinking. He leveraged his wrestling fame into the highest-grossing film career in history, launched a tequila brand (Teremana, $3.5B valuation), an energy drink (ZOA), and a production company. His social media strategy (400M+ followers) is studied in business schools.",
+    iqContext: "Johnson demonstrates that consistent, strategic brand-building requires genuine intelligence. His daily 4am workouts, meticulous social media strategy, and ability to choose commercially successful film roles show disciplined, analytical thinking. The transition from wrestling to Hollywood's highest-paid actor to billion-dollar entrepreneur requires cognitive abilities that IQ tests don't fully capture.",
+    faqItems: [
+      { question: "What is The Rock's IQ?", answer: "Johnson's IQ is estimated at 105-118. His billion-dollar brand empire, strategic career moves, and business ventures demonstrate above-average practical and strategic intelligence." },
+      { question: "Is Dwayne Johnson smart?", answer: "In brand strategy and business, very much so. He's built a multi-billion dollar empire through disciplined, strategic decisions — from wrestling to film to spirits to supplements. His social media strategy is studied at business schools." },
+      { question: "How did Johnson become so successful?", answer: "Strategic brand building: he chose commercial film roles, maintained an authentic social media presence, diversified into products (Teremana, ZOA), and applied extreme discipline. This systematic approach requires genuine strategic intelligence." },
+    ],
+  },
+  {
+    name: "Malala Yousafzai",
+    slug: "malala-yousafzai",
+    estimatedIQ: "120–135",
+    knownFor: "Nobel Peace Prize laureate, education activist, Oxford graduate",
+    description: "Malala Yousafzai's IQ is estimated at 120-135 based on her Oxford University degree, Nobel Prize, and extraordinary intellectual maturity. She began advocating for girls' education at age 11, survived a Taliban assassination attempt at 15, addressed the United Nations at 16, and won the Nobel Peace Prize at 17 — the youngest laureate ever. She graduated from Oxford with a degree in Philosophy, Politics, and Economics.",
+    iqContext: "Malala's intellectual maturity at age 11-15 was extraordinary — she wrote articulate, nuanced analysis of Taliban oppression that drew international attention. Her Oxford PPE degree (Philosophy, Politics, and Economics) is one of the most intellectually demanding programs in the world. Her ability to synthesize complex geopolitical issues, communicate with world leaders, and build global advocacy organizations suggests genuine superior cognitive ability.",
+    faqItems: [
+      { question: "What is Malala's IQ?", answer: "Malala's IQ is estimated at 120-135 based on her Oxford PPE degree, Nobel Prize, and extraordinary intellectual maturity from a very young age." },
+      { question: "Is Malala smart?", answer: "By every measure, yes. Her Oxford degree (PPE — one of the world's most demanding programs), Nobel Prize, and ability to engage with complex geopolitical issues since childhood all demonstrate superior intellectual ability." },
+      { question: "How did Malala achieve so much so young?", answer: "A combination of exceptional intelligence, extraordinary courage, supportive family, and circumstances that thrust her into global prominence. Her intellectual maturity at 11-15 was remarkable by any standard." },
+    ],
+  },
+  {
+    name: "Jeff Goldblum",
+    slug: "jeff-goldblum",
+    estimatedIQ: "125–135",
+    knownFor: "Actor (Jurassic Park), jazz musician, intellectual personality",
+    description: "Jeff Goldblum's IQ is estimated at 125-135 based on his intellectual persona, jazz musicianship, and demonstrated curiosity across many domains. Goldblum is known for his genuinely intellectual approach to acting — deeply researching roles, asking philosophical questions in interviews, and maintaining a serious jazz piano career alongside acting. His National Geographic show explored diverse topics with genuine scientific curiosity.",
+    iqContext: "Goldblum represents a type of intelligence characterized by voracious curiosity and intellectual playfulness. His jazz musicianship requires strong musical intelligence, his acting success demonstrates interpersonal and verbal skills, and his intellectual persona is not an act — colleagues consistently describe him as one of the most genuinely curious people in Hollywood.",
+    faqItems: [
+      { question: "What is Jeff Goldblum's IQ?", answer: "Goldblum's IQ is estimated at 125-135. His intellectual curiosity, jazz musicianship, and genuinely analytical approach to life suggest superior cognitive ability across multiple domains." },
+      { question: "Is Jeff Goldblum actually smart?", answer: "By all accounts, yes. His intellectual persona is genuine — he maintains a serious jazz career, approaches roles with academic rigor, and demonstrates broad curiosity about science, philosophy, and art." },
+      { question: "Does acting require high intelligence?", answer: "Goldblum's approach does. His method of deeply researching roles, asking philosophical questions about character motivation, and applying intellectual rigor to creative work represents a high-IQ approach to acting that not all actors share." },
+    ],
+  },
+  {
+    name: "Viswanathan Anand",
+    slug: "viswanathan-anand",
+    estimatedIQ: "175–185",
+    knownFor: "5x World Chess Champion, Indian chess legend",
+    description: "Viswanathan Anand's IQ is estimated at 175-185 based on his extraordinary chess achievements. Anand held the World Chess Championship five times and was ranked #1 globally for extended periods. His particular strength is rapid calculation speed — he's widely considered the fastest chess calculator in history, able to process positions and find optimal moves faster than any other grandmaster.",
+    iqContext: "Anand's processing speed in chess — finding the best move in complex positions faster than anyone — maps directly onto the processing speed component of IQ tests. His ability to maintain world-class performance from the 1990s through the 2020s (over 30 years) also demonstrates exceptional cognitive longevity. Among chess players, his rapid calculation ability is considered possibly the greatest ever.",
+    faqItems: [
+      { question: "What is Viswanathan Anand's IQ?", answer: "Anand's IQ is estimated at 175-185 based on his 5 World Championships and legendary calculation speed. He's considered possibly the fastest chess calculator in history." },
+      { question: "Is Anand the smartest chess player?", answer: "In raw processing speed, possibly. His ability to calculate chess positions faster than any other grandmaster in history suggests extraordinary cognitive processing. Carlsen (186) and Kasparov (190) may have higher estimated IQs, but Anand's speed is unmatched." },
+      { question: "How does Anand stay competitive for so long?", answer: "His 30+ year career at the world-class level is exceptional even among grandmasters. This suggests not just high cognitive ability but exceptional cognitive longevity — maintaining peak mental performance well into his 50s." },
+    ],
+  },
+  {
+    name: "Nicki Minaj",
+    slug: "nicki-minaj",
+    estimatedIQ: "110–120",
+    knownFor: "Rapper, singer, businesswoman, cultural icon",
+    description: "Nicki Minaj's IQ is estimated at 110-120 based on her lyrical complexity, business acumen, and career longevity. Minaj's rap technique — switching between multiple characters, voices, and flows within a single verse — requires extraordinary verbal dexterity and working memory. She has built a brand spanning music, fashion, fragrances, and media, maintaining relevance for over 15 years in an industry that quickly discards artists.",
+    iqContext: "Minaj's verbal intelligence manifests in her rap technique — the ability to create and switch between distinct character voices (Roman, Barbie, etc.) within verses demonstrates cognitive flexibility and creative intelligence. Her business longevity in a brutal industry, combined with her technical rap skills, suggests above-average cognitive ability applied to creative and strategic domains.",
+    faqItems: [
+      { question: "What is Nicki Minaj's IQ?", answer: "Minaj's IQ is estimated at 110-120. Her complex multi-character rap technique, 15+ year career longevity, and diversified business ventures suggest above-average verbal and strategic intelligence." },
+      { question: "Is Nicki Minaj a good rapper technically?", answer: "Among the most technically skilled. Her ability to switch between characters, flows, and vocal styles within a single verse requires extraordinary verbal working memory and creative flexibility — cognitive skills that relate to IQ." },
+      { question: "How has Minaj stayed relevant so long?", answer: "Strategic reinvention, consistent quality, strong fan relationship management, and diversification into fashion, fragrance, and media. Maintaining 15+ years of relevance in hip-hop requires genuine strategic intelligence." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {

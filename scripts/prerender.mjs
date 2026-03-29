@@ -41,7 +41,9 @@ const careerSlugs = [
   "blockchain-developer", "pharmacologist", "air-traffic-controller",
   "optometrist", "hvac-technician",
   "forensic-scientist", "librarian", "mechanical-engineer",
-  "insurance-actuary", "social-media-manager", "chiropractor", "biomedical-engineer",
+  "insurance-actuary", "social-media-manager", "dermatologist",
+  "athletic-trainer", "clinical-psychologist", "film-director",
+  "psychiatric-nurse", "chiropractor", "biomedical-engineer",
   "real-estate-appraiser", "primary-care-physician", "video-game-developer",
 ];
 
@@ -137,6 +139,11 @@ const routes = [
   "/famous-iq/billie-eilish",
   "/famous-iq/lionel-richie",
   "/famous-iq/ruth-bader-ginsburg",
+  "/famous-iq/dwayne-johnson",
+  "/famous-iq/malala-yousafzai",
+  "/famous-iq/jeff-goldblum",
+  "/famous-iq/viswanathan-anand",
+  "/famous-iq/nicki-minaj",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",
