@@ -1,6 +1,8 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
+import IQMeter from "@/components/IQMeter";
+import ComparisonChart from "@/components/ComparisonChart";
 import { getCountryBySlug, countryIQData } from "@/data/countryIQData";
 
 const CountryIQ = () => {
@@ -77,6 +79,9 @@ const CountryIQ = () => {
         Average IQ in <span className="gradient-text">{country.name}</span>: Score, Ranking &amp; Analysis
       </h1>
 
+      {/* IQ Meter */}
+      <IQMeter score={country.avgIQ} label={country.name} />
+
       {/* Prominent Score Display */}
       <div className="grid grid-cols-3 gap-4 my-8">
         <div className="glass-card p-6 text-center rounded-xl">
@@ -119,6 +124,21 @@ const CountryIQ = () => {
       {continentPeers.length > 0 && (
         <>
           <h2>{country.name} Compared to {country.continent}</h2>
+
+          {/* Visual comparison chart */}
+          <ComparisonChart
+            title={`${country.continent} IQ Comparison`}
+            items={[
+              { label: country.name, value: country.avgIQ, highlight: true },
+              ...continentPeers.slice(0, 5).map((c) => ({
+                label: c!.name,
+                value: c!.avgIQ,
+                href: `/average-iq/${c!.slug}`,
+              })),
+            ]}
+            maxValue={115}
+          />
+
           <p>
             Here is how {country.name} compares to other countries in {country.continent} that are
             included in our database:

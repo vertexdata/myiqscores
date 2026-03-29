@@ -1,6 +1,9 @@
 import { useLocation, Link, Navigate } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
+import IQMeter from "@/components/IQMeter";
+import ComparisonChart from "@/components/ComparisonChart";
+import PercentileBar from "@/components/PercentileBar";
 import { getCareerBySlug, careerIQData } from "@/data/careerIQData";
 
 const CareerIQ = () => {
@@ -50,8 +53,11 @@ const CareerIQ = () => {
         IQ Needed to Be a <span className="gradient-text">{career.career}</span>
       </h1>
 
+      {/* IQ Meter for career midpoint */}
+      <IQMeter score={Math.round((career.minIQ + career.maxIQ) / 2)} label={`Avg ${career.career}`} />
+
       {/* Quick Stats */}
-      <div className="grid grid-cols-2 gap-4 my-8">
+      <div className="grid grid-cols-2 gap-4 my-6">
         <div className="glass-card p-5 text-center rounded-xl">
           <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Average IQ Range</p>
           <p className="font-heading font-bold text-3xl gradient-text">{career.avgIQRange}</p>
@@ -79,6 +85,21 @@ const CareerIQ = () => {
       <p>{career.educationPath}</p>
 
       <h2>How Does This Compare to Other Careers?</h2>
+
+      {/* Visual career comparison */}
+      <ComparisonChart
+        title="Career IQ Comparison"
+        items={[
+          { label: career.career, value: Math.round((career.minIQ + career.maxIQ) / 2), highlight: true },
+          ...relatedCareers.filter(Boolean).map((c) => ({
+            label: (c as any).career,
+            value: Math.round(((c as any).minIQ + (c as any).maxIQ) / 2),
+            href: `/iq-needed-for/${(c as any).slug}`,
+          })),
+        ]}
+        maxValue={150}
+      />
+
       <table>
         <thead>
           <tr>

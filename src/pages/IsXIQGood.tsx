@@ -2,6 +2,9 @@ import { useLocation, Link, Navigate } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
 import BellCurve from "@/components/BellCurve";
+import IQMeter from "@/components/IQMeter";
+import PercentileBar from "@/components/PercentileBar";
+import ComparisonChart from "@/components/ComparisonChart";
 import { iqScoreData, getAdjacentScores, iqScores } from "@/data/iqScoreData";
 
 const IsXIQGood = () => {
@@ -62,8 +65,13 @@ const IsXIQGood = () => {
         Is an IQ of <span className="gradient-text">{score}</span> Good? What It Means &amp; Where You Stand
       </h1>
 
+      {/* IQ Meter Visual */}
+      <div className="my-8">
+        <IQMeter score={score} />
+      </div>
+
       {/* Quick Stats */}
-      <div className="grid grid-cols-3 gap-2 sm:gap-4 my-8">
+      <div className="grid grid-cols-3 gap-2 sm:gap-4 my-4">
         <div className="glass-card p-3 sm:p-4 text-center rounded-xl">
           <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider mb-1">Classification</p>
           <p className="font-heading font-bold text-sm sm:text-lg text-foreground">{data.classification}</p>
@@ -77,6 +85,12 @@ const IsXIQGood = () => {
           <p className="font-heading font-bold text-sm sm:text-lg text-foreground">{data.rarity}</p>
         </div>
       </div>
+
+      {/* Percentile Bar */}
+      <PercentileBar
+        percentile={parseInt(data.percentile)}
+        label={`IQ ${score} Percentile Ranking`}
+      />
 
       {/* Bell Curve */}
       <div className="my-8">
@@ -114,6 +128,21 @@ const IsXIQGood = () => {
       <p>
         Here's how a score of {score} compares to nearby IQ scores:
       </p>
+
+      {/* Visual comparison chart */}
+      <ComparisonChart
+        title="Nearby IQ Score Comparison"
+        items={iqScores
+          .filter((s) => Math.abs(s - score) <= 15)
+          .slice(0, 7)
+          .map((s) => ({
+            label: `IQ ${s} — ${iqScoreData[s]?.classification || ""}`,
+            value: s,
+            href: s !== score ? `/is-${s}-iq-good` : undefined,
+            highlight: s === score,
+          }))}
+        maxValue={160}
+      />
 
       <table>
         <thead>
