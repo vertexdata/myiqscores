@@ -211,7 +211,7 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
           <IQCertificate
             name={userName}
             score={iq}
-            percentile={percentile}
+            percentile={`${percentile}th`}
             classification={label}
           />
 
