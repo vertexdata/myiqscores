@@ -815,6 +815,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does Cuban compare to other billionaires?", answer: "Cuban's estimated IQ (125-140) is somewhat below tech billionaires like Gates (150-160) or Bezos (145-155) but comparable to many successful entrepreneurs. His particular strength is rapid opportunity assessment and cross-domain business building." },
     ],
   },
+  {
+    name: "Eminem",
+    slug: "eminem",
+    estimatedIQ: "115–130",
+    knownFor: "Rapper, lyrical genius, best-selling hip-hop artist",
+    description: "Eminem's IQ is estimated at 115-130 based on his extraordinary verbal ability. His rhyme schemes are among the most complex in music history — linguists have analyzed his work and found multi-syllabic rhyme patterns, internal rhymes, and vocabulary density that exceed most published poets. He holds the Guinness record for most words in a hit single (Rap God: 1,560 words in 6 minutes). Despite dropping out of high school, his verbal-linguistic intelligence is exceptional.",
+    iqContext: "Eminem demonstrates that verbal intelligence can exist at genius levels independently of formal education. His ability to construct complex multi-layered rhyme schemes in real-time during freestyles suggests extraordinary working memory and verbal processing speed. Linguistic analysis of his catalog shows vocabulary and structural complexity rivaling literary authors — applied to a musical form that also demands rhythmic precision.",
+    faqItems: [
+      { question: "What is Eminem's IQ?", answer: "Eminem's IQ is estimated at 115-130. His extraordinary verbal ability — complex rhyme schemes, massive vocabulary, real-time freestyle improvisation — suggests strong verbal-linguistic intelligence despite no formal higher education." },
+      { question: "Is Eminem a lyrical genius?", answer: "By linguistic analysis, yes. His rhyme complexity, vocabulary density, and structural innovation exceed most published poets. The Guinness record for most words in a hit single confirms his extraordinary verbal processing ability." },
+      { question: "How does Eminem compare to other rappers intellectually?", answer: "Eminem's verbal intelligence is among the highest in rap. His rhyme complexity has been measured as exceeding Shakespeare in some metrics. Kendrick Lamar and Jay-Z are comparable in different ways — Kendrick in narrative depth, Jay-Z in business intelligence." },
+    ],
+  },
+  {
+    name: "Simone Biles",
+    slug: "simone-biles",
+    estimatedIQ: "100–115",
+    knownFor: "Greatest gymnast of all time, 37 Olympic/World medals",
+    description: "Simone Biles' IQ is estimated at 100-115, but her bodily-kinesthetic and spatial intelligence is arguably the highest ever measured in gymnastics. Biles performs skills that no other human can — her spatial awareness, rotational processing, and motor control in mid-air defy what was thought physically possible. Her ability to learn and execute new skills faster than any gymnast in history suggests extraordinary domain-specific cognitive processing.",
+    iqContext: "Biles demonstrates that certain forms of intelligence can reach 'genius' levels that IQ tests completely miss. Her brain processes spatial information, body position, and rotational physics at speeds that allow her to perform skills with fractions of a second for adjustment. This real-time physics computation in three dimensions, under extreme physical stress, represents cognitive processing that is extraordinary by any measure — just not the kind IQ tests assess.",
+    faqItems: [
+      { question: "What is Simone Biles' IQ?", answer: "Biles' general IQ is estimated at 100-115. Her extraordinary genius is in bodily-kinesthetic and spatial intelligence — processing rotational physics and body position in mid-air at speeds no other gymnast can match." },
+      { question: "Is Simone Biles smart?", answer: "In spatial-kinesthetic intelligence, she may be the most gifted athlete ever. Her brain processes 3D rotation, body position, and landing mechanics at speeds that allow her to perform skills literally no other human can do." },
+      { question: "How does athletic intelligence compare to IQ?", answer: "They're different domains. Biles has average-to-above-average general IQ but potentially the highest bodily-kinesthetic intelligence in gymnastics history. Traditional IQ tests miss this entire dimension of cognitive ability." },
+    ],
+  },
+  {
+    name: "Tim Cook",
+    slug: "tim-cook",
+    estimatedIQ: "125–140",
+    knownFor: "Apple CEO, supply chain genius",
+    description: "Tim Cook's IQ is estimated at 125-140 based on his academic record (Auburn engineering, Duke MBA, top of class) and his success leading the world's most valuable company. Cook is known for his operational brilliance — he transformed Apple's supply chain into the most efficient in the tech industry. His ability to manage Apple's $400+ billion revenue operation while navigating geopolitical complexity demonstrates exceptional analytical and strategic intelligence.",
+    iqContext: "Cook's intelligence manifests differently from Steve Jobs' — where Jobs was a creative visionary, Cook is an operational and strategic thinker. His engineering background, MBA, and 25+ year climb through IBM and Apple demonstrate sustained analytical excellence. Doubling Apple's revenue and market cap since becoming CEO required genuine strategic intelligence, not just maintaining momentum.",
+    faqItems: [
+      { question: "What is Tim Cook's IQ?", answer: "Cook's IQ is estimated at 125-140 based on his Auburn engineering degree, Duke MBA (top of class), and success running the world's most valuable company. His operational brilliance suggests strong analytical intelligence." },
+      { question: "Is Tim Cook as smart as Steve Jobs?", answer: "Different types of smart. Jobs (130-145) was a creative visionary; Cook (125-140) is an operational and strategic genius. Cook has actually grown Apple's revenue and value more than Jobs did, through different cognitive strengths." },
+      { question: "How does a CEO's IQ relate to company success?", answer: "Research shows CEO cognitive ability correlates with company performance, but the relationship is moderate. Leadership, strategic vision, and organizational skills matter as much as raw IQ. Cook exemplifies operational intelligence driving business success." },
+    ],
+  },
+  {
+    name: "Terence Tao",
+    slug: "terence-tao",
+    estimatedIQ: "220–230",
+    knownFor: "Fields Medal mathematician, highest verified IQ",
+    description: "Terence Tao has the highest verified IQ among living people, tested at 220-230 as a child. Tao is an Australian-American mathematician who became the youngest person to win a gold medal at the International Mathematical Olympiad (age 13), earned his PhD at 21, and won the Fields Medal (mathematics' Nobel Prize) at 31. He is a professor at UCLA and has published over 350 research papers across diverse areas of mathematics.",
+    iqContext: "Tao's IQ of 220-230 is sometimes questioned because it was measured in childhood using the ratio method, which can inflate scores for prodigies. However, his subsequent achievements — Fields Medal, 350+ papers, contributions across multiple mathematical fields — are consistent with extraordinary cognitive ability by any measure. Unlike many child prodigies who fade, Tao has sustained his intellectual output into his 50s, confirming his childhood scores reflected genuine exceptional ability.",
+    faqItems: [
+      { question: "What is Terence Tao's IQ?", answer: "Tao tested at 220-230 as a child, the highest verified score among living people. His Fields Medal, 350+ research papers, and contributions across multiple mathematical fields confirm this extraordinary cognitive ability." },
+      { question: "Is Terence Tao the smartest person alive?", answer: "By measured IQ, he has the highest verified score (220-230) among living people. His mathematical achievements are consistent with this extraordinary score. Whether IQ captures all forms of 'smartness' is debatable." },
+      { question: "How did Tao score so high on IQ tests?", answer: "Tao's childhood scores used the ratio method (mental age / chronological age × 100), which can produce very high numbers for prodigies. Some researchers suggest his 'true' deviation IQ would be around 160-180 — still extraordinarily high but different from the 220+ figure." },
+    ],
+  },
+  {
+    name: "Kobe Bryant",
+    slug: "kobe-bryant",
+    estimatedIQ: "110–120",
+    knownFor: "NBA legend, 5x champion, Mamba Mentality",
+    description: "Kobe Bryant's IQ was estimated at 110-120 based on his demonstrated cognitive abilities. Bryant was fluent in Italian and Spanish, studied extensively outside basketball (shadowing Disney and Apple executives), and won an Oscar for his animated short film 'Dear Basketball.' His basketball IQ was considered among the highest in NBA history, and his post-retirement ventures into venture capital and media production demonstrated strong cross-domain intelligence.",
+    iqContext: "Bryant's 'Mamba Mentality' was essentially a cognitive framework — deliberate practice, film study, and systematic skill development that mirrors how high-IQ individuals approach learning. His multilingualism, Oscar win, and venture capital success show cognitive ability extending well beyond athletics. Bryant invested in BodyArmor ($6M → $400M exit) and built a media company, demonstrating genuine analytical intelligence.",
+    faqItems: [
+      { question: "What was Kobe Bryant's IQ?", answer: "Bryant's IQ was estimated at 110-120. His multilingualism (Italian, Spanish, English), Oscar win, venture capital success ($6M BodyArmor investment → $400M exit), and legendary basketball IQ suggest above-average cognitive ability across multiple domains." },
+      { question: "Was Kobe smart off the court?", answer: "Very. He spoke three languages, won an Oscar, built a media company, and made highly successful venture investments. He regularly met with tech and business leaders to learn. His intelligence extended far beyond basketball." },
+      { question: "What was Kobe's basketball IQ?", answer: "Among the highest in NBA history. Kobe's film study habits were legendary — he would analyze opponents for hundreds of hours. His ability to deconstruct and replicate any move he saw demonstrated extraordinary observational learning and motor intelligence." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
