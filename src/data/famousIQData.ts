@@ -1283,6 +1283,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How does AOC compare to other communicators?", answer: "Her engagement metrics consistently exceed colleagues with decades more experience. This suggests a natural communication intelligence — the ability to make complex ideas accessible and emotionally resonant — that few politicians possess regardless of their IQ." },
     ],
   },
+  {
+    name: "Selena Gomez",
+    slug: "selena-gomez",
+    estimatedIQ: "108–118",
+    knownFor: "Singer, actress, Rare Beauty founder, mental health advocate",
+    description: "Selena Gomez's IQ is estimated at 108-118. Beyond music and acting, Gomez built Rare Beauty into a $2B+ brand that disrupted the beauty industry by centering mental health. Her strategic brand positioning — authentic vulnerability rather than aspirational perfection — reversed typical celebrity beauty marketing. She's the most followed woman on Instagram.",
+    iqContext: "Gomez's Rare Beauty success parallels Rihanna's Fenty — identifying an underserved market need. While Fenty addressed shade inclusivity, Rare Beauty addressed the mental health gap in beauty marketing. Building a $2B brand through authentic positioning requires genuine strategic intelligence.",
+    faqItems: [
+      { question: "What is Selena Gomez's IQ?", answer: "Gomez's IQ is estimated at 108-118. Building Rare Beauty into a $2B brand through mental health-centered marketing demonstrates above-average strategic and emotional intelligence." },
+      { question: "How did Gomez build Rare Beauty?", answer: "By centering mental health and authenticity rather than aspirational perfection. This inverted typical celebrity beauty marketing. The 1% Rare Impact Fund donates to mental health resources — genuine strategic positioning, not just branding." },
+      { question: "Is Selena Gomez a good businesswoman?", answer: "Her $2B+ Rare Beauty valuation speaks for itself. She identified that authenticity and mental health awareness resonated more with Gen Z than traditional beauty marketing — a strategic insight that major beauty companies missed." },
+    ],
+  },
+  {
+    name: "Charles Darwin",
+    slug: "charles-darwin",
+    estimatedIQ: "150–165",
+    knownFor: "Theory of evolution, On the Origin of Species",
+    description: "Charles Darwin's IQ is estimated at 150-165, reflecting his extraordinary ability to observe patterns in nature, synthesize evidence across disciplines, and develop one of the most transformative scientific theories in history. Darwin spent 20 years meticulously gathering evidence before publishing On the Origin of Species — demonstrating both exceptional analytical ability and extraordinary scientific patience.",
+    iqContext: "Darwin's genius was observational and synthetic — he noticed patterns across geology, zoology, botany, and biogeography that others missed, then wove them into a unified theory. His approach was more similar to modern data science (pattern recognition across large datasets) than to theoretical physics (mathematical deduction). This represents a distinctive type of intelligence that standard IQ tests measure partially.",
+    faqItems: [
+      { question: "What was Darwin's IQ?", answer: "Darwin's IQ is estimated at 150-165. He never took an IQ test, but his ability to develop evolutionary theory from decades of observation and synthesis suggests exceptional analytical intelligence." },
+      { question: "Was Darwin a genius?", answer: "By any definition. His theory of evolution fundamentally changed human understanding of biology and our place in nature. Spending 20 years meticulously gathering evidence before publishing demonstrates both exceptional intelligence and extraordinary scientific discipline." },
+      { question: "How does Darwin compare to Einstein?", answer: "Both revolutionized science but in different ways. Einstein (160) used mathematical-theoretical reasoning; Darwin (150-165) used observational-synthetic reasoning. Both represent the highest levels of scientific intelligence applied to different domains." },
+    ],
+  },
+  {
+    name: "Steph Curry",
+    slug: "steph-curry-detailed",
+    estimatedIQ: "105–120",
+    knownFor: "NBA champion, greatest shooter ever, Under Armour partner",
+    description: "Additional analysis: Curry's shooting intelligence deserves deeper examination. His ability to calculate shooting trajectories from any angle, distance, and defensive pressure in milliseconds represents extraordinary spatial-mathematical processing. Stanford researchers studying Curry's shooting found he processes and executes shot decisions faster than any previously measured basketball player.",
+    iqContext: "Curry graduated from Davidson College — not a given for professional athletes. His Under Armour equity deal (reportedly worth $1B+) shows exceptional business judgment. His shooting accuracy from previously impossible distances fundamentally changed how basketball is played — the kind of paradigm shift usually associated with genius-level thinking in a domain.",
+    faqItems: [
+      { question: "How is Curry's shooting evidence of intelligence?", answer: "His brain processes shooting angles, defender positions, and trajectory calculations in milliseconds — spatial-mathematical processing at speeds researchers have never measured in other players. It's physics computation in real-time under extreme pressure." },
+      { question: "Is Curry smart off the court?", answer: "His Davidson degree, $1B+ Under Armour equity deal, and media production company suggest solid general intelligence. The business deal alone demonstrates exceptional negotiation and long-term strategic thinking." },
+      { question: "Did Curry change basketball through intelligence?", answer: "Yes — he proved that three-point shooting from extreme distances was the most efficient strategy. This mathematical insight, executed through unprecedented skill, fundamentally transformed NBA strategy. It's essentially an IQ-driven revolution in the sport." },
+    ],
+  },
+  {
+    name: "Ada Lovelace",
+    slug: "ada-lovelace",
+    estimatedIQ: "155–170",
+    knownFor: "World's first computer programmer, mathematician",
+    description: "Ada Lovelace is estimated to have had an IQ of 155-170, making her one of the most cognitively gifted women in recorded history. Working with Charles Babbage in the 1840s, she wrote what is considered the first computer program — an algorithm for Babbage's Analytical Engine. More remarkably, she was the first person to recognize that computers could do more than just calculate numbers, envisioning them creating music and art — a conceptual leap 100 years ahead of its time.",
+    iqContext: "Lovelace's genius was in abstract conceptualization. While Babbage designed the hardware, Lovelace independently grasped the machine's potential for general-purpose computation — a conceptual insight so far ahead of its time that it wasn't fully appreciated until the mid-20th century. Her ability to think abstractly about computation before computers existed represents cognitive ability at the extreme end of human capacity.",
+    faqItems: [
+      { question: "What was Ada Lovelace's IQ?", answer: "Lovelace's IQ is estimated at 155-170. She wrote the world's first computer program in the 1840s and was the first to envision general-purpose computing — concepts a century ahead of their time." },
+      { question: "Was Ada Lovelace really the first programmer?", answer: "Yes. Her notes on Babbage's Analytical Engine include an algorithm for computing Bernoulli numbers — widely recognized as the first computer program. She independently developed the concept of programming before the hardware existed to run programs." },
+      { question: "How was Lovelace so far ahead of her time?", answer: "Exceptional abstract reasoning. She grasped that computing machines could manipulate symbols, not just numbers — envisioning them creating music and art. This conceptual leap wouldn't be fully realized for 100+ years, suggesting cognitive ability at the extreme upper end." },
+    ],
+  },
+  {
+    name: "Tyler Perry",
+    slug: "tyler-perry",
+    estimatedIQ: "115–128",
+    knownFor: "Filmmaker, media mogul, billionaire, Tyler Perry Studios",
+    description: "Tyler Perry's IQ is estimated at 115-128 based on his extraordinary business achievements. Perry built a billion-dollar entertainment empire entirely independently — no studio backing, no Ivy League connections. Tyler Perry Studios is the first major film studio owned by an African American, spanning 330 acres. He writes, directs, produces, and often stars in his projects simultaneously.",
+    iqContext: "Perry's intelligence manifests in business independence and creative productivity. He writes, produces, and directs at a pace that staggers Hollywood — sometimes completing entire films in weeks. Building an independent studio without traditional industry support required genuine strategic intelligence, understanding audience economics, and entrepreneurial risk management at the highest level.",
+    faqItems: [
+      { question: "What is Tyler Perry's IQ?", answer: "Perry's IQ is estimated at 115-128. Building a billion-dollar independent studio, writing/directing dozens of films, and becoming the first African American to own a major studio all demonstrate exceptional creative and business intelligence." },
+      { question: "How did Perry succeed without Hollywood backing?", answer: "He identified an underserved audience (Black churchgoing communities), built direct relationships through theater tours, and reinvested profits into progressively bigger productions. This independent business model required genuine strategic intelligence." },
+      { question: "Is Tyler Perry a business genius?", answer: "His results suggest yes. Building a 330-acre studio worth $1B+, maintaining creative control over all projects, and achieving billionaire status entirely independently demonstrates business intelligence rivaling any traditional media mogul." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
