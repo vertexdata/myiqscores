@@ -1023,6 +1023,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "How has Minaj stayed relevant so long?", answer: "Strategic reinvention, consistent quality, strong fan relationship management, and diversification into fashion, fragrance, and media. Maintaining 15+ years of relevance in hip-hop requires genuine strategic intelligence." },
     ],
   },
+  {
+    name: "Ariana Grande",
+    slug: "ariana-grande",
+    estimatedIQ: "108–118",
+    knownFor: "Grammy-winning singer, actress, vocal powerhouse",
+    description: "Ariana Grande's IQ is estimated at 108-118. Her four-octave vocal range is among the most impressive in pop music, requiring extraordinary auditory processing and motor control. Grande has also demonstrated business intelligence through strategic album releases, brand partnerships, and a perfume line generating over $1 billion in revenue.",
+    iqContext: "Grande's intelligence manifests primarily in musical and business domains. Her vocal ability — precise pitch control across four octaves — requires neural processing that relates to but differs from traditional IQ. Her successful transition from Nickelodeon actress to pop icon to billion-dollar brand shows strategic adaptation.",
+    faqItems: [
+      { question: "What is Ariana Grande's IQ?", answer: "Grande's IQ is estimated at 108-118. Her four-octave vocal range, Grammy success, and billion-dollar fragrance empire suggest above-average cognitive ability across musical and business domains." },
+      { question: "Is Ariana Grande musically gifted?", answer: "Undeniably. Her four-octave range places her among the most technically skilled vocalists in pop history. The precision of her pitch control requires extraordinary auditory processing ability." },
+      { question: "How did Grande build a billion-dollar brand?", answer: "Strategic diversification from music to fragrances (r.e.m. beauty, perfumes), acting, and brand partnerships. Her business decisions show genuine strategic thinking beyond musical talent." },
+    ],
+  },
+  {
+    name: "Satya Nadella",
+    slug: "satya-nadella",
+    estimatedIQ: "135–150",
+    knownFor: "Microsoft CEO, transformed Microsoft's culture and market cap",
+    description: "Satya Nadella's IQ is estimated at 135-150 based on his academic record (Mangalore University electrical engineering, University of Wisconsin MS, University of Chicago MBA) and his extraordinary success as Microsoft CEO. Nadella pivoted Microsoft from a stagnant Windows-centric company to a cloud and AI powerhouse, increasing market cap from $300B to over $3T — the largest value creation by any CEO in tech history.",
+    iqContext: "Nadella's triple academic credentials (engineering degree, CS master's, MBA) each independently suggest strong cognitive ability. His strategic vision — pivoting Microsoft to cloud (Azure) and AI (OpenAI partnership) years before competitors — demonstrates the kind of strategic foresight that requires genuine analytical intelligence. Growing a company from $300B to $3T+ requires sustained cognitive excellence at the highest level.",
+    faqItems: [
+      { question: "What is Satya Nadella's IQ?", answer: "Nadella's IQ is estimated at 135-150. Three advanced degrees and growing Microsoft from $300B to $3T+ demonstrate exceptional analytical and strategic intelligence." },
+      { question: "Is Nadella the most successful CEO in tech?", answer: "By value creation, arguably yes — adding over $2.7T in market cap. His strategic decisions (cloud pivot, OpenAI partnership, cultural transformation) demonstrate the kind of foresight that characterizes the highest-functioning business minds." },
+      { question: "How does Nadella compare to other tech CEOs?", answer: "Nadella's estimated IQ (135-150) is comparable to Pichai (135-150) and Cook (125-140). His particular genius is in strategic transformation — he didn't just manage Microsoft, he fundamentally reinvented it." },
+    ],
+  },
+  {
+    name: "Post Malone",
+    slug: "post-malone",
+    estimatedIQ: "110–120",
+    knownFor: "Multi-genre musician, songwriter, record-breaker",
+    description: "Post Malone's IQ is estimated at 110-120 based on his musical versatility and business acumen. Malone defied industry expectations by succeeding across hip-hop, pop, rock, and country — a genre-crossing ability that requires understanding multiple musical traditions and audience psychologies. He plays multiple instruments, writes his own material, and has broken numerous streaming records.",
+    iqContext: "Malone's multi-genre success suggests strong cognitive flexibility — the ability to understand and authentically produce music across fundamentally different traditions. His business ventures (Maison No. 9 rosé wine, Enoc gaming brand) show entrepreneurial intelligence. His public persona of casual nonchalance belies the strategic thinking required to maintain relevance across multiple music genres simultaneously.",
+    faqItems: [
+      { question: "What is Post Malone's IQ?", answer: "Post Malone's IQ is estimated at 110-120. His multi-genre success (hip-hop, pop, rock, country), multi-instrument ability, and business ventures suggest above-average cognitive flexibility." },
+      { question: "Is Post Malone musically intelligent?", answer: "Very. Succeeding authentically across 4+ genres requires understanding different musical traditions, audience expectations, and creative approaches. His ability to write hit songs in any genre suggests genuine musical intelligence." },
+      { question: "How does Post Malone cross genres so well?", answer: "Cognitive flexibility — the ability to shift between different frameworks and approaches. This is a genuine cognitive skill that correlates with IQ. Most musicians excel in one genre; Malone's cross-genre success is exceptionally rare." },
+    ],
+  },
+  {
+    name: "Michelle Obama",
+    slug: "michelle-obama",
+    estimatedIQ: "125–135",
+    knownFor: "Former First Lady, Princeton/Harvard grad, bestselling author",
+    description: "Michelle Obama's IQ is estimated at 125-135 based on her academic record — Princeton University undergraduate, Harvard Law School JD. Before becoming First Lady, she worked at a top law firm, served as Associate Dean at University of Chicago, and held leadership roles in healthcare. Her bestselling memoir 'Becoming' and subsequent advocacy work demonstrate exceptional verbal and strategic intelligence.",
+    iqContext: "Obama's Princeton + Harvard Law trajectory provides strong evidence of superior cognitive ability. Harvard Law School alone has an admission rate under 10% and requires outstanding analytical reasoning. Her subsequent career success across law, education, healthcare administration, and public advocacy demonstrates cognitive versatility that extends well beyond academic credentials.",
+    faqItems: [
+      { question: "What is Michelle Obama's IQ?", answer: "Michelle Obama's IQ is estimated at 125-135. Her Princeton and Harvard Law degrees, legal career, university leadership, and bestselling authorship all indicate superior analytical and verbal intelligence." },
+      { question: "Did Michelle Obama go to Harvard?", answer: "Yes — Harvard Law School, earning her JD in 1988. She had previously graduated from Princeton University. Both institutions are highly selective and academically demanding." },
+      { question: "How does Michelle compare to Barack intellectually?", answer: "Both are estimated in the 125-140 range. Michelle's particular strengths may be in organizational leadership and strategic communication, while Barack's may lean more toward verbal eloquence and legal analysis. Both demonstrate superior cognitive ability." },
+    ],
+  },
+  {
+    name: "Novak Djokovic",
+    slug: "novak-djokovic",
+    estimatedIQ: "105–118",
+    knownFor: "Tennis GOAT by many measures, 24 Grand Slam titles",
+    description: "Novak Djokovic's IQ is estimated at 105-118. His tennis intelligence is considered the highest in the sport's history — his ability to adapt mid-match, find opponents' weaknesses, and maintain optimal decision-making under extreme pressure for 3-5 hours is unmatched. Djokovic speaks 11 languages, suggesting strong linguistic intelligence. His business ventures and media company show broader cognitive abilities.",
+    iqContext: "Djokovic's 11-language fluency alone suggests above-average cognitive ability — multilingualism at this level is strongly correlated with high IQ. His tennis decision-making — analyzing opponents in real-time, adjusting strategy continuously, maintaining peak cognitive performance under pressure for hours — represents domain-specific intelligence at its highest level.",
+    faqItems: [
+      { question: "What is Novak Djokovic's IQ?", answer: "Djokovic's IQ is estimated at 105-118. His 11-language fluency and legendary tennis adaptability suggest above-average cognitive ability, with exceptional domain-specific intelligence in competitive strategy." },
+      { question: "How many languages does Djokovic speak?", answer: "Djokovic speaks 11 languages: Serbian, English, French, Italian, German, Spanish, Portuguese, Arabic, Chinese (basic), Japanese (basic), and Russian. This extraordinary multilingualism is strongly correlated with high cognitive ability." },
+      { question: "Is Djokovic the smartest tennis player?", answer: "His 11-language fluency and legendary tactical adaptability suggest he may be. Tennis requires real-time strategic adjustment, pattern recognition, and decision-making under pressure — cognitive skills directly related to IQ." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {
