@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Shield, Twitter, Facebook, Linkedin, Copy, Check, Lock, Award } from "lucide-react";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
+import IQCertificate from "./IQCertificate";
 import { questions } from "@/data/questions";
 import { calculateIQ, getIQLabel, getPercentile, getCategoryScores, categories } from "@/data/questions";
 import { supabase } from "@/integrations/supabase/client";
@@ -206,6 +207,14 @@ const Results = ({ answers, userName, userEmail, onShowNurture }: ResultsProps) 
         </motion.div>
 
         <motion.div variants={fadeUp} className="glass-card p-6 mb-8">
+          {/* IQ Certificate */}
+          <IQCertificate
+            name={userName}
+            score={iq}
+            percentile={percentile}
+            classification={label}
+          />
+
           {/* Ad after score reveal */}
           <AdUnit slotId={AD_SLOTS.resultsTop} format="display" size="responsive" className="mb-6" />
 
