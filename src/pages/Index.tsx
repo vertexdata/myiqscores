@@ -56,7 +56,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
-        title="Free IQ Test — Get Your Score Instantly | MyIQScores"
+        title="Free IQ Test — Get Your Score Instantly Online | MyIQScores"
         description="Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall. Discover your cognitive edge."
         canonicalUrl="https://www.myiqscores.com"
         jsonLd={websiteSchema}
