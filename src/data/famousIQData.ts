@@ -1153,6 +1153,71 @@ export const famousIQData: FamousIQInfo[] = [
       { question: "Was the Moon landing decision-making evidence of high IQ?", answer: "Absolutely. Armstrong manually landed the Eagle with 25 seconds of fuel left while alarms were firing — overriding the automatic system in real-time. This required extraordinary processing speed, spatial reasoning, and composure under pressure that few humans could match." },
     ],
   },
+  {
+    name: "Adele",
+    slug: "adele",
+    estimatedIQ: "108–118",
+    knownFor: "Grammy-winning singer, vocal powerhouse, record-breaking albums",
+    description: "Adele's IQ is estimated at 108-118 based on her songwriting depth and career management. Her ability to write emotionally resonant songs that connect with hundreds of millions of people requires genuine verbal-emotional intelligence. Her strategic career decisions — taking long breaks between albums, limiting streaming availability, and maintaining mystique — show sophisticated brand thinking.",
+    iqContext: "Adele's intelligence manifests in emotional and verbal domains. Her lyrics translate complex emotional experiences into universally relatable songs — a deceptively difficult skill. Her career strategy of scarcity (years between albums) contradicts music industry norms but consistently generates record-breaking results, showing independent strategic thinking.",
+    faqItems: [
+      { question: "What is Adele's IQ?", answer: "Adele's IQ is estimated at 108-118. Her emotionally sophisticated songwriting, strategic career management, and ability to connect with global audiences suggest above-average verbal and emotional intelligence." },
+      { question: "Is Adele a good songwriter?", answer: "Among the best. Her ability to translate complex emotional experiences into universally relatable lyrics requires genuine verbal intelligence. Her songs achieve both critical acclaim and massive commercial success — a rare combination." },
+      { question: "How has Adele managed her career so strategically?", answer: "By defying industry norms: taking years between albums, limiting streaming, and maintaining personal privacy. This scarcity strategy generates massive anticipation and record-breaking sales — showing independent strategic thinking." },
+    ],
+  },
+  {
+    name: "Usain Bolt",
+    slug: "usain-bolt",
+    estimatedIQ: "100–112",
+    knownFor: "Fastest human ever, 8 Olympic gold medals",
+    description: "Usain Bolt's IQ is estimated at 100-112. While sprinting appears purely physical, Bolt's dominance required significant cognitive components: reaction time processing, race strategy, mental preparation under extreme pressure, and the ability to maintain technical precision at speeds no human had achieved. His post-retirement business ventures and media personality demonstrate broader cognitive ability.",
+    iqContext: "Bolt's particular cognitive gifts — extraordinary reaction time and the ability to maintain perfect biomechanical form at 27+ mph — represent neural processing abilities that IQ tests don't measure. His brand management and business ventures since retirement show practical intelligence extending beyond athletics.",
+    faqItems: [
+      { question: "What is Usain Bolt's IQ?", answer: "Bolt's IQ is estimated at 100-112. His extraordinary reaction time and biomechanical precision at world-record speeds represent neural processing abilities beyond what standard IQ tests capture." },
+      { question: "Is sprinting a cognitive skill?", answer: "Partly. Reaction time, biomechanical optimization, race strategy, and maintaining technical form under extreme physical stress all have cognitive components. Bolt's dominance required both physical gifts and cognitive precision." },
+      { question: "Is Bolt smart off the track?", answer: "His post-retirement business ventures, brand partnerships, and media presence suggest solid practical intelligence. He's navigated the transition from athlete to personality and entrepreneur effectively." },
+    ],
+  },
+  {
+    name: "Sam Altman",
+    slug: "sam-altman",
+    estimatedIQ: "140–155",
+    knownFor: "OpenAI CEO, Y Combinator president, AI pioneer",
+    description: "Sam Altman's IQ is estimated at 140-155 based on his extraordinary career trajectory. He dropped out of Stanford at 19, became president of Y Combinator (the world's most prestigious startup accelerator) at 28, and now leads OpenAI — the company at the center of the AI revolution. His ability to identify transformative technology trends, attract world-class talent, and navigate extremely complex organizational dynamics suggests exceptional cognitive ability.",
+    iqContext: "Altman's strategic vision — betting on AI before it was mainstream, structuring OpenAI's unique capped-profit model, and navigating the relationship with Microsoft — demonstrates the kind of systems thinking that characterizes the highest cognitive ability. His Y Combinator tenure, where he evaluated thousands of startups, further honed pattern recognition skills already in the gifted-to-genius range.",
+    faqItems: [
+      { question: "What is Sam Altman's IQ?", answer: "Altman's IQ is estimated at 140-155. His Stanford background, Y Combinator presidency at 28, and leadership of OpenAI during the AI revolution all suggest gifted-to-genius range cognitive ability." },
+      { question: "Is Sam Altman a genius?", answer: "His estimated IQ (140-155) crosses the conventional genius threshold of 140. His ability to identify AI's transformative potential early, structure novel organizational models, and lead through unprecedented technological change is consistent with exceptional intelligence." },
+      { question: "How does Altman compare to other tech leaders?", answer: "Altman's estimated IQ (140-155) places him comparable to Musk (150-155) and potentially above Bezos (145-155) or Cook (125-140). His particular strength is in strategic vision and organizational design." },
+    ],
+  },
+  {
+    name: "Dolly Parton",
+    slug: "dolly-parton",
+    estimatedIQ: "115–125",
+    knownFor: "Singer, songwriter, actress, businesswoman, philanthropist",
+    description: "Dolly Parton's IQ is estimated at 115-125 based on her extraordinary business achievements. Beyond her legendary music career (3,000+ songs, 25 #1 country hits), Parton built Dollywood (attracting 3M+ visitors annually), founded the Imagination Library (delivering 200M+ free books to children), and manages a business empire spanning music, theme parks, and media. Her 'dumb blonde' persona deliberately masks sharp business intelligence.",
+    iqContext: "Parton is perhaps the ultimate example of strategic persona management. She has openly said 'It costs a lot of money to look this cheap' and 'I'm not offended by all the dumb blonde jokes because I know I'm not dumb — and I also know that I'm not blonde.' Her business empire — worth an estimated $650M — was built through decades of strategic decisions that belie her fun-loving public image.",
+    faqItems: [
+      { question: "What is Dolly Parton's IQ?", answer: "Parton's IQ is estimated at 115-125. Her $650M business empire, 3,000+ songs, Dollywood theme park, and Imagination Library (200M+ free books) all demonstrate genuine business and creative intelligence behind her playful persona." },
+      { question: "Is Dolly Parton smart?", answer: "Extremely. Her 'dumb blonde' persona is a deliberate strategic choice. She built a theme park, philanthropic empire, and 60-year music career through shrewd business decisions. She's one of the most strategically intelligent entertainers in history." },
+      { question: "What is Dolly's biggest business achievement?", answer: "Hard to choose: Dollywood (3M+ annual visitors, $300M+ revenue), the Imagination Library (200M+ free books in 5 countries), or her music catalog (3,000+ songs, estimated $150M+). Each alone would represent impressive business intelligence." },
+    ],
+  },
+  {
+    name: "Lewis Hamilton",
+    slug: "lewis-hamilton",
+    estimatedIQ: "110–120",
+    knownFor: "7x F1 World Champion, most race wins in history",
+    description: "Lewis Hamilton's IQ is estimated at 110-120. F1 racing is among the most cognitively demanding sports — drivers process information from dozens of data streams while controlling a car at 200+ mph, making split-second strategic decisions, and communicating with engineers in real-time. Hamilton's record-breaking success (7 championships, 100+ wins) reflects extraordinary cognitive processing under extreme physical and mental stress.",
+    iqContext: "F1 is essentially applied physics at 200 mph. Hamilton must process tire degradation data, weather changes, fuel loads, competitor strategies, and radio communications while physically controlling a car at the limits of adhesion. Research shows F1 drivers have reaction times and cognitive processing speeds significantly above population norms. Hamilton's additional business ventures (fashion, music, activism) show cognitive breadth beyond racing.",
+    faqItems: [
+      { question: "What is Lewis Hamilton's IQ?", answer: "Hamilton's IQ is estimated at 110-120. F1 racing requires extraordinary cognitive processing — managing dozens of data streams while controlling a car at 200+ mph. His 7 championships reflect exceptional cognitive ability under extreme pressure." },
+      { question: "Is F1 racing intellectually demanding?", answer: "Among the most demanding sports cognitively. Drivers process tire data, weather, fuel, competitor strategy, and radio communications while physically controlling a car at the limits of physics. Research shows F1 drivers have significantly above-average cognitive processing speed." },
+      { question: "How smart is Hamilton off the track?", answer: "His fashion ventures, music interests, environmental activism, and business investments show cognitive breadth beyond racing. He's multilingual and engages with complex social issues, suggesting above-average general intelligence." },
+    ],
+  },
 ];
 
 export function getFamousPersonBySlug(slug: string): FamousIQInfo | undefined {

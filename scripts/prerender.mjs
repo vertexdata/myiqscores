@@ -46,7 +46,9 @@ const careerSlugs = [
   "psychiatric-nurse", "dental-assistant", "emt", "orthodontist",
   "epidemiologist", "landscape-architect", "management-consultant",
   "audiologist", "art-director", "genetic-counselor",
-  "interpreter-translator", "chiropractor", "biomedical-engineer",
+  "interpreter-translator", "nuclear-engineer",
+  "clinical-research-coordinator", "urban-planner",
+  "veterinary-surgeon", "ethical-hacker", "chiropractor", "biomedical-engineer",
   "real-estate-appraiser", "primary-care-physician", "video-game-developer",
 ];
 
@@ -157,6 +159,11 @@ const routes = [
   "/famous-iq/roger-federer",
   "/famous-iq/ronda-rousey",
   "/famous-iq/neil-armstrong",
+  "/famous-iq/adele",
+  "/famous-iq/usain-bolt",
+  "/famous-iq/sam-altman",
+  "/famous-iq/dolly-parton",
+  "/famous-iq/lewis-hamilton",
   "/iq-myths/do-video-games-make-you-smarter",
   "/iq-myths/mozart-effect-iq",
   "/iq-myths/birth-order-and-iq",
