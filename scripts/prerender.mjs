@@ -48,7 +48,9 @@ const careerSlugs = [
   "audiologist", "art-director", "genetic-counselor",
   "interpreter-translator", "nuclear-engineer",
   "clinical-research-coordinator", "urban-planner",
-  "veterinary-surgeon", "ethical-hacker", "chiropractor", "biomedical-engineer",
+  "veterinary-surgeon", "ethical-hacker", "neurosurgeon",
+  "patent-attorney", "database-administrator",
+  "physical-education-teacher", "cloud-architect", "chiropractor", "biomedical-engineer",
   "real-estate-appraiser", "primary-care-physician", "video-game-developer",
 ];
 
