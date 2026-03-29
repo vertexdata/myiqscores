@@ -356,6 +356,66 @@ export const iqMythData: IQMythInfo[] = [
       { question: "Can genetic testing predict IQ?", answer: "Very poorly. The best current polygenic scores explain about 10-15% of IQ variation — barely better than guessing from parental education level. Genetic IQ prediction is unlikely to become accurate in the foreseeable future due to the extreme complexity of the genetic architecture." },
     ],
   },
+  {
+    title: "Does Sugar Make Kids Hyperactive?",
+    slug: "sugar-hyperactivity-iq",
+    myth: "Sugar makes children hyperactive and impairs their cognitive function and IQ.",
+    reality: "Double-blind studies consistently show sugar does not cause hyperactivity. Parents perceive hyperactivity because they expect it. However, excessive sugar intake can impair nutrition and indirectly affect cognitive development.",
+    explanation: "This is one of the most widely believed myths in parenting. Multiple double-blind, placebo-controlled studies have given children either sugar or artificial sweetener and asked parents to rate their behavior — parents consistently cannot tell the difference. A landmark meta-analysis of 16 studies found zero effect of sugar on children's behavior or cognitive performance. The perceived hyperactivity is entirely a parental expectation effect: when parents believe their child has consumed sugar, they rate the child as more hyperactive even when the child received a placebo. That said, a diet high in processed sugar displaces nutritious foods that support brain development (protein, omega-3s, vitamins). Chronic poor nutrition absolutely impairs cognitive development. So sugar doesn't directly cause hyperactivity or lower IQ, but a sugar-heavy diet that displaces brain-healthy nutrients can indirectly harm cognitive development.",
+    faqItems: [
+      { question: "Does sugar make kids hyperactive?", answer: "No. Multiple double-blind studies show sugar does not cause hyperactivity. The perceived effect is entirely due to parental expectations — parents think their kids are hyper because they expect sugar to cause it." },
+      { question: "Does sugar affect IQ?", answer: "Not directly. Sugar doesn't impair cognitive function in the short term. However, a diet high in processed sugar that displaces nutritious foods can indirectly harm brain development by reducing intake of omega-3s, protein, and essential vitamins." },
+      { question: "What foods actually help brain development?", answer: "Omega-3 fatty acids (fish, walnuts), protein, iron, zinc, iodine, B vitamins, and antioxidants (berries, dark greens) all support cognitive development. A Mediterranean-style diet is associated with the best cognitive outcomes." },
+    ],
+  },
+  {
+    title: "Does Music Training Increase IQ?",
+    slug: "music-training-and-iq",
+    myth: "Learning to play a musical instrument dramatically increases IQ, especially in children.",
+    reality: "Music training is associated with 2-3 IQ point gains in children and improved verbal memory and executive function. The effect is real but modest, and it's unclear how much is caused by music versus general enrichment.",
+    explanation: "Music training does have real cognitive benefits, but the effect is smaller than the 'Mozart myth' industry suggests. A meta-analysis of 13 studies found that children who receive music lessons show IQ gains of about 2-3 points compared to controls. The benefits are strongest for verbal memory and executive function (planning, attention control). However, interpretation is complicated: children who take music lessons often come from more educationally engaged families, making it hard to separate the effect of music from general enrichment. The most rigorous study (by Glenn Schellenberg at University of Toronto) randomly assigned children to music lessons, drama lessons, or no lessons and found music group gained about 3 IQ points more than the control group. This confirms a real but modest effect. The mechanism likely involves the extreme cognitive demands of music — reading notation, coordinating motor movements, processing auditory feedback, and managing timing simultaneously exercises multiple brain regions.",
+    faqItems: [
+      { question: "Does learning music increase IQ?", answer: "Modestly, yes. Research shows 2-3 IQ point gains in children who receive music training, with improvements in verbal memory and executive function. The effect is real but smaller than commonly claimed." },
+      { question: "What instrument is best for brain development?", answer: "Research doesn't clearly identify one instrument as best. Piano and violin have been most studied and show benefits. The key factor is regular practice that challenges the student, not the specific instrument." },
+      { question: "Is it too late to get cognitive benefits from music?", answer: "No. Adults who learn instruments show improvements in executive function and auditory processing. The effects are strongest in children during critical developmental periods, but brain plasticity allows benefits at any age." },
+    ],
+  },
+  {
+    title: "Do IQ Tests Have Cultural Bias?",
+    slug: "iq-test-cultural-bias",
+    myth: "IQ tests are completely fair and measure pure intelligence regardless of cultural background.",
+    reality: "All IQ tests contain some degree of cultural bias. Tests designed in Western countries may disadvantage people from different cultural backgrounds through language, content, and testing format assumptions.",
+    explanation: "Cultural bias in IQ testing is well-documented and comes in several forms. Content bias: questions may reference cultural knowledge specific to one group (American holidays, Western fairy tales, specific cultural idioms). Linguistic bias: verbal subtests inherently favor native speakers of the test's language. Format bias: timed, multiple-choice testing formats are more familiar to people educated in Western systems. Motivational bias: the testing context itself (sitting in a room, answering questions from a stranger) may be more comfortable for some cultural groups. Efforts to create 'culture-fair' tests (like Raven's Progressive Matrices, which uses non-verbal pattern recognition) have reduced but not eliminated bias. Even non-verbal tests assume familiarity with 2D pattern completion — a skill more practiced in cultures with formal schooling. The practical implication: IQ tests are best interpreted within their cultural context. Cross-cultural IQ comparisons should be made with extreme caution.",
+    faqItems: [
+      { question: "Are IQ tests culturally biased?", answer: "To some degree, yes. Western-designed IQ tests can disadvantage people from different cultural backgrounds through language, content, and format assumptions. 'Culture-fair' tests reduce but don't eliminate bias." },
+      { question: "Which IQ test is least biased?", answer: "Raven's Progressive Matrices and the Cattell Culture Fair test are designed to minimize cultural bias by using non-verbal pattern recognition. However, no test is completely culture-free — even pattern completion assumes familiarity with certain visual conventions." },
+      { question: "Should IQ scores be interpreted differently across cultures?", answer: "Yes. Cross-cultural IQ comparisons must account for testing language, educational system familiarity, and cultural attitudes toward testing. A score obtained in a second language or unfamiliar testing format likely underestimates true cognitive ability." },
+    ],
+  },
+  {
+    title: "Does Internet Use Lower IQ?",
+    slug: "internet-and-iq",
+    myth: "The internet is making us dumber — constant browsing, social media, and smartphones are lowering IQ.",
+    reality: "Research is mixed. Heavy social media use is associated with reduced attention span, but internet access also provides unprecedented learning opportunities. The net effect depends entirely on how you use it.",
+    explanation: "The relationship between internet use and cognitive function is about how you use it, not whether you use it. Research from Oxford found no meaningful relationship between digital technology use and adolescent wellbeing. However, specific usage patterns do matter: Heavy social media scrolling is associated with reduced sustained attention and increased distraction. Multitasking between screens fragments attention and impairs deep thinking. However, using the internet for learning (online courses, educational content, reading) provides cognitive benefits similar to traditional education. Some studies suggest that strategic internet use (searching, evaluating sources, synthesizing information) actually exercises cognitive skills. A Stanford study found that 'digital natives' were not better at evaluating online information than older adults — suggesting that internet exposure alone doesn't build critical thinking. The practical advice: use the internet intentionally for learning and creation rather than passive consumption. Limit social media scrolling. The internet is a tool — its cognitive impact depends entirely on how you wield it.",
+    faqItems: [
+      { question: "Does the internet lower IQ?", answer: "Not inherently. Heavy passive use (social media scrolling) is associated with reduced attention. But intentional use (learning, reading, online courses) provides cognitive benefits. The effect depends entirely on usage patterns." },
+      { question: "Do smartphones make us dumber?", answer: "They can reduce sustained attention and encourage shallow processing if used for constant scrolling and notifications. But smartphones also provide unprecedented access to learning. The key is intentional use over passive consumption." },
+      { question: "How does social media affect cognition?", answer: "Heavy social media use is associated with reduced attention span, increased distraction, and possibly lower life satisfaction. However, it doesn't appear to affect IQ directly. Limiting passive scrolling and using technology intentionally protects cognitive function." },
+    ],
+  },
+  {
+    title: "Can Trauma Lower IQ?",
+    slug: "trauma-and-iq",
+    myth: "Psychological trauma doesn't affect intelligence — IQ is fixed regardless of what happens to you.",
+    reality: "Childhood trauma can reduce IQ by 5-8 points through chronic stress effects on brain development. Adult trauma can temporarily impair cognitive function. The effects of childhood adversity on IQ are well-documented.",
+    explanation: "The relationship between trauma and cognitive function is one of the most important and underappreciated findings in intelligence research. The ACE (Adverse Childhood Experiences) study found that children who experienced 4+ adverse experiences (abuse, neglect, household dysfunction) scored 5-8 IQ points lower on average than children with no ACEs. The mechanism is well-understood: chronic stress floods the developing brain with cortisol, which damages the hippocampus (memory center), impairs prefrontal cortex development (executive function), and disrupts neural connectivity. The effects are dose-dependent — more trauma equals more cognitive impairment. PTSD in adults also impairs cognitive function, particularly working memory and executive function, though adult effects are more reversible than childhood effects. The implication for IQ interpretation is profound: when we see someone with a lower IQ score, we should consider whether trauma and adversity have impaired their cognitive potential rather than assuming the score reflects innate ability.",
+    faqItems: [
+      { question: "Can trauma lower IQ?", answer: "Yes. Childhood trauma can reduce IQ by 5-8 points through chronic stress effects on brain development. The ACE study found clear dose-dependent relationships between adverse experiences and cognitive impairment." },
+      { question: "How does stress affect the brain?", answer: "Chronic stress floods the brain with cortisol, which damages the hippocampus (memory), impairs prefrontal cortex development (planning, impulse control), and disrupts neural connectivity. These effects are particularly severe during childhood brain development." },
+      { question: "Can the brain recover from trauma's cognitive effects?", answer: "Partially. Therapy (especially trauma-focused CBT and EMDR), stable relationships, and supportive environments can help restore cognitive function. Recovery is more complete when trauma is addressed earlier and when childhood environments improve." },
+    ],
+  },
 ];
 
 export function getMythBySlug(slug: string): IQMythInfo | undefined {
