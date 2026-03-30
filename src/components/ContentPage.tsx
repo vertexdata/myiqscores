@@ -175,8 +175,13 @@ const ContentPage = ({
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.06)] text-center text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} MyIQScores. All rights reserved.
+        <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
+          <div className="flex items-center gap-4">
+            <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -291,6 +291,8 @@ const routes = [
   "/good-iq-score",
   "/genius-iq",
   "/mensa-iq-test",
+  "/terms-of-service",
+  "/about",
   "/types-of-iq-tests",
   "/iq-percentile-chart",
   "/famous-iq",

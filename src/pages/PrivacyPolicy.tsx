@@ -7,7 +7,7 @@ const PrivacyPolicy = () => (
     <SEOHead
       title="Privacy Policy — MyIQScores"
       description="Privacy Policy for MyIQScores.com. Learn how we collect, use, and protect your personal data."
-      canonicalUrl="https://myiqscores.com/privacy-policy"
+      canonicalUrl="/privacy-policy"
     />
     <BackgroundEffect />
     <Navbar />

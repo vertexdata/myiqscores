@@ -29,6 +29,8 @@ import IQPercentile from "./pages/IQPercentile.tsx";
 import FamousIQHub from "./pages/FamousIQHub.tsx";
 import CareerIQHub from "./pages/CareerIQHub.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsOfService from "./pages/TermsOfService.tsx";
+import About from "./pages/About.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
@@ -81,6 +83,8 @@ export const AppRoutes = () => (
     <Route path="/famous-iq" element={<FamousIQHub />} />
     <Route path="/iq-by-career" element={<CareerIQHub />} />
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+    <Route path="/terms-of-service" element={<TermsOfService />} />
+    <Route path="/about" element={<About />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
