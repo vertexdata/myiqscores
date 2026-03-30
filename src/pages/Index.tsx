@@ -1,5 +1,7 @@
 import { useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Brain } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Landing from "@/components/Landing";
@@ -86,6 +88,53 @@ const Index = () => {
           <EmailNurture email={userData.email} onClose={() => setShowNurture(false)} />
         )}
       </AnimatePresence>
+
+      {/* Footer — show on landing and results screens */}
+      {(screen === "landing" || screen === "results") && (
+        <footer className="relative z-10 border-t border-[rgba(255,255,255,0.06)] mt-8">
+          <div className="max-w-6xl mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-sm">
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <Brain className="w-5 h-5 text-primary" />
+                  <span className="font-heading font-bold text-foreground">
+                    My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
+                  </span>
+                </div>
+                <p className="text-muted-foreground text-sm">
+                  The most accurate free IQ test online. 30 questions, instant results.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Learn</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li><Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link></li>
+                  <li><Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">IQ Score Ranges</Link></li>
+                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Famous People IQs</Link></li>
+                  <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ by Career</Link></li>
+                  <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">IQ by Country</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Company</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li><Link to="/about" className="hover:text-foreground transition-colors">About Us</Link></li>
+                  <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+                  <li><Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+              <span>&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
+              <div className="flex items-center gap-4">
+                <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
+                <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy</Link>
+                <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms</Link>
+              </div>
+            </div>
+          </div>
+        </footer>
+      )}
     </div>
   );
 };
