@@ -51,11 +51,31 @@ const IsXIQGood = () => {
     },
   };
 
+  const pctNum = parseFloat(data.percentile);
+  let seoTitle: string;
+  if (score <= 79) {
+    seoTitle = `Is ${score} IQ Low? What It Actually Means | MyIQScores`;
+  } else if (score <= 89) {
+    seoTitle = `Is ${score} IQ Good? Here's Where You Stand | MyIQScores`;
+  } else if (score <= 109) {
+    seoTitle = `Is ${score} IQ Good? You're ${data.percentile} Percentile | MyIQScores`;
+  } else if (score <= 119) {
+    seoTitle = `Is ${score} IQ Good? Smarter Than ${Math.round(pctNum)}% of People | MyIQScores`;
+  } else if (score <= 129) {
+    const topPct = Math.round(100 - pctNum);
+    seoTitle = `Is ${score} IQ Good? Top ${topPct}% — Here's What It Means | MyIQScores`;
+  } else if (score <= 139) {
+    seoTitle = `Is ${score} IQ Good? Gifted Range Explained | MyIQScores`;
+  } else {
+    seoTitle = `Is ${score} IQ Good? Genius-Level Breakdown | MyIQScores`;
+  }
+  const seoDesc = `Is ${score} a good IQ? At the ${data.percentile} percentile, you score higher than ${pctNum}% of people. See what this ${data.classification.toLowerCase()} score means for careers and life.`;
+
   return (
     <ContentPage ctaText="Think you can score higher? Take the free IQ test" relatedPages={relatedPages}>
       <SEOHead
-        title={`Is an IQ of ${score} Good? What It Means & Where You Stand | MyIQScores`}
-        description={`Is ${score} a good IQ score? Learn what an IQ of ${score} means, what percentile it falls in, and what it says about your cognitive abilities.`}
+        title={seoTitle}
+        description={seoDesc}
         canonicalUrl={`/is-${score}-iq-good`}
         ogType="article"
         jsonLd={[faqSchema, articleSchema]}

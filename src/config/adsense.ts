@@ -10,4 +10,11 @@ export const AD_SLOTS = {
   resultsTop: "slot-XXXXXXXXX6",
   resultsBottom: "slot-XXXXXXXXX7",
   multiplex: "slot-XXXXXXXXX8",
+  // Quiz per-question ad zones
+  quizTop: "slot-XXXXXXXXX9",
+  quizBottom: "slot-XXXXXXXXXA",
+  quizMobile: "slot-XXXXXXXXXB",
+  quizInterstitial: "slot-XXXXXXXXXC",
+  // Results page mid zone
+  resultsMid: "slot-XXXXXXXXXD",
 };

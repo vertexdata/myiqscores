@@ -945,6 +945,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Can a 72 IQ increase over time?", answer: "Yes, IQ scores can change. Improved nutrition, education, reduced stress, and cognitive engagement may help. The borderline range is particularly responsive to environmental improvements." },
     ],
   },
+  75: {
+    score: 75,
+    classification: "Borderline",
+    percentile: "5th",
+    rarity: "1 in 20",
+    detailedExplanation: "An IQ of 75 sits at the midpoint of the borderline range, between the 4th and 5th percentile. About 1 in 20 people score at or below this level. Daily life at 75 is fully manageable — people at this score handle personal finances, employment, relationships, and parenting without significant cognitive barriers. The borderline classification is a statistical label, not a ceiling. Most adults in this range live independently and hold steady employment, often in practical roles where hands-on skill and experience carry more weight than academic reasoning.",
+    careerContext: "Careers at IQ 75 center on practical, hands-on roles: retail, food service, warehouse work, custodial services, transportation, and entry-level manufacturing. Many people in this range build long, stable careers by developing expertise in a specific trade or service area. Reliability, work ethic, and people skills are the primary determinants of career success at this level — not IQ.",
+    faqItems: [
+      { question: "Is 75 a good IQ score?", answer: "An IQ of 75 is in the borderline range at roughly the 5th percentile. While below average, it supports independent daily living and employment. The borderline label is clinical shorthand — it does not reflect a person's full worth, social ability, or potential for a meaningful life." },
+      { question: "What careers suit someone with a 75 IQ?", answer: "Many practical, hands-on careers: food service, retail, warehouse logistics, transportation, cleaning and maintenance, and entry-level manufacturing. These roles reward reliability and practical skill over abstract reasoning. Many people at this level build stable, long-term careers." },
+      { question: "Is 75 IQ considered intellectually disabled?", answer: "No. Intellectual disability is typically defined as IQ 70 or below combined with significant adaptive limitations. An IQ of 75 is in the borderline range — above the disability threshold. People at this level generally manage daily life and employment independently." },
+    ],
+  },
   76: {
     score: 76,
     classification: "Borderline",
@@ -1268,6 +1281,19 @@ export const iqScoreData: Record<number, IQScoreInfo> = {
       { question: "Is 141 a good IQ score?", answer: "141 is extraordinary — above the genius threshold at the 99.7th percentile. Only about 1 in 290 people score this high." },
       { question: "Is 141 IQ genius?", answer: "Yes, by the most common definition (140+). You have crossed the conventional genius threshold, placing you among the top 0.3% of the population." },
       { question: "How rare is 141 IQ?", answer: "About 1 in 290 people. In a city of 100,000, approximately 345 people would score at this level. Rare but not impossibly so." },
+    ],
+  },
+  142: {
+    score: 142,
+    classification: "Genius-level",
+    percentile: "99.7th",
+    rarity: "1 in 340",
+    detailedExplanation: "An IQ of 142 is solidly in the genius range at the 99.7th percentile. Only about 1 in 340 people score this high. At this level, complex analytical problems that challenge most people may feel approachable or even intuitive. You process information substantially faster than nearly everyone around you, see connections that others miss, and can hold large amounts of information in working memory simultaneously. The cognitive gap between 142 and the average of 100 is enormous in practical terms.",
+    careerContext: "People at 142 are equipped for the most demanding intellectual work available — theoretical research, advanced mathematics, high-stakes legal or medical specialties, technology innovation, and creative work at the highest levels. The challenge is rarely ability; it is finding work stimulating enough to sustain engagement and finding peers who match the pace of your thinking.",
+    faqItems: [
+      { question: "Is 142 a good IQ score?", answer: "142 is extraordinary — genius range at the 99.7th percentile. Only about 1 in 340 people score this high. It represents cognitive ability far beyond the vast majority of the population, comfortably above the 140 genius threshold." },
+      { question: "Is 142 IQ considered genius?", answer: "Yes. The widely cited genius threshold is 140, and a 142 exceeds it. At this level, you are in the top 0.3% of the population. The real-world difference between 140, 141, and 142 is negligible — all represent the same exceptional tier of cognitive ability." },
+      { question: "How rare is a 142 IQ?", answer: "About 1 in 340 people. In a city of 1 million, roughly 2,900 people would score at this level. It is rare enough that finding intellectual peers in everyday settings can be challenging." },
     ],
   },
   143: {

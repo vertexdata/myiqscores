@@ -12,6 +12,44 @@ import { getFamousPersonBySlug, famousIQData } from "@/data/famousIQData";
 // For production, download these images and serve them from /public/images/famous/
 const wikiImages: Record<string, { src: string; alt: string; caption: string }> = {};
 
+const seoTitles: Record<string, string> = {
+  "cristiano-ronaldo": "Cristiano Ronaldo's IQ: How Smart Is the GOAT? | MyIQScores",
+  "elon-musk": "Elon Musk's IQ: Estimated at 150-155 | MyIQScores",
+  "albert-einstein": "Albert Einstein's IQ: Estimated at 160 | MyIQScores",
+  "stephen-hawking": "Stephen Hawking's IQ: Estimated at 160 | MyIQScores",
+  "taylor-swift": "Taylor Swift's IQ: How Smart Is She Really? | MyIQScores",
+  "lebron-james": "LeBron James' IQ: Basketball Genius Breakdown | MyIQScores",
+  "donald-trump": "Donald Trump's IQ: Claims, Estimates & Analysis | MyIQScores",
+  "mark-zuckerberg": "Mark Zuckerberg's IQ: Estimated at 140-152 | MyIQScores",
+  "kim-kardashian": "Kim Kardashian's IQ: Smarter Than You Think? | MyIQScores",
+  "bill-gates": "Bill Gates' IQ: Estimated at 150-160 | MyIQScores",
+  "kanye-west": "Kanye West's IQ: Creative Genius or Overrated? | MyIQScores",
+  "lionel-messi": "Lionel Messi's IQ: Football Genius Analyzed | MyIQScores",
+  "jeff-bezos": "Jeff Bezos' IQ: Estimated at 145-155 | MyIQScores",
+  "joe-rogan": "Joe Rogan's IQ: What We Know | MyIQScores",
+  "beyonce": "Beyoncé's IQ: How Smart Is Queen Bey? | MyIQScores",
+  "nikola-tesla": "Nikola Tesla's IQ: Estimated at 160-200+ | MyIQScores",
+};
+
+const seoDescs: Record<string, string> = {
+  "cristiano-ronaldo": "What is Cristiano Ronaldo's IQ? Explore estimates of CR7's intelligence, how it compares to other athletes, and what makes him a genius on the pitch.",
+  "elon-musk": "Elon Musk's IQ is estimated at 150-155. See how his physics background, first-principles thinking, and multi-company leadership reflect exceptional cognitive ability.",
+  "albert-einstein": "Einstein's IQ is estimated at 160 — never officially tested. Learn about his thought experiments, the late-bloomer myth, and what made him history's most iconic genius.",
+  "stephen-hawking": "Hawking's IQ is estimated at 160. He famously said IQ-boosters are losers. See what his physics work actually reveals about his extraordinary intellectual ability.",
+  "taylor-swift": "Taylor Swift's IQ is estimated at 120-130. Her re-recording strategy, lyrical complexity, and billion-dollar brand show intelligence far beyond what most people expect.",
+  "lebron-james": "LeBron's IQ is estimated at 110-120. His legendary basketball IQ, photographic memory claims, and business empire reveal a uniquely gifted mind beyond the court.",
+  "donald-trump": "Donald Trump's IQ: what Wharton, his business career, and his own bold claims suggest. A factual, politically neutral analysis of his estimated cognitive ability.",
+  "mark-zuckerberg": "Zuckerberg's IQ is estimated at 140-152. His 1590 SAT score, Harvard dorm-room coding, and Meta/AI pivot reveal the mind behind the world's largest social network.",
+  "kim-kardashian": "Kim Kardashian passed the baby bar — a 20% pass-rate exam. Her IQ is estimated at 110-120. Discover the real business intelligence behind her billion-dollar empire.",
+  "bill-gates": "Bill Gates scored 1590/1600 on the SAT. His IQ is estimated at 150-160. See what Microsoft, his legendary reading habits, and philanthropy reveal about his exceptional mind.",
+  "kanye-west": "Kanye West's IQ is estimated at 115-125. Musical innovator, fashion mogul, controversial genius — a balanced look at the cognitive profile behind one of music's biggest names.",
+  "lionel-messi": "Messi's IQ is estimated at 110-120. His spatial intelligence and split-second decisions on the pitch are analyzed and compared to his long-time rival Cristiano Ronaldo.",
+  "jeff-bezos": "Bezos graduated Princeton summa cum laude. IQ estimated at 145-155. See how his long-term thinking and data-driven strategy reveal one of the sharpest minds in business.",
+  "joe-rogan": "Joe Rogan's IQ is estimated at 110-120. He calls himself average, but his curiosity-driven learning and podcast depth tell a more interesting story. What the data shows.",
+  "beyonce": "Beyoncé's IQ is estimated at 120-130. Behind the performances is a business strategist, visual album pioneer, and empire-builder who is far more than a pop star.",
+  "nikola-tesla": "Tesla's IQ is estimated at 160-200+. His eidetic memory, AC electricity mastery, rivalry with Edison, and ability to mentally simulate machines set him apart from every peer.",
+};
+
 const FamousIQ = () => {
   const { pathname } = useLocation();
   const slug = pathname.replace("/famous-iq/", "");
@@ -42,8 +80,8 @@ const FamousIQ = () => {
   return (
     <ContentPage ctaText="How does your IQ compare? Take the free test" relatedPages={relatedPages}>
       <SEOHead
-        title={`${person.name}'s IQ: ${person.estimatedIQ} — What It Means | MyIQScores`}
-        description={`${person.name}'s IQ is estimated at ${person.estimatedIQ}. Learn what this means, how it compares, and what made ${person.name} a genius.`}
+        title={seoTitles[person.slug] ?? `${person.name}'s IQ: ${person.estimatedIQ} — What It Means | MyIQScores`}
+        description={seoDescs[person.slug] ?? `${person.name}'s IQ is estimated at ${person.estimatedIQ}. Learn what this means, how it compares, and what made ${person.name} a genius.`}
         canonicalUrl={`/famous-iq/${person.slug}`}
         ogType="article"
         jsonLd={faqSchema}

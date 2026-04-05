@@ -1601,6 +1601,36 @@ export const careerIQData: CareerIQInfo[] = [
       { question: "How does MFT compare to clinical psychology?", answer: "Clinical psychologists (118-132, doctoral degree) have more research training and broader diagnostic scope. MFTs (105-118, master's degree) specialize in relational therapy. Both provide effective therapy but through different theoretical frameworks." },
     ],
   },
+  {
+    career: "Software Engineer",
+    slug: "software-engineer",
+    avgIQRange: "115–128",
+    minIQ: 115,
+    maxIQ: 128,
+    description: "Software engineers — as distinct from general software developers — typically work on more complex systems engineering problems: distributed architectures, compilers, operating systems, and large-scale infrastructure. They score in the high average to superior range, with particular strength in abstract and logical reasoning. The field spans self-taught coders to PhD computer scientists, giving it one of the widest cognitive ranges of any technical profession. Top-tier employers like Google, Meta, and Amazon use algorithmic coding interviews specifically designed to filter for abstract problem-solving ability.",
+    educationPath: "Software engineering can be entered via a CS degree (4 years), a software engineering degree, a coding bootcamp (3–6 months), or self-study. Top tech companies use multi-round technical interviews covering data structures, algorithms, and system design — an effective proxy for cognitive ability. Open-source contributions and a strong portfolio often matter as much as credentials.",
+    relatedCareers: ["engineer", "software-developer", "data-scientist"],
+    faqItems: [
+      { question: "What IQ do you need to be a software engineer?", answer: "Most software engineers have IQs between 115 and 128. The abstract and logical reasoning demanded by complex system design and algorithm development requires above-average cognitive ability. However, hands-on problem-solving skills and continuous learning often matter more than raw IQ scores in day-to-day work." },
+      { question: "Is software engineering harder than other engineering disciplines?", answer: "Software engineering presents different challenges rather than strictly harder ones. It requires exceptional abstract reasoning and the ability to manage invisible, infinitely complex systems. Unlike civil or mechanical engineering, there are no physical prototypes — everything exists as mental models that must be perfectly correct." },
+      { question: "Can you be a software engineer without a CS degree?", answer: "Yes. Many successful software engineers are self-taught or bootcamp graduates. The field is highly meritocratic — demonstrated coding ability, portfolio projects, and algorithmic problem-solving skills matter more than credentials at most companies outside the most selective tech firms." },
+    ],
+  },
+  {
+    career: "Astronaut",
+    slug: "astronaut",
+    avgIQRange: "130–145",
+    minIQ: 130,
+    maxIQ: 145,
+    description: "NASA astronauts are among the most cognitively elite professionals in the world. Selection requirements include advanced STEM degrees, significant professional experience, and exceptional performance under pressure. The astronaut selection process evaluates candidates on technical problem-solving, leadership, teamwork, and the ability to execute complex procedures in life-threatening environments with limited equipment. Astronauts must master rocket propulsion, spacecraft systems, medical procedures, robotic arm operation, spacewalk protocols, and scientific research — often simultaneously. The acceptance rate is under 0.2%.",
+    educationPath: "NASA requires a master's degree or higher in STEM (engineering, biological science, physical science, computer science, or mathematics), at least two years of relevant professional experience, and 1,000 hours as pilot-in-command of jet aircraft (or equivalent). Military test pilots have traditionally dominated the corps. The selection process accepts only 10–20 candidates from over 12,000 applicants per cycle.",
+    relatedCareers: ["engineer", "military-officer", "scientist"],
+    faqItems: [
+      { question: "What IQ do you need to be an astronaut?", answer: "Astronauts are estimated to have IQs between 130 and 145, in the gifted range. NASA's selection process — accepting fewer than 0.2% of applicants — effectively filters for exceptional cognitive ability combined with outstanding professional achievement and psychological resilience under extreme conditions." },
+      { question: "Do astronauts need to be geniuses?", answer: "Not by strict IQ definition, but astronauts need to be in the top few percent cognitively. More importantly, they need exceptional applied intelligence — the ability to solve novel engineering, medical, and mechanical problems in life-threatening conditions with limited resources and no possibility of external help." },
+      { question: "Can anyone become an astronaut with a high IQ?", answer: "IQ is necessary but far from sufficient. NASA also requires a STEM graduate degree, significant professional experience (often as a test pilot or senior scientist), exceptional physical fitness, and psychological stability under extreme isolation. A high IQ is one filter among many in an extraordinarily competitive process." },
+    ],
+  },
 ];
 
 export function getCareerBySlug(slug: string): CareerIQInfo | undefined {
