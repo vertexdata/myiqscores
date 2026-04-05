@@ -44,8 +44,8 @@ const faqSchema = {
 const SATtoIQ = () => (
   <ContentPage>
     <SEOHead
-      title="SAT to IQ Conversion: Estimate Your IQ from SAT Scores | MyIQScores"
-      description="Convert your SAT score to an estimated IQ. See the SAT to IQ conversion table, understand the correlation between SAT and IQ, and what your score means."
+      title="SAT to IQ Conversion Chart: What Your SAT Score Says About Your IQ"
+      description="Convert your SAT score to an estimated IQ. See the full SAT-to-IQ table, understand the 0.8 correlation, and find out where you rank."
       canonicalUrl="/sat-to-iq"
       ogType="article"
       jsonLd={faqSchema}

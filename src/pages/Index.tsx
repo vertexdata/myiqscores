@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Brain } from "lucide-react";
@@ -37,15 +37,32 @@ const Index = () => {
   const [screen, setScreen] = useState<Screen>("landing");
   const [userData, setUserData] = useState({ name: "", email: "", ageRange: "" });
   const [answers, setAnswers] = useState<(number | null)[]>([]);
+  const [elapsed, setElapsed] = useState(0);
   const [showNurture, setShowNurture] = useState(false);
+  const [challengerScore, setChallengerScore] = useState<{ score: number; percentile: number } | null>(null);
+
+  // Check for ?ref= challenge param on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+    if (ref) {
+      const stored = localStorage.getItem(`iq_challenge_${ref}`);
+      if (stored) {
+        try {
+          setChallengerScore(JSON.parse(stored));
+        } catch {}
+      }
+    }
+  }, []);
 
   const handleLeadSubmit = (data: { name: string; email: string; ageRange: string }) => {
     setUserData(data);
     setScreen("quiz");
   };
 
-  const handleQuizComplete = useCallback((ans: (number | null)[]) => {
+  const handleQuizComplete = useCallback((ans: (number | null)[], quizElapsed: number) => {
     setAnswers(ans);
+    setElapsed(quizElapsed);
     setScreen("processing");
   }, []);
 
@@ -58,8 +75,8 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
-        title="Free IQ Test — Get Your Score Instantly Online | MyIQScores"
-        description="Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall. Discover your cognitive edge."
+        title="Free IQ Test — 30 Questions, Instant Score, No Paywall | MyIQScores"
+        description="Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall, no email required. See how smart you really are."
         canonicalUrl="https://www.myiqscores.com"
         jsonLd={websiteSchema}
       />
@@ -77,6 +94,8 @@ const Index = () => {
               answers={answers}
               userName={userData.name}
               userEmail={userData.email}
+              elapsed={elapsed}
+              challengerScore={challengerScore}
               onShowNurture={() => setShowNurture(true)}
             />
           )}
