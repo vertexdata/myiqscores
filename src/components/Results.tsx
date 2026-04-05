@@ -120,7 +120,7 @@ function getRecommendations(iq: number): { title: string; href: string }[] {
       { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
       { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
-      { title: "Average IQ by Age", href: "/average-iq-by-age" },
+      { title: "Average IQ by Age Group", href: "/iq-by-age/adults" },
       { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
     ];
   }
