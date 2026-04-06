@@ -105,28 +105,54 @@ const Index = () => {
       {(screen === "landing" || screen === "results") && (
         <footer className="relative z-10 border-t border-[rgba(255,255,255,0.06)] mt-8">
           <div className="max-w-6xl mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-sm">
-              <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <Brain className="w-5 h-5 text-primary" />
-                  <span className="font-heading font-bold text-foreground">
-                    My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
-                  </span>
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  The most accurate free IQ test online. 30 questions, instant results.
-                </p>
-              </div>
+            {/* Footer CTA bar */}
+            <div className="text-center mb-10 pb-10 border-b border-[rgba(255,255,255,0.06)]">
+              <p className="text-muted-foreground text-sm mb-3">Ready to find out your IQ?</p>
+              <Link to="/" className="glow-button inline-block">Take the Free IQ Test →</Link>
+            </div>
+
+            {/* 4-column link grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm mb-10">
+              {/* Col 1: Learn */}
               <div>
                 <h3 className="font-heading font-semibold text-foreground mb-3">Learn</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link></li>
                   <li><Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">IQ Score Ranges</Link></li>
-                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Famous People IQs</Link></li>
-                  <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ by Career</Link></li>
-                  <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">IQ by Country</Link></li>
+                  <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Bell Curve</Link></li>
+                  <li><Link to="/iq-vs-eq" className="hover:text-foreground transition-colors">IQ vs EQ</Link></li>
+                  <li><Link to="/how-to-improve-iq" className="hover:text-foreground transition-colors">How to Improve IQ</Link></li>
+                  <li><Link to="/types-of-iq-tests" className="hover:text-foreground transition-colors">Types of IQ Tests</Link></li>
                 </ul>
               </div>
+
+              {/* Col 2: Famous IQs */}
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Famous IQs</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li><Link to="/famous-iq/albert-einstein" className="hover:text-foreground transition-colors">Albert Einstein</Link></li>
+                  <li><Link to="/famous-iq/elon-musk" className="hover:text-foreground transition-colors">Elon Musk</Link></li>
+                  <li><Link to="/famous-iq/stephen-hawking" className="hover:text-foreground transition-colors">Stephen Hawking</Link></li>
+                  <li><Link to="/famous-iq/taylor-swift" className="hover:text-foreground transition-colors">Taylor Swift</Link></li>
+                  <li><Link to="/famous-iq/donald-trump" className="hover:text-foreground transition-colors">Donald Trump</Link></li>
+                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">All Famous IQs</Link></li>
+                </ul>
+              </div>
+
+              {/* Col 3: Tools & Tests */}
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Tools &amp; Tests</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li><Link to="/" className="hover:text-foreground transition-colors">Free IQ Test</Link></li>
+                  <li><Link to="/sat-to-iq" className="hover:text-foreground transition-colors">SAT to IQ</Link></li>
+                  <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Percentile Chart</Link></li>
+                  <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
+                  <li><Link to="/average-iq-us" className="hover:text-foreground transition-colors">Average IQ in US</Link></li>
+                  <li><Link to="/iq-of-presidents" className="hover:text-foreground transition-colors">IQ of Presidents</Link></li>
+                </ul>
+              </div>
+
+              {/* Col 4: Company */}
               <div>
                 <h3 className="font-heading font-semibold text-foreground mb-3">Company</h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -136,13 +162,17 @@ const Index = () => {
                 </ul>
               </div>
             </div>
-            <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-              <span>&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
-              <div className="flex items-center gap-4">
-                <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
-                <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy</Link>
-                <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms</Link>
+
+            {/* Brand row */}
+            <div className="pt-6 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-2">
+                <Brain className="w-5 h-5 text-primary" />
+                <span className="font-heading font-bold text-foreground">
+                  My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
+                </span>
+                <span className="text-muted-foreground text-xs ml-2">— The most accurate free IQ test online.</span>
               </div>
+              <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
             </div>
           </div>
         </footer>

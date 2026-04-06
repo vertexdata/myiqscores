@@ -39,6 +39,21 @@ const seoTitles: Record<string, string> = {
   "jensen-huang": "Jensen Huang's IQ: The Mind That Built the AI Era | MyIQScores",
   "tiger-woods": "Tiger Woods' IQ: Golf Genius on and off the Course | MyIQScores",
   "vladimir-putin": "Vladimir Putin's IQ: KGB Agent to World Leader | MyIQScores",
+  "joe-biden": "Joe Biden's IQ: 46th President's Estimated Intelligence | MyIQScores",
+  "kamala-harris": "Kamala Harris's IQ: Prosecutor, VP, Estimated Intelligence | MyIQScores",
+  "xi-jinping": "Xi Jinping's IQ: China's President Analyzed | MyIQScores",
+  "the-weeknd": "The Weeknd's IQ: Self-Taught Music Genius Breakdown | MyIQScores",
+  "dua-lipa": "Dua Lipa's IQ: Multilingual Pop Star's Intelligence Analyzed | MyIQScores",
+  "barron-trump": "Barron Trump's IQ: What We Know So Far | MyIQScores",
+  "sabrina-carpenter": "Sabrina Carpenter's IQ: Songwriter and Pop Star Analyzed | MyIQScores",
+  "ishowspeed": "IShowSpeed's IQ: The World's Most Watched Streamer | MyIQScores",
+  "kai-cenat": "Kai Cenat's IQ: Twitch's Most Subscribed Streamer Analyzed | MyIQScores",
+  "harry-styles": "Harry Styles's IQ: From One Direction to Solo Genius | MyIQScores",
+  "ryan-reynolds": "Ryan Reynolds's IQ: Actor, Entrepreneur, Marketing Genius | MyIQScores",
+  "pedro-pascal": "Pedro Pascal's IQ: The Mandalorian Star Analyzed | MyIQScores",
+  "chappell-roan": "Chappell Roan's IQ: The Rise of a Midwest Princess | MyIQScores",
+  "peso-pluma": "Peso Pluma's IQ: Corridos Tumbados Pioneer Analyzed | MyIQScores",
+  "jungkook-bts": "Jung Kook's IQ: BTS's Golden Artist Analyzed | MyIQScores",
 };
 
 const seoDescs: Record<string, string> = {
@@ -68,6 +83,21 @@ const seoDescs: Record<string, string> = {
   "jensen-huang": "What is Jensen Huang's IQ? Nvidia's CEO built a $3 trillion company by betting on GPU computing before anyone else — suggesting an IQ of 145-155.",
   "tiger-woods": "What is Tiger Woods' IQ? His 15 majors, Stanford education, and course management intelligence suggest an IQ well above average for athletes.",
   "vladimir-putin": "What is Vladimir Putin's IQ? The former KGB officer and Russian president has been estimated at 127-135 by intelligence analysts.",
+  "joe-biden": "Joe Biden's IQ is estimated at 128–140. His 36-year Senate foreign policy career and presidential record reveal an intellectual profile far more sophisticated than his verbal gaffes suggest.",
+  "kamala-harris": "Kamala Harris's IQ is estimated at 125–140. Her prosecutorial career, California AG tenure, and historic Vice Presidency reflect systematic analytical and legal intelligence.",
+  "xi-jinping": "Xi Jinping's IQ is estimated at 130–145. His Tsinghua engineering degree, four-decade rise through the CCP, and Belt and Road Initiative reflect exceptional strategic intelligence.",
+  "the-weeknd": "The Weeknd's IQ is estimated at 112–125. He dropped out at 17 and taught himself everything — building one of music's biggest careers through self-directed intelligence and creative vision.",
+  "dua-lipa": "Dua Lipa's IQ is estimated at 115–128. Trilingual, a former Strategic Management student, and the mind behind Future Nostalgia's calculated retro-pop revival and Service95 media platform.",
+  "barron-trump": "Barron Trump's IQ is estimated at 120–140 — though with high uncertainty. He grew up bilingual in English and Slovenian and attends NYU Stern, but remains deliberately private.",
+  "sabrina-carpenter": "Sabrina Carpenter's IQ is estimated at 118–128. Homeschooled while working professionally from age 11, she wrote every album and engineered one of pop's most strategic career transitions.",
+  "ishowspeed": "IShowSpeed's IQ is estimated at 105–118. Building a 20M+ subscriber channel as a teenager through pure real-time improvisation reflects strong practical and social intelligence.",
+  "kai-cenat": "Kai Cenat's IQ is estimated at 108–120. Three-time Streamer of the Year and most subscribed Twitch streamer in history — his social intelligence is among the highest in entertainment.",
+  "harry-styles": "Harry Styles's IQ is estimated at 115–128. From One Direction dropout to Grammy winner, Oscar-adjacent actor, and fashion icon — his deliberate artistic risk-taking reflects rare integrative intelligence.",
+  "ryan-reynolds": "Ryan Reynolds's IQ is estimated at 125–138. Selling Aviation Gin for $610M and Mint Mobile for $1.35B reveals a marketing and business intelligence that transcends his acting career.",
+  "pedro-pascal": "Pedro Pascal's IQ is estimated at 118–130. His ability to play The Mandalorian entirely without facial expressions — and make it iconic — reflects extraordinary emotional and performative intelligence.",
+  "chappell-roan": "Chappell Roan's IQ is estimated at 115–128. The Rise and Fall of a Midwest Princess and her articulate public statements about fame reveal theatrical and self-reflective intelligence beyond her years.",
+  "peso-pluma": "Peso Pluma's IQ is estimated at 110–122. He pioneered corridos tumbados and became the most streamed Mexican artist in history — a genre-creating achievement requiring genuine musical intelligence.",
+  "jungkook-bts": "Jung Kook's IQ is estimated at 118–130. BTS's Golden vocalist mastered dance, vocals, and production simultaneously while helping make Korean-language pop a global mainstream force.",
 };
 
 const FamousIQ = () => {
