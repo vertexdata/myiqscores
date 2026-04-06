@@ -29,6 +29,16 @@ const seoTitles: Record<string, string> = {
   "joe-rogan": "Joe Rogan's IQ: What We Know | MyIQScores",
   "beyonce": "Beyoncé's IQ: How Smart Is Queen Bey? | MyIQScores",
   "nikola-tesla": "Nikola Tesla's IQ: Estimated at 160-200+ | MyIQScores",
+  "jeffrey-epstein": "Jeffrey Epstein's IQ: How Smart Was He Really? | MyIQScores",
+  "andrew-tate": "Andrew Tate's IQ: Estimated at 120-132 | MyIQScores",
+  "michael-jordan": "Michael Jordan's IQ: Basketball Genius Breakdown | MyIQScores",
+  "drake": "Drake's IQ: The Mind Behind Music's Biggest Brand | MyIQScores",
+  "rihanna": "Rihanna's IQ: Business Genius Behind Fenty Beauty | MyIQScores",
+  "michael-jackson": "Michael Jackson's IQ: The King of Pop's Genius | MyIQScores",
+  "sam-altman": "Sam Altman's IQ: OpenAI's Visionary CEO Analyzed | MyIQScores",
+  "jensen-huang": "Jensen Huang's IQ: The Mind That Built the AI Era | MyIQScores",
+  "tiger-woods": "Tiger Woods' IQ: Golf Genius on and off the Course | MyIQScores",
+  "vladimir-putin": "Vladimir Putin's IQ: KGB Agent to World Leader | MyIQScores",
 };
 
 const seoDescs: Record<string, string> = {
@@ -48,6 +58,16 @@ const seoDescs: Record<string, string> = {
   "joe-rogan": "Joe Rogan's IQ is estimated at 110-120. He calls himself average, but his curiosity-driven learning and podcast depth tell a more interesting story. What the data shows.",
   "beyonce": "Beyoncé's IQ is estimated at 120-130. Behind the performances is a business strategist, visual album pioneer, and empire-builder who is far more than a pop star.",
   "nikola-tesla": "Tesla's IQ is estimated at 160-200+. His eidetic memory, AC electricity mastery, rivalry with Edison, and ability to mentally simulate machines set him apart from every peer.",
+  "jeffrey-epstein": "What was Jeffrey Epstein's IQ? Examining the financial genius, MIT connections, and dark intelligence behind one of history's most controversial figures.",
+  "andrew-tate": "What is Andrew Tate's IQ? Estimated at 120-132, the 4x kickboxing champion and entrepreneur breaks down his chess background and business intelligence.",
+  "michael-jordan": "What is Michael Jordan's IQ? His basketball genius, psychological dominance, and billion-dollar business empire reveal a mind far beyond the court.",
+  "drake": "What is Drake's IQ? Estimated at 112-125, the most charted artist in Billboard history reveals a remarkably consistent commercial and creative intelligence.",
+  "rihanna": "What is Rihanna's IQ? The Fenty Beauty billionaire's business genius disrupted the beauty industry and made her the world's wealthiest female musician.",
+  "michael-jackson": "What was Michael Jackson's IQ? The King of Pop's musical genius, Beatles catalog purchase, and studio perfectionism reveal a remarkably high IQ.",
+  "sam-altman": "What is Sam Altman's IQ? The OpenAI CEO who launched ChatGPT — the fastest-growing app in history — shows signs of an exceptional IQ of 145-160.",
+  "jensen-huang": "What is Jensen Huang's IQ? Nvidia's CEO built a $3 trillion company by betting on GPU computing before anyone else — suggesting an IQ of 145-155.",
+  "tiger-woods": "What is Tiger Woods' IQ? His 15 majors, Stanford education, and course management intelligence suggest an IQ well above average for athletes.",
+  "vladimir-putin": "What is Vladimir Putin's IQ? The former KGB officer and Russian president has been estimated at 127-135 by intelligence analysts.",
 };
 
 const FamousIQ = () => {
