@@ -5,14 +5,13 @@ import { Brain } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Landing from "@/components/Landing";
-import LeadCapture from "@/components/LeadCapture";
 import Quiz from "@/components/Quiz";
 import Processing from "@/components/Processing";
 import Results from "@/components/Results";
 import EmailNurture from "@/components/EmailNurture";
 import SEOHead from "@/components/SEOHead";
 
-type Screen = "landing" | "leadCapture" | "quiz" | "processing" | "results";
+type Screen = "landing" | "quiz" | "processing" | "results";
 
 const pageTransition = {
   initial: { opacity: 0, scale: 0.98 },
@@ -55,11 +54,6 @@ const Index = () => {
     }
   }, []);
 
-  const handleLeadSubmit = (data: { name: string; email: string; ageRange: string }) => {
-    setUserData(data);
-    setScreen("quiz");
-  };
-
   const handleQuizComplete = useCallback((ans: (number | null)[], quizElapsed: number) => {
     setAnswers(ans);
     setElapsed(quizElapsed);
@@ -85,8 +79,7 @@ const Index = () => {
 
       <AnimatePresence mode="wait">
         <motion.div key={screen} {...pageTransition}>
-          {screen === "landing" && <Landing onStart={() => setScreen("leadCapture")} />}
-          {screen === "leadCapture" && <LeadCapture onSubmit={handleLeadSubmit} />}
+          {screen === "landing" && <Landing onStart={() => setScreen("quiz")} />}
           {screen === "quiz" && <Quiz onComplete={handleQuizComplete} />}
           {screen === "processing" && <Processing onDone={handleProcessingDone} />}
           {screen === "results" && (
