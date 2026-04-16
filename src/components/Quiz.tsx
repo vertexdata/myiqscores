@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { questions } from "@/data/questions";
 import { Check, Zap } from "lucide-react";
+import { trackQuizQuestionAnswered, trackQuizCompleted } from "@/lib/analytics";
 
 interface QuizProps {
   onComplete: (answers: (number | null)[], elapsed: number) => void;
@@ -73,6 +74,7 @@ const Quiz = ({ onComplete }: QuizProps) => {
     const a = [...answers];
     a[currentQ] = i;
     setAnswers(a);
+    trackQuizQuestionAnswered(currentQ + 1);
   };
 
   const handleNext = () => {
@@ -83,6 +85,8 @@ const Quiz = ({ onComplete }: QuizProps) => {
       return;
     }
     if (currentQ === 29) {
+      const answeredCount = answers.filter((a) => a !== null).length;
+      trackQuizCompleted(answeredCount, elapsed);
       onComplete(answers, elapsed);
       return;
     }

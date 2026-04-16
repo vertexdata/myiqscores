@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { trackQuizStarted } from "@/lib/analytics";
 import {
   Brain,
   FlaskConical,
@@ -94,7 +95,7 @@ const Landing = ({ onStart }: LandingProps) => {
       </motion.p>
 
       <motion.div variants={fadeUp} className="mt-10">
-        <button onClick={onStart} className="glow-button text-lg">
+        <button onClick={() => { trackQuizStarted(); onStart(); }} className="glow-button text-lg">
           Start Free IQ Test →
         </button>
       </motion.div>

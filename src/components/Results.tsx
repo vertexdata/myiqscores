@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { trackResultViewed, trackResultShared } from "@/lib/analytics";
 import { Shield, Twitter, Facebook, Linkedin, Copy, Check, Lock, Award } from "lucide-react";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
@@ -157,6 +158,11 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
   const shareUrl = "https://myiqscores.com";
   const shareText = `I just scored ${iq} on a free IQ test — that's the ${percentile}th percentile! 🧠 Think you can beat me? → myiqscores.com`;
 
+  // Fire result_viewed on mount
+  useEffect(() => {
+    trackResultViewed(iq);
+  }, []);
+
   // Save score to database and send results email
   useEffect(() => {
     const saveAndEmail = async () => {
@@ -196,6 +202,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
     navigator.clipboard.writeText(`${shareText}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+    trackResultShared("copy");
   };
 
   const handleChallenge = () => {
@@ -204,10 +211,12 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
     const challengeUrl = `https://myiqscores.com/test?ref=${code}`;
     navigator.clipboard.writeText(`I just scored ${iq} on this IQ test 🧠 Think you can beat me? Try it free: ${challengeUrl}`);
     toast.success("Challenge link copied! Send it to a friend");
+    trackResultShared("challenge");
     supabase.from("referrals").insert({ referrer_email: userEmail, platform: "challenge" }).then(() => {});
   };
 
   const handleShare = (platform: string) => {
+    trackResultShared(platform as "twitter" | "facebook" | "linkedin" | "whatsapp");
     supabase.from("referrals").insert({ referrer_email: userEmail, platform }).then(() => {});
   };
 
