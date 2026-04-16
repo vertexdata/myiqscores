@@ -5,6 +5,7 @@ import BellCurve from "@/components/BellCurve";
 import IQMeter from "@/components/IQMeter";
 import PercentileBar from "@/components/PercentileBar";
 import ComparisonChart from "@/components/ComparisonChart";
+import Breadcrumb from "@/components/Breadcrumb";
 import { iqScoreData, getAdjacentScores, iqScores } from "@/data/iqScoreData";
 
 const IsXIQGood = () => {
@@ -51,6 +52,16 @@ const IsXIQGood = () => {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.myiqscores.com" },
+      { "@type": "ListItem", position: 2, name: "IQ Score Ranges", item: "https://www.myiqscores.com/iq-score-ranges" },
+      { "@type": "ListItem", position: 3, name: `Is ${score} IQ Good?`, item: `https://www.myiqscores.com/is-${score}-iq-good` },
+    ],
+  };
+
   const pctNum = parseFloat(data.percentile);
   let seoTitle: string;
   if (score <= 79) {
@@ -78,8 +89,10 @@ const IsXIQGood = () => {
         description={seoDesc}
         canonicalUrl={`/is-${score}-iq-good`}
         ogType="article"
-        jsonLd={[faqSchema, articleSchema]}
+        jsonLd={[faqSchema, articleSchema, breadcrumbSchema]}
       />
+
+      <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "IQ Score Ranges", href: "/iq-score-ranges" }, { label: `Is ${score} IQ Good?` }]} />
 
       <h1>
         Is an IQ of <span className="gradient-text">{score}</span> Good? What It Means &amp; Where You Stand

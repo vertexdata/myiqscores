@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import IQMeter from "@/components/IQMeter";
 import ComparisonChart from "@/components/ComparisonChart";
 import PercentileBar from "@/components/PercentileBar";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getCareerBySlug, careerIQData } from "@/data/careerIQData";
 
 const seoTitles: Record<string, string> = {
@@ -73,6 +74,16 @@ const CareerIQ = () => {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.myiqscores.com" },
+      { "@type": "ListItem", position: 2, name: "IQ by Career", item: "https://www.myiqscores.com/iq-by-career" },
+      { "@type": "ListItem", position: 3, name: `${career.career} IQ`, item: `https://www.myiqscores.com/iq-needed-for/${career.slug}` },
+    ],
+  };
+
   const relatedCareers = career.relatedCareers
     .map((s) => careerIQData.find((c) => c.slug === s))
     .filter(Boolean);
@@ -84,8 +95,10 @@ const CareerIQ = () => {
         description={seoDescs[career.slug] ?? `What IQ do you need to be a ${career.career.toLowerCase()}? The average IQ for ${career.career.toLowerCase()}s is ${career.avgIQRange}. Learn the cognitive requirements and how to qualify.`}
         canonicalUrl={`/iq-needed-for/${career.slug}`}
         ogType="article"
-        jsonLd={faqSchema}
+        jsonLd={[faqSchema, breadcrumbSchema]}
       />
+
+      <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "IQ by Career", href: "/iq-by-career" }, { label: `${career.career} IQ` }]} />
 
       <h1>
         IQ Needed to Be a <span className="gradient-text">{career.career}</span>

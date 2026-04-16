@@ -15,6 +15,10 @@ import AverageIQByCountry from "./pages/AverageIQByCountry.tsx";
 import CareerIQ from "./pages/CareerIQ.tsx";
 import IQvsEQ from "./pages/IQvsEQ.tsx";
 import SATtoIQ from "./pages/SATtoIQ.tsx";
+import ACTtoIQ from "./pages/ACTtoIQ.tsx";
+import GREtoIQ from "./pages/GREtoIQ.tsx";
+import ASVABtoIQ from "./pages/ASVABtoIQ.tsx";
+import StateIQHub from "./pages/StateIQHub.tsx";
 import HowToImproveIQ from "./pages/HowToImproveIQ.tsx";
 import AgeIQ from "./pages/AgeIQ.tsx";
 import FamousIQ from "./pages/FamousIQ.tsx";
@@ -35,6 +39,15 @@ import Unsubscribe from "./pages/Unsubscribe.tsx";
 import AverageIQUS from "./pages/AverageIQUS.tsx";
 import PresidentIQ from "./pages/PresidentIQ.tsx";
 import LowIQ from "./pages/LowIQ.tsx";
+import Blog from "./pages/Blog.tsx";
+import WhatIsIQScore from "./pages/blog/WhatIsIQScore.tsx";
+import HowToIncreaseIQ from "./pages/blog/HowToIncreaseIQ.tsx";
+import IQvsSuccess from "./pages/blog/IQvsSuccess.tsx";
+import FamousIQScores from "./pages/blog/FamousIQScores.tsx";
+import IQByCountry from "./pages/blog/IQByCountry.tsx";
+import WhatIsGeniusIQ from "./pages/blog/WhatIsGeniusIQ.tsx";
+import IQTestsAccurate from "./pages/blog/IQTestsAccurate.tsx";
+import EmotionalIntelligenceVsIQ from "./pages/blog/EmotionalIntelligenceVsIQ.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
 import { careerSlugs } from "./data/careerIQData";
@@ -64,6 +77,10 @@ export const AppRoutes = () => (
     ))}
     <Route path="/iq-vs-eq" element={<IQvsEQ />} />
     <Route path="/sat-to-iq" element={<SATtoIQ />} />
+    <Route path="/act-to-iq" element={<ACTtoIQ />} />
+    <Route path="/gre-to-iq" element={<GREtoIQ />} />
+    <Route path="/asvab-to-iq" element={<ASVABtoIQ />} />
+    <Route path="/average-iq-by-state" element={<StateIQHub />} />
     <Route path="/how-to-improve-iq" element={<HowToImproveIQ />} />
     {ageGroupSlugs.map((slug) => (
       <Route key={slug} path={`/iq-by-age/${slug}`} element={<AgeIQ />} />
@@ -92,6 +109,15 @@ export const AppRoutes = () => (
     <Route path="/average-iq-us" element={<AverageIQUS />} />
     <Route path="/iq-of-presidents" element={<PresidentIQ />} />
     <Route path="/low-iq" element={<LowIQ />} />
+    <Route path="/blog" element={<Blog />} />
+    <Route path="/blog/what-is-iq-score" element={<WhatIsIQScore />} />
+    <Route path="/blog/how-to-increase-iq" element={<HowToIncreaseIQ />} />
+    <Route path="/blog/iq-vs-success" element={<IQvsSuccess />} />
+    <Route path="/blog/famous-iq-scores" element={<FamousIQScores />} />
+    <Route path="/blog/iq-by-country" element={<IQByCountry />} />
+    <Route path="/blog/what-is-genius-iq" element={<WhatIsGeniusIQ />} />
+    <Route path="/blog/iq-tests-accurate" element={<IQTestsAccurate />} />
+    <Route path="/blog/emotional-intelligence-vs-iq" element={<EmotionalIntelligenceVsIQ />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>

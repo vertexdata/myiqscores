@@ -199,6 +199,13 @@ const SATtoIQ = () => (
       <Link to="/test">Take our free IQ test</Link> for an instant estimate. Or learn more about{" "}
       <Link to="/what-is-iq">what IQ really measures</Link>.
     </p>
+
+    <h2>Other Score Converters</h2>
+    <ul>
+      <li><Link to="/act-to-iq">ACT to IQ Conversion</Link> — Convert your ACT score to an estimated IQ</li>
+      <li><Link to="/gre-to-iq">GRE to IQ Conversion</Link> — GRE Verbal + Quant to IQ estimate</li>
+      <li><Link to="/asvab-to-iq">ASVAB to IQ Conversion</Link> — AFQT score to IQ estimate</li>
+    </ul>
   </ContentPage>
 );
 

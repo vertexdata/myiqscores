@@ -5,6 +5,7 @@ import IQMeter from "@/components/IQMeter";
 import ComparisonChart from "@/components/ComparisonChart";
 import WikiImage from "@/components/WikiImage";
 import FamousPersonIcon from "@/components/FamousPersonIcon";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getFamousPersonBySlug, famousIQData } from "@/data/famousIQData";
 
 // Public domain / CC images from Wikimedia Commons for historical figures
@@ -117,6 +118,24 @@ const FamousIQ = () => {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.myiqscores.com" },
+      { "@type": "ListItem", position: 2, name: "Famous IQs", item: "https://www.myiqscores.com/famous-iq" },
+      { "@type": "ListItem", position: 3, name: `${person.name}'s IQ`, item: `https://www.myiqscores.com/famous-iq/${person.slug}` },
+    ],
+  };
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: person.name,
+    description: person.description,
+    url: `https://www.myiqscores.com/famous-iq/${person.slug}`,
+  };
+
   const otherPeople = famousIQData.filter((p) => p.slug !== person.slug);
 
   const relatedPages = [
@@ -134,8 +153,10 @@ const FamousIQ = () => {
         description={seoDescs[person.slug] ?? `${person.name}'s IQ is estimated at ${person.estimatedIQ}. Learn what this means, how it compares, and what made ${person.name} a genius.`}
         canonicalUrl={`/famous-iq/${person.slug}`}
         ogType="article"
-        jsonLd={faqSchema}
+        jsonLd={[faqSchema, breadcrumbSchema, personSchema]}
       />
+
+      <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Famous IQs", href: "/famous-iq" }, { label: `${person.name}'s IQ` }]} />
 
       <h1>
         <span className="gradient-text">{person.name}'s IQ</span>: {person.estimatedIQ}
