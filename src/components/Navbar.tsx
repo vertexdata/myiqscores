@@ -5,9 +5,9 @@ import { useState } from "react";
 const navLinks = [
   { to: "/what-is-iq", label: "What Is IQ?" },
   { to: "/iq-score-ranges", label: "Score Ranges" },
-  { to: "/iq-percentile", label: "Percentile" },
+  { to: "/iq-percentile-chart", label: "Percentile" },
   { to: "/famous-iq", label: "Famous IQs" },
-  { to: "/career-iq", label: "Careers & IQ" },
+  { to: "/iq-by-career", label: "Careers & IQ" },
 ];
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
               My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
             </span>
             <span className="hidden sm:block text-[10px] text-muted-foreground/70 -mt-0.5 tracking-wide">
-              The Most Accurate Free IQ Test Online
+              Free IQ Estimate and Learning Guides
             </span>
           </div>
         </Link>

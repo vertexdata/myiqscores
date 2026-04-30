@@ -43,7 +43,7 @@ const ContentPage = ({
               My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
             </span>
             <span className="hidden sm:block text-[10px] text-muted-foreground/70 -mt-0.5 tracking-wide">
-              The Most Accurate Free IQ Test Online
+              Free IQ Estimate and Learning Guides
             </span>
           </div>
         </Link>
@@ -146,7 +146,7 @@ const ContentPage = ({
               </span>
             </div>
             <p className="text-muted-foreground">
-              Free, accurate IQ testing with instant results.
+              Free IQ estimate with instant educational results.
             </p>
             <Link to="/test" className="inline-block mt-3 text-primary hover:text-primary/80 font-medium transition-colors">
               Take the Free IQ Test →
@@ -179,6 +179,9 @@ const ContentPage = ({
           <span>&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
+            <Link to="/methodology" className="hover:text-foreground transition-colors">Methodology</Link>
+            <Link to="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>
+            <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
           </div>

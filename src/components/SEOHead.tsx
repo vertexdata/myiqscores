@@ -16,7 +16,7 @@ const DEFAULT_IMAGE =
 
 const SEOHead = ({
   title = "Free IQ Test — Get Your Score Instantly | MyIQScores",
-  description = "Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall. Discover your cognitive edge.",
+  description = "Take a free online IQ-style reasoning test. 30 questions, instant educational results, score ranges, and cognitive learning guides. No sign-up or paywall.",
   canonicalUrl = SITE_URL,
   ogImage = DEFAULT_IMAGE,
   ogType = "website",

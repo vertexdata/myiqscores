@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { trackQuizStarted } from "@/lib/analytics";
 import {
@@ -11,12 +10,11 @@ import {
   BookOpen,
   BarChart3,
   MapPin,
-  Star,
   ChevronRight,
-  Zap,
-  Users,
   Trophy,
   HelpCircle,
+  ClipboardCheck,
+  Scale,
 } from "lucide-react";
 
 const stagger = {
@@ -27,39 +25,6 @@ const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
-
-const BASE_COUNT = 2847391;
-
-function CountUp({ target, duration = 2000 }: { target: number; duration?: number }) {
-  const [val, setVal] = useState(0);
-  useEffect(() => {
-    const start = Date.now();
-    const tick = () => {
-      const elapsed = Date.now() - start;
-      const progress = Math.min(elapsed / duration, 1);
-      setVal(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }, [target, duration]);
-  return <>{val.toLocaleString()}</>;
-}
-
-function LiveCounter() {
-  const [count, setCount] = useState(BASE_COUNT);
-  useEffect(() => {
-    const schedule = () => {
-      const delay = 3000 + Math.random() * 5000;
-      return setTimeout(() => {
-        setCount((c) => c + Math.floor(1 + Math.random() * 3));
-        timerRef.current = schedule();
-      }, delay);
-    };
-    const timerRef = { current: schedule() };
-    return () => clearTimeout(timerRef.current);
-  }, []);
-  return <>{count.toLocaleString()}</>;
-}
 
 interface LandingProps {
   onStart: () => void;
@@ -91,7 +56,7 @@ const Landing = ({ onStart }: LandingProps) => {
       </motion.h1>
 
       <motion.p variants={fadeUp} className="mt-6 text-muted-foreground text-center text-lg sm:text-xl max-w-2xl">
-        Take the most accurate free IQ test online. 30 questions. 15 minutes. Instant results.
+        Take a free IQ-style reasoning test online. 30 questions. Instant educational results.
       </motion.p>
 
       <motion.div variants={fadeUp} className="mt-10">
@@ -102,9 +67,9 @@ const Landing = ({ onStart }: LandingProps) => {
 
       <motion.div variants={fadeUp} className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-10">
         {[
-          { icon: FlaskConical, text: "Scientifically Designed" },
+          { icon: FlaskConical, text: "Reasoning-Based Questions" },
           { icon: Timer, text: "Takes ~12 Minutes" },
-          { icon: Globe, text: "2.8M+ Tests Taken" },
+          { icon: Globe, text: "No Sign-Up or Paywall" },
         ].map(({ icon: Icon, text }) => (
           <div key={text} className="flex items-center gap-2 text-muted-foreground text-sm">
             <Icon className="w-4 h-4 text-primary" />
@@ -113,17 +78,17 @@ const Landing = ({ onStart }: LandingProps) => {
         ))}
       </motion.div>
 
-      <motion.p variants={fadeUp} className="mt-8 text-muted-foreground text-sm text-center">
-        Join <span className="text-foreground font-semibold"><LiveCounter /></span> people who've discovered their IQ
+      <motion.p variants={fadeUp} className="mt-8 text-muted-foreground text-sm text-center max-w-xl">
+        Results include your estimated score range, percentile context, and plain-language notes on what an online test can and cannot tell you.
       </motion.p>
 
       {/* ── SOCIAL PROOF BAR ── */}
       <motion.div variants={fadeUp} className="mt-14 w-full max-w-3xl">
         <div className="glass-card rounded-2xl px-6 py-5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[rgba(255,255,255,0.08)] gap-0">
           {[
-            { emoji: "⭐", label: "4.8/5 rating", sub: "Based on 14,000+ reviews" },
-            { emoji: "🧠", label: "30 research-backed questions", sub: "Covering 5 cognitive domains" },
-            { emoji: "⚡", label: "Results in 12 minutes", sub: "No sign-up required" },
+            { emoji: "📋", label: "Transparent methodology", sub: "Clear limits and scoring notes" },
+            { emoji: "🧠", label: "30 reasoning questions", sub: "Covering 5 cognitive domains" },
+            { emoji: "⚡", label: "Instant educational report", sub: "No sign-up required" },
           ].map(({ emoji, label, sub }) => (
             <div key={label} className="flex flex-col items-center text-center py-4 sm:py-0 sm:px-6">
               <span className="text-2xl mb-1">{emoji}</span>
@@ -173,44 +138,32 @@ const Landing = ({ onStart }: LandingProps) => {
         </div>
       </motion.div>
 
-      {/* ── TESTIMONIALS ── */}
+      {/* ── TRUST & METHODOLOGY ── */}
       <motion.div variants={fadeUp} className="mt-20 w-full max-w-4xl">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">What People Are Saying</h2>
-        <p className="text-center text-muted-foreground text-sm mb-10">Real results from real people</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">How We Keep the Test Honest</h2>
+        <p className="text-center text-muted-foreground text-sm mb-10">A free online result should be useful without pretending to be a clinical diagnosis</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {[
             {
-              quote: "Finally an IQ test that doesn't require a credit card. Got my score instantly and it felt genuinely challenging.",
-              name: "Sarah K.",
-              score: "IQ 127",
+              icon: ClipboardCheck,
+              title: "Transparent Scoring",
+              text: "Your result is an estimate based on accuracy and completion time across reasoning categories, with clear score-range explanations.",
             },
             {
-              quote: "I've taken a few online IQ tests and this is the most serious one. The questions actually made me think.",
-              name: "Marcus T.",
-              score: "IQ 118",
+              icon: Scale,
+              title: "Plain Limitations",
+              text: "Online IQ-style tests are not a substitute for WAIS, Stanford-Binet, or a licensed psychologist's assessment.",
             },
             {
-              quote: "The bell curve visualization was really cool — it helped me understand where I stand compared to everyone else.",
-              name: "Priya R.",
-              score: "IQ 134",
+              icon: BookOpen,
+              title: "Educational Context",
+              text: "The site includes guides on score ranges, percentiles, test types, and how to interpret cognitive assessments responsibly.",
             },
-            {
-              quote: "Sent the challenge link to my friends. We all compared scores. Mine was highest 😂",
-              name: "James L.",
-              score: "IQ 122",
-            },
-          ].map(({ quote, name, score }) => (
-            <div key={name} className="glass-card rounded-2xl p-6 flex flex-col gap-4">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-foreground text-sm leading-relaxed">"{quote}"</p>
-              <div className="flex items-center justify-between mt-auto pt-2 border-t border-[rgba(255,255,255,0.06)]">
-                <span className="text-muted-foreground text-sm font-medium">{name}</span>
-                <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full font-semibold">{score}</span>
-              </div>
+          ].map(({ icon: Icon, title, text }) => (
+            <div key={title} className="glass-card rounded-2xl p-6 flex flex-col gap-3">
+              <Icon className="w-6 h-6 text-primary" />
+              <h3 className="font-heading font-semibold text-foreground text-base">{title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
@@ -256,7 +209,7 @@ const Landing = ({ onStart }: LandingProps) => {
             },
             {
               q: "How long does the test take?",
-              a: "Most people complete the test in 10-15 minutes. There's no time limit per question, but the test measures processing efficiency as well as accuracy, so working at a natural pace gives the most accurate results.",
+              a: "Most people complete the test in 10-15 minutes. There's no time limit per question, but the test considers both accuracy and completion time, so working at a natural pace gives the most useful estimate.",
             },
             {
               q: "Do I need to create an account?",

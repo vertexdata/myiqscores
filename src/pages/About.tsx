@@ -7,24 +7,25 @@ const About = () => (
   <ContentPage showLeaderboard={false} showSidebar={false}>
     <SEOHead
       title="About MyIQScores™ — Our Mission, Team & Contact | MyIQScores"
-      description="Learn about MyIQScores.com — our mission to provide the most accurate free IQ test online. Contact us, learn our methodology, and see how we help millions test their IQ."
+      description="Learn about MyIQScores.com, our free IQ-style reasoning test, editorial standards, methodology, privacy practices, and contact options."
       canonicalUrl="/about"
     />
 
     <h1>About <span className="gradient-text">MyIQScores™</span></h1>
 
     <p>
-      MyIQScores is the internet's most popular free IQ testing platform. We've helped over 2 million
-      people discover their cognitive abilities through our scientifically designed assessment. Our
-      mission is simple: make IQ testing accessible, accurate, and educational for everyone.
+      MyIQScores is a free educational site for IQ-style reasoning practice, score interpretation,
+      and accessible guides to cognitive testing. Our mission is simple: make intelligence testing
+      concepts easier to understand without hiding results behind a paywall or presenting an online
+      quiz as a clinical assessment.
     </p>
 
     {/* Mission cards */}
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8">
       <div className="glass-card p-5 rounded-xl text-center">
         <Users className="w-8 h-8 text-primary mx-auto mb-3" />
-        <p className="font-heading font-bold text-2xl text-foreground">2M+</p>
-        <p className="text-sm text-muted-foreground">Tests Taken</p>
+        <p className="font-heading font-bold text-2xl text-foreground">Free</p>
+        <p className="text-sm text-muted-foreground">No Paywall</p>
       </div>
       <div className="glass-card p-5 rounded-xl text-center">
         <BookOpen className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -74,8 +75,8 @@ const About = () => (
 
     <h2>Our Content</h2>
     <p>
-      Beyond the IQ test, MyIQScores provides the internet's most comprehensive educational resource
-      about intelligence quotient:
+      Beyond the IQ-style test, MyIQScores provides an educational resource about intelligence
+      quotient:
     </p>
     <ul>
       <li><Link to="/what-is-iq">What Is IQ?</Link> — complete guide to intelligence quotient</li>
@@ -86,8 +87,9 @@ const About = () => (
       <li>IQ myths debunked, age-related IQ changes, and much more</li>
     </ul>
     <p>
-      All our content is researched, written, and reviewed for accuracy. We cite published scientific
-      research and clearly distinguish between established findings and estimates.
+      Our content is written to distinguish between established findings, practical estimates, and
+      topics where public data is incomplete. Read our <Link to="/editorial-policy">editorial policy</Link>{" "}
+      and <Link to="/methodology">test methodology</Link> for more detail.
     </p>
 
     <h2>Privacy & Trust</h2>

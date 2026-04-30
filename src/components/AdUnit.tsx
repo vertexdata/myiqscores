@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { ADSENSE_PUB_ID } from "@/config/adsense";
+import { ADSENSE_ENABLED, ADSENSE_PUB_ID } from "@/config/adsense";
+
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[];
+  }
+}
 
 type AdFormat = "display" | "in-article" | "multiplex";
 type AdSize = "responsive" | "728x90" | "320x50" | "300x250" | "300x600";
@@ -27,12 +33,15 @@ const AdUnit = ({
   className = "",
   label = true,
 }: AdUnitProps) => {
+  const hasRealSlot = /^\d+$/.test(slotId);
+  const shouldRenderAd = ADSENSE_ENABLED && hasRealSlot;
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [adLoaded, setAdLoaded] = useState(false);
 
   // Lazy load with Intersection Observer
   useEffect(() => {
+    if (!shouldRenderAd) return;
     const el = containerRef.current;
     if (!el) return;
 
@@ -52,11 +61,12 @@ const AdUnit = ({
 
   // Push ad when visible
   useEffect(() => {
+    if (!shouldRenderAd) return;
     if (!isVisible || adLoaded) return;
     if (typeof window === "undefined") return;
 
     try {
-      const adsbygoogle = (window as any).adsbygoogle || [];
+      const adsbygoogle = window.adsbygoogle || [];
       adsbygoogle.push({});
       setAdLoaded(true);
     } catch {
@@ -64,8 +74,11 @@ const AdUnit = ({
     }
   }, [isVisible, adLoaded]);
 
-  const placeholder = sizeToStyle[size] || sizeToStyle.responsive;
+  if (!shouldRenderAd) {
+    return null;
+  }
 
+  const placeholder = sizeToStyle[size] || sizeToStyle.responsive;
   return (
     <div
       ref={containerRef}

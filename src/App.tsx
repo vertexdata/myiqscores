@@ -35,6 +35,9 @@ import CareerIQHub from "./pages/CareerIQHub.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
 import About from "./pages/About.tsx";
+import Methodology from "./pages/Methodology.tsx";
+import EditorialPolicy from "./pages/EditorialPolicy.tsx";
+import Contact from "./pages/Contact.tsx";
 import Unsubscribe from "./pages/Unsubscribe.tsx";
 import AverageIQUS from "./pages/AverageIQUS.tsx";
 import PresidentIQ from "./pages/PresidentIQ.tsx";
@@ -105,6 +108,9 @@ export const AppRoutes = () => (
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/terms-of-service" element={<TermsOfService />} />
     <Route path="/about" element={<About />} />
+    <Route path="/methodology" element={<Methodology />} />
+    <Route path="/editorial-policy" element={<EditorialPolicy />} />
+    <Route path="/contact" element={<Contact />} />
     <Route path="/unsubscribe" element={<Unsubscribe />} />
     <Route path="/average-iq-us" element={<AverageIQUS />} />
     <Route path="/iq-of-presidents" element={<PresidentIQ />} />

@@ -68,6 +68,9 @@ const routes = [
   ...careerSlugs.map((s) => `/iq-needed-for/${s}`),
   "/iq-vs-eq",
   "/sat-to-iq",
+  "/act-to-iq",
+  "/gre-to-iq",
+  "/asvab-to-iq",
   "/how-to-improve-iq",
   "/iq-by-age/children",
   "/iq-by-age/teenagers",
@@ -175,7 +178,6 @@ const routes = [
   "/famous-iq/aoc-detailed",
   "/famous-iq/selena-gomez",
   "/famous-iq/charles-darwin",
-  "/famous-iq/steph-curry-detailed",
   "/famous-iq/ada-lovelace",
   "/famous-iq/tyler-perry",
   "/famous-iq/bad-bunny",
@@ -291,13 +293,52 @@ const routes = [
   "/good-iq-score",
   "/genius-iq",
   "/mensa-iq-test",
+  "/average-iq-us",
+  "/iq-of-presidents",
+  "/low-iq",
+  "/blog",
+  "/blog/what-is-iq-score",
+  "/blog/how-to-increase-iq",
+  "/blog/iq-vs-success",
+  "/blog/famous-iq-scores",
+  "/blog/iq-by-country",
+  "/blog/what-is-genius-iq",
+  "/blog/iq-tests-accurate",
+  "/blog/emotional-intelligence-vs-iq",
+  "/privacy-policy",
   "/terms-of-service",
   "/about",
+  "/methodology",
+  "/editorial-policy",
+  "/contact",
   "/types-of-iq-tests",
   "/iq-percentile-chart",
   "/famous-iq",
   "/iq-by-career",
 ];
+
+function writeSitemap() {
+  const today = new Date().toISOString().slice(0, 10);
+  const uniqueRoutes = [...new Set(routes)];
+  const urls = uniqueRoutes
+    .map((route) => {
+      const loc = route === "/" ? "https://www.myiqscores.com" : `https://www.myiqscores.com${route}`;
+      const priority = route === "/" || route === "/test" ? "1.0" : route.includes("/blog") ? "0.8" : "0.7";
+      return [
+        "  <url>",
+        `    <loc>${loc}</loc>`,
+        `    <lastmod>${today}</lastmod>`,
+        "    <changefreq>monthly</changefreq>",
+        `    <priority>${priority}</priority>`,
+        "  </url>",
+      ].join("\n");
+    })
+    .join("\n");
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+  fs.writeFileSync(path.resolve(distDir, "sitemap.xml"), sitemap);
+  fs.writeFileSync(path.resolve(__dirname, "../public/sitemap.xml"), sitemap);
+}
 
 async function prerender() {
   const template = fs.readFileSync(path.resolve(distDir, "index.html"), "utf-8");
@@ -343,6 +384,7 @@ async function prerender() {
 
   // Clean up server build
   fs.rmSync(path.resolve(distDir, "server"), { recursive: true, force: true });
+  writeSitemap();
 
   console.log("Pre-rendering complete!");
 }

@@ -3,7 +3,7 @@
   "redirects": [
     { "source": "/famous-iq/einstein-iq-detailed", "destination": "/famous-iq/albert-einstein", "permanent": true },
     { "source": "/famous-iq/aoc-detailed", "destination": "/famous-iq/alexandria-ocasio-cortez", "permanent": true },
-    { "source": "/famous-iq/steph-curry-detailed", "destination": "/famous-iq/steph-curry", "permanent": true }
+    { "source": "/famous-iq/steph-curry-detailed", "destination": "/famous-iq/stephen-curry", "permanent": true }
   ],
   "headers": [
     {

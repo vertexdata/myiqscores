@@ -49,7 +49,9 @@ const Index = () => {
       if (stored) {
         try {
           setChallengerScore(JSON.parse(stored));
-        } catch {}
+        } catch {
+          localStorage.removeItem(`iq_challenge_${ref}`);
+        }
       }
     }
   }, []);
@@ -70,7 +72,7 @@ const Index = () => {
     <div className="relative min-h-screen overflow-x-hidden">
       <SEOHead
         title="Free IQ Test — 30 Questions, Instant Score, No Paywall | MyIQScores"
-        description="Take the most accurate free IQ test online. 30 questions, 15 minutes, instant results. No sign-up, no paywall, no email required. See how smart you really are."
+        description="Take a free online IQ-style reasoning test. 30 questions, instant educational results, score ranges, and cognitive learning guides. No sign-up or paywall."
         canonicalUrl="https://www.myiqscores.com"
         jsonLd={websiteSchema}
       />
@@ -157,6 +159,9 @@ const Index = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-3">Company</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><Link to="/about" className="hover:text-foreground transition-colors">About Us</Link></li>
+                  <li><Link to="/methodology" className="hover:text-foreground transition-colors">Methodology</Link></li>
+                  <li><Link to="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link></li>
+                  <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
                   <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
                   <li><Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
                 </ul>
@@ -170,7 +175,7 @@ const Index = () => {
                 <span className="font-heading font-bold text-foreground">
                   My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
                 </span>
-                <span className="text-muted-foreground text-xs ml-2">— The most accurate free IQ test online.</span>
+                <span className="text-muted-foreground text-xs ml-2">— Free IQ estimate and learning guides.</span>
               </div>
               <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} MyIQScores™. All rights reserved.</span>
             </div>
