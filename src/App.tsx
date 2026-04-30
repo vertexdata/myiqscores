@@ -51,6 +51,19 @@ import IQByCountry from "./pages/blog/IQByCountry.tsx";
 import WhatIsGeniusIQ from "./pages/blog/WhatIsGeniusIQ.tsx";
 import IQTestsAccurate from "./pages/blog/IQTestsAccurate.tsx";
 import EmotionalIntelligenceVsIQ from "./pages/blog/EmotionalIntelligenceVsIQ.tsx";
+import FluidVsCrystallizedIntelligence from "./pages/blog/FluidVsCrystallizedIntelligence.tsx";
+import FlynnEffect from "./pages/blog/FlynnEffect.tsx";
+import IQGeneticsNatureVsNurture from "./pages/blog/IQGeneticsNatureVsNurture.tsx";
+import SleepAndIQ from "./pages/blog/SleepAndIQ.tsx";
+import NutritionAndIQ from "./pages/blog/NutritionAndIQ.tsx";
+import IQAndMentalHealth from "./pages/blog/IQAndMentalHealth.tsx";
+import IQAndWorkplace from "./pages/blog/IQAndWorkplace.tsx";
+import WorkingMemoryAndIQ from "./pages/blog/WorkingMemoryAndIQ.tsx";
+import IQTestingInChildren from "./pages/blog/IQTestingInChildren.tsx";
+import ExerciseAndIQ from "./pages/blog/ExerciseAndIQ.tsx";
+import MultipleIntelligences from "./pages/blog/MultipleIntelligences.tsx";
+import IQAndCreativity from "./pages/blog/IQAndCreativity.tsx";
+import IQAndLeadership from "./pages/blog/IQAndLeadership.tsx";
 import { iqScores } from "./data/iqScoreData";
 import { countrySlugs } from "./data/countryIQData";
 import { careerSlugs } from "./data/careerIQData";
@@ -124,6 +137,19 @@ export const AppRoutes = () => (
     <Route path="/blog/what-is-genius-iq" element={<WhatIsGeniusIQ />} />
     <Route path="/blog/iq-tests-accurate" element={<IQTestsAccurate />} />
     <Route path="/blog/emotional-intelligence-vs-iq" element={<EmotionalIntelligenceVsIQ />} />
+    <Route path="/blog/fluid-vs-crystallized-intelligence" element={<FluidVsCrystallizedIntelligence />} />
+    <Route path="/blog/flynn-effect" element={<FlynnEffect />} />
+    <Route path="/blog/iq-genetics-nature-vs-nurture" element={<IQGeneticsNatureVsNurture />} />
+    <Route path="/blog/sleep-and-iq" element={<SleepAndIQ />} />
+    <Route path="/blog/nutrition-and-iq" element={<NutritionAndIQ />} />
+    <Route path="/blog/iq-and-mental-health" element={<IQAndMentalHealth />} />
+    <Route path="/blog/iq-and-workplace" element={<IQAndWorkplace />} />
+    <Route path="/blog/working-memory-and-iq" element={<WorkingMemoryAndIQ />} />
+    <Route path="/blog/iq-testing-in-children" element={<IQTestingInChildren />} />
+    <Route path="/blog/exercise-and-iq" element={<ExerciseAndIQ />} />
+    <Route path="/blog/multiple-intelligences-theory" element={<MultipleIntelligences />} />
+    <Route path="/blog/iq-and-creativity" element={<IQAndCreativity />} />
+    <Route path="/blog/iq-and-leadership" element={<IQAndLeadership />} />
     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
     <Route path="*" element={<NotFound />} />
   </Routes>
