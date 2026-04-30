@@ -21,14 +21,16 @@ const pageTransition = {
 
 const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "MyIQScores",
-  url: "https://www.myiqscores.com",
-  description: "Free online IQ test with instant results. No sign-up required.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.myiqscores.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
+  "@type": "WebApplication",
+  name: "MyIQScores Free IQ Test",
+  url: "https://www.myiqscores.com/test",
+  description: "Take a free IQ-style reasoning test online with instant educational results.",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
   },
 };
 

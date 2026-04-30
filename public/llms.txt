@@ -1,0 +1,47 @@
+# MyIQScores
+
+> MyIQScores is a free IQ-style reasoning test and educational reference site for IQ score interpretation, cognitive testing concepts, percentiles, score ranges, and responsible explanations of intelligence research.
+
+## Core Product
+
+- [Free IQ Test](https://www.myiqscores.com/): 30-question IQ-style reasoning test with instant educational results and no sign-up requirement.
+- [Methodology](https://www.myiqscores.com/methodology): Explains how the online estimate is structured, what it measures, and why it is not a clinical IQ assessment.
+- [About MyIQScores](https://www.myiqscores.com/about): Site mission, privacy posture, limitations, and contact routes.
+- [Editorial Policy](https://www.myiqscores.com/editorial-policy): Standards for estimates, corrections, and responsible educational content.
+- [Contact](https://www.myiqscores.com/contact): Support, privacy, business, and content correction contact information.
+
+## Canonical IQ Learning Guides
+
+- [What Is IQ?](https://www.myiqscores.com/what-is-iq): Complete guide to intelligence quotient, how IQ is measured, and what scores mean.
+- [IQ Score Ranges](https://www.myiqscores.com/iq-score-ranges): Full IQ scale with classifications, percentiles, rarity, and practical interpretation.
+- [IQ Percentile Chart](https://www.myiqscores.com/iq-percentile-chart): Percentile equivalents and bell curve context.
+- [Types of IQ Tests](https://www.myiqscores.com/types-of-iq-tests): WAIS, Stanford-Binet, Raven's Progressive Matrices, Mensa-style tests, and online-test limitations.
+- [Good IQ Score](https://www.myiqscores.com/good-iq-score): Practical guide to what counts as average, above average, gifted, and genius-level IQ.
+- [Genius IQ](https://www.myiqscores.com/genius-iq): Explains the genius threshold, rarity, and common misconceptions.
+- [Mensa IQ Test](https://www.myiqscores.com/mensa-iq-test): Mensa qualification threshold and what a supervised admissions test involves.
+
+## Data Hubs
+
+- [Average IQ by Country](https://www.myiqscores.com/average-iq-by-country): Country-level estimates with methodology caveats.
+- [Average IQ by State](https://www.myiqscores.com/average-iq-by-state): US state-level educational data context.
+- [IQ by Career](https://www.myiqscores.com/iq-by-career): Career-related cognitive demand estimates with cautions against using IQ alone.
+- [Famous IQ Scores](https://www.myiqscores.com/famous-iq): Public-figure IQ estimates clearly labeled as estimates unless verified.
+- [IQ Blog](https://www.myiqscores.com/blog): Research explainers on IQ, success, EQ, cognitive training, and testing accuracy.
+
+## High-Intent Converters
+
+- [SAT to IQ](https://www.myiqscores.com/sat-to-iq)
+- [ACT to IQ](https://www.myiqscores.com/act-to-iq)
+- [GRE to IQ](https://www.myiqscores.com/gre-to-iq)
+- [ASVAB to IQ](https://www.myiqscores.com/asvab-to-iq)
+- [Is 100 IQ Good?](https://www.myiqscores.com/is-100-iq-good)
+- [Is 120 IQ Good?](https://www.myiqscores.com/is-120-iq-good)
+- [Is 130 IQ Good?](https://www.myiqscores.com/is-130-iq-good)
+- [Is 140 IQ Good?](https://www.myiqscores.com/is-140-iq-good)
+
+## AI Search Notes
+
+- Public pages are intended to be crawlable and citable by search engines and answer engines.
+- Online scores are educational estimates, not clinical assessments.
+- For official IQ testing, users should consult a licensed psychologist using validated instruments such as WAIS, WISC, Stanford-Binet, or Raven's Progressive Matrices.
+- Preferred canonical host: https://www.myiqscores.com
