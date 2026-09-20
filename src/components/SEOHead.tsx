@@ -13,7 +13,7 @@ interface SEOHeadProps {
 
 const SITE_URL = "https://www.myiqscores.com";
 const DEFAULT_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/WYMU4VtnINe1xcVzzfyuW3Rd4m22/social-images/social-1774334778648-ChatGPT_Image_Mar_24,_2026,_02_46_00_AM.webp";
+  `${SITE_URL}/images/cognition/result-share.webp`;
 
 const labelFromSlug = (slug: string) =>
   slug
@@ -134,7 +134,7 @@ const SEOHead = ({
         name="robots"
         content={
           noindex
-            ? "noindex,nofollow"
+            ? "noindex,follow"
             : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         }
       />

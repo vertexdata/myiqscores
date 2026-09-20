@@ -15,11 +15,11 @@ export const questions: Question[] = [
   { id: 5, category: "Pattern Recognition", question: "What comes next: 1, 4, 9, 16, 25, ___?", options: ["30", "36", "34", "49"], correctIndex: 1 },
   { id: 6, category: "Pattern Recognition", question: "What comes next: 2, 3, 5, 7, 11, 13, ___?", options: ["15", "17", "19", "16"], correctIndex: 1 },
   // Logical Reasoning (7-12)
-  { id: 7, category: "Logical Reasoning", question: "All roses are flowers. Some flowers fade quickly. Which must be true?", options: ["All roses fade quickly", "Some roses fade quickly", "Some flowers are roses", "No roses fade quickly"], correctIndex: 2 },
+  { id: 7, category: "Logical Reasoning", question: "All roses are flowers. No flowers are made of metal. Which must be true?", options: ["No roses are made of metal", "Some metal objects are roses", "All flowers are roses", "Some roses are made of metal"], correctIndex: 0 },
   { id: 8, category: "Logical Reasoning", question: "If all Zogs are Bips, and all Bips are Crats, then:", options: ["All Crats are Zogs", "All Zogs are Crats", "Some Bips are not Zogs", "No Crats are Zogs"], correctIndex: 1 },
   { id: 9, category: "Logical Reasoning", question: "Tom is taller than Sam. Sam is taller than Rick. Jim is taller than Tom. Who is shortest?", options: ["Tom", "Sam", "Rick", "Jim"], correctIndex: 2 },
   { id: 10, category: "Logical Reasoning", question: "If it rains, the ground gets wet. The ground is not wet. Therefore:", options: ["It rained", "It didn't rain", "The ground is dry", "Both B and C"], correctIndex: 3 },
-  { id: 11, category: "Logical Reasoning", question: "A is the father of B. B is the sister of C. D is the mother of C. What is A to D?", options: ["Husband", "Brother", "Father", "Son"], correctIndex: 0 },
+  { id: 11, category: "Logical Reasoning", question: "A is the father of B. B and C are siblings. What is A to C?", options: ["Father", "Brother", "Grandfather", "Uncle"], correctIndex: 0 },
   { id: 12, category: "Logical Reasoning", question: "In a race, you overtake the person in 2nd place. What position are you now in?", options: ["1st", "2nd", "3rd", "It depends"], correctIndex: 1 },
   // Verbal / Linguistic (13-18)
   { id: 13, category: "Verbal", question: "Which word is the odd one out: Cat, Dog, Rabbit, Eagle, Hamster?", options: ["Cat", "Rabbit", "Eagle", "Hamster"], correctIndex: 2 },
@@ -29,7 +29,7 @@ export const questions: Question[] = [
   { id: 17, category: "Verbal", question: "Which word does NOT belong: Whisper, Shout, Mumble, Listen, Speak?", options: ["Whisper", "Shout", "Listen", "Speak"], correctIndex: 2 },
   { id: 18, category: "Verbal", question: "If CLOUD is coded as DMPVE, then RAIN is coded as:", options: ["SBJO", "SBJM", "QZHO", "SCJO"], correctIndex: 0 },
   // Spatial Reasoning (19-24)
-  { id: 19, category: "Spatial", question: "How many sides does a dodecahedron have?", options: ["10", "12", "14", "20"], correctIndex: 1 },
+  { id: 19, category: "Spatial", question: "How many faces does a dodecahedron have?", options: ["10", "12", "14", "20"], correctIndex: 1 },
   { id: 20, category: "Spatial", question: "If you fold a square piece of paper in half twice, then cut a small circle in the center, how many holes appear when unfolded?", options: ["1", "2", "4", "3"], correctIndex: 2 },
   { id: 21, category: "Spatial", question: "A clock shows 3:15. What is the angle between the hour and minute hands?", options: ["0°", "7.5°", "15°", "90°"], correctIndex: 1 },
   { id: 22, category: "Spatial", question: "Which 3D shape has 6 faces, 12 edges, and 8 vertices?", options: ["Sphere", "Cube", "Pyramid", "Cylinder"], correctIndex: 1 },
@@ -72,9 +72,10 @@ export function calculateIQ(correctAnswers: number): number {
 export function getIQLabel(iq: number): string {
   if (iq < 85) return "Below Average";
   if (iq < 100) return "Average";
-  if (iq < 110) return "Above Average";
-  if (iq < 120) return "High Intelligence";
-  return "Superior Intelligence";
+  if (iq < 110) return "Average to High Average";
+  if (iq < 120) return "High Average";
+  if (iq < 130) return "High Range";
+  return "Very High Range";
 }
 
 export function getPercentile(iq: number): number {

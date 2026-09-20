@@ -1,9 +1,5 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -30,6 +26,7 @@ import GeniusIQ from "./pages/GeniusIQ.tsx";
 import MensaIQ from "./pages/MensaIQ.tsx";
 import TypesOfIQTests from "./pages/TypesOfIQTests.tsx";
 import IQPercentile from "./pages/IQPercentile.tsx";
+import IQScoreInterpreter from "./pages/IQScoreInterpreter.tsx";
 import FamousIQHub from "./pages/FamousIQHub.tsx";
 import CareerIQHub from "./pages/CareerIQHub.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
@@ -76,8 +73,6 @@ import { famousPersonSlugs } from "./data/famousIQData";
 import { mythSlugs } from "./data/iqMythData";
 import { stateSlugs } from "./data/stateIQData";
 
-const queryClient = new QueryClient();
-
 // Extracted routes for reuse with StaticRouter during pre-rendering
 export const AppRoutes = () => (
   <Routes>
@@ -120,6 +115,7 @@ export const AppRoutes = () => (
     <Route path="/mensa-iq-test" element={<MensaIQ />} />
     <Route path="/types-of-iq-tests" element={<TypesOfIQTests />} />
     <Route path="/iq-percentile-chart" element={<IQPercentile />} />
+    <Route path="/iq-score-interpreter" element={<IQScoreInterpreter />} />
     <Route path="/famous-iq" element={<FamousIQHub />} />
     <Route path="/iq-by-career" element={<CareerIQHub />} />
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -165,14 +161,10 @@ export const AppRoutes = () => (
 
 // Core app shell (without Router or HelmetProvider — those are provided by entry files)
 export const AppContent = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <ScrollToTop />
-      <AppRoutes />
-    </TooltipProvider>
-  </QueryClientProvider>
+  <>
+    <ScrollToTop />
+    <AppRoutes />
+  </>
 );
 
 // Default export wraps everything for standalone usage

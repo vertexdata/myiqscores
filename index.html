@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="MyIQScores" />
-
-    <!-- Preconnect to font servers -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Load fonts non-render-blocking with display=swap + media trick -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+    <meta name="theme-color" content="#07111f" />
+    <link rel="preload" as="image" href="/images/cognition/hero-1280.webp" imagesrcset="/images/cognition/hero-640.webp 640w, /images/cognition/hero-1280.webp 1280w, /images/cognition/hero-1920.webp 1920w" imagesizes="(max-width: 1024px) 100vw, 48vw" fetchpriority="high" />
 
     <!-- Google Consent Mode v2 defaults — MUST run before GA/AdSense load.
          Storage defaults to denied in the EEA, UK, and Switzerland until the
@@ -36,21 +30,13 @@
       });
     </script>
 
-    <!-- Defer AdSense until after page load -->
-    <script>
-      // Load AdSense after page is interactive
-      window.addEventListener('load', function() {
-        var s = document.createElement('script');
-        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5051305701488211';
-        s.async = true;
-        s.crossOrigin = 'anonymous';
-        document.head.appendChild(s);
-      });
-    </script>
+    <!-- AdSense is intentionally not loaded before approval. Enable the script
+         together with ADSENSE_ENABLED only after real slot IDs are configured. -->
 
     <!-- Defer Google Analytics until after page load -->
     <script>
       window.addEventListener('load', function() {
+        window.setTimeout(function() {
         var g = document.createElement('script');
         g.src = 'https://www.googletagmanager.com/gtag/js?id=G-57H1Q82XZ4';
         g.async = true;
@@ -59,6 +45,7 @@
           gtag('js', new Date());
           gtag('config', 'G-57H1Q82XZ4');
         };
+        }, 5000);
       });
     </script>
 

@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const messages = [
-  "Analyzing your pattern recognition...",
-  "Evaluating logical reasoning...",
-  "Measuring verbal intelligence...",
-  "Calculating your IQ score...",
+  "Checking your responses...",
+  "Building your category breakdown...",
+  "Preparing the result context...",
 ];
 
 interface ProcessingProps {
@@ -19,16 +18,16 @@ const Processing = ({ onDone }: ProcessingProps) => {
   useEffect(() => {
     const msgInterval = setInterval(() => {
       setMessageIndex((prev) => Math.min(prev + 1, messages.length - 1));
-    }, 1100);
+    }, 280);
 
     const progInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) return 100;
-        return prev + 2;
+      return prev + 10;
       });
     }, 80);
 
-    const timeout = setTimeout(onDone, 4500);
+    const timeout = setTimeout(onDone, 900);
 
     return () => {
       clearInterval(msgInterval);

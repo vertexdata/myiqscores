@@ -61,24 +61,23 @@ const FamousIQHub = () => {
   return (
     <ContentPage>
       <SEOHead
-        title="Famous People IQ Scores: Complete List with Estimates | MyIQScores"
-        description="See the estimated IQ scores of famous people — scientists, entrepreneurs, athletes, actors, and more. From Einstein (160) to everyday celebrities."
+        title="Famous People IQ Claims: Verified Scores vs Estimates | MyIQScores"
+        description="Review widely circulated celebrity IQ claims with a clear warning: most are unauthenticated estimates, not released professional test results."
         canonicalUrl="/famous-iq"
         ogType="article"
       />
 
-      <h1><span className="gradient-text">Famous People IQ Scores:</span> Complete List</h1>
+      <h1><span className="gradient-text">Famous People IQ Claims:</span> Evidence Before Numbers</h1>
 
       <p>
-        How smart are the world's most famous people? Below is our complete database of estimated IQ
-        scores for celebrities, scientists, entrepreneurs, athletes, and historical figures. Click any
-        name for a detailed analysis of their cognitive abilities and achievements.
+        Celebrity IQ figures spread easily and verify poorly. This index collects commonly circulated
+        estimates so readers can examine the claims, not treat them as authenticated test results.
       </p>
 
       <p className="text-sm text-muted-foreground">
-        <strong>Note:</strong> Most celebrity IQ scores are estimates based on academic records,
-        career achievements, and public statements. Very few have verified, professionally
-        administered IQ test results. See our guide on{" "}
+        <strong>Evidence warning:</strong> The figures below are unverified estimates. Academic records,
+        career achievements, and public statements cannot be converted into a valid IQ score. Unless a
+        named test and authenticated report are available, the number should be treated as speculation. See{" "}
         <Link to="/types-of-iq-tests">how IQ tests work</Link>.
       </p>
 
@@ -101,7 +100,7 @@ const FamousIQHub = () => {
 
       <table>
         <thead>
-          <tr><th>Name</th><th>Estimated IQ</th><th>Known For</th></tr>
+          <tr><th>Name</th><th>Circulated estimate (unverified)</th><th>Known For</th></tr>
         </thead>
         <tbody>
           {filtered.map((p) => (

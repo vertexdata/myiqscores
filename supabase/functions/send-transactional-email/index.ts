@@ -122,8 +122,44 @@ Deno.serve(async (req) => {
     )
   }
 
+  const normalizedEmail = effectiveRecipient.trim().toLowerCase()
+  if (
+    normalizedEmail.length > 254 ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail) ||
+    JSON.stringify(templateData).length > 20_000
+  ) {
+    return new Response(JSON.stringify({ error: 'Invalid request data' }), {
+      status: 400,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(supabaseUrl, supabaseServiceKey)
+
+  // Per-recipient abuse control. This endpoint is public by design so a test
+  // taker can email their own result, but it must not become an email relay.
+  const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000).toISOString()
+  const { count: recentSendCount, error: rateLimitError } = await supabase
+    .from('email_send_log')
+    .select('id', { count: 'exact', head: true })
+    .eq('recipient_email', normalizedEmail)
+    .gte('created_at', fifteenMinutesAgo)
+
+  if (rateLimitError) {
+    console.error('Email rate-limit check failed', { error: rateLimitError })
+    return new Response(JSON.stringify({ error: 'Unable to verify send limit' }), {
+      status: 503,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
+  if ((recentSendCount ?? 0) >= 3) {
+    return new Response(JSON.stringify({ error: 'Too many requests. Try again later.' }), {
+      status: 429,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json', 'Retry-After': '900' },
+    })
+  }
 
   // 2. Check suppression list (fail-closed: if we can't verify, don't send)
   const { data: suppressed, error: suppressionError } = await supabase
@@ -166,7 +202,6 @@ Deno.serve(async (req) => {
   }
 
   // 3. Get or create unsubscribe token (one token per email address)
-  const normalizedEmail = effectiveRecipient.toLowerCase()
   let unsubscribeToken: string
 
   // Check for existing token for this email

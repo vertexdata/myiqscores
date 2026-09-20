@@ -1,23 +1,17 @@
-import { useState, useCallback, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { lazy, Suspense, useState, useCallback, useEffect } from "react";
+import { Link } from "@/components/StaticLink";
 import { Brain } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Landing from "@/components/Landing";
-import Quiz from "@/components/Quiz";
-import Processing from "@/components/Processing";
-import Results from "@/components/Results";
-import EmailNurture from "@/components/EmailNurture";
 import SEOHead from "@/components/SEOHead";
+import { trackReturnVisit } from "@/lib/analytics";
 
 type Screen = "landing" | "quiz" | "processing" | "results";
 
-const pageTransition = {
-  initial: { opacity: 0, scale: 0.98 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" as const } },
-  exit: { opacity: 0, scale: 0.98, transition: { duration: 0.25 } },
-};
+const Quiz = lazy(() => import("@/components/Quiz"));
+const Processing = lazy(() => import("@/components/Processing"));
+const Results = lazy(() => import("@/components/Results"));
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -39,22 +33,33 @@ const Index = () => {
   const [userData, setUserData] = useState({ name: "", email: "", ageRange: "" });
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [elapsed, setElapsed] = useState(0);
-  const [showNurture, setShowNurture] = useState(false);
   const [challengerScore, setChallengerScore] = useState<{ score: number; percentile: number } | null>(null);
 
-  // Check for ?ref= challenge param on mount
+  // Challenge data is carried in the link so it works across devices. It contains
+  // only the score and percentile the sender explicitly chose to share.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const ref = params.get("ref");
-    if (ref) {
-      const stored = localStorage.getItem(`iq_challenge_${ref}`);
-      if (stored) {
-        try {
-          setChallengerScore(JSON.parse(stored));
-        } catch {
-          localStorage.removeItem(`iq_challenge_${ref}`);
-        }
+    const challenge = params.get("challenge");
+    if (challenge) {
+      const [score, percentile] = challenge.split("-").map(Number);
+      if (Number.isInteger(score) && score >= 55 && score <= 160 && Number.isInteger(percentile) && percentile >= 0 && percentile <= 100) {
+        setChallengerScore({ score, percentile });
       }
+    }
+  }, []);
+
+  useEffect(() => {
+    const key = "myiqscores:last-visit:v1";
+    try {
+      const now = Date.now();
+      const previous = Number(localStorage.getItem(key));
+      if (Number.isFinite(previous) && previous > 0) {
+        const days = Math.max(0, Math.floor((now - previous) / 86_400_000));
+        trackReturnVisit(days);
+      }
+      localStorage.setItem(key, String(now));
+    } catch {
+      // Storage may be unavailable in private browsing; the test still works.
     }
   }, []);
 
@@ -66,8 +71,6 @@ const Index = () => {
 
   const handleProcessingDone = useCallback(() => {
     setScreen("results");
-    // Show nurture bar after 10 seconds on results page
-    setTimeout(() => setShowNurture(true), 10000);
   }, []);
 
   return (
@@ -81,29 +84,22 @@ const Index = () => {
       <BackgroundEffect />
       <Navbar />
 
-      <AnimatePresence mode="wait">
-        <motion.div key={screen} {...pageTransition}>
-          {screen === "landing" && <Landing onStart={() => setScreen("quiz")} />}
-          {screen === "quiz" && <Quiz onComplete={handleQuizComplete} />}
-          {screen === "processing" && <Processing onDone={handleProcessingDone} />}
-          {screen === "results" && (
-            <Results
-              answers={answers}
-              userName={userData.name}
-              userEmail={userData.email}
-              elapsed={elapsed}
-              challengerScore={challengerScore}
-              onShowNurture={() => setShowNurture(true)}
-            />
-          )}
-        </motion.div>
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {showNurture && screen === "results" && (
-          <EmailNurture email={userData.email} onClose={() => setShowNurture(false)} />
-        )}
-      </AnimatePresence>
+      <Suspense fallback={<div className="min-h-screen" aria-live="polite"><span className="sr-only">Loading test experience</span></div>}>
+          <div key={screen} className="screen-enter">
+            {screen === "landing" && <Landing onStart={() => setScreen("quiz")} />}
+            {screen === "quiz" && <Quiz onComplete={handleQuizComplete} />}
+            {screen === "processing" && <Processing onDone={handleProcessingDone} />}
+            {screen === "results" && (
+              <Results
+                answers={answers}
+                userName={userData.name}
+                userEmail={userData.email}
+                elapsed={elapsed}
+                challengerScore={challengerScore}
+              />
+            )}
+          </div>
+      </Suspense>
 
       {/* Footer — show on landing and results screens */}
       {(screen === "landing" || screen === "results") && (
@@ -112,7 +108,7 @@ const Index = () => {
             {/* Footer CTA bar */}
             <div className="text-center mb-10 pb-10 border-b border-[rgba(255,255,255,0.06)]">
               <p className="text-muted-foreground text-sm mb-3">Ready to find out your IQ?</p>
-              <Link to="/" className="glow-button inline-block">Take the Free IQ Test →</Link>
+              <a href="/test" className="glow-button inline-block">Take the Free IQ Test →</a>
             </div>
 
             {/* 4-column link grid */}

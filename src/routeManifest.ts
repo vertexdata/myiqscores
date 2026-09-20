@@ -13,6 +13,12 @@ import { stateSlugs } from "./data/stateIQData";
 const staticRoutes = [
   "/",
   "/test",
+  "/blog/what-is-iq-score",
+  "/blog/what-is-genius-iq",
+  "/blog/how-to-increase-iq",
+  "/blog/iq-by-country",
+  "/blog/famous-iq-scores",
+  "/blog/emotional-intelligence-vs-iq",
   "/what-is-iq",
   "/iq-score-ranges",
   "/average-iq-by-country",
@@ -29,6 +35,7 @@ const staticRoutes = [
   "/mensa-iq-test",
   "/types-of-iq-tests",
   "/iq-percentile-chart",
+  "/iq-score-interpreter",
   "/famous-iq",
   "/iq-by-career",
   "/average-iq-us",
@@ -75,7 +82,22 @@ const blogRoutes = [
 // - /unsubscribe is a noindexed utility page
 // - /test canonicalizes to "/" (same quiz component), and sitemaps should
 //   list only canonical URLs
-export const noSitemapRoutes = ["/unsubscribe", "/test"];
+export const noSitemapRoutes = [
+  "/unsubscribe",
+  "/test",
+  ...iqScores.map((s) => `/is-${s}-iq-good`),
+  ...countrySlugs.map((s) => `/average-iq/${s}`),
+  ...careerSlugs.map((s) => `/iq-needed-for/${s}`),
+  ...ageGroupSlugs.map((s) => `/iq-by-age/${s}`),
+  ...famousPersonSlugs.map((s) => `/famous-iq/${s}`),
+  ...stateSlugs.map((s) => `/average-iq-by-state/${s}`),
+  "/blog/what-is-iq-score",
+  "/blog/what-is-genius-iq",
+  "/blog/how-to-increase-iq",
+  "/blog/iq-by-country",
+  "/blog/famous-iq-scores",
+  "/blog/emotional-intelligence-vs-iq",
+];
 
 export const prerenderRoutes: string[] = [
   ...staticRoutes,

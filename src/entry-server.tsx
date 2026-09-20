@@ -1,17 +1,20 @@
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
+import { StaticRouter } from "react-router-dom";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import { AppContent } from "./App";
+import Index from "./pages/Index";
 
 export { prerenderRoutes, noSitemapRoutes } from "./routeManifest";
 
 export function render(url: string) {
   const helmetContext: { helmet?: HelmetServerState } = {};
+  const pathname = new URL(url, "https://www.myiqscores.com").pathname;
+  const content = pathname === "/" || pathname === "/test" ? <Index /> : <AppContent />;
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
       <StaticRouter location={url}>
-        <AppContent />
+        {content}
       </StaticRouter>
     </HelmetProvider>
   );

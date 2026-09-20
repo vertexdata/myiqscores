@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Brain, ArrowRight } from "lucide-react";
 import BackgroundEffect from "./BackgroundEffect";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
+import { trackArticleDepth } from "@/lib/analytics";
 
 interface ContentPageProps {
   children: React.ReactNode;
@@ -16,9 +18,25 @@ const ContentPage = ({
   children,
   ctaText = "Think you can score higher? Take the free IQ test",
   relatedPages,
-  showLeaderboard = true,
-  showSidebar = true,
-}: ContentPageProps) => (
+}: ContentPageProps) => {
+  useEffect(() => {
+    const sent = new Set<number>();
+    const measure = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const depth = Math.round((window.scrollY / scrollable) * 100);
+      for (const threshold of [50, 90] as const) {
+        if (depth >= threshold && !sent.has(threshold)) {
+          sent.add(threshold);
+          trackArticleDepth(threshold);
+        }
+      }
+    };
+    window.addEventListener("scroll", measure, { passive: true });
+    return () => window.removeEventListener("scroll", measure);
+  }, []);
+
+  return (
   <div className="relative min-h-screen">
     <BackgroundEffect />
 
@@ -58,38 +76,11 @@ const ContentPage = ({
 
     {/* Article Content */}
     <main className="relative z-10 pt-20 sm:pt-24 pb-16 px-4 sm:pb-16 pb-24">
-      {/* Leaderboard ad — top of content */}
-      {showLeaderboard && (
-        <div className="max-w-3xl mx-auto mb-6">
-          <AdUnit
-            slotId={AD_SLOTS.leaderboard}
-            format="display"
-            size="responsive"
-            className="!my-0 hidden sm:block"
-          />
-          <AdUnit
-            slotId={AD_SLOTS.leaderboard}
-            format="display"
-            size="320x50"
-            className="!my-0 sm:hidden"
-          />
-        </div>
-      )}
-
-      <div className="max-w-5xl mx-auto flex gap-8">
+      <div className="max-w-3xl mx-auto">
         {/* Main content */}
         <article className="max-w-3xl w-full prose-content overflow-x-hidden">
           {children}
         </article>
-
-        {/* Sticky sidebar ad — desktop only */}
-        {showSidebar && (
-          <aside className="hidden lg:block w-[300px] flex-shrink-0">
-            <div className="sticky top-20">
-              <AdUnit slotId={AD_SLOTS.sidebar} format="display" size="300x250" />
-            </div>
-          </aside>
-        )}
       </div>
 
       {/* Related Pages Section */}
@@ -120,7 +111,7 @@ const ContentPage = ({
             {ctaText}
           </h2>
           <p className="text-muted-foreground mb-6">
-            30 questions. 15 minutes. Instant results. No sign-up required.
+            30 questions. About 12 minutes. Instant results. No sign-up required.
           </p>
           <Link to="/test" className="glow-button inline-block text-lg">
             Start Free IQ Test
@@ -193,6 +184,7 @@ const ContentPage = ({
       </div>
     </footer>
   </div>
-);
+  );
+};
 
 export default ContentPage;

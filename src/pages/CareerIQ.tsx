@@ -91,9 +91,10 @@ const CareerIQ = () => {
   return (
     <ContentPage ctaText={`Think you have what it takes? Test your IQ now`} relatedPages={relatedPages}>
       <SEOHead
+        noindex
         title={seoTitles[career.slug] ?? `IQ Needed to Be a ${career.career}? Typical Range & What Matters | MyIQScores`}
         description={seoDescs[career.slug] ?? `Do you need a high IQ to be a ${career.career.toLowerCase()}? Studies suggest a typical range of ${career.avgIQRange} — but IQ is not a job requirement. See what actually matters.`}
-        canonicalUrl={`/iq-needed-for/${career.slug}`}
+        canonicalUrl="/iq-by-career"
         ogType="article"
         jsonLd={[faqSchema, breadcrumbSchema]}
       />

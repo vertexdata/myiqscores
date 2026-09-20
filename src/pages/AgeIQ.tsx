@@ -33,9 +33,10 @@ const AgeIQ = () => {
   return (
     <ContentPage ctaText="Curious about your IQ? Take the free test" relatedPages={relatedPages}>
       <SEOHead
+        noindex
         title={ageGroup.slug === "adults" ? "Average IQ by Age (Adults 26-50): What's Normal? | MyIQScores" : `Average IQ for ${ageGroup.ageGroup}: What's Normal? | MyIQScores`}
         description={ageGroup.slug === "adults" ? "What's a normal IQ for your age? Adults 26-50 peak in crystallized intelligence while fluid IQ slowly declines. See the data and what it means for you." : `What is a normal IQ for ${ageGroup.ageGroup.toLowerCase()}? Average IQ range is ${ageGroup.avgIQRange}. Learn how age affects intelligence and what to expect.`}
-        canonicalUrl={`/iq-by-age/${ageGroup.slug}`}
+        canonicalUrl="/what-is-iq"
         ogType="article"
         jsonLd={faqSchema}
       />

@@ -1,6 +1,13 @@
 {
   "trailingSlash": false,
   "redirects": [
+    { "source": "/is-:score-iq-good", "destination": "/iq-score-interpreter?score=:score", "permanent": true },
+    { "source": "/blog/what-is-iq-score", "destination": "/what-is-iq", "permanent": true },
+    { "source": "/blog/what-is-genius-iq", "destination": "/genius-iq", "permanent": true },
+    { "source": "/blog/how-to-increase-iq", "destination": "/how-to-improve-iq", "permanent": true },
+    { "source": "/blog/iq-by-country", "destination": "/average-iq-by-country", "permanent": true },
+    { "source": "/blog/famous-iq-scores", "destination": "/famous-iq", "permanent": true },
+    { "source": "/blog/emotional-intelligence-vs-iq", "destination": "/iq-vs-eq", "permanent": true },
     { "source": "/famous-iq/einstein-iq-detailed", "destination": "/famous-iq/albert-einstein", "permanent": true },
     { "source": "/famous-iq/aoc-detailed", "destination": "/famous-iq/alexandria-ocasio-cortez", "permanent": true },
     { "source": "/famous-iq/steph-curry-detailed", "destination": "/famous-iq/stephen-curry", "permanent": true },
@@ -18,7 +25,9 @@
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(self)" },
+        { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" }
       ]
     }
   ],

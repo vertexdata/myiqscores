@@ -1,13 +1,12 @@
 import { Brain, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/StaticLink";
 import { useState } from "react";
 
 const navLinks = [
-  { to: "/what-is-iq", label: "What Is IQ?" },
+  { to: "/iq-score-interpreter", label: "Score Explorer" },
+  { to: "/what-is-iq", label: "IQ Science" },
   { to: "/iq-score-ranges", label: "Score Ranges" },
-  { to: "/iq-percentile-chart", label: "Percentile" },
   { to: "/famous-iq", label: "Famous IQs" },
-  { to: "/iq-by-career", label: "Careers & IQ" },
 ];
 
 const Navbar = () => {
@@ -16,14 +15,14 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-[rgba(255,255,255,0.06)]">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <Brain className="w-7 h-7 text-primary" />
+          <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity" aria-label="MyIQScores home">
+          <span className="grid h-8 w-8 place-items-center rounded-xl border border-primary/25 bg-primary/10"><Brain className="w-5 h-5 text-primary" /></span>
           <div>
             <span className="font-heading font-bold text-lg tracking-tight text-foreground">
               My<span className="text-primary">IQ</span>Scores<sup className="text-[8px] text-muted-foreground/50 ml-0.5">™</sup>
             </span>
             <span className="hidden sm:block text-[10px] text-muted-foreground/70 -mt-0.5 tracking-wide">
-              Free IQ Estimate and Learning Guides
+              Reasoning test & intelligence guides
             </span>
           </div>
         </Link>
@@ -39,16 +38,17 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <Link to="/" className="glow-button text-sm px-4 py-2">
+          <Link to="/test" className="glow-button text-sm px-4 py-2">
             Take the Test
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
+          className="md:hidden min-h-11 min-w-11 rounded-lg text-muted-foreground hover:bg-white/[.05] hover:text-foreground transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -69,7 +69,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              to="/"
+              to="/test"
               className="block glow-button text-sm px-4 py-2 text-center"
               onClick={() => setMobileOpen(false)}
             >

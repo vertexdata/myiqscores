@@ -57,7 +57,7 @@ const AdUnit = ({
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [shouldRenderAd]);
 
   // Push ad when visible
   useEffect(() => {
@@ -72,7 +72,7 @@ const AdUnit = ({
     } catch {
       // AdSense not loaded yet — that's fine
     }
-  }, [isVisible, adLoaded]);
+  }, [shouldRenderAd, isVisible, adLoaded]);
 
   if (!shouldRenderAd) {
     return null;

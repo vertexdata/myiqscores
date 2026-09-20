@@ -32,9 +32,10 @@ const StateIQ = () => {
   return (
     <ContentPage ctaText="How smart is your state? Test your own IQ">
       <SEOHead
+        noindex
         title={`Average IQ in ${state.name}: ${state.avgIQ}, Ranked #${state.rank} | MyIQScores`}
         description={`${state.name}'s average IQ is ${state.avgIQ}, ranking #${state.rank} among US states. Learn what drives ${state.name}'s cognitive scores and how it compares.`}
-        canonicalUrl={`/average-iq-by-state/${state.slug}`}
+        canonicalUrl="/average-iq-by-state"
         ogType="article"
         jsonLd={faqSchema}
       />
