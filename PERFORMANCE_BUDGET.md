@@ -15,6 +15,8 @@ Measured locally with Lighthouse mobile emulation against the production build o
 | CLS | 0 | ≤ 0.10 |
 | TBT | 0 ms | ≤ 200 ms |
 
+Post-deployment Lighthouse against `https://www.myiqscores.com/` scored 90 Performance, 100 Accessibility, 100 Best Practices, and 100 SEO, with FCP 2.0 s, LCP 2.0 s, CLS 0, and TBT 340 ms. The higher network-run TBT is a monitoring target; LCP and the overall score remain inside release thresholds.
+
 ## Asset budgets
 
 | Asset class | Current | Budget |

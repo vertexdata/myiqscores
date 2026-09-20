@@ -30,6 +30,7 @@ MyIQScores was rebuilt around one clear promise: a focused 30-question reasoning
 - Lint: zero errors; eight pre-existing Fast Refresh warnings in shared UI/template files.
 - Browser QA: desktop homepage, complete 30-question journey, results, and interactive score interpreter pass.
 - Local mobile Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100; FCP 1.3 s, LCP 1.7 s, CLS 0, TBT 0 ms.
+- Live production Lighthouse: Performance 90, Accessibility 100, Best Practices 100, SEO 100; FCP/LCP 2.0 s, CLS 0.
 - Critical homepage payload: 64.04 KB gzip JavaScript and 14.34 KB gzip CSS; assessment/results load on demand.
 
 ## Safety and deployment note
