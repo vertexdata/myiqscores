@@ -149,17 +149,18 @@ const FamousIQ = () => {
   return (
     <ContentPage ctaText="How does your IQ compare? Take the free test" relatedPages={relatedPages}>
       <SEOHead
-        title={seoTitles[person.slug] ?? `${person.name}'s IQ: ${person.estimatedIQ} — What It Means | MyIQScores`}
-        description={seoDescs[person.slug] ?? `${person.name}'s IQ is estimated at ${person.estimatedIQ}. Learn what this means, how it compares, and what made ${person.name} a genius.`}
-        canonicalUrl={`/famous-iq/${person.slug}`}
+        title={`${person.name} IQ Claims: What Is and Isn't Verified | MyIQScores`}
+        description={`A critical look at circulated claims about ${person.name}'s IQ, the lack of authenticated test evidence, and why achievements cannot establish an IQ score.`}
+        canonicalUrl="/famous-iq"
         ogType="article"
         jsonLd={[faqSchema, breadcrumbSchema, personSchema]}
+        noindex
       />
 
       <Breadcrumb crumbs={[{ label: "Home", href: "/" }, { label: "Famous IQs", href: "/famous-iq" }, { label: `${person.name}'s IQ` }]} />
 
       <h1>
-        <span className="gradient-text">{person.name}'s IQ</span>: {person.estimatedIQ}
+        <span className="gradient-text">{person.name}'s IQ claims</span>: an unverified estimate
       </h1>
 
       {/* Estimate disclosure — shown on every famous-IQ page */}
@@ -203,7 +204,7 @@ const FamousIQ = () => {
       <h2>About {person.name}</h2>
       <p>{person.description}</p>
 
-      <h2>What an IQ of {person.estimatedIQ} Means</h2>
+      <h2>What the circulated estimate would mean</h2>
       <p>{person.iqContext}</p>
 
       {/* Visual comparison with other famous people */}

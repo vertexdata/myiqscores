@@ -1,23 +1,18 @@
-import { useState, useCallback, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { lazy, Suspense, useState, useCallback, useEffect } from "react";
+import { Link } from "@/components/StaticLink";
 import { Brain } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import BackgroundEffect from "@/components/BackgroundEffect";
 import Landing from "@/components/Landing";
-import Quiz from "@/components/Quiz";
-import Processing from "@/components/Processing";
-import Results from "@/components/Results";
-import EmailNurture from "@/components/EmailNurture";
 import SEOHead from "@/components/SEOHead";
+import { trackReturnVisit } from "@/lib/analytics";
+import PrivacyChoices from "@/components/PrivacyChoices";
 
 type Screen = "landing" | "quiz" | "processing" | "results";
 
-const pageTransition = {
-  initial: { opacity: 0, scale: 0.98 },
-  animate: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" as const } },
-  exit: { opacity: 0, scale: 0.98, transition: { duration: 0.25 } },
-};
+const Quiz = lazy(() => import("@/components/Quiz"));
+const Processing = lazy(() => import("@/components/Processing"));
+const Results = lazy(() => import("@/components/Results"));
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -39,22 +34,33 @@ const Index = () => {
   const [userData, setUserData] = useState({ name: "", email: "", ageRange: "" });
   const [answers, setAnswers] = useState<(number | null)[]>([]);
   const [elapsed, setElapsed] = useState(0);
-  const [showNurture, setShowNurture] = useState(false);
   const [challengerScore, setChallengerScore] = useState<{ score: number; percentile: number } | null>(null);
 
-  // Check for ?ref= challenge param on mount
+  // Challenge data is carried in the link so it works across devices. It contains
+  // only the score and percentile the sender explicitly chose to share.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const ref = params.get("ref");
-    if (ref) {
-      const stored = localStorage.getItem(`iq_challenge_${ref}`);
-      if (stored) {
-        try {
-          setChallengerScore(JSON.parse(stored));
-        } catch {
-          localStorage.removeItem(`iq_challenge_${ref}`);
-        }
+    const challenge = params.get("challenge");
+    if (challenge) {
+      const [score, percentile] = challenge.split("-").map(Number);
+      if (Number.isInteger(score) && score >= 55 && score <= 160 && Number.isInteger(percentile) && percentile >= 0 && percentile <= 100) {
+        setChallengerScore({ score, percentile });
       }
+    }
+  }, []);
+
+  useEffect(() => {
+    const key = "myiqscores:last-visit:v1";
+    try {
+      const now = Date.now();
+      const previous = Number(localStorage.getItem(key));
+      if (Number.isFinite(previous) && previous > 0) {
+        const days = Math.max(0, Math.floor((now - previous) / 86_400_000));
+        trackReturnVisit(days);
+      }
+      localStorage.setItem(key, String(now));
+    } catch {
+      // Storage may be unavailable in private browsing; the test still works.
     }
   }, []);
 
@@ -66,8 +72,6 @@ const Index = () => {
 
   const handleProcessingDone = useCallback(() => {
     setScreen("results");
-    // Show nurture bar after 10 seconds on results page
-    setTimeout(() => setShowNurture(true), 10000);
   }, []);
 
   return (
@@ -81,29 +85,22 @@ const Index = () => {
       <BackgroundEffect />
       <Navbar />
 
-      <AnimatePresence mode="wait">
-        <motion.div key={screen} {...pageTransition}>
-          {screen === "landing" && <Landing onStart={() => setScreen("quiz")} />}
-          {screen === "quiz" && <Quiz onComplete={handleQuizComplete} />}
-          {screen === "processing" && <Processing onDone={handleProcessingDone} />}
-          {screen === "results" && (
-            <Results
-              answers={answers}
-              userName={userData.name}
-              userEmail={userData.email}
-              elapsed={elapsed}
-              challengerScore={challengerScore}
-              onShowNurture={() => setShowNurture(true)}
-            />
-          )}
-        </motion.div>
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {showNurture && screen === "results" && (
-          <EmailNurture email={userData.email} onClose={() => setShowNurture(false)} />
-        )}
-      </AnimatePresence>
+      <Suspense fallback={<div className="min-h-screen" aria-live="polite"><span className="sr-only">Loading test experience</span></div>}>
+          <div key={screen} className="screen-enter">
+            {screen === "landing" && <Landing onStart={() => setScreen("quiz")} />}
+            {screen === "quiz" && <Quiz onComplete={handleQuizComplete} />}
+            {screen === "processing" && <Processing onDone={handleProcessingDone} />}
+            {screen === "results" && (
+              <Results
+                answers={answers}
+                userName={userData.name}
+                userEmail={userData.email}
+                elapsed={elapsed}
+                challengerScore={challengerScore}
+              />
+            )}
+          </div>
+      </Suspense>
 
       {/* Footer — show on landing and results screens */}
       {(screen === "landing" || screen === "results") && (
@@ -111,8 +108,8 @@ const Index = () => {
           <div className="max-w-6xl mx-auto px-4 py-12">
             {/* Footer CTA bar */}
             <div className="text-center mb-10 pb-10 border-b border-[rgba(255,255,255,0.06)]">
-              <p className="text-muted-foreground text-sm mb-3">Ready to find out your IQ?</p>
-              <Link to="/" className="glow-button inline-block">Take the Free IQ Test →</Link>
+              <p className="text-muted-foreground text-sm mb-3">Ready to try the reasoning test?</p>
+              <a href="/test" className="glow-button inline-block">Start the Free Reasoning Test →</a>
             </div>
 
             {/* 4-column link grid */}
@@ -130,16 +127,16 @@ const Index = () => {
                 </ul>
               </div>
 
-              {/* Col 2: Famous IQs */}
+              {/* Col 2: Evidence */}
               <div>
-                <h3 className="font-heading font-semibold text-foreground mb-3">Famous IQs</h3>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Evidence</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li><Link to="/famous-iq/albert-einstein" className="hover:text-foreground transition-colors">Albert Einstein</Link></li>
-                  <li><Link to="/famous-iq/elon-musk" className="hover:text-foreground transition-colors">Elon Musk</Link></li>
-                  <li><Link to="/famous-iq/stephen-hawking" className="hover:text-foreground transition-colors">Stephen Hawking</Link></li>
-                  <li><Link to="/famous-iq/taylor-swift" className="hover:text-foreground transition-colors">Taylor Swift</Link></li>
-                  <li><Link to="/famous-iq/donald-trump" className="hover:text-foreground transition-colors">Donald Trump</Link></li>
-                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">All Famous IQs</Link></li>
+                  <li><Link to="/research-sources" className="hover:text-foreground transition-colors">Research Sources</Link></li>
+                  <li><Link to="/iq-myths" className="hover:text-foreground transition-colors">IQ Myths</Link></li>
+                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Celebrity Claim Checks</Link></li>
+                  <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Country Ranking Limits</Link></li>
+                  <li><Link to="/average-iq-by-state" className="hover:text-foreground transition-colors">State Ranking Limits</Link></li>
+                  <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ and Careers</Link></li>
                 </ul>
               </div>
 
@@ -148,11 +145,11 @@ const Index = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-3">Tools &amp; Tests</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><Link to="/" className="hover:text-foreground transition-colors">Free IQ Test</Link></li>
-                  <li><Link to="/sat-to-iq" className="hover:text-foreground transition-colors">SAT to IQ</Link></li>
+                  <li><Link to="/iq-score-interpreter" className="hover:text-foreground transition-colors">Score Interpreter</Link></li>
                   <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Percentile Chart</Link></li>
                   <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
-                  <li><Link to="/average-iq-us" className="hover:text-foreground transition-colors">Average IQ in US</Link></li>
-                  <li><Link to="/iq-of-presidents" className="hover:text-foreground transition-colors">IQ of Presidents</Link></li>
+                  <li><Link to="/methodology" className="hover:text-foreground transition-colors">Quiz Methodology</Link></li>
+                  <li><Link to="/blog" className="hover:text-foreground transition-colors">Learning Center</Link></li>
                 </ul>
               </div>
 
@@ -174,6 +171,7 @@ const Index = () => {
             <div className="pt-6 border-t border-[rgba(255,255,255,0.06)] mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
               <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
               <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
+              <PrivacyChoices />
               <Link to="/advertising-policy" className="hover:text-foreground transition-colors">Advertising Policy</Link>
               <Link to="/corrections-policy" className="hover:text-foreground transition-colors">Corrections</Link>
               <Link to="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>

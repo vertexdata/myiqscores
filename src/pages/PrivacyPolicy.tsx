@@ -25,11 +25,7 @@ const PrivacyPolicy = () => (
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">2. Information We Collect</h2>
           <p className="mb-2">We collect the following personal data when you voluntarily provide it:</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong className="text-foreground">Name</strong> — to personalize your results</li>
-            <li><strong className="text-foreground">Email address</strong> — to deliver your IQ results and optional communications</li>
-            <li><strong className="text-foreground">Age range</strong> — to calibrate scoring based on age norms</li>
-            <li><strong className="text-foreground">Quiz answers &amp; IQ score</strong> — to generate and store your results</li>
-            <li><strong className="text-foreground">Payment information</strong> — processed securely by Stripe; we never store card details</li>
+            <li><strong className="text-foreground">Email address</strong> — only when you request the optional one-time result email</li>
           </ul>
           <p className="mt-3">We also automatically collect:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -43,9 +39,7 @@ const PrivacyPolicy = () => (
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">3. How We Use Your Information</h2>
           <ul className="list-disc pl-6 space-y-1">
             <li>To provide, operate, and improve our IQ test service</li>
-            <li>To deliver your test results and personalized reports</li>
-            <li>To process payments via Stripe for premium features</li>
-            <li>To send you your results and, if you consent, occasional educational content</li>
+            <li>To send the one-time result email you request</li>
             <li>To analyze usage patterns and improve user experience (Google Analytics)</li>
             <li>To comply with legal obligations</li>
           </ul>
@@ -65,7 +59,6 @@ const PrivacyPolicy = () => (
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">5. Data Sharing &amp; Third Parties</h2>
           <p>We do not sell your personal data. We share data only with:</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong className="text-foreground">Stripe</strong> — for secure payment processing (<a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Stripe Privacy Policy</a>)</li>
             <li><strong className="text-foreground">Google Analytics</strong> — for anonymized website usage analytics (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Privacy Policy</a>)</li>
             <li><strong className="text-foreground">Google AdSense</strong> — for serving advertising (see the Advertising section below)</li>
             <li><strong className="text-foreground">Infrastructure providers</strong> — for hosting and data storage, with appropriate safeguards</li>

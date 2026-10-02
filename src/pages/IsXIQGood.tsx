@@ -85,9 +85,10 @@ const IsXIQGood = () => {
   return (
     <ContentPage ctaText="Think you can score higher? Take the free IQ test" relatedPages={relatedPages}>
       <SEOHead
+        noindex
         title={seoTitle}
         description={seoDesc}
-        canonicalUrl={`/is-${score}-iq-good`}
+        canonicalUrl={`/iq-score-interpreter?score=${score}`}
         ogType="article"
         jsonLd={[faqSchema, articleSchema, breadcrumbSchema]}
       />

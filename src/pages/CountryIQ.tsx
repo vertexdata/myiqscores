@@ -68,9 +68,10 @@ const CountryIQ = () => {
   return (
     <ContentPage ctaText="Test your IQ and see how you compare" relatedPages={relatedPages}>
       <SEOHead
+        noindex
         title={`Average IQ in ${country.name}: ~${country.avgIQ} — Estimates & Context | MyIQScores`}
         description={`${country.name}'s average IQ is estimated at ~${country.avgIQ} in compiled cross-national datasets. See where that figure comes from, why such estimates are debated, and how ${country.name} compares.`}
-        canonicalUrl={`/average-iq/${country.slug}`}
+        canonicalUrl="/average-iq-by-country"
         ogType="article"
         jsonLd={[faqSchema, articleSchema]}
       />

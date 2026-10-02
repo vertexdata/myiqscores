@@ -1,8 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Brain, ArrowRight } from "lucide-react";
 import BackgroundEffect from "./BackgroundEffect";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
+import { trackArticleDepth } from "@/lib/analytics";
+import PrivacyChoices from "./PrivacyChoices";
 
 interface ContentPageProps {
   children: React.ReactNode;
@@ -16,9 +19,25 @@ const ContentPage = ({
   children,
   ctaText = "Think you can score higher? Take the free IQ test",
   relatedPages,
-  showLeaderboard = true,
-  showSidebar = true,
-}: ContentPageProps) => (
+}: ContentPageProps) => {
+  useEffect(() => {
+    const sent = new Set<number>();
+    const measure = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const depth = Math.round((window.scrollY / scrollable) * 100);
+      for (const threshold of [50, 90] as const) {
+        if (depth >= threshold && !sent.has(threshold)) {
+          sent.add(threshold);
+          trackArticleDepth(threshold);
+        }
+      }
+    };
+    window.addEventListener("scroll", measure, { passive: true });
+    return () => window.removeEventListener("scroll", measure);
+  }, []);
+
+  return (
   <div className="relative min-h-screen">
     <BackgroundEffect />
 
@@ -58,38 +77,11 @@ const ContentPage = ({
 
     {/* Article Content */}
     <main className="relative z-10 pt-20 sm:pt-24 pb-16 px-4 sm:pb-16 pb-24">
-      {/* Leaderboard ad — top of content */}
-      {showLeaderboard && (
-        <div className="max-w-3xl mx-auto mb-6">
-          <AdUnit
-            slotId={AD_SLOTS.leaderboard}
-            format="display"
-            size="responsive"
-            className="!my-0 hidden sm:block"
-          />
-          <AdUnit
-            slotId={AD_SLOTS.leaderboard}
-            format="display"
-            size="320x50"
-            className="!my-0 sm:hidden"
-          />
-        </div>
-      )}
-
-      <div className="max-w-5xl mx-auto flex gap-8">
+      <div className="max-w-3xl mx-auto">
         {/* Main content */}
         <article className="max-w-3xl w-full prose-content overflow-x-hidden">
           {children}
         </article>
-
-        {/* Sticky sidebar ad — desktop only */}
-        {showSidebar && (
-          <aside className="hidden lg:block w-[300px] flex-shrink-0">
-            <div className="sticky top-20">
-              <AdUnit slotId={AD_SLOTS.sidebar} format="display" size="300x250" />
-            </div>
-          </aside>
-        )}
       </div>
 
       {/* Related Pages Section */}
@@ -120,7 +112,7 @@ const ContentPage = ({
             {ctaText}
           </h2>
           <p className="text-muted-foreground mb-6">
-            30 questions. 15 minutes. Instant results. No sign-up required.
+            30 questions. About 12 minutes. Instant results. No sign-up required.
           </p>
           <Link to="/test" className="glow-button inline-block text-lg">
             Start Free IQ Test
@@ -157,9 +149,9 @@ const ContentPage = ({
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link></li>
               <li><Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">IQ Score Ranges</Link></li>
-              <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
-              <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ by Career</Link></li>
-              <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Famous People IQs</Link></li>
+              <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Country Ranking Limits</Link></li>
+              <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ and Careers</Link></li>
+              <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Celebrity Claim Checks</Link></li>
               <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Percentile Chart</Link></li>
             </ul>
           </div>
@@ -168,10 +160,10 @@ const ContentPage = ({
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/test" className="hover:text-foreground transition-colors font-medium text-primary">Take the Free IQ Test</Link></li>
               <li><Link to="/how-to-improve-iq" className="hover:text-foreground transition-colors">How to Improve Your IQ</Link></li>
-              <li><Link to="/sat-to-iq" className="hover:text-foreground transition-colors">SAT to IQ Conversion</Link></li>
+              <li><Link to="/iq-score-interpreter" className="hover:text-foreground transition-colors">Score Interpreter</Link></li>
               <li><Link to="/iq-vs-eq" className="hover:text-foreground transition-colors">IQ vs EQ</Link></li>
-              <li><Link to="/genius-iq" className="hover:text-foreground transition-colors">Genius IQ Guide</Link></li>
-              <li><Link to="/mensa-iq-test" className="hover:text-foreground transition-colors">Mensa IQ Test</Link></li>
+              <li><Link to="/iq-myths" className="hover:text-foreground transition-colors">IQ Myths</Link></li>
+              <li><Link to="/research-sources" className="hover:text-foreground transition-colors">Research Sources</Link></li>
             </ul>
           </div>
         </div>
@@ -185,6 +177,7 @@ const ContentPage = ({
             <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
+            <PrivacyChoices />
             <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
             <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
             <Link to="/advertising-policy" className="hover:text-foreground transition-colors">Advertising</Link>
@@ -193,6 +186,7 @@ const ContentPage = ({
       </div>
     </footer>
   </div>
-);
+  );
+};
 
 export default ContentPage;

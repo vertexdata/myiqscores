@@ -59,12 +59,12 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
         ctx.stroke();
       });
 
-      // Header - "Certificate of Intelligence"
+      // Header
       ctx.fillStyle = "#C9A84C";
       ctx.font = "14px 'Inter', sans-serif";
       ctx.textAlign = "center";
       ctx.letterSpacing = "6px";
-      ctx.fillText("CERTIFICATE OF INTELLIGENCE", w / 2, 80);
+      ctx.fillText("REASONING TEST RESULT", w / 2, 80);
 
       // Brand
       ctx.fillStyle = "#00E5FF";
@@ -80,20 +80,20 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
       ctx.lineTo(w - 200, 140);
       ctx.stroke();
 
-      // "This certifies that"
+      // Recipient
       ctx.fillStyle = "#999";
       ctx.font = "14px 'Inter', sans-serif";
-      ctx.fillText("This certifies that", w / 2, 175);
+      ctx.fillText("Educational result for", w / 2, 175);
 
       // Name
       ctx.fillStyle = "#FFFFFF";
       ctx.font = "bold 36px 'Plus Jakarta Sans', sans-serif";
       ctx.fillText(name || "Test Taker", w / 2, 220);
 
-      // "has achieved a score of"
+      // Score label
       ctx.fillStyle = "#999";
       ctx.font = "14px 'Inter', sans-serif";
-      ctx.fillText("has achieved a score of", w / 2, 260);
+      ctx.fillText("estimated IQ-style score", w / 2, 260);
 
       // IQ Score - big and gradient-like
       ctx.fillStyle = "#00E5FF";
@@ -108,7 +108,7 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
       // Percentile
       ctx.fillStyle = "#999";
       ctx.font = "16px 'Inter', sans-serif";
-      ctx.fillText(`${percentile} percentile — higher than ${percentile.replace(/[a-z]/g, "")}% of the population`, w / 2, 415);
+      ctx.fillText(`Approximate ${percentile} percentile mapping`, w / 2, 415);
 
       // Line
       ctx.strokeStyle = "#C9A84C40";
@@ -120,7 +120,7 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
       // Date
       ctx.fillStyle = "#777";
       ctx.font = "13px 'Inter', sans-serif";
-      ctx.fillText(`Assessed on ${getFormattedDate()}`, w / 2, 470);
+      ctx.fillText(`Completed on ${getFormattedDate()}`, w / 2, 470);
 
       // Signature line
       ctx.strokeStyle = "#555";
@@ -132,7 +132,7 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
 
       ctx.fillStyle = "#777";
       ctx.font = "12px 'Inter', sans-serif";
-      ctx.fillText("MyIQScores™ Assessment", w / 2, 550);
+      ctx.fillText("Educational estimate · Not a clinical assessment", w / 2, 550);
 
       // Seal circle (bottom right)
       ctx.strokeStyle = "#C9A84C";
@@ -145,9 +145,9 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
       ctx.stroke();
       ctx.fillStyle = "#C9A84C";
       ctx.font = "bold 10px 'Inter', sans-serif";
-      ctx.fillText("VERIFIED", w - 100, h - 103);
+      ctx.fillText("ONLINE", w - 100, h - 103);
       ctx.font = "8px 'Inter', sans-serif";
-      ctx.fillText("ASSESSMENT", w - 100, h - 92);
+      ctx.fillText("ESTIMATE", w - 100, h - 92);
 
       // URL
       ctx.fillStyle = "#444";
@@ -163,7 +163,7 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
     drawCertificate(canvas);
 
     const link = document.createElement("a");
-    link.download = `MyIQScores-Certificate-${name || "IQ"}-${score}.png`;
+    link.download = `MyIQScores-Result-${name || "Score"}-${score}.png`;
     link.href = canvas.toDataURL("image/png");
     link.click();
   };
@@ -185,10 +185,10 @@ const IQCertificate = ({ name, score, percentile, classification }: IQCertificat
       {/* Download button */}
       <div className="text-center mt-4">
         <button onClick={handleDownload} className="glow-button text-sm px-6 py-3">
-          Download Certificate (PNG)
+          Download Result Summary (PNG)
         </button>
         <p className="text-xs text-muted-foreground mt-2">
-          Free to download and share. Your personalized IQ certificate.
+          Free to download and share. Clearly labeled as an educational estimate.
         </p>
       </div>
     </div>

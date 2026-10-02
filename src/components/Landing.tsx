@@ -1,267 +1,147 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { trackQuizStarted } from "@/lib/analytics";
+import { Link } from "@/components/StaticLink";
+import { trackCtaClick, trackTestStart } from "@/lib/analytics";
 import {
-  Brain,
-  FlaskConical,
-  Timer,
-  Globe,
-  ChevronDown,
-  BookOpen,
+  ArrowRight,
   BarChart3,
-  MapPin,
-  ChevronRight,
-  Trophy,
-  HelpCircle,
-  ClipboardCheck,
-  Scale,
+  BookOpen,
+  CheckCircle2,
+  Clock3,
+  Compass,
+  Fingerprint,
+  Grid3X3,
+  Layers3,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-};
 
 interface LandingProps {
   onStart: () => void;
 }
 
+const domains = [
+  { icon: Grid3X3, label: "Pattern recognition", detail: "Sequences, rules, and relationships" },
+  { icon: Layers3, label: "Logical reasoning", detail: "Deduction and structured problems" },
+  { icon: Compass, label: "Spatial reasoning", detail: "Rotation, shape, and orientation" },
+  { icon: BookOpen, label: "Verbal reasoning", detail: "Meaning, analogy, and classification" },
+];
+
 const Landing = ({ onStart }: LandingProps) => {
+  const start = (location: string) => {
+    trackTestStart(location);
+    trackCtaClick("start_test", location);
+    onStart();
+  };
+
   return (
-    <motion.div
-      className="min-h-screen flex flex-col items-center px-4 pt-20 pb-16 relative"
-      variants={stagger}
-      initial="hidden"
-      animate="show"
-    >
-      {/* ── HERO SECTION ── */}
-      <motion.div variants={fadeUp} className="mb-8">
-        <div className="relative">
-          <Brain className="w-20 h-20 text-primary opacity-80" />
-          <div className="absolute inset-0 w-20 h-20 rounded-full" style={{ animation: "pulse-glow 3s ease-in-out infinite" }} />
-        </div>
-      </motion.div>
-
-      <motion.h1
-        variants={fadeUp}
-        className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center leading-tight max-w-4xl"
-      >
-        <span className="gradient-text">How Smart Are You,</span>
-        <br />
-        <span className="gradient-text">Really?</span>
-      </motion.h1>
-
-      <motion.p variants={fadeUp} className="mt-6 text-muted-foreground text-center text-lg sm:text-xl max-w-2xl">
-        Take a free IQ-style reasoning test online. 30 questions. Instant educational results.
-      </motion.p>
-
-      <motion.div variants={fadeUp} className="mt-10">
-        <button onClick={() => { trackQuizStarted(); onStart(); }} className="glow-button text-lg">
-          Start Free IQ Test →
-        </button>
-      </motion.div>
-
-      <motion.div variants={fadeUp} className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-10">
-        {[
-          { icon: FlaskConical, text: "Reasoning-Based Questions" },
-          { icon: Timer, text: "Takes ~12 Minutes" },
-          { icon: Globe, text: "No Sign-Up or Paywall" },
-        ].map(({ icon: Icon, text }) => (
-          <div key={text} className="flex items-center gap-2 text-muted-foreground text-sm">
-            <Icon className="w-4 h-4 text-primary" />
-            <span>{text}</span>
+    <main className="relative z-10 overflow-hidden">
+      <section className="mx-auto grid min-h-[92vh] max-w-7xl items-center gap-12 px-5 pb-16 pt-28 lg:grid-cols-[1.05fr_.95fr] lg:px-8">
+        <div className="max-w-3xl">
+          <div className="eyebrow mb-6">
+            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+            A clearer look at how you reason
           </div>
-        ))}
-      </motion.div>
-
-      <motion.p variants={fadeUp} className="mt-8 text-muted-foreground text-sm text-center max-w-xl">
-        Results include your estimated score range, percentile context, and plain-language notes on what an online test can and cannot tell you.
-      </motion.p>
-
-      {/* ── SOCIAL PROOF BAR ── */}
-      <motion.div variants={fadeUp} className="mt-14 w-full max-w-3xl">
-        <div className="glass-card rounded-2xl px-6 py-5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[rgba(255,255,255,0.08)] gap-0">
-          {[
-            { emoji: "📋", label: "Transparent methodology", sub: "Clear limits and scoring notes" },
-            { emoji: "🧠", label: "30 reasoning questions", sub: "Covering 5 cognitive domains" },
-            { emoji: "⚡", label: "Instant educational report", sub: "No sign-up required" },
-          ].map(({ emoji, label, sub }) => (
-            <div key={label} className="flex flex-col items-center text-center py-4 sm:py-0 sm:px-6">
-              <span className="text-2xl mb-1">{emoji}</span>
-              <span className="text-sm font-semibold text-foreground">{label}</span>
-              <span className="text-xs text-muted-foreground mt-0.5">{sub}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* ── HOW IT WORKS ── */}
-      <motion.div variants={fadeUp} className="mt-20 w-full max-w-4xl">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">How It Works</h2>
-        <p className="text-center text-muted-foreground text-sm mb-10">Three steps to your IQ score</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {[
-            {
-              step: "1",
-              icon: BookOpen,
-              title: "Answer 30 Questions",
-              desc: "Each question is carefully designed to measure different cognitive abilities: pattern recognition, verbal reasoning, spatial intelligence, and more.",
-            },
-            {
-              step: "2",
-              icon: BarChart3,
-              title: "Get Your IQ Score",
-              desc: "Receive your precise IQ score, percentile ranking, and a breakdown of your performance across 5 cognitive categories.",
-            },
-            {
-              step: "3",
-              icon: Trophy,
-              title: "Discover What It Means",
-              desc: "See where you rank against the general population, compare with famous people near your score, and explore what it means for your career.",
-            },
-          ].map(({ step, icon: Icon, title, desc }) => (
-            <div key={step} className="glass-card rounded-2xl p-6 flex flex-col gap-3">
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
-                  {step}
-                </span>
-                <Icon className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-heading font-semibold text-foreground text-base">{title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* ── TRUST & METHODOLOGY ── */}
-      <motion.div variants={fadeUp} className="mt-20 w-full max-w-4xl">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">How We Keep the Test Honest</h2>
-        <p className="text-center text-muted-foreground text-sm mb-10">A free online result should be useful without pretending to be a clinical diagnosis</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {[
-            {
-              icon: ClipboardCheck,
-              title: "Transparent Scoring",
-              text: "Your result is an estimate based on accuracy and completion time across reasoning categories, with clear score-range explanations.",
-            },
-            {
-              icon: Scale,
-              title: "Plain Limitations",
-              text: "Online IQ-style tests are not a substitute for WAIS, Stanford-Binet, or a licensed psychologist's assessment.",
-            },
-            {
-              icon: BookOpen,
-              title: "Educational Context",
-              text: "The site includes guides on score ranges, percentiles, test types, and how to interpret cognitive assessments responsibly.",
-            },
-          ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="glass-card rounded-2xl p-6 flex flex-col gap-3">
-              <Icon className="w-6 h-6 text-primary" />
-              <h3 className="font-heading font-semibold text-foreground text-base">{title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* ── POPULAR ON MYIQSCORES ── */}
-      <motion.div variants={fadeUp} className="mt-20 w-full max-w-4xl">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">Popular on MyIQScores</h2>
-        <p className="text-center text-muted-foreground text-sm mb-10">Explore IQ research and famous scores</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {[
-            { title: "Is 130 IQ Good?", href: "/is-130-iq-good", sub: "Top 2% of the population. See what it means." },
-            { title: "Elon Musk's IQ", href: "/famous-iq/elon-musk", sub: "Estimated at 150-155. How he compares." },
-            { title: "Average IQ in the US", href: "/average-iq-us", sub: "Is America's IQ above or below average?" },
-            { title: "IQ of US Presidents", href: "/iq-of-presidents", sub: "Who was the smartest president?" },
-            { title: "What Is a Genius IQ?", href: "/genius-iq", sub: "The threshold, famous geniuses, and more." },
-            { title: "IQ Score Ranges", href: "/iq-score-ranges", sub: "From 70 to 160 — what each range means." },
-          ].map(({ title, href, sub }) => (
+          <h1 className="text-balance font-heading text-5xl font-extrabold leading-[.98] tracking-[-.045em] text-foreground sm:text-6xl lg:text-7xl">
+            Intelligence is more than <span className="gradient-text">one number.</span>
+          </h1>
+          <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">
+            Explore 30 carefully written reasoning problems, see your performance across five task categories, and learn what an online score can—and cannot—tell you.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button onClick={() => start("hero")} className="glow-button group min-h-14 px-7 text-base">
+              Begin the reasoning test
+              <ArrowRight className="ml-2 inline h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </button>
             <Link
-              key={href}
-              to={href}
-              className="glass-card rounded-xl p-4 flex flex-col gap-2 hover:bg-[rgba(255,255,255,0.06)] transition-colors group"
+              to="/iq-score-interpreter"
+              onClick={() => trackCtaClick("open_score_interpreter", "hero")}
+              className="min-h-14 rounded-xl border border-white/10 px-6 py-4 text-center text-sm font-semibold text-foreground transition hover:border-primary/30 hover:bg-white/[.04]"
             >
-              <div className="flex items-start justify-between gap-2">
-                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">{title}</span>
-                <ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-0.5 group-hover:text-primary transition-colors" />
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">{sub}</p>
+              Interpret an existing score
             </Link>
-          ))}
+          </div>
+          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+            <span className="inline-flex items-center gap-2"><Clock3 className="h-4 w-4 text-primary" />About 12 minutes</span>
+            <span className="inline-flex items-center gap-2"><Fingerprint className="h-4 w-4 text-primary" />No account required</span>
+            <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" />No ads during the test</span>
+          </div>
         </div>
-      </motion.div>
 
-      {/* ── MINI FAQ ── */}
-      <motion.div variants={fadeUp} className="mt-20 w-full max-w-3xl">
-        <h2 className="font-heading text-2xl sm:text-3xl font-bold text-center text-foreground mb-2">Frequently Asked Questions</h2>
-        <p className="text-center text-muted-foreground text-sm mb-10">Everything you need to know before you start</p>
-        <div className="flex flex-col gap-4">
-          {[
-            {
-              q: "Is this IQ test accurate?",
-              a: "Our test is designed based on established psychometric principles and measures the same cognitive domains as professional IQ assessments — pattern recognition, logical reasoning, verbal ability, spatial reasoning, and numerical processing. While no online test replaces a formal assessment, our 30-question format provides a reliable estimate for most adults.",
-            },
-            {
-              q: "How long does the test take?",
-              a: "Most people complete the test in 10-15 minutes. There's no time limit per question, but the test considers both accuracy and completion time, so working at a natural pace gives the most useful estimate.",
-            },
-            {
-              q: "Do I need to create an account?",
-              a: "No. The test is completely free with no sign-up required. You start immediately and get your full results instantly — no email gate, no paywall, no credit card.",
-            },
-            {
-              q: "What does my IQ score mean?",
-              a: "IQ scores follow a bell curve with an average of 100. About 68% of people score between 85-115. Scores above 130 are in the top 2%, and scores below 70 occur in about 2% of the population. After your test, we'll show you exactly where you stand and link you to detailed explanations.",
-            },
-          ].map(({ q, a }) => (
-            <div key={q} className="glass-card rounded-2xl p-6">
-              <div className="flex items-start gap-3 mb-3">
-                <HelpCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <h3 className="font-heading font-semibold text-foreground text-sm sm:text-base">{q}</h3>
+        <div className="hero-art relative mx-auto w-full max-w-2xl">
+          <picture>
+            <source media="(max-width: 700px)" srcSet="/images/cognition/hero-640.webp" />
+            <source media="(max-width: 1400px)" srcSet="/images/cognition/hero-1280.webp" />
+            <img
+              src="/images/cognition/hero-1920.webp"
+              width="1920"
+              height="1097"
+              alt="Abstract geometric pathways connecting pattern matrices and reasoning shapes"
+              className="h-auto w-full rounded-[2rem]"
+            />
+          </picture>
+          <div className="absolute inset-x-5 bottom-5 grid grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-[#07111f]/75 p-3 backdrop-blur-xl sm:inset-x-8 sm:bottom-8">
+            {[["30", "problems"], ["5", "categories"], ["0", "paywalls"]].map(([value, label]) => (
+              <div key={label} className="text-center">
+                <div className="font-heading text-xl font-bold text-white sm:text-2xl">{value}</div>
+                <div className="text-[10px] uppercase tracking-[.16em] text-slate-400 sm:text-xs">{label}</div>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed pl-8">{a}</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/[.07] bg-white/[.018]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:grid-cols-3 lg:px-8">
+          {[
+            [ShieldCheck, "Transparent by design", "Scoring, limits, and methodology are visible before you begin."],
+            [BarChart3, "Context, not diagnosis", "Results are educational estimates, never clinical or employment advice."],
+            [CheckCircle2, "Your attention stays yours", "No answer-screen advertising, forced signup, or artificial countdown."],
+          ].map(([Icon, title, copy]) => {
+            const ItemIcon = Icon as typeof ShieldCheck;
+            return <div key={title as string} className="flex gap-4"><ItemIcon className="mt-1 h-5 w-5 shrink-0 text-primary" /><div><h2 className="font-heading text-base font-bold">{title as string}</h2><p className="mt-1 text-sm leading-6 text-muted-foreground">{copy as string}</p></div></div>;
+          })}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+        <div className="max-w-2xl">
+          <div className="eyebrow mb-5">Inside the test</div>
+          <h2 className="text-balance font-heading text-3xl font-bold tracking-tight sm:text-5xl">Five kinds of tasks. One focused session.</h2>
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">The category breakdown describes performance on this question set. It is not a clinical subscore or a fixed trait.</p>
+        </div>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {domains.map(({ icon: Icon, label, detail }) => (
+            <article
+              key={label}
+              className="signal-card"
+            >
+              <Icon className="h-6 w-6 text-primary" />
+              <h3 className="mt-8 font-heading text-lg font-bold">{label}</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{detail}</p>
+            </article>
           ))}
         </div>
-      </motion.div>
+      </section>
 
-      {/* ── SECOND CTA / CONTENT LINKS ── */}
-      <motion.div variants={fadeUp} className="mt-20 w-full max-w-3xl">
-        <p className="text-center text-sm text-muted-foreground mb-6">Learn more about IQ</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Link to="/what-is-iq" className="glass-card p-5 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
-            <BookOpen className="w-6 h-6 text-primary mx-auto mb-3" />
-            <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors block mb-1">What Is IQ?</span>
-            <span className="text-xs text-muted-foreground">The science behind intelligence testing</span>
-          </Link>
-          <Link to="/iq-score-ranges" className="glass-card p-5 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
-            <BarChart3 className="w-6 h-6 text-primary mx-auto mb-3" />
-            <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors block mb-1">IQ Score Ranges</span>
-            <span className="text-xs text-muted-foreground">From borderline to genius — explained</span>
-          </Link>
-          <Link to="/average-iq-by-country" className="glass-card p-5 rounded-xl hover:bg-[rgba(255,255,255,0.06)] transition-colors text-center group">
-            <MapPin className="w-6 h-6 text-primary mx-auto mb-3" />
-            <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors block mb-1">IQ by Country</span>
-            <span className="text-xs text-muted-foreground">See how your country compares globally</span>
-          </Link>
+      <section className="mx-auto grid max-w-7xl gap-6 px-5 pb-24 lg:grid-cols-2 lg:px-8">
+        <article className="editorial-panel group">
+          <picture><source media="(max-width: 700px)" srcSet="/images/cognition/pattern-640.webp" /><img src="/images/cognition/pattern-1200.webp" width="1200" height="780" loading="lazy" alt="Layered geometric tiles illustrating pattern recognition" /></picture>
+          <div className="p-7 sm:p-9"><span className="text-xs font-bold uppercase tracking-[.2em] text-primary">Understand your score</span><h2 className="mt-3 font-heading text-2xl font-bold">From number to useful context.</h2><p className="mt-3 leading-7 text-muted-foreground">Convert scores to approximate percentiles, explore the bell curve, and see why test version and uncertainty matter.</p><Link to="/iq-score-interpreter" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary">Open score interpreter <ArrowRight className="h-4 w-4" /></Link></div>
+        </article>
+        <article className="editorial-panel group">
+          <picture><source media="(max-width: 700px)" srcSet="/images/cognition/memory-640.webp" /><img src="/images/cognition/memory-1200.webp" width="1200" height="780" loading="lazy" alt="Floating geometric frames illustrating information held and transformed" /></picture>
+          <div className="p-7 sm:p-9"><span className="text-xs font-bold uppercase tracking-[.2em] text-violet-300">Learn the science</span><h2 className="mt-3 font-heading text-2xl font-bold">What does IQ actually measure?</h2><p className="mt-3 leading-7 text-muted-foreground">A plain-language guide to standardization, reliability, cognitive domains, and the limits of a single score.</p><Link to="/what-is-iq" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary">Read the guide <ArrowRight className="h-4 w-4" /></Link></div>
+        </article>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-5 pb-28 text-center">
+        <div className="rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/[.09] to-violet-500/[.06] px-6 py-14 sm:px-12">
+          <p className="text-sm font-bold uppercase tracking-[.2em] text-primary">Ready when you are</p>
+          <h2 className="mt-4 font-heading text-3xl font-bold sm:text-5xl">Think clearly. Answer honestly. Learn something useful.</h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-7 text-muted-foreground">Choose your best answer without outside help. There is no per-question timer and you can move back before submitting.</p>
+          <button onClick={() => start("final_cta")} className="glow-button mt-8 min-h-14">Start the free test <ArrowRight className="ml-2 inline h-4 w-4" /></button>
         </div>
-      </motion.div>
-
-      <motion.div
-        variants={fadeUp}
-        className="mt-12"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-      >
-        <ChevronDown className="w-6 h-6 text-muted-foreground" />
-      </motion.div>
-    </motion.div>
+      </section>
+    </main>
   );
 };
 

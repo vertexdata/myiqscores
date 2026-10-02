@@ -1,10 +1,31 @@
 {
   "trailingSlash": false,
   "redirects": [
-    { "source": "/famous-iq/einstein-iq-detailed", "destination": "/famous-iq/albert-einstein", "permanent": true },
-    { "source": "/famous-iq/aoc-detailed", "destination": "/famous-iq/alexandria-ocasio-cortez", "permanent": true },
-    { "source": "/famous-iq/steph-curry-detailed", "destination": "/famous-iq/stephen-curry", "permanent": true },
-    { "source": "/famous-iq/rihanna-detailed", "destination": "/famous-iq/rihanna", "permanent": true }
+    { "source": "/is-:score-iq-good", "destination": "/iq-score-interpreter?score=:score", "permanent": true },
+    { "source": "/blog/what-is-iq-score", "destination": "/what-is-iq", "permanent": true },
+    { "source": "/blog/what-is-genius-iq", "destination": "/iq-score-ranges", "permanent": true },
+    { "source": "/blog/how-to-increase-iq", "destination": "/how-to-improve-iq", "permanent": true },
+    { "source": "/blog/iq-by-country", "destination": "/average-iq-by-country", "permanent": true },
+    { "source": "/blog/famous-iq-scores", "destination": "/famous-iq", "permanent": true },
+    { "source": "/blog/emotional-intelligence-vs-iq", "destination": "/iq-vs-eq", "permanent": true },
+    { "source": "/blog/:slug", "destination": "/research-sources", "permanent": true },
+    { "source": "/average-iq/:country", "destination": "/average-iq-by-country", "permanent": true },
+    { "source": "/average-iq-by-state/:state", "destination": "/average-iq-by-state", "permanent": true },
+    { "source": "/iq-needed-for/:career", "destination": "/iq-by-career", "permanent": true },
+    { "source": "/iq-by-age/:group", "destination": "/what-is-iq", "permanent": true },
+    { "source": "/famous-iq/:person", "destination": "/famous-iq", "permanent": true },
+    { "source": "/iq-myths/:myth", "destination": "/iq-myths", "permanent": true },
+    { "source": "/sat-to-iq", "destination": "/types-of-iq-tests", "permanent": true },
+    { "source": "/act-to-iq", "destination": "/types-of-iq-tests", "permanent": true },
+    { "source": "/gre-to-iq", "destination": "/types-of-iq-tests", "permanent": true },
+    { "source": "/asvab-to-iq", "destination": "/types-of-iq-tests", "permanent": true },
+    { "source": "/highest-iq-ever", "destination": "/famous-iq", "permanent": true },
+    { "source": "/good-iq-score", "destination": "/iq-score-ranges", "permanent": true },
+    { "source": "/genius-iq", "destination": "/iq-score-ranges", "permanent": true },
+    { "source": "/mensa-iq-test", "destination": "/types-of-iq-tests", "permanent": true },
+    { "source": "/average-iq-us", "destination": "/average-iq-by-state", "permanent": true },
+    { "source": "/iq-of-presidents", "destination": "/famous-iq", "permanent": true },
+    { "source": "/low-iq", "destination": "/iq-score-ranges", "permanent": true }
   ],
   "headers": [
     {
@@ -18,11 +39,10 @@
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(self)" },
+        { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/((?!assets|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
   ]
 }

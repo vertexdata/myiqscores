@@ -1,18 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "./StaticLink";
 import { trackResultViewed, trackResultShared } from "@/lib/analytics";
-import { Shield, Twitter, Facebook, Linkedin, Copy, Check, Lock, Award } from "lucide-react";
+import { Twitter, Facebook, Linkedin, Copy, Check, Download } from "lucide-react";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
 import IQCertificate from "./IQCertificate";
 import { questions } from "@/data/questions";
 import { calculateIQ, getIQLabel, getPercentile, getCategoryScores, categories } from "@/data/questions";
 import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
-
-const PREMIUM_REPORT_LINK = "https://buy.stripe.com/14AbJ0eH5cmJ9z48oSasg00";
-const CERTIFICATE_LINK = "https://buy.stripe.com/28E14mbuT1I512yeNgasg01";
 
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = {
@@ -25,13 +21,15 @@ function AnimatedNumber({ target }: { target: number }) {
   useEffect(() => {
     const duration = 1500;
     const start = Date.now();
+    let frame = 0;
     const tick = () => {
       const t = Math.min((Date.now() - start) / duration, 1);
       const eased = 1 - Math.pow(1 - t, 3);
       setVal(Math.round(eased * target));
-      if (t < 1) requestAnimationFrame(tick);
+      if (t < 1) frame = requestAnimationFrame(tick);
     };
-    requestAnimationFrame(tick);
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, [target]);
   return <>{val}</>;
 }
@@ -87,35 +85,36 @@ function formatElapsed(s: number): string {
 function getRecommendations(iq: number): { title: string; href: string }[] {
   if (iq >= 130) {
     return [
-      { title: "What Is a Genius IQ?", href: "/genius-iq" },
-      { title: "Mensa IQ Test Requirements", href: "/mensa-iq-test" },
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
-      { title: "Albert Einstein's IQ Explained", href: "/famous-iq/albert-einstein" },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
+      { title: "How this quiz calculates results", href: "/methodology" },
+      { title: "Professional and online test differences", href: "/types-of-iq-tests" },
+      { title: "Common IQ myths, checked", href: "/iq-myths" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
     ];
   }
   if (iq >= 110) {
     return [
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
-      { title: "What Is a Good IQ Score?", href: "/good-iq-score" },
-      { title: "IQ by Career — Where Do You Fit?", href: "/iq-by-career" },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
+      { title: "How this quiz calculates results", href: "/methodology" },
+      { title: "What IQ tests can and cannot measure", href: "/what-is-iq" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
       { title: "IQ Percentile Chart", href: "/iq-percentile-chart" },
     ];
   }
   if (iq >= 90) {
     return [
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
       { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
-      { title: "Average IQ by Age Group", href: "/iq-by-age/adults" },
+      { title: "How this quiz calculates results", href: "/methodology" },
       { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
     ];
   }
   return [
-    { title: `Is ${iq} IQ Good? What It Means`, href: `/is-${iq}-iq-good` },
+    { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
     { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
     { title: "IQ Score Ranges Explained", href: "/iq-score-ranges" },
+    { title: "How this quiz calculates results", href: "/methodology" },
     { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
   ];
 }
@@ -126,14 +125,16 @@ interface ResultsProps {
   userEmail: string;
   elapsed: number;
   challengerScore?: { score: number; percentile: number } | null;
-  onShowNurture: () => void;
 }
 
-const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onShowNurture }: ResultsProps) => {
+const Results = ({ answers, userName, userEmail, elapsed, challengerScore }: ResultsProps) => {
   const [copied, setCopied] = useState(false);
+  const [challengeCopied, setChallengeCopied] = useState(false);
   const [captureEmail, setCaptureEmail] = useState(userEmail || "");
-  const [newsletterOptIn, setNewsletterOptIn] = useState(false);
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [previousScores, setPreviousScores] = useState<number[]>([]);
 
   const correctCount = answers.reduce((acc, a, i) => acc + (a === questions[i].correctIndex ? 1 : 0), 0);
   const iq = calculateIQ(correctCount);
@@ -143,47 +144,23 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
   const recommendations = getRecommendations(iq);
 
   const shareUrl = "https://myiqscores.com";
-  const shareText = `I just scored ${iq} on a free IQ test — that's the ${percentile}th percentile! 🧠 Think you can beat me? → myiqscores.com`;
+  const shareText = `I completed the MyIQScores reasoning test and received an estimated score of ${iq}. Try the 30-question challenge: myiqscores.com`;
 
   // Fire result_viewed on mount
   useEffect(() => {
     trackResultViewed(iq);
-  }, []);
-
-  // Save score to database and send results email
-  useEffect(() => {
-    const saveAndEmail = async () => {
-      try {
-        const id = crypto.randomUUID();
-        await supabase.from("leads").insert({
-          id,
-          name: userName,
-          email: userEmail,
-          iq_score: iq,
-          correct_answers: correctCount,
-        });
-
-        await supabase.functions.invoke("send-transactional-email", {
-          body: {
-            templateName: "iq-results",
-            recipientEmail: userEmail,
-            idempotencyKey: `iq-results-${id}`,
-            templateData: {
-              name: userName,
-              iqScore: iq,
-              label,
-              percentile,
-              correctCount,
-              totalQuestions: questions.length,
-            },
-          },
-        });
-      } catch (e) {
-        console.error("Failed to save score or send email:", e);
-      }
-    };
-    saveAndEmail();
-  }, []);
+    const key = "myiqscores:score-history:v1";
+    try {
+      const stored = JSON.parse(localStorage.getItem(key) || "[]") as unknown;
+      const valid = Array.isArray(stored)
+        ? stored.filter((value): value is number => Number.isInteger(value) && value >= 55 && value <= 160).slice(0, 4)
+        : [];
+      setPreviousScores(valid);
+      localStorage.setItem(key, JSON.stringify([iq, ...valid].slice(0, 5)));
+    } catch {
+      // Device history is optional; never block result rendering.
+    }
+  }, [iq]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(`${shareText}`);
@@ -193,30 +170,73 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
   };
 
   const handleChallenge = () => {
-    const code = Math.random().toString(36).slice(2, 8).toUpperCase();
-    localStorage.setItem(`iq_challenge_${code}`, JSON.stringify({ score: iq, percentile }));
-    const challengeUrl = `https://myiqscores.com/test?ref=${code}`;
-    navigator.clipboard.writeText(`I just scored ${iq} on this IQ test 🧠 Think you can beat me? Try it free: ${challengeUrl}`);
-    toast.success("Challenge link copied! Send it to a friend");
+    const challengeUrl = `https://www.myiqscores.com/test?challenge=${iq}-${percentile}`;
+    navigator.clipboard.writeText(`I completed this reasoning test with an estimated score of ${iq}. Want to compare? ${challengeUrl}`);
+    setChallengeCopied(true);
+    window.setTimeout(() => setChallengeCopied(false), 2500);
     trackResultShared("challenge");
-    supabase.from("referrals").insert({ referrer_email: userEmail, platform: "challenge" }).then(() => {});
   };
 
   const handleShare = (platform: string) => {
     trackResultShared(platform as "twitter" | "facebook" | "linkedin" | "whatsapp");
-    supabase.from("referrals").insert({ referrer_email: userEmail, platform }).then(() => {});
   };
 
-  const handleEmailCapture = (e: React.FormEvent) => {
+  const handleEmailCapture = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!captureEmail) return;
-    localStorage.setItem("iq_report_signup", JSON.stringify({
-      email: captureEmail,
-      score: iq,
-      newsletter: newsletterOptIn,
-      savedAt: new Date().toISOString(),
-    }));
-    setEmailSubmitted(true);
+    if (!captureEmail || emailSending) return;
+    setEmailSending(true);
+    setEmailError("");
+    try {
+      const id = crypto.randomUUID();
+      const { error: emailInvokeError } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "iq-results",
+          recipientEmail: captureEmail,
+          idempotencyKey: `iq-results-${id}`,
+          templateData: { name: userName || "there", iqScore: iq, label, percentile, correctCount, totalQuestions: questions.length },
+        },
+      });
+      if (emailInvokeError) throw emailInvokeError;
+      setEmailSubmitted(true);
+    } catch {
+      setEmailError("We couldn't send the report right now. Your on-screen result is still available.");
+    } finally {
+      setEmailSending(false);
+    }
+  };
+
+  const downloadResultCard = async () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1200;
+    canvas.height = 686;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    const background = new Image();
+    background.src = "/images/cognition/result-share.webp";
+    await background.decode();
+    context.drawImage(background, 0, 0, canvas.width, canvas.height);
+    context.fillStyle = "rgba(7,17,31,.52)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.textAlign = "center";
+    context.fillStyle = "#dffcf5";
+    context.font = "700 34px system-ui";
+    context.fillText("MYIQSCORES · REASONING TEST", 600, 120);
+    context.font = "800 160px system-ui";
+    context.fillStyle = "#5eead4";
+    context.fillText(String(iq), 600, 340);
+    context.font = "700 42px system-ui";
+    context.fillStyle = "#ffffff";
+    context.fillText(label, 600, 420);
+    context.font = "400 27px system-ui";
+    context.fillStyle = "#cbd5e1";
+    context.fillText("Educational estimate · Not a clinical assessment", 600, 485);
+    context.font = "600 25px system-ui";
+    context.fillText("myiqscores.com", 600, 590);
+    const anchor = document.createElement("a");
+    anchor.download = "myiqscores-result.webp";
+    anchor.href = canvas.toDataURL("image/webp", .9);
+    anchor.click();
+    trackResultShared("download");
   };
 
   const catColors: Record<string, string> = {
@@ -235,11 +255,6 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
       animate="show"
     >
       <div className="max-w-2xl mx-auto">
-
-        {/* Top leaderboard ad — desktop only */}
-        <div className="hidden sm:flex justify-center mb-6">
-          <AdUnit slotId={AD_SLOTS.resultsTop} format="display" size="728x90" />
-        </div>
 
         {/* Challenger comparison — shown when arriving via ?ref= */}
         {challengerScore && (
@@ -275,7 +290,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
         {/* SECTION A: Free Results */}
         <motion.div variants={fadeUp} className="text-center mb-10">
           <p className="text-muted-foreground text-sm mb-4">
-            {userName ? `${userName}, your` : "Your"} Estimated IQ Score
+            {userName ? `${userName}, your` : "Your"} estimated reasoning score
           </p>
           <div className="relative inline-block">
             <div className="text-7xl sm:text-8xl font-heading font-extrabold gradient-text">
@@ -305,8 +320,21 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
         <motion.div variants={fadeUp} className="glass-card p-6 mb-4">
           <BellCurve iq={iq} />
           <p className="text-center text-sm text-muted-foreground mt-4">
-            You scored higher than <span className="text-foreground font-semibold">{percentile}%</span> of test takers
+            Approximate bell-curve position: <span className="text-foreground font-semibold">{percentile}th percentile</span>
           </p>
+        </motion.div>
+
+        <motion.div variants={fadeUp} className="glass-card p-6 mb-4">
+          <h3 className="font-heading font-bold text-foreground">Your device history</h3>
+          {previousScores.length > 0 ? (
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Earlier estimates on this device: <span className="font-semibold text-foreground">{previousScores.join(", ")}</span>.
+              Differences can reflect familiarity, attention, and normal measurement variation.
+            </p>
+          ) : (
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">This is the first result saved on this device.</p>
+          )}
+          <p className="mt-2 text-xs text-muted-foreground/70">Stored only in this browser. Clearing site data removes it.</p>
         </motion.div>
 
         <motion.div variants={fadeUp} className="glass-card p-6 mb-4">
@@ -318,7 +346,8 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
             classification={label}
           />
 
-          <h3 className="font-heading font-bold text-foreground mb-4 mt-6">Category Breakdown</h3>
+          <h3 className="font-heading font-bold text-foreground mb-1 mt-6">Performance by task category</h3>
+          <p className="mb-4 text-xs leading-5 text-muted-foreground">These are raw scores on six questions per category, not clinical subscores.</p>
           <div className="space-y-3">
             {categories.map((cat) => {
               const { correct, total } = catScores[cat];
@@ -351,7 +380,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
             Your result of <span className="text-foreground font-medium">{iq}</span> is an{" "}
             <span className="text-foreground font-medium">estimated IQ-style score</span> based on your
             performance across 30 reasoning questions in five cognitive domains. It places you at
-            approximately the {percentile}th percentile relative to a normal distribution with a mean of
+            approximately the {percentile}th percentile when mapped to a normal distribution with a mean of
             100 and a standard deviation of 15.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed mb-3">
@@ -374,81 +403,16 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
           <AdUnit slotId={AD_SLOTS.resultsMid} format="display" size="300x250" />
         </div>
 
-        {/* SECTION B: Premium Report Upsell */}
-        <motion.div
-          variants={fadeUp}
-          className="glass-card p-6 sm:p-8 mb-4 relative overflow-hidden"
-          style={{
-            border: "1px solid rgba(0, 229, 255, 0.2)",
-            animation: "pulse-glow 3s ease-in-out infinite",
-          }}
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <Lock className="w-5 h-5 text-primary" />
-            <h3 className="font-heading font-bold text-foreground text-lg">Unlock Your Full Cognitive Report</h3>
-          </div>
-          <p className="text-muted-foreground text-sm mb-5">
-            Get a detailed 12-page analysis of your cognitive strengths, weaknesses, and personalized improvement plan.
-          </p>
-          <div className="glass-card p-4 mb-5 space-y-2 text-sm text-muted-foreground">
-            {[
-              "Detailed score breakdown by all 5 categories",
-              "Cognitive strengths & weaknesses deep-dive",
-              "Personalized brain training recommendations",
-              "How you compare to your age group",
-              "Printable IQ Certificate with your name & score",
-              "Historical IQ percentile ranking",
-              "Shareable social media certificate image",
-            ].map((t) => (
-              <div key={t} className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-success shrink-0" />
-                <span>{t}</span>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-baseline gap-2 mb-4">
-            <span className="text-2xl font-heading font-bold text-success">$7.99</span>
-            <span className="text-sm text-muted-foreground">one-time purchase</span>
-          </div>
-          <button
-            onClick={() => {
-              const url = `${PREMIUM_REPORT_LINK}?prefilled_email=${encodeURIComponent(userEmail)}`;
-              window.open(url, "_blank");
-            }}
-            className="w-full py-3.5 rounded-lg font-heading font-bold text-base bg-success hover:bg-success/90 text-white transition-all hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]"
-          >
-            Get My Full Report — $7.99
-          </button>
-          <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground mt-3">
-            <Shield className="w-3.5 h-3.5" />
-            <span>🔒 Secure payment via Stripe · 30-day money-back guarantee</span>
-          </div>
-        </motion.div>
-
-        {/* Certificate-only option */}
-        <motion.div variants={fadeUp} className="text-center mb-8">
-          <button
-            onClick={() => {
-              const url = `${CERTIFICATE_LINK}?prefilled_email=${encodeURIComponent(userEmail)}`;
-              window.open(url, "_blank");
-            }}
-            className="text-primary hover:underline text-sm font-medium inline-flex items-center gap-1.5"
-          >
-            <Award className="w-4 h-4" />
-            Just want the certificate? $3.99
-          </button>
-        </motion.div>
-
-        {/* SECTION C: Social Sharing */}
+        {/* SECTION B: Social Sharing */}
         <motion.div variants={fadeUp} className="glass-card p-6 mb-6">
           <h3 className="font-heading font-bold text-foreground text-center mb-4">Share Your IQ Score</h3>
           {/* Shareable score card preview */}
-          <div className="glass-card p-6 mb-4 text-center max-w-sm mx-auto" style={{ border: "1px solid rgba(0,229,255,0.15)" }}>
-            <p className="text-xs text-muted-foreground mb-2">My IQ Score</p>
+          <div className="overflow-hidden rounded-2xl border border-primary/20 bg-cover bg-center p-6 mb-4 text-center max-w-sm mx-auto" style={{ backgroundImage: "linear-gradient(rgba(7,17,31,.62), rgba(7,17,31,.75)), url('/images/cognition/result-share.webp')" }}>
+            <p className="text-xs text-muted-foreground mb-2">My estimated reasoning score</p>
             <p className="text-4xl font-heading font-extrabold gradient-text">{iq}</p>
             <p className="text-sm text-primary font-semibold mt-1">{label}</p>
-            <p className="text-xs text-muted-foreground mt-2">Scored higher than {percentile}% of test takers</p>
-            <p className="text-xs text-muted-foreground/50 mt-3">Take the test at MyIQScores.com</p>
+            <p className="text-xs text-muted-foreground mt-2">Approximate {percentile}th percentile mapping</p>
+            <p className="text-xs text-muted-foreground/70 mt-3">Educational estimate · MyIQScores.com</p>
           </div>
           <div className="flex justify-center gap-3 flex-wrap">
             <a
@@ -501,6 +465,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
             >
               {copied ? <Check className="w-5 h-5 text-success" /> : <Copy className="w-5 h-5 text-muted-foreground" />}
             </button>
+            <button onClick={downloadResultCard} className="glass-card p-3 hover:bg-[rgba(255,255,255,0.08)] transition-all hover:scale-105 rounded-lg" title="Download result card" aria-label="Download result card"><Download className="w-5 h-5 text-muted-foreground" /></button>
           </div>
         </motion.div>
 
@@ -510,7 +475,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
             onClick={handleChallenge}
             className="border border-primary/30 text-primary hover:bg-primary/10 px-6 py-2.5 rounded-lg text-sm font-medium transition-all hover:scale-[1.02]"
           >
-            🎯 Challenge a Friend
+            {challengeCopied ? "Challenge link copied" : "🎯 Challenge a Friend"}
           </button>
           <p className="text-xs text-muted-foreground/50 mt-2">Generates a unique link — compare scores when they finish</p>
         </motion.div>
@@ -536,9 +501,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
         {/* SECTION E: Email Capture */}
         <motion.div variants={fadeUp} className="glass-card p-6 mb-6">
           <h3 className="font-heading font-bold text-foreground mb-1">📧 Get Your Detailed IQ Report</h3>
-          <p className="text-sm text-muted-foreground mb-4">
-            Enter your email to receive a personalized breakdown of your cognitive strengths, career recommendations based on your score, and tips to improve your IQ.
-          </p>
+          <p className="text-sm text-muted-foreground mb-4">Optional: email yourself a copy of the score and category breakdown shown above. We only save the address after you submit this form.</p>
           {emailSubmitted ? (
             <div className="text-center py-3">
               <p className="text-success font-medium">✓ Check your inbox! Your report is on the way.</p>
@@ -553,22 +516,15 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore, onSho
                 required
                 className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50"
               />
-              <label className="flex items-center gap-2 text-sm text-muted-foreground cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={newsletterOptIn}
-                  onChange={(e) => setNewsletterOptIn(e.target.checked)}
-                  className="rounded border-[rgba(255,255,255,0.2)] bg-transparent accent-primary"
-                />
-                Also send me weekly brain teasers
-              </label>
               <button
                 type="submit"
+                disabled={emailSending}
                 className="w-full py-2.5 rounded-lg font-medium text-sm bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 transition-all"
               >
-                Send My Report
+                {emailSending ? "Sending…" : "Send My Report"}
               </button>
-              <p className="text-xs text-muted-foreground/50 text-center">No spam, ever. Unsubscribe anytime.</p>
+              {emailError && <p role="alert" className="text-sm text-amber-300">{emailError}</p>}
+              <p className="text-xs text-muted-foreground/60 text-center">This sends one transactional result email. It does not subscribe you to a newsletter. See our privacy policy.</p>
             </form>
           )}
         </motion.div>

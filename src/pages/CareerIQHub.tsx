@@ -1,57 +1,30 @@
 import { Link } from "react-router-dom";
 import ContentPage from "@/components/ContentPage";
 import SEOHead from "@/components/SEOHead";
-import { careerIQData } from "@/data/careerIQData";
 
-const CareerIQHub = () => {
-  const sorted = [...careerIQData].sort((a, b) => b.minIQ - a.minIQ);
+const skillRows = [
+  ["Healthcare", "Technical knowledge, communication, attention, judgment", "Accredited training and supervised practice"],
+  ["Engineering and data", "Quantitative reasoning, modeling, debugging, collaboration", "Projects, coursework, and role-specific assessments"],
+  ["Skilled trades", "Spatial reasoning, safety, diagnosis, precision", "Apprenticeships, licensing, and hands-on demonstration"],
+  ["Management and sales", "Planning, communication, negotiation, domain knowledge", "Track record, structured interviews, and work samples"],
+] as const;
 
-  return (
-    <ContentPage>
-      <SEOHead
-        title="IQ Needed for Every Career: Complete Job IQ Chart | MyIQScores"
-        description="What IQ do you need for your dream career? See average IQ scores for 50+ professions from doctor to plumber, with detailed breakdowns and education paths."
-        canonicalUrl="/iq-by-career"
-        ogType="article"
-      />
-
-      <h1><span className="gradient-text">IQ Needed for Every Career:</span> Complete Job IQ Chart</h1>
-
-      <p>
-        What IQ do you need for your dream job? Below is our complete database of average IQ
-        ranges for over 50 careers, from the most intellectually demanding (mathematician, professor)
-        to practical trades (electrician, plumber). Click any career for detailed analysis including
-        education paths, cognitive requirements, and FAQs.
-      </p>
-
-      <p>
-        Remember: IQ is just one factor in career success. Motivation, interpersonal skills,
-        domain expertise, and opportunity often matter more. See our guide on{" "}
-        <Link to="/iq-myths/does-iq-determine-success">whether IQ determines success</Link>.
-      </p>
-
-      <table>
-        <thead>
-          <tr><th>Career</th><th>Average IQ Range</th><th>Education</th></tr>
-        </thead>
-        <tbody>
-          {sorted.map((c) => (
-            <tr key={c.slug}>
-              <td><Link to={`/iq-needed-for/${c.slug}`}>{c.career}</Link></td>
-              <td className="font-mono font-semibold text-foreground">{c.avgIQRange}</td>
-              <td className="text-sm text-muted-foreground">{c.educationPath.split('.')[0]}.</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <p className="mt-8">
-        Learn more about <Link to="/what-is-iq">what IQ measures</Link>,{" "}
-        <Link to="/iq-score-ranges">IQ score ranges</Link>, or{" "}
-        <Link to="/test">take our free IQ test</Link>.
-      </p>
-    </ContentPage>
-  );
-};
+const CareerIQHub = () => (
+  <ContentPage showLeaderboard={false} showSidebar={false}>
+    <SEOHead
+      title="IQ and Careers: Skills Matter More Than a Cutoff | MyIQScores"
+      description="There is no defensible IQ requirement for most careers. Compare job-relevant skills, training, and work samples instead of unsupported score cutoffs."
+      canonicalUrl="/iq-by-career"
+      ogType="article"
+    />
+    <h1>IQ and Careers: <span className="gradient-text">There Is No Universal Cutoff</span></h1>
+    <p>MyIQScores no longer publishes a table claiming that each occupation requires a particular IQ. Those precise-looking ranges are not licensing standards and can discourage people without measuring the skills a job actually requires.</p>
+    <h2>Evaluate the Work, Not a Rumored Number</h2>
+    <table><thead><tr><th>Work area</th><th>Relevant capabilities</th><th>Better evidence</th></tr></thead><tbody>{skillRows.map(([area, skills, evidence]) => <tr key={area}><td>{area}</td><td>{skills}</td><td>{evidence}</td></tr>)}</tbody></table>
+    <h2>What a Cognitive Test Cannot Establish</h2>
+    <p>One score does not measure reliability, ethics, creativity, interpersonal skill, physical skill, experience, or motivation. Employers should use validated, job-related selection procedures and follow applicable law—not an online quiz result. Our result is explicitly not designed for hiring.</p>
+    <p>Learn <Link to="/what-is-iq">what IQ tests measure</Link>, compare <Link to="/types-of-iq-tests">professional and online assessments</Link>, or review <Link to="/methodology">this quiz’s exact limitations</Link>.</p>
+  </ContentPage>
+);
 
 export default CareerIQHub;

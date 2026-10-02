@@ -1,55 +1,68 @@
-// GA4 event helpers — all calls go through trackEvent so we get
-// a single safety check and easy mocking in tests.
-// Tag: G-57H1Q82XZ4 (loaded via gtag in index.html)
-
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
   }
 }
 
-function trackEvent(name: string, params: Record<string, string | number>) {
+type EventValue = string | number | boolean;
+
+export function trackEvent(name: string, params: Record<string, EventValue> = {}) {
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", name, params);
   }
 }
 
-// ── Quiz flow ──────────────────────────────────────────────────────────────
-
-export function trackQuizStarted() {
-  trackEvent("quiz_started", {
-    quiz_type: "iq_test",
-    source_page: typeof window !== "undefined" ? window.location.pathname : "/",
-  });
+export function trackTestStart(source = "homepage") {
+  trackEvent("test_start", { test_version: "reasoning_v2", source });
 }
 
-export function trackQuizQuestionAnswered(questionNumber: number) {
-  trackEvent("quiz_question_answered", {
-    question_number: questionNumber,
-    quiz_type: "iq_test",
-  });
+export function trackQuestionProgress(questionNumber: number, category: string) {
+  if (questionNumber === 1 || questionNumber % 5 === 0 || questionNumber === 30) {
+    trackEvent("question_progress", {
+      question_number: questionNumber,
+      category,
+      test_version: "reasoning_v2",
+    });
+  }
 }
 
-export function trackQuizCompleted(questionsAnswered: number, timeSpentSeconds: number) {
-  trackEvent("quiz_completed", {
-    quiz_type: "iq_test",
+export function trackTestComplete(questionsAnswered: number, timeSpentSeconds: number) {
+  trackEvent("test_complete", {
     questions_answered: questionsAnswered,
     time_spent_seconds: timeSpentSeconds,
+    test_version: "reasoning_v2",
   });
 }
 
-// ── Results ────────────────────────────────────────────────────────────────
-
-export function trackResultViewed(score: number) {
-  trackEvent("result_viewed", {
-    score,
-    quiz_type: "iq_test",
-  });
+export function trackResultView(scoreBand: string) {
+  trackEvent("result_view", { score_band: scoreBand, test_version: "reasoning_v2" });
 }
 
-export function trackResultShared(method: "copy" | "twitter" | "facebook" | "linkedin" | "whatsapp" | "challenge") {
-  trackEvent("result_shared", {
-    method,
-    quiz_type: "iq_test",
-  });
+export function trackResultShare(method: "copy" | "download" | "twitter" | "facebook" | "linkedin" | "whatsapp" | "challenge") {
+  trackEvent("result_share", { method, test_version: "reasoning_v2" });
 }
+
+export function trackCalculatorUse(score: number) {
+  trackEvent("calculator_use", { calculator: "iq_score_interpreter", score });
+}
+
+export function trackCtaClick(label: string, location: string) {
+  trackEvent("cta_click", { label, location });
+}
+
+export function trackArticleDepth(percent: 50 | 90) {
+  trackEvent("article_depth", { percent });
+}
+
+export function trackReturnVisit(daysSinceLastVisit: number) {
+  trackEvent("return_visit", { days_since_last_visit: daysSinceLastVisit });
+}
+
+// Compatibility aliases for older components while event names remain clean in GA4.
+export const trackQuizStarted = trackTestStart;
+export const trackQuizQuestionAnswered = (questionNumber: number) =>
+  trackQuestionProgress(questionNumber, "unknown");
+export const trackQuizCompleted = trackTestComplete;
+export const trackResultViewed = (score: number) =>
+  trackResultView(score >= 130 ? "130+" : score >= 115 ? "115-129" : score >= 85 ? "85-114" : "below-85");
+export const trackResultShared = trackResultShare;
