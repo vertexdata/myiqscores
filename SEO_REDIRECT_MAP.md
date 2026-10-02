@@ -1,31 +1,18 @@
-# SEO Redirect and Consolidation Map
+# Redirect and consolidation map
 
-All redirects below are permanent Vercel redirects.
+All rules are permanent Vercel redirects and execute before the SPA rewrite.
 
-| Source | Destination | Coverage | Reason |
-|---|---|---:|---|
-| `/is-:score-iq-good` | `/iq-score-interpreter?score=:score` | 110 known score URLs | Replaces templated score pages with one interactive intent match |
-| `/blog/what-is-iq-score` | `/what-is-iq` | 1 | Duplicate foundational intent |
-| `/blog/what-is-genius-iq` | `/genius-iq` | 1 | Duplicate genius-range intent |
-| `/blog/how-to-increase-iq` | `/how-to-improve-iq` | 1 | Duplicate improvement intent |
-| `/blog/iq-by-country` | `/average-iq-by-country` | 1 | Duplicate country hub |
-| `/blog/famous-iq-scores` | `/famous-iq` | 1 | Duplicate celebrity-claim hub |
-| `/blog/emotional-intelligence-vs-iq` | `/iq-vs-eq` | 1 | Duplicate comparison intent |
-| `/famous-iq/einstein-iq-detailed` | `/famous-iq/albert-einstein` | 1 | Legacy alias |
-| `/famous-iq/aoc-detailed` | `/famous-iq/alexandria-ocasio-cortez` | 1 | Legacy alias |
-| `/famous-iq/steph-curry-detailed` | `/famous-iq/stephen-curry` | 1 | Legacy alias |
-| `/famous-iq/rihanna-detailed` | `/famous-iq/rihanna` | 1 | Legacy alias |
+| Source | Destination | Purpose |
+|---|---|---|
+| `/is-:score-iq-good` | `/iq-score-interpreter?score=:score` | Replace templated score pages with one interactive tool |
+| `/average-iq/:country` | `/average-iq-by-country` | Replace mixed-source country estimates with a methods guide |
+| `/average-iq-by-state/:state` | `/average-iq-by-state` | Replace inferred state values with official-data guidance |
+| `/iq-needed-for/:career` | `/iq-by-career` | Replace unsupported job cutoffs with skill-based guidance |
+| `/iq-by-age/:group` | `/what-is-iq` | Remove unsupported age-specific estimates |
+| `/famous-iq/:person` | `/famous-iq` | Replace unauthenticated individual scores with an evidence-checking guide |
+| `/iq-myths/:myth` | `/iq-myths` | Consolidate near-duplicate pages into one maintained myth guide |
+| `/blog/:slug` | `/research-sources` | Catch retired overlapping or unsupported article routes |
 
-## Noindex consolidation families
+Specific duplicate blog routes redirect to their closest maintained guide before the blog wildcard. Unsupported test conversions and sensational/static score pages also redirect to `types-of-iq-tests`, `iq-score-ranges`, `famous-iq`, or the relevant evidence hub.
 
-These URLs remain reachable to protect existing links but are excluded from the sitemap and canonicalized to the stronger hub:
-
-- `/average-iq/:country` → canonical `/average-iq-by-country` (50)
-- `/iq-needed-for/:career` → canonical `/iq-by-career` (108)
-- `/iq-by-age/:group` → canonical `/what-is-iq` (6)
-- `/average-iq-by-state/:state` → canonical `/average-iq-by-state` (50)
-- `/famous-iq/:person` → canonical `/famous-iq` and `noindex` (123)
-
-## Validation
-
-`public/sitemap.xml` contains only canonical indexable URLs. The build-time content audit found zero canonical mismatches, duplicate titles, missing HTML files, or noindexed sitemap entries.
+The complete 501-URL programmatic inventory, destination, and rationale is in `REDIRECT_INVENTORY.csv`.

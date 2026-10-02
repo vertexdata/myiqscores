@@ -1,16 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "./StaticLink";
 import { trackResultViewed, trackResultShared } from "@/lib/analytics";
-import { Shield, Twitter, Facebook, Linkedin, Copy, Check, Lock, Download } from "lucide-react";
+import { Twitter, Facebook, Linkedin, Copy, Check, Download } from "lucide-react";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
 import IQCertificate from "./IQCertificate";
 import { questions } from "@/data/questions";
 import { calculateIQ, getIQLabel, getPercentile, getCategoryScores, categories } from "@/data/questions";
 import { supabase } from "@/integrations/supabase/client";
-
-const PREMIUM_REPORT_LINK = "https://buy.stripe.com/14AbJ0eH5cmJ9z48oSasg00";
 
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
 const fadeUp = {
@@ -87,35 +85,36 @@ function formatElapsed(s: number): string {
 function getRecommendations(iq: number): { title: string; href: string }[] {
   if (iq >= 130) {
     return [
-      { title: "What Is a Genius IQ?", href: "/genius-iq" },
-      { title: "Mensa IQ Test Requirements", href: "/mensa-iq-test" },
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
-      { title: "Albert Einstein's IQ Explained", href: "/famous-iq/albert-einstein" },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
+      { title: "How this quiz calculates results", href: "/methodology" },
+      { title: "Professional and online test differences", href: "/types-of-iq-tests" },
+      { title: "Common IQ myths, checked", href: "/iq-myths" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
     ];
   }
   if (iq >= 110) {
     return [
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
-      { title: "What Is a Good IQ Score?", href: "/good-iq-score" },
-      { title: "IQ by Career — Where Do You Fit?", href: "/iq-by-career" },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
+      { title: "How this quiz calculates results", href: "/methodology" },
+      { title: "What IQ tests can and cannot measure", href: "/what-is-iq" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
       { title: "IQ Percentile Chart", href: "/iq-percentile-chart" },
     ];
   }
   if (iq >= 90) {
     return [
-      { title: `Is ${iq} IQ Good? Full Breakdown`, href: `/is-${iq}-iq-good` },
+      { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
       { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
       { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
-      { title: "Average IQ by Age Group", href: "/iq-by-age/adults" },
+      { title: "How this quiz calculates results", href: "/methodology" },
       { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
     ];
   }
   return [
-    { title: `Is ${iq} IQ Good? What It Means`, href: `/is-${iq}-iq-good` },
+    { title: "Interpret this mapped score carefully", href: `/iq-score-interpreter?score=${iq}` },
     { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
     { title: "IQ Score Ranges Explained", href: "/iq-score-ranges" },
+    { title: "How this quiz calculates results", href: "/methodology" },
     { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
   ];
 }
@@ -404,54 +403,7 @@ const Results = ({ answers, userName, userEmail, elapsed, challengerScore }: Res
           <AdUnit slotId={AD_SLOTS.resultsMid} format="display" size="300x250" />
         </div>
 
-        {/* SECTION B: Premium Report Upsell */}
-        <motion.div
-          variants={fadeUp}
-          className="glass-card p-6 sm:p-8 mb-4 relative overflow-hidden"
-          style={{
-            border: "1px solid rgba(0, 229, 255, 0.2)",
-            animation: "pulse-glow 3s ease-in-out infinite",
-          }}
-        >
-          <div className="flex items-center gap-2 mb-2">
-            <Lock className="w-5 h-5 text-primary" />
-            <h3 className="font-heading font-bold text-foreground text-lg">Optional Expanded Report</h3>
-          </div>
-          <p className="text-muted-foreground text-sm mb-5">
-            Continue to the secure checkout for the current report description and delivery details. Your free result above remains fully available.
-          </p>
-          <div className="glass-card p-4 mb-5 space-y-2 text-sm text-muted-foreground">
-            {[
-              "Expanded educational explanation",
-              "Printable result summary",
-              "Review the current contents before payment",
-            ].map((t) => (
-              <div key={t} className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-success shrink-0" />
-                <span>{t}</span>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-baseline gap-2 mb-4">
-            <span className="text-2xl font-heading font-bold text-success">$7.99</span>
-            <span className="text-sm text-muted-foreground">one-time purchase</span>
-          </div>
-          <button
-            onClick={() => {
-              const url = `${PREMIUM_REPORT_LINK}?prefilled_email=${encodeURIComponent(userEmail)}`;
-              window.open(url, "_blank");
-            }}
-            className="w-full py-3.5 rounded-lg font-heading font-bold text-base bg-success hover:bg-success/90 text-white transition-all hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]"
-          >
-            Get My Full Report — $7.99
-          </button>
-          <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground mt-3">
-            <Shield className="w-3.5 h-3.5" />
-            <span>Secure one-time payment via Stripe</span>
-          </div>
-        </motion.div>
-
-        {/* SECTION C: Social Sharing */}
+        {/* SECTION B: Social Sharing */}
         <motion.div variants={fadeUp} className="glass-card p-6 mb-6">
           <h3 className="font-heading font-bold text-foreground text-center mb-4">Share Your IQ Score</h3>
           {/* Shareable score card preview */}

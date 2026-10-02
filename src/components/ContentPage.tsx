@@ -5,6 +5,7 @@ import BackgroundEffect from "./BackgroundEffect";
 import AdUnit from "./AdUnit";
 import { AD_SLOTS } from "@/config/adsense";
 import { trackArticleDepth } from "@/lib/analytics";
+import PrivacyChoices from "./PrivacyChoices";
 
 interface ContentPageProps {
   children: React.ReactNode;
@@ -148,9 +149,9 @@ const ContentPage = ({
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/what-is-iq" className="hover:text-foreground transition-colors">What Is IQ?</Link></li>
               <li><Link to="/iq-score-ranges" className="hover:text-foreground transition-colors">IQ Score Ranges</Link></li>
-              <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
-              <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ by Career</Link></li>
-              <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Famous People IQs</Link></li>
+              <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Country Ranking Limits</Link></li>
+              <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ and Careers</Link></li>
+              <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Celebrity Claim Checks</Link></li>
               <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Percentile Chart</Link></li>
             </ul>
           </div>
@@ -159,10 +160,10 @@ const ContentPage = ({
             <ul className="space-y-2 text-muted-foreground">
               <li><Link to="/test" className="hover:text-foreground transition-colors font-medium text-primary">Take the Free IQ Test</Link></li>
               <li><Link to="/how-to-improve-iq" className="hover:text-foreground transition-colors">How to Improve Your IQ</Link></li>
-              <li><Link to="/sat-to-iq" className="hover:text-foreground transition-colors">SAT to IQ Conversion</Link></li>
+              <li><Link to="/iq-score-interpreter" className="hover:text-foreground transition-colors">Score Interpreter</Link></li>
               <li><Link to="/iq-vs-eq" className="hover:text-foreground transition-colors">IQ vs EQ</Link></li>
-              <li><Link to="/genius-iq" className="hover:text-foreground transition-colors">Genius IQ Guide</Link></li>
-              <li><Link to="/mensa-iq-test" className="hover:text-foreground transition-colors">Mensa IQ Test</Link></li>
+              <li><Link to="/iq-myths" className="hover:text-foreground transition-colors">IQ Myths</Link></li>
+              <li><Link to="/research-sources" className="hover:text-foreground transition-colors">Research Sources</Link></li>
             </ul>
           </div>
         </div>
@@ -176,6 +177,7 @@ const ContentPage = ({
             <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             <Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
+            <PrivacyChoices />
             <Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
             <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
             <Link to="/advertising-policy" className="hover:text-foreground transition-colors">Advertising</Link>

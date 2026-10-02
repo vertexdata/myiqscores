@@ -6,7 +6,7 @@ const navLinks = [
   { to: "/iq-score-interpreter", label: "Score Explorer" },
   { to: "/what-is-iq", label: "IQ Science" },
   { to: "/iq-score-ranges", label: "Score Ranges" },
-  { to: "/famous-iq", label: "Famous IQs" },
+  { to: "/research-sources", label: "Sources" },
 ];
 
 const Navbar = () => {

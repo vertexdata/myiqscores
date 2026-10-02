@@ -6,6 +6,7 @@ import BackgroundEffect from "@/components/BackgroundEffect";
 import Landing from "@/components/Landing";
 import SEOHead from "@/components/SEOHead";
 import { trackReturnVisit } from "@/lib/analytics";
+import PrivacyChoices from "@/components/PrivacyChoices";
 
 type Screen = "landing" | "quiz" | "processing" | "results";
 
@@ -107,8 +108,8 @@ const Index = () => {
           <div className="max-w-6xl mx-auto px-4 py-12">
             {/* Footer CTA bar */}
             <div className="text-center mb-10 pb-10 border-b border-[rgba(255,255,255,0.06)]">
-              <p className="text-muted-foreground text-sm mb-3">Ready to find out your IQ?</p>
-              <a href="/test" className="glow-button inline-block">Take the Free IQ Test →</a>
+              <p className="text-muted-foreground text-sm mb-3">Ready to try the reasoning test?</p>
+              <a href="/test" className="glow-button inline-block">Start the Free Reasoning Test →</a>
             </div>
 
             {/* 4-column link grid */}
@@ -126,16 +127,16 @@ const Index = () => {
                 </ul>
               </div>
 
-              {/* Col 2: Famous IQs */}
+              {/* Col 2: Evidence */}
               <div>
-                <h3 className="font-heading font-semibold text-foreground mb-3">Famous IQs</h3>
+                <h3 className="font-heading font-semibold text-foreground mb-3">Evidence</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li><Link to="/famous-iq/albert-einstein" className="hover:text-foreground transition-colors">Albert Einstein</Link></li>
-                  <li><Link to="/famous-iq/elon-musk" className="hover:text-foreground transition-colors">Elon Musk</Link></li>
-                  <li><Link to="/famous-iq/stephen-hawking" className="hover:text-foreground transition-colors">Stephen Hawking</Link></li>
-                  <li><Link to="/famous-iq/taylor-swift" className="hover:text-foreground transition-colors">Taylor Swift</Link></li>
-                  <li><Link to="/famous-iq/donald-trump" className="hover:text-foreground transition-colors">Donald Trump</Link></li>
-                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">All Famous IQs</Link></li>
+                  <li><Link to="/research-sources" className="hover:text-foreground transition-colors">Research Sources</Link></li>
+                  <li><Link to="/iq-myths" className="hover:text-foreground transition-colors">IQ Myths</Link></li>
+                  <li><Link to="/famous-iq" className="hover:text-foreground transition-colors">Celebrity Claim Checks</Link></li>
+                  <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Country Ranking Limits</Link></li>
+                  <li><Link to="/average-iq-by-state" className="hover:text-foreground transition-colors">State Ranking Limits</Link></li>
+                  <li><Link to="/iq-by-career" className="hover:text-foreground transition-colors">IQ and Careers</Link></li>
                 </ul>
               </div>
 
@@ -144,11 +145,11 @@ const Index = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-3">Tools &amp; Tests</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li><Link to="/" className="hover:text-foreground transition-colors">Free IQ Test</Link></li>
-                  <li><Link to="/sat-to-iq" className="hover:text-foreground transition-colors">SAT to IQ</Link></li>
+                  <li><Link to="/iq-score-interpreter" className="hover:text-foreground transition-colors">Score Interpreter</Link></li>
                   <li><Link to="/iq-percentile-chart" className="hover:text-foreground transition-colors">IQ Percentile Chart</Link></li>
                   <li><Link to="/average-iq-by-country" className="hover:text-foreground transition-colors">Average IQ by Country</Link></li>
-                  <li><Link to="/average-iq-us" className="hover:text-foreground transition-colors">Average IQ in US</Link></li>
-                  <li><Link to="/iq-of-presidents" className="hover:text-foreground transition-colors">IQ of Presidents</Link></li>
+                  <li><Link to="/methodology" className="hover:text-foreground transition-colors">Quiz Methodology</Link></li>
+                  <li><Link to="/blog" className="hover:text-foreground transition-colors">Learning Center</Link></li>
                 </ul>
               </div>
 
@@ -170,6 +171,7 @@ const Index = () => {
             <div className="pt-6 border-t border-[rgba(255,255,255,0.06)] mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
               <Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link>
               <Link to="/cookie-policy" className="hover:text-foreground transition-colors">Cookie Policy</Link>
+              <PrivacyChoices />
               <Link to="/advertising-policy" className="hover:text-foreground transition-colors">Advertising Policy</Link>
               <Link to="/corrections-policy" className="hover:text-foreground transition-colors">Corrections</Link>
               <Link to="/editorial-policy" className="hover:text-foreground transition-colors">Editorial Policy</Link>

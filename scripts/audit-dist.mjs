@@ -7,6 +7,18 @@ const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 const errors = [];
 const titles = new Map();
+const ownershipTag = '<meta name="google-adsense-account" content="ca-pub-5051305701488211"';
+const rootHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
+
+if (!rootHtml.includes(ownershipTag)) errors.push("homepage: missing AdSense ownership meta tag");
+if (urls.length > 40) errors.push(`sitemap: expected a curated core under 40 URLs, found ${urls.length}`);
+
+const retiredFamilies = [/\/is-\d+-iq-good$/, /\/average-iq\//, /\/iq-needed-for\//, /\/iq-by-age\//, /\/famous-iq\/.+/, /\/iq-myths\/.+/, /\/average-iq-by-state\/.+/];
+for (const url of urls) {
+  if (retiredFamilies.some((pattern) => pattern.test(new URL(url).pathname))) {
+    errors.push(`${url}: retired programmatic detail route remains in sitemap`);
+  }
+}
 
 const fileForUrl = (url) => {
   const pathname = new URL(url).pathname;

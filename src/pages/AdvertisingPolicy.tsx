@@ -60,11 +60,10 @@ const AdvertisingPolicy = () => (
         </section>
 
         <section>
-          <h2 className="text-foreground font-heading text-xl font-semibold mb-3">5. Other Revenue</h2>
+          <h2 className="text-foreground font-heading text-xl font-semibold mb-3">5. Free Access</h2>
           <p>
-            In addition to advertising, we offer optional paid extras (a detailed score report and a printable
-            certificate) processed securely through Stripe. These are optional purchases — the test and your
-            results are always free.
+            The complete 30-question test, on-screen result, category breakdown, and printable certificate
+            are available without payment. We do not currently offer a paid checkout on this site.
           </p>
         </section>
 

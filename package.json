@@ -8,6 +8,7 @@
     "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist/server && node scripts/prerender.mjs",
     "build:dev": "vite build --mode development",
     "qa:content": "node scripts/audit-dist.mjs",
+    "generate:redirect-inventory": "node scripts/generate-redirect-inventory.ts",
     "qa:e2e": "playwright test tests/worldclass.spec.ts",
     "lint": "eslint .",
     "preview": "vite preview",

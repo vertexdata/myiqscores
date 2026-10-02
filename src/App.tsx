@@ -29,6 +29,8 @@ import IQPercentile from "./pages/IQPercentile.tsx";
 import IQScoreInterpreter from "./pages/IQScoreInterpreter.tsx";
 import FamousIQHub from "./pages/FamousIQHub.tsx";
 import CareerIQHub from "./pages/CareerIQHub.tsx";
+import IQMythsHub from "./pages/IQMythsHub.tsx";
+import ResearchSources from "./pages/ResearchSources.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
 import Disclaimer from "./pages/Disclaimer.tsx";
@@ -118,6 +120,8 @@ export const AppRoutes = () => (
     <Route path="/iq-score-interpreter" element={<IQScoreInterpreter />} />
     <Route path="/famous-iq" element={<FamousIQHub />} />
     <Route path="/iq-by-career" element={<CareerIQHub />} />
+    <Route path="/iq-myths" element={<IQMythsHub />} />
+    <Route path="/research-sources" element={<ResearchSources />} />
     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
     <Route path="/terms-of-service" element={<TermsOfService />} />
     <Route path="/disclaimer" element={<Disclaimer />} />
