@@ -59,7 +59,7 @@ const IQAndLeadership = () => (
       { title: "IQ vs. EQ", href: "/iq-vs-eq" },
       { title: "IQ in the Workplace", href: "/blog/iq-and-workplace" },
       { title: "IQ vs. Success", href: "/blog/iq-vs-success" },
-      { title: "What Is a Good IQ Score?", href: "/good-iq-score" },
+      { title: "What Is a Good IQ Score?", href: "/iq-score-ranges" },
     ]}
   >
     <SEOHead

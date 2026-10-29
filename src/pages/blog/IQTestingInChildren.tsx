@@ -58,8 +58,8 @@ const IQTestingInChildren = () => (
     relatedPages={[
       { title: "What Is IQ?", href: "/what-is-iq" },
       { title: "IQ Score Ranges", href: "/iq-score-ranges" },
-      { title: "IQ by Age", href: "/iq-by-age/children-6-12" },
-      { title: "Genius IQ Guide", href: "/genius-iq" },
+      { title: "IQ by Age", href: "/what-is-iq" },
+      { title: "Genius IQ Guide", href: "/iq-score-ranges" },
     ]}
   >
     <SEOHead
@@ -245,7 +245,7 @@ const IQTestingInChildren = () => (
       gifted children.
     </p>
     <p>
-      For more on genius-level intelligence, see our <Link to="/genius-iq">genius IQ guide</Link>.
+      For more on genius-level intelligence, see our <Link to="/iq-score-ranges">genius IQ guide</Link>.
     </p>
 
     <h2>How Parents Should Talk to Children About IQ</h2>
@@ -279,13 +279,13 @@ const IQTestingInChildren = () => (
     <p>
       The WPPSI can assess children from age 2:6. The WISC-V covers ages 6–16. However, scores
       before age 5 are notably unstable and should be interpreted with great caution. See our{" "}
-      <Link to="/iq-by-age/children-6-12">IQ by age for children</Link> for more context.
+      <Link to="/what-is-iq">IQ by age for children</Link> for more context.
     </p>
 
     <h3>What is a gifted IQ score for a child?</h3>
     <p>
       Most gifted programs use 130+ as the threshold (top ~2%). Highly gifted is typically 145+
-      (top 0.1%). See our <Link to="/genius-iq">genius IQ guide</Link> for more detail on
+      (top 0.1%). See our <Link to="/iq-score-ranges">genius IQ guide</Link> for more detail on
       high-range scores.
     </p>
 

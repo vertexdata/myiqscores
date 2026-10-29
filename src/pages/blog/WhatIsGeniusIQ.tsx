@@ -47,7 +47,7 @@ const WhatIsGeniusIQ = () => (
       genius achievement.
     </p>
     <p>
-      As we discussed in our <Link to="/genius-iq">Genius IQ guide</Link>, the results were more
+      As we discussed in our <Link to="/iq-score-ranges">Genius IQ guide</Link>, the results were more
       complicated. The Termites did well on average, but the handful of children Terman rejected
       for being "too low" in IQ (around 130-135) included future Nobel laureates William Shockley
       and Luis Alvarez.
@@ -71,7 +71,7 @@ const WhatIsGeniusIQ = () => (
       </tbody>
     </table>
     <p>
-      The <Link to="/mensa-iq-test">Mensa IQ threshold</Link> of 130 (98th percentile) is the most
+      The <Link to="/types-of-iq-tests">Mensa IQ threshold</Link> of 130 (98th percentile) is the most
       institutionally formalized definition of exceptionally high intelligence, though Mensa
       itself does not use the word "genius."
     </p>

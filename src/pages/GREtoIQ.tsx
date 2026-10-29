@@ -245,7 +245,7 @@ const GREtoIQ = () => {
         Compare across standardized tests:{" "}
         <Link to="/sat-to-iq">SAT to IQ converter</Link> |{" "}
         <Link to="/act-to-iq">ACT to IQ converter</Link>. Curious about what these scores mean?
-        See <Link to="/genius-iq">what qualifies as genius IQ</Link> or{" "}
+        See <Link to="/iq-score-ranges">what qualifies as genius IQ</Link> or{" "}
         <Link to="/test">take our free IQ test</Link>.
       </p>
     </ContentPage>

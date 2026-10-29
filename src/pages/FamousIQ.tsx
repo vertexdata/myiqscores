@@ -141,9 +141,9 @@ const FamousIQ = () => {
   const relatedPages = [
     { title: "Famous People IQ Scores (Full List)", href: "/famous-iq" },
     { title: "Highest IQ Ever Recorded", href: "/highest-iq-ever" },
-    { title: "Genius IQ Guide", href: "/genius-iq" },
+    { title: "Genius IQ Guide", href: "/iq-score-ranges" },
     ...otherPeople.slice(0, 3).map((p) => ({ title: `${p.name}'s IQ (${p.estimatedIQ})`, href: `/famous-iq/${p.slug}` })),
-    { title: "What Is a Good IQ Score?", href: "/good-iq-score" },
+    { title: "What Is a Good IQ Score?", href: "/iq-score-ranges" },
   ];
 
   return (
@@ -275,7 +275,7 @@ const FamousIQ = () => {
 
       <p className="mt-6">
         <Link to="/test">Take our free IQ test</Link> to discover your own score, or explore{" "}
-        <Link to="/is-130-iq-good">what a gifted IQ means</Link>.
+        <Link to="/iq-score-interpreter?score=130">what a gifted IQ means</Link>.
       </p>
     </ContentPage>
   );

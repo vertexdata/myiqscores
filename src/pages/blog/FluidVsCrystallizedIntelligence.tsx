@@ -59,7 +59,7 @@ const FluidVsCrystallizedIntelligence = () => (
       { title: "What Is IQ?", href: "/what-is-iq" },
       { title: "IQ Score Ranges", href: "/iq-score-ranges" },
       { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
-      { title: "IQ by Age", href: "/iq-by-age/adults-25-34" },
+      { title: "IQ by Age", href: "/what-is-iq" },
     ]}
   >
     <SEOHead
@@ -194,7 +194,7 @@ const FluidVsCrystallizedIntelligence = () => (
       It also explains why many domains favor younger thinkers (theoretical physics, competitive chess,
       computer programming) while others favor experienced practitioners (medicine, law, management,
       teaching). For more on how IQ relates to age, see our{" "}
-      <Link to="/iq-by-age/adults-25-34">IQ by age guides</Link>.
+      <Link to="/what-is-iq">IQ by age guides</Link>.
     </p>
 
     <h2>Fluid and Crystallized Intelligence on IQ Tests</h2>
@@ -301,7 +301,7 @@ const FluidVsCrystallizedIntelligence = () => (
     <p>
       Fluid intelligence peaks in the mid-20s and then gradually declines. Processing speed
       peaks even earlier, around 18–25. For more on cognitive changes across age groups, explore
-      our <Link to="/iq-by-age/adults-25-34">IQ by age</Link> pages.
+      our <Link to="/what-is-iq">IQ by age</Link> pages.
     </p>
 
     <p className="mt-8">

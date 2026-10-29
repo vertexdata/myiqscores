@@ -243,7 +243,7 @@ const PresidentIQ = () => (
       cognitive, social, and emotional abilities that no single test captures.
     </p>
     <p>
-      For more on this theme, see our guide on <Link to="/genius-iq">what genius IQ really means</Link>{" "}
+      For more on this theme, see our guide on <Link to="/iq-score-ranges">what genius IQ really means</Link>{" "}
       and explore individual famous person pages for <Link to="/famous-iq/donald-trump">Donald Trump's IQ</Link>{" "}
       and <Link to="/famous-iq/barack-obama">Barack Obama's IQ</Link>.
     </p>

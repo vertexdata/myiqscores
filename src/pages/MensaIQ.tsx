@@ -22,7 +22,7 @@ const MensaIQ = () => (
     <SEOHead
       title="Mensa IQ Test: Score Required, How to Join & What to Expect | MyIQScores"
       description="What IQ do you need for Mensa? You need a score in the top 2% (IQ 130+). Learn about the Mensa test, how to qualify, accepted tests, and what membership offers."
-      canonicalUrl="/mensa-iq-test"
+      canonicalUrl="/types-of-iq-tests"
       ogType="article"
       jsonLd={faqSchema}
     />
@@ -33,7 +33,7 @@ const MensaIQ = () => (
       Mensa is the world's oldest and largest high-IQ society, with over 145,000 members in 90+
       countries. To join, you need to score in the <strong>top 2%</strong> of the population on a
       standardized intelligence test — that's an IQ of approximately{" "}
-      <Link to="/is-130-iq-good">130 or higher</Link>. Here's everything you need to know about
+      <Link to="/iq-score-interpreter?score=130">130 or higher</Link>. Here's everything you need to know about
       qualifying, testing, and what membership actually involves.
     </p>
 
@@ -141,8 +141,8 @@ const MensaIQ = () => (
 
     <p className="mt-8">
       Curious if you could qualify? <Link to="/test">Take our free IQ test</Link> for a quick
-      estimate. Or learn more about <Link to="/is-130-iq-good">what a 130 IQ means</Link> and{" "}
-      <Link to="/genius-iq">genius-level intelligence</Link>.
+      estimate. Or learn more about <Link to="/iq-score-interpreter?score=130">what a 130 IQ means</Link> and{" "}
+      <Link to="/iq-score-ranges">genius-level intelligence</Link>.
     </p>
   </ContentPage>
 );

@@ -135,37 +135,37 @@ const WhatIsIQ = () => (
       </thead>
       <tbody>
         <tr>
-          <td><Link to="/is-130-iq-good">130+</Link></td>
+          <td><Link to="/iq-score-interpreter?score=130">130+</Link></td>
           <td>Very Superior / Gifted</td>
           <td>~2.1%</td>
         </tr>
         <tr>
-          <td><Link to="/is-120-iq-good">120–129</Link></td>
+          <td><Link to="/iq-score-interpreter?score=120">120–129</Link></td>
           <td>Superior</td>
           <td>~6.7%</td>
         </tr>
         <tr>
-          <td><Link to="/is-110-iq-good">110–119</Link></td>
+          <td><Link to="/iq-score-interpreter?score=110">110–119</Link></td>
           <td>High Average</td>
           <td>~16.1%</td>
         </tr>
         <tr>
-          <td><Link to="/is-100-iq-good">90–109</Link></td>
+          <td><Link to="/iq-score-interpreter?score=100">90–109</Link></td>
           <td>Average</td>
           <td>~50%</td>
         </tr>
         <tr>
-          <td><Link to="/is-85-iq-good">80–89</Link></td>
+          <td><Link to="/iq-score-interpreter?score=85">80–89</Link></td>
           <td>Low Average</td>
           <td>~16.1%</td>
         </tr>
         <tr>
-          <td><Link to="/is-75-iq-good">70–79</Link></td>
+          <td><Link to="/iq-score-interpreter?score=75">70–79</Link></td>
           <td>Borderline</td>
           <td>~6.7%</td>
         </tr>
         <tr>
-          <td><Link to="/is-70-iq-good">Below 70</Link></td>
+          <td><Link to="/iq-score-interpreter?score=70">Below 70</Link></td>
           <td>Extremely Low</td>
           <td>~2.1%</td>
         </tr>

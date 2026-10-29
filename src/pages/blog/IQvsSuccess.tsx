@@ -89,7 +89,7 @@ const IQvsSuccess = () => (
     </p>
     <p>
       For more on what "good" looks like across different IQ ranges, see our{" "}
-      <Link to="/good-iq-score">good IQ score guide</Link>.
+      <Link to="/iq-score-ranges">good IQ score guide</Link>.
     </p>
 
     <h2>EQ, Conscientiousness, and Grit as Predictors</h2>
@@ -141,7 +141,7 @@ const IQvsSuccess = () => (
     </p>
     <p>
       Curious about what genius-level IQ looks like? See our{" "}
-      <Link to="/genius-iq">Genius IQ guide</Link>.
+      <Link to="/iq-score-ranges">Genius IQ guide</Link>.
     </p>
 
     <p className="mt-8">

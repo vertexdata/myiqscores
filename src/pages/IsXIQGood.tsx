@@ -22,9 +22,9 @@ const IsXIQGood = () => {
     { title: "What Is IQ? Complete Guide", href: "/what-is-iq" },
     { title: "IQ Score Ranges Chart", href: "/iq-score-ranges" },
     { title: "IQ Percentile Chart", href: "/iq-percentile-chart" },
-    { title: "What Is a Good IQ Score?", href: "/good-iq-score" },
+    { title: "What Is a Good IQ Score?", href: "/iq-score-ranges" },
     ...adjacent.map((s) => ({ title: `Is ${s} IQ Good?`, href: `/is-${s}-iq-good` })),
-    score >= 130 ? { title: "Genius IQ Guide", href: "/genius-iq" } : { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
+    score >= 130 ? { title: "Genius IQ Guide", href: "/iq-score-ranges" } : { title: "How to Improve Your IQ", href: "/how-to-improve-iq" },
   ];
 
   const faqSchema = {

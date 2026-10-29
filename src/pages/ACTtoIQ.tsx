@@ -228,7 +228,7 @@ const ACTtoIQ = () => {
       </p>
 
       <p>
-        Also see: <Link to="/good-iq-score">What is a good IQ score?</Link>
+        Also see: <Link to="/iq-score-ranges">What is a good IQ score?</Link>
       </p>
     </ContentPage>
   );

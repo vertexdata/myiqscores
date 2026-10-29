@@ -59,7 +59,7 @@ const TypesOfIQTests = () => (
       The <strong>WISC-V</strong> is the WAIS equivalent for children ages 6-16. It measures the
       same four domains plus a fifth (Fluid Reasoning) and is the most commonly used test for
       identifying giftedness and learning disabilities in children. Schools often use the WISC
-      for special education eligibility. See our <Link to="/iq-by-age/children">children's IQ page</Link>.
+      for special education eligibility. See our <Link to="/what-is-iq">children's IQ page</Link>.
     </p>
 
     <h3>Stanford-Binet Intelligence Scales</h3>
@@ -85,7 +85,7 @@ const TypesOfIQTests = () => (
       Designed to minimize cultural and educational bias, the <strong>Cattell CFIT</strong> uses
       abstract shapes and patterns rather than language-dependent questions. It primarily measures
       fluid intelligence and is useful for testing individuals from different cultural backgrounds.
-      <Link to="/mensa-iq-test"> Mensa</Link> uses the Cattell scale (SD 24) alongside other tests.
+      <Link to="/types-of-iq-tests"> Mensa</Link> uses the Cattell scale (SD 24) alongside other tests.
     </p>
 
     <h2>Specialized and Screening Tests</h2>
@@ -144,7 +144,7 @@ const TypesOfIQTests = () => (
         <tr><td>Raven's SPM</td><td>5-65</td><td>45 min</td><td>$50-200</td><td>Good (fluid IQ only)</td></tr>
         <tr><td>Cattell CFIT</td><td>4-adult</td><td>30 min</td><td>$50-150</td><td>Good (culture-fair)</td></tr>
         <tr><td>Wonderlic</td><td>Adult</td><td>12 min</td><td>$5-25</td><td>Moderate (screening)</td></tr>
-        <tr><td><Link to="/mensa-iq-test">Mensa Test</Link></td><td>Adult</td><td>90 min</td><td>~$40</td><td>Good (qualifying only)</td></tr>
+        <tr><td><Link to="/types-of-iq-tests">Mensa Test</Link></td><td>Adult</td><td>90 min</td><td>~$40</td><td>Good (qualifying only)</td></tr>
         <tr><td>Online tests</td><td>Varies</td><td>15-30 min</td><td>Free-$20</td><td>Low-moderate</td></tr>
       </tbody>
     </table>
@@ -152,11 +152,11 @@ const TypesOfIQTests = () => (
     <h2>How to Choose the Right IQ Test</h2>
     <ul>
       <li><strong>For clinical diagnosis</strong> (learning disability, giftedness): WAIS or WISC from a licensed psychologist</li>
-      <li><strong>For <Link to="/mensa-iq-test">Mensa qualification</Link></strong>: Mensa Admission Test or qualifying score on WAIS/Stanford-Binet</li>
+      <li><strong>For <Link to="/types-of-iq-tests">Mensa qualification</Link></strong>: Mensa Admission Test or qualifying score on WAIS/Stanford-Binet</li>
       <li><strong>For cross-cultural comparison</strong>: Raven's Progressive Matrices or Cattell CFIT</li>
       <li><strong>For employment screening</strong>: Wonderlic (employer-administered)</li>
       <li><strong>For a rough estimate</strong>: <Link to="/test">Our free IQ test</Link> or similar online assessments</li>
-      <li><strong>For children's <Link to="/iq-by-age/children">school placement</Link></strong>: WISC-V or CogAT (school-administered)</li>
+      <li><strong>For children's <Link to="/what-is-iq">school placement</Link></strong>: WISC-V or CogAT (school-administered)</li>
     </ul>
 
     <h2>Frequently Asked Questions</h2>

@@ -313,9 +313,9 @@ const LowIQ = () => (
       For detailed information about what specific below-average scores mean in practice:
     </p>
     <ul>
-      <li><Link to="/is-85-iq-good">Is 85 IQ good?</Link> — Low average range explained</li>
-      <li><Link to="/is-80-iq-good">Is 80 IQ good?</Link> — Borderline range analysis</li>
-      <li><Link to="/is-75-iq-good">Is 75 IQ good?</Link> — Borderline intellectual functioning</li>
+      <li><Link to="/iq-score-interpreter?score=85">Is 85 IQ good?</Link> — Low average range explained</li>
+      <li><Link to="/iq-score-interpreter?score=80">Is 80 IQ good?</Link> — Borderline range analysis</li>
+      <li><Link to="/iq-score-interpreter?score=75">Is 75 IQ good?</Link> — Borderline intellectual functioning</li>
     </ul>
 
     <h2>Frequently Asked Questions</h2>
