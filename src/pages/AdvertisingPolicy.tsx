@@ -14,7 +14,7 @@ const AdvertisingPolicy = () => (
     <Navbar />
     <div className="max-w-3xl mx-auto px-4 pt-28 pb-20 text-foreground">
       <h1 className="font-heading text-3xl sm:text-4xl font-bold mb-8">Advertising Policy</h1>
-      <p className="text-muted-foreground text-sm mb-6">Last updated: August 28, 2026</p>
+      <p className="text-muted-foreground text-sm mb-6">Last updated: October 29, 2026</p>
 
       <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
         <section>
@@ -44,7 +44,7 @@ const AdvertisingPolicy = () => (
             <li>Ads are labeled and visually distinct from quiz questions, results, and article content</li>
             <li>Ads are never placed where they could be mistaken for quiz answers, navigation, or buttons</li>
             <li>We do not use pop-ups that block content, auto-redirects, or ads that require dismissal to continue</li>
-            <li>During the test, ad positions are limited and kept away from answer options and the Next button</li>
+            <li>We do not place ads on quiz answer screens or beside answer options and the Next button</li>
             <li>We do not artificially refresh or reload ads to inflate impressions</li>
           </ul>
         </section>

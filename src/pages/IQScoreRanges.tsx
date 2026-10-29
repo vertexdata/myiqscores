@@ -182,9 +182,9 @@ const IQScoreRanges = () => {
         social isolation, and heightened sensitivity. Emotional intelligence, persistence, and
         social skills remain crucial factors in translating raw intellectual ability into
         real-world achievement. Curious where specific scores in this range fall? Read more
-        about <Link to="/is-130-iq-good">IQ 130</Link>,{" "}
-        <Link to="/is-135-iq-good">IQ 135</Link>, and{" "}
-        <Link to="/is-140-iq-good">IQ 140</Link>.
+        about <Link to="/iq-score-interpreter?score=130">IQ 130</Link>,{" "}
+        <Link to="/iq-score-interpreter?score=135">IQ 135</Link>, and{" "}
+        <Link to="/iq-score-interpreter?score=140">IQ 140</Link>.
       </p>
 
       {/* IQ 120-129 */}
@@ -209,8 +209,8 @@ const IQScoreRanges = () => {
         significant cognitive advantage in most professional and academic settings. They
         typically learn new material faster than average and can handle high levels of
         complexity in their work. For a deeper look at specific scores, explore our pages
-        on <Link to="/is-120-iq-good">IQ 120</Link> and{" "}
-        <Link to="/is-125-iq-good">IQ 125</Link>.
+        on <Link to="/iq-score-interpreter?score=120">IQ 120</Link> and{" "}
+        <Link to="/iq-score-interpreter?score=125">IQ 125</Link>.
       </p>
 
       {/* IQ 110-119 */}
@@ -234,8 +234,8 @@ const IQScoreRanges = () => {
         edge over the majority of the population — roughly 75% of people score lower. Combined
         with strong motivation and good study habits, this level of intelligence opens the door
         to a wide array of professional opportunities. Learn more about what specific scores
-        mean: <Link to="/is-110-iq-good">IQ 110</Link> and{" "}
-        <Link to="/is-115-iq-good">IQ 115</Link>.
+        mean: <Link to="/iq-score-interpreter?score=110">IQ 110</Link> and{" "}
+        <Link to="/iq-score-interpreter?score=115">IQ 115</Link>.
       </p>
 
       <InArticleAd slot="first" />
@@ -263,10 +263,10 @@ const IQScoreRanges = () => {
         positions. Success in any career depends far more on effort, experience, and
         interpersonal skills than on IQ points. For more insight into where specific average
         scores stand, see our detailed breakdowns for{" "}
-        <Link to="/is-90-iq-good">IQ 90</Link>,{" "}
-        <Link to="/is-95-iq-good">IQ 95</Link>,{" "}
-        <Link to="/is-100-iq-good">IQ 100</Link>, and{" "}
-        <Link to="/is-105-iq-good">IQ 105</Link>.
+        <Link to="/iq-score-interpreter?score=90">IQ 90</Link>,{" "}
+        <Link to="/iq-score-interpreter?score=95">IQ 95</Link>,{" "}
+        <Link to="/iq-score-interpreter?score=100">IQ 100</Link>, and{" "}
+        <Link to="/iq-score-interpreter?score=105">IQ 105</Link>.
       </p>
 
       {/* IQ 80-89 */}
@@ -291,8 +291,8 @@ const IQScoreRanges = () => {
         transportation, and many other practical careers that value reliability, manual
         dexterity, and real-world problem-solving over abstract reasoning. These are essential
         roles that keep society running. Explore more at{" "}
-        <Link to="/is-80-iq-good">IQ 80</Link> and{" "}
-        <Link to="/is-85-iq-good">IQ 85</Link>.
+        <Link to="/iq-score-interpreter?score=80">IQ 80</Link> and{" "}
+        <Link to="/iq-score-interpreter?score=85">IQ 85</Link>.
       </p>
 
       {/* IQ Below 80 */}
@@ -317,8 +317,8 @@ const IQScoreRanges = () => {
         cognitive limitations, educators and support professionals work to identify and develop
         each individual's unique abilities, whether in social connection, artistic expression,
         physical skills, or practical tasks. For more nuanced discussions, see our pages
-        on <Link to="/is-70-iq-good">IQ 70</Link> and{" "}
-        <Link to="/is-75-iq-good">IQ 75</Link>.
+        on <Link to="/iq-score-interpreter?score=70">IQ 70</Link> and{" "}
+        <Link to="/iq-score-interpreter?score=75">IQ 75</Link>.
       </p>
 
       <InArticleAd slot="second" />

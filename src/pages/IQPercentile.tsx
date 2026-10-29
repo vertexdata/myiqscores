@@ -39,25 +39,25 @@ const IQPercentile = () => (
         <tr><th>IQ Score</th><th>Percentile</th><th>Higher Than</th><th>Rarity</th></tr>
       </thead>
       <tbody>
-        <tr><td><Link to="/is-160-iq-good">160</Link></td><td>99.997th</td><td>99.997% of people</td><td>1 in 31,000</td></tr>
-        <tr><td><Link to="/is-155-iq-good">155</Link></td><td>99.99th</td><td>99.99% of people</td><td>1 in 10,000</td></tr>
-        <tr><td><Link to="/is-150-iq-good">150</Link></td><td>99.96th</td><td>99.96% of people</td><td>1 in 2,330</td></tr>
-        <tr><td><Link to="/is-145-iq-good">145</Link></td><td>99.9th</td><td>99.9% of people</td><td>1 in 741</td></tr>
-        <tr><td><Link to="/is-140-iq-good">140</Link></td><td>99.6th</td><td>99.6% of people</td><td>1 in 261</td></tr>
-        <tr><td><Link to="/is-135-iq-good">135</Link></td><td>99th</td><td>99% of people</td><td>1 in 100</td></tr>
-        <tr><td><Link to="/is-130-iq-good">130</Link></td><td>98th</td><td>98% of people</td><td>1 in 50</td></tr>
-        <tr><td><Link to="/is-125-iq-good">125</Link></td><td>95th</td><td>95% of people</td><td>1 in 20</td></tr>
-        <tr><td><Link to="/is-120-iq-good">120</Link></td><td>91st</td><td>91% of people</td><td>1 in 11</td></tr>
-        <tr><td><Link to="/is-115-iq-good">115</Link></td><td>84th</td><td>84% of people</td><td>1 in 6</td></tr>
-        <tr><td><Link to="/is-110-iq-good">110</Link></td><td>75th</td><td>75% of people</td><td>1 in 4</td></tr>
-        <tr><td><Link to="/is-105-iq-good">105</Link></td><td>63rd</td><td>63% of people</td><td>Common</td></tr>
-        <tr><td><Link to="/is-100-iq-good">100</Link></td><td>50th</td><td>50% of people</td><td>Most common</td></tr>
-        <tr><td><Link to="/is-95-iq-good">95</Link></td><td>37th</td><td>37% of people</td><td>Common</td></tr>
-        <tr><td><Link to="/is-90-iq-good">90</Link></td><td>25th</td><td>25% of people</td><td>1 in 4</td></tr>
-        <tr><td><Link to="/is-85-iq-good">85</Link></td><td>16th</td><td>16% of people</td><td>1 in 6</td></tr>
-        <tr><td><Link to="/is-80-iq-good">80</Link></td><td>9th</td><td>9% of people</td><td>1 in 11</td></tr>
-        <tr><td><Link to="/is-75-iq-good">75</Link></td><td>5th</td><td>5% of people</td><td>1 in 20</td></tr>
-        <tr><td><Link to="/is-70-iq-good">70</Link></td><td>2nd</td><td>2% of people</td><td>1 in 50</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=160">160</Link></td><td>99.997th</td><td>99.997% of people</td><td>1 in 31,000</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=155">155</Link></td><td>99.99th</td><td>99.99% of people</td><td>1 in 10,000</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=150">150</Link></td><td>99.96th</td><td>99.96% of people</td><td>1 in 2,330</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=145">145</Link></td><td>99.9th</td><td>99.9% of people</td><td>1 in 741</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=140">140</Link></td><td>99.6th</td><td>99.6% of people</td><td>1 in 261</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=135">135</Link></td><td>99th</td><td>99% of people</td><td>1 in 100</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=130">130</Link></td><td>98th</td><td>98% of people</td><td>1 in 50</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=125">125</Link></td><td>95th</td><td>95% of people</td><td>1 in 20</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=120">120</Link></td><td>91st</td><td>91% of people</td><td>1 in 11</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=115">115</Link></td><td>84th</td><td>84% of people</td><td>1 in 6</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=110">110</Link></td><td>75th</td><td>75% of people</td><td>1 in 4</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=105">105</Link></td><td>63rd</td><td>63% of people</td><td>Common</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=100">100</Link></td><td>50th</td><td>50% of people</td><td>Most common</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=95">95</Link></td><td>37th</td><td>37% of people</td><td>Common</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=90">90</Link></td><td>25th</td><td>25% of people</td><td>1 in 4</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=85">85</Link></td><td>16th</td><td>16% of people</td><td>1 in 6</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=80">80</Link></td><td>9th</td><td>9% of people</td><td>1 in 11</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=75">75</Link></td><td>5th</td><td>5% of people</td><td>1 in 20</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=70">70</Link></td><td>2nd</td><td>2% of people</td><td>1 in 50</td></tr>
       </tbody>
     </table>
 
@@ -69,24 +69,24 @@ const IQPercentile = () => (
     </p>
     <ul>
       <li>Each 15-point increase above 100 moves you roughly one standard deviation higher</li>
-      <li><strong>68%</strong> of people score between <Link to="/is-85-iq-good">85</Link> and <Link to="/is-115-iq-good">115</Link> (within 1 SD)</li>
-      <li><strong>95%</strong> of people score between <Link to="/is-70-iq-good">70</Link> and <Link to="/is-130-iq-good">130</Link> (within 2 SD)</li>
-      <li><strong>99.7%</strong> of people score between 55 and <Link to="/is-145-iq-good">145</Link> (within 3 SD)</li>
+      <li><strong>68%</strong> of people score between <Link to="/iq-score-interpreter?score=85">85</Link> and <Link to="/iq-score-interpreter?score=115">115</Link> (within 1 SD)</li>
+      <li><strong>95%</strong> of people score between <Link to="/iq-score-interpreter?score=70">70</Link> and <Link to="/iq-score-interpreter?score=130">130</Link> (within 2 SD)</li>
+      <li><strong>99.7%</strong> of people score between 55 and <Link to="/iq-score-interpreter?score=145">145</Link> (within 3 SD)</li>
     </ul>
 
     <h2>Percentiles for Common IQ Questions</h2>
 
-    <h3>What percentile is <Link to="/is-120-iq-good">IQ 120</Link>?</h3>
+    <h3>What percentile is <Link to="/iq-score-interpreter?score=120">IQ 120</Link>?</h3>
     <p>91st percentile — you score higher than ~91% of people. About 1 in 11 people score this high. This is classified as <Link to="/iq-score-ranges">superior</Link>.</p>
 
-    <h3>What percentile is <Link to="/is-130-iq-good">IQ 130</Link>?</h3>
-    <p>98th percentile — top 2% of the population. This is the <Link to="/mensa-iq-test">Mensa</Link> qualification threshold and the beginning of the <Link to="/genius-iq">gifted</Link> range.</p>
+    <h3>What percentile is <Link to="/iq-score-interpreter?score=130">IQ 130</Link>?</h3>
+    <p>98th percentile — top 2% of the population. This is the <Link to="/types-of-iq-tests">Mensa</Link> qualification threshold and the beginning of the <Link to="/iq-score-ranges">gifted</Link> range.</p>
 
-    <h3>What percentile is <Link to="/is-140-iq-good">IQ 140</Link>?</h3>
-    <p>99.6th percentile — top 0.4%, or about 1 in 261 people. This is the commonly cited <Link to="/genius-iq">genius threshold</Link>.</p>
+    <h3>What percentile is <Link to="/iq-score-interpreter?score=140">IQ 140</Link>?</h3>
+    <p>99.6th percentile — top 0.4%, or about 1 in 261 people. This is the commonly cited <Link to="/iq-score-ranges">genius threshold</Link>.</p>
 
-    <h3>What percentile is <Link to="/is-100-iq-good">IQ 100</Link>?</h3>
-    <p>50th percentile — exactly average. You score higher than half the population and lower than the other half. See our page on <Link to="/good-iq-score">what makes a good IQ score</Link>.</p>
+    <h3>What percentile is <Link to="/iq-score-interpreter?score=100">IQ 100</Link>?</h3>
+    <p>50th percentile — exactly average. You score higher than half the population and lower than the other half. See our page on <Link to="/iq-score-ranges">what makes a good IQ score</Link>.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -94,10 +94,10 @@ const IQPercentile = () => (
     <p>Find your score in the table above. Or as a rule of thumb: IQ 100 = 50th percentile, with each 5 points adding roughly 10-15 percentile points in the middle range.</p>
 
     <h3>What does 99th percentile IQ mean?</h3>
-    <p>It means you score higher than 99% of people — only 1 in 100 score as high or higher. This corresponds to an IQ of approximately <Link to="/is-135-iq-good">135</Link>.</p>
+    <p>It means you score higher than 99% of people — only 1 in 100 score as high or higher. This corresponds to an IQ of approximately <Link to="/iq-score-interpreter?score=135">135</Link>.</p>
 
     <h3>What percentile is an IQ of 120?</h3>
-    <p><Link to="/is-120-iq-good">120 IQ</Link> is at the 91st percentile — higher than about 91% of the population.</p>
+    <p><Link to="/iq-score-interpreter?score=120">120 IQ</Link> is at the 91st percentile — higher than about 91% of the population.</p>
 
     <p className="mt-8">
       <Link to="/test">Take our free IQ test</Link> to find your percentile ranking. Learn more

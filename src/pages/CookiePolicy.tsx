@@ -14,7 +14,7 @@ const CookiePolicy = () => (
     <Navbar />
     <div className="max-w-3xl mx-auto px-4 pt-28 pb-20 text-foreground">
       <h1 className="font-heading text-3xl sm:text-4xl font-bold mb-8">Cookie Policy</h1>
-      <p className="text-muted-foreground text-sm mb-6">Last updated: August 28, 2026</p>
+      <p className="text-muted-foreground text-sm mb-6">Last updated: October 29, 2026</p>
 
       <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
         <section>
@@ -56,11 +56,13 @@ const CookiePolicy = () => (
         <section>
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">3. Consent in the EEA, UK, and Switzerland</h2>
           <p>
-            If you visit from the European Economic Area, the United Kingdom, or Switzerland, analytics and
-            advertising cookies are not used for personalization until you give consent. We use Google's
-            consent framework (Consent Mode), and where ads are shown, a Google-certified consent message
-            allows you to accept, refuse, or manage the purposes for which cookies are used. You can change
-            your choice at any time via the consent or privacy options presented on the site.
+            If you visit from the European Economic Area, the United Kingdom, or Switzerland, analytics storage
+            and ads-related storage default to denied until you make a choice. We use Google's consent framework
+            (Consent Mode), and where ads are shown, a Google-certified consent message allows you to accept,
+            refuse, or manage the purposes for which cookies are used. If storage is denied, Google services may
+            receive limited cookieless consent and measurement signals rather than storing advertising or
+            analytics cookies on your device. You can change your choice at any time via the consent or privacy
+            options presented on the site.
           </p>
         </section>
 

@@ -194,7 +194,7 @@ const IQTestsAccurate = () => (
       to established IQ instruments, with score interpretation anchored to normative distributions.
       It provides a useful estimate — but for high-stakes decisions, a clinical evaluation with
       the WAIS-IV by a licensed psychologist is the gold standard. Learn more about different
-      options in our <Link to="/mensa-iq-test">Mensa IQ test guide</Link>.
+      options in our <Link to="/types-of-iq-tests">Mensa IQ test guide</Link>.
     </p>
 
     <h2>Frequently Asked Questions</h2>

@@ -152,7 +152,7 @@ const HighestIQEver = () => (
     <p>
       Theoretically yes, but practically unmeasurable with any reliability. Standard tests cannot
       validate scores above 150-160. See our page on{" "}
-      <Link to="/is-200-iq-good">what an IQ of 200 means</Link>.
+      <Link to="/iq-score-interpreter?score=200">what an IQ of 200 means</Link>.
     </p>
 
     <h3>What was Einstein's IQ?</h3>

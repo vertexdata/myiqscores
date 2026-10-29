@@ -22,7 +22,7 @@ const GoodIQScore = () => (
     <SEOHead
       title="What Is a Good IQ Score? Ranges, Percentiles & What Yours Means | MyIQScores"
       description="What is a good IQ score? A score of 100 is average, 110+ is above average, 120+ is superior, and 130+ is gifted. Find out what your IQ score means and where you stand."
-      canonicalUrl="/good-iq-score"
+      canonicalUrl="/iq-score-ranges"
       ogType="article"
       jsonLd={faqSchema}
     />
@@ -42,13 +42,13 @@ const GoodIQScore = () => (
         <tr><th>Score</th><th>Classification</th><th>% of Population</th><th>Is It "Good"?</th></tr>
       </thead>
       <tbody>
-        <tr><td><Link to="/is-130-iq-good">130+</Link></td><td>Gifted</td><td>~2%</td><td>Exceptional</td></tr>
-        <tr><td><Link to="/is-120-iq-good">120–129</Link></td><td>Superior</td><td>~7%</td><td>Excellent</td></tr>
-        <tr><td><Link to="/is-110-iq-good">110–119</Link></td><td>High Average</td><td>~16%</td><td>Very good</td></tr>
-        <tr><td><Link to="/is-100-iq-good">90–109</Link></td><td>Average</td><td>~50%</td><td>Good — this is where most people are</td></tr>
-        <tr><td><Link to="/is-85-iq-good">80–89</Link></td><td>Low Average</td><td>~16%</td><td>Functional — no limitations for daily life</td></tr>
-        <tr><td><Link to="/is-75-iq-good">70–79</Link></td><td>Borderline</td><td>~7%</td><td>May benefit from additional support</td></tr>
-        <tr><td><Link to="/is-65-iq-good">Below 70</Link></td><td>Extremely Low</td><td>~2%</td><td>May qualify for support services</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=130">130+</Link></td><td>Gifted</td><td>~2%</td><td>Exceptional</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=120">120–129</Link></td><td>Superior</td><td>~7%</td><td>Excellent</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=110">110–119</Link></td><td>High Average</td><td>~16%</td><td>Very good</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=100">90–109</Link></td><td>Average</td><td>~50%</td><td>Good — this is where most people are</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=85">80–89</Link></td><td>Low Average</td><td>~16%</td><td>Functional — no limitations for daily life</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=75">70–79</Link></td><td>Borderline</td><td>~7%</td><td>May benefit from additional support</td></tr>
+        <tr><td><Link to="/iq-score-interpreter?score=65">Below 70</Link></td><td>Extremely Low</td><td>~2%</td><td>May qualify for support services</td></tr>
       </tbody>
     </table>
 
@@ -75,7 +75,7 @@ const GoodIQScore = () => (
 
     <h3>For College</h3>
     <p>
-      An IQ of <Link to="/is-100-iq-good">100</Link> (average) is sufficient for most college
+      An IQ of <Link to="/iq-score-interpreter?score=100">100</Link> (average) is sufficient for most college
       programs. Competitive universities may implicitly select for IQs of 115+, and elite programs
       (Ivy League, MIT) may average 130+. But IQ is just one factor — GPA, extracurriculars, and
       test prep matter too. See our <Link to="/sat-to-iq">SAT to IQ conversion</Link> for how
@@ -84,7 +84,7 @@ const GoodIQScore = () => (
 
     <h3>For Most Careers</h3>
     <p>
-      An IQ of <Link to="/is-90-iq-good">90-110</Link> is adequate for the vast majority of
+      An IQ of <Link to="/iq-score-interpreter?score=90">90-110</Link> is adequate for the vast majority of
       careers. Demanding fields like <Link to="/iq-needed-for/doctor">medicine</Link> (120-130),{" "}
       <Link to="/iq-needed-for/lawyer">law</Link> (115-130), and{" "}
       <Link to="/iq-needed-for/engineer">engineering</Link> (115-128) tend to have higher averages,
@@ -94,14 +94,14 @@ const GoodIQScore = () => (
 
     <h3>For Mensa</h3>
     <p>
-      <Link to="/is-130-iq-good">130</Link> is the minimum for Mensa membership (98th percentile).
+      <Link to="/iq-score-interpreter?score=130">130</Link> is the minimum for Mensa membership (98th percentile).
       Only about 2% of the population qualifies. If your goal is Mensa, you need a "very superior"
       or "gifted" score.
     </p>
 
     <h3>For "Genius"</h3>
     <p>
-      <Link to="/is-140-iq-good">140</Link> is the commonly cited genius threshold, though some
+      <Link to="/iq-score-interpreter?score=140">140</Link> is the commonly cited genius threshold, though some
       definitions use 130 or 145. Only about 0.4% of people score this high. See our page on the{" "}
       <Link to="/highest-iq-ever">highest IQ scores ever recorded</Link>.
     </p>
@@ -131,11 +131,11 @@ const GoodIQScore = () => (
       group. However, cognitive abilities change across the lifespan:
     </p>
     <ul>
-      <li><Link to="/iq-by-age/children">Children</Link> — scores can be volatile; don't over-interpret</li>
-      <li><Link to="/iq-by-age/teenagers">Teenagers</Link> — scores stabilizing, good time to test</li>
-      <li><Link to="/iq-by-age/young-adults">Young adults</Link> — fluid intelligence peaks</li>
-      <li><Link to="/iq-by-age/adults">Adults</Link> — most stable period for IQ measurement</li>
-      <li><Link to="/iq-by-age/seniors">Seniors</Link> — crystallized intelligence stays strong</li>
+      <li><Link to="/what-is-iq">Children</Link> — scores can be volatile; don't over-interpret</li>
+      <li><Link to="/what-is-iq">Teenagers</Link> — scores stabilizing, good time to test</li>
+      <li><Link to="/what-is-iq">Young adults</Link> — fluid intelligence peaks</li>
+      <li><Link to="/what-is-iq">Adults</Link> — most stable period for IQ measurement</li>
+      <li><Link to="/what-is-iq">Seniors</Link> — crystallized intelligence stays strong</li>
     </ul>
 
     <h2>Frequently Asked Questions</h2>
@@ -148,19 +148,19 @@ const GoodIQScore = () => (
 
     <h3>Is 120 a good IQ?</h3>
     <p>
-      Yes, <Link to="/is-120-iq-good">120 is excellent</Link> — superior range at the 91st
+      Yes, <Link to="/iq-score-interpreter?score=120">120 is excellent</Link> — superior range at the 91st
       percentile. It's associated with strong academic and professional achievement.
     </p>
 
     <h3>Is 100 IQ good or bad?</h3>
     <p>
-      <Link to="/is-100-iq-good">100 is perfectly good</Link> — it's the average. Most successful
+      <Link to="/iq-score-interpreter?score=100">100 is perfectly good</Link> — it's the average. Most successful
       people have IQs near 100.
     </p>
 
     <h3>What IQ is considered genius?</h3>
     <p>
-      <Link to="/is-140-iq-good">140+</Link> is commonly cited as genius-level. Only about 1 in 261
+      <Link to="/iq-score-interpreter?score=140">140+</Link> is commonly cited as genius-level. Only about 1 in 261
       people score this high.
     </p>
 

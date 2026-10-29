@@ -96,7 +96,7 @@ const EmotionalIntelligenceVsIQ = () => (
     </p>
     <p>
       For more on what a "good" IQ actually means in practice, see our{" "}
-      <Link to="/good-iq-score">good IQ score guide</Link>.
+      <Link to="/iq-score-ranges">good IQ score guide</Link>.
     </p>
 
     <h2>EQ and Leadership: The Research</h2>

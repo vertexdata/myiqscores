@@ -13,7 +13,7 @@ const PrivacyPolicy = () => (
     <Navbar />
     <div className="max-w-3xl mx-auto px-4 pt-28 pb-20 text-foreground">
       <h1 className="font-heading text-3xl sm:text-4xl font-bold mb-8">Privacy Policy</h1>
-      <p className="text-muted-foreground text-sm mb-6">Last updated: August 28, 2026</p>
+      <p className="text-muted-foreground text-sm mb-6">Last updated: October 29, 2026</p>
 
       <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
         <section>
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => (
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">4. Legal Basis for Processing (GDPR)</h2>
           <p>If you are in the European Economic Area (EEA) or UK, we process your personal data based on:</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong className="text-foreground">Consent</strong> — you provide explicit consent when submitting your information to take the test</li>
+            <li><strong className="text-foreground">Consent</strong> — when you request the optional result email and for consent-managed cookies or storage where required</li>
             <li><strong className="text-foreground">Contract performance</strong> — processing necessary to deliver the service you requested</li>
             <li><strong className="text-foreground">Legitimate interest</strong> — analytics and service improvement, balanced against your rights</li>
           </ul>
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => (
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">5. Data Sharing &amp; Third Parties</h2>
           <p>We do not sell your personal data. We share data only with:</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong className="text-foreground">Google Analytics</strong> — for anonymized website usage analytics (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Privacy Policy</a>)</li>
+            <li><strong className="text-foreground">Google Analytics</strong> — for aggregated and pseudonymous website usage measurement (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Privacy Policy</a>)</li>
             <li><strong className="text-foreground">Google AdSense</strong> — for serving advertising (see the Advertising section below)</li>
             <li><strong className="text-foreground">Infrastructure providers</strong> — for hosting and data storage, with appropriate safeguards</li>
           </ul>
@@ -115,7 +115,13 @@ const PrivacyPolicy = () => (
 
         <section>
           <h2 className="text-foreground font-heading text-xl font-semibold mb-3">8. Data Retention</h2>
-          <p>We retain your personal data for as long as necessary to provide our services and fulfill the purposes described in this policy. You may request deletion at any time by contacting us.</p>
+          <p>
+            We retain optional result-email addresses and delivery records only as long as reasonably needed
+            to deliver the requested message, secure and troubleshoot the service, honor suppression or
+            complaint requests, and meet legal obligations. A suppressed address may be retained so we do not
+            send to it again. We delete or anonymize personal data when it is no longer needed, and you may
+            request deletion at any time by contacting us.
+          </p>
         </section>
 
         <section>

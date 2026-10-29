@@ -57,7 +57,7 @@ const IQAndCreativity = () => (
   <ContentPage
     relatedPages={[
       { title: "What Is IQ?", href: "/what-is-iq" },
-      { title: "Genius IQ Guide", href: "/genius-iq" },
+      { title: "Genius IQ Guide", href: "/iq-score-ranges" },
       { title: "IQ vs. Success", href: "/blog/iq-vs-success" },
       { title: "Multiple Intelligences Theory", href: "/blog/multiple-intelligences-theory" },
     ]}
@@ -262,7 +262,7 @@ const IQAndCreativity = () => (
     <p>
       Up to approximately IQ 120, yes — higher IQ predicts more creative potential. Above 120,
       the relationship breaks down. Other factors (openness, motivation, domain expertise)
-      become more important. See our <Link to="/genius-iq">genius IQ guide</Link> for more on
+      become more important. See our <Link to="/iq-score-ranges">genius IQ guide</Link> for more on
       very high-range cognitive ability.
     </p>
 

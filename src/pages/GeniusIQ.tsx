@@ -22,7 +22,7 @@ const GeniusIQ = () => (
     <SEOHead
       title="Genius IQ: What Score Makes You a Genius? (Full Guide) | MyIQScores"
       description="What IQ makes you a genius? A score of 140+ is the most common threshold. Learn what genius-level IQ means, how rare it is, famous geniuses' scores, and signs of genius."
-      canonicalUrl="/genius-iq"
+      canonicalUrl="/iq-score-ranges"
       ogType="article"
       jsonLd={faqSchema}
     />
@@ -42,16 +42,16 @@ const GeniusIQ = () => (
         <tr><th>Threshold</th><th>IQ Score</th><th>% of Population</th><th>Rarity</th><th>Used By</th></tr>
       </thead>
       <tbody>
-        <tr><td>Gifted</td><td><Link to="/is-130-iq-good">130+</Link></td><td>2.1%</td><td>1 in 50</td><td>Mensa, most gifted programs</td></tr>
-        <tr><td>Highly Gifted</td><td><Link to="/is-140-iq-good">140+</Link></td><td>0.4%</td><td>1 in 261</td><td>Most common "genius" definition</td></tr>
-        <tr><td>Exceptionally Gifted</td><td><Link to="/is-145-iq-good">145+</Link></td><td>0.1%</td><td>1 in 741</td><td>Triple Nine Society</td></tr>
-        <tr><td>Profoundly Gifted</td><td><Link to="/is-160-iq-good">160+</Link></td><td>0.003%</td><td>1 in 31,000</td><td>Prometheus Society</td></tr>
+        <tr><td>Gifted</td><td><Link to="/iq-score-interpreter?score=130">130+</Link></td><td>2.1%</td><td>1 in 50</td><td>Mensa, most gifted programs</td></tr>
+        <tr><td>Highly Gifted</td><td><Link to="/iq-score-interpreter?score=140">140+</Link></td><td>0.4%</td><td>1 in 261</td><td>Most common "genius" definition</td></tr>
+        <tr><td>Exceptionally Gifted</td><td><Link to="/iq-score-interpreter?score=145">145+</Link></td><td>0.1%</td><td>1 in 741</td><td>Triple Nine Society</td></tr>
+        <tr><td>Profoundly Gifted</td><td><Link to="/iq-score-interpreter?score=160">160+</Link></td><td>0.003%</td><td>1 in 31,000</td><td>Prometheus Society</td></tr>
       </tbody>
     </table>
 
     <h2>What Does Genius-Level IQ Look Like?</h2>
     <p>
-      People with IQs of <Link to="/is-140-iq-good">140+</Link> often describe their experience of
+      People with IQs of <Link to="/iq-score-interpreter?score=140">140+</Link> often describe their experience of
       thinking as qualitatively different from the norm:
     </p>
     <ul>

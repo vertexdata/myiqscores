@@ -77,23 +77,23 @@ const SATtoIQ = () => (
         </tr>
       </thead>
       <tbody>
-        <tr><td>1600</td><td>~140+</td><td><Link to="/is-140-iq-good">Genius-level</Link></td><td>99.6th+</td></tr>
-        <tr><td>1550</td><td>~137</td><td><Link to="/is-135-iq-good">Very Superior</Link></td><td>99th</td></tr>
-        <tr><td>1500</td><td>~132</td><td><Link to="/is-130-iq-good">Gifted</Link></td><td>98th</td></tr>
-        <tr><td>1450</td><td>~128</td><td><Link to="/is-125-iq-good">Superior</Link></td><td>96th</td></tr>
-        <tr><td>1400</td><td>~125</td><td><Link to="/is-125-iq-good">Superior</Link></td><td>95th</td></tr>
-        <tr><td>1350</td><td>~122</td><td><Link to="/is-120-iq-good">Superior</Link></td><td>93rd</td></tr>
-        <tr><td>1300</td><td>~119</td><td><Link to="/is-120-iq-good">High Average</Link></td><td>90th</td></tr>
-        <tr><td>1250</td><td>~117</td><td><Link to="/is-115-iq-good">High Average</Link></td><td>87th</td></tr>
-        <tr><td>1200</td><td>~115</td><td><Link to="/is-115-iq-good">High Average</Link></td><td>84th</td></tr>
-        <tr><td>1150</td><td>~112</td><td><Link to="/is-110-iq-good">High Average</Link></td><td>79th</td></tr>
-        <tr><td>1100</td><td>~110</td><td><Link to="/is-110-iq-good">High Average</Link></td><td>75th</td></tr>
-        <tr><td>1050</td><td>~107</td><td><Link to="/is-105-iq-good">Average</Link></td><td>68th</td></tr>
-        <tr><td>1000</td><td>~104</td><td><Link to="/is-105-iq-good">Average</Link></td><td>61st</td></tr>
-        <tr><td>950</td><td>~101</td><td><Link to="/is-100-iq-good">Average</Link></td><td>53rd</td></tr>
-        <tr><td>900</td><td>~98</td><td><Link to="/is-100-iq-good">Average</Link></td><td>45th</td></tr>
-        <tr><td>850</td><td>~95</td><td><Link to="/is-95-iq-good">Average</Link></td><td>37th</td></tr>
-        <tr><td>800</td><td>~92</td><td><Link to="/is-90-iq-good">Average</Link></td><td>30th</td></tr>
+        <tr><td>1600</td><td>~140+</td><td><Link to="/iq-score-interpreter?score=140">Genius-level</Link></td><td>99.6th+</td></tr>
+        <tr><td>1550</td><td>~137</td><td><Link to="/iq-score-interpreter?score=135">Very Superior</Link></td><td>99th</td></tr>
+        <tr><td>1500</td><td>~132</td><td><Link to="/iq-score-interpreter?score=130">Gifted</Link></td><td>98th</td></tr>
+        <tr><td>1450</td><td>~128</td><td><Link to="/iq-score-interpreter?score=125">Superior</Link></td><td>96th</td></tr>
+        <tr><td>1400</td><td>~125</td><td><Link to="/iq-score-interpreter?score=125">Superior</Link></td><td>95th</td></tr>
+        <tr><td>1350</td><td>~122</td><td><Link to="/iq-score-interpreter?score=120">Superior</Link></td><td>93rd</td></tr>
+        <tr><td>1300</td><td>~119</td><td><Link to="/iq-score-interpreter?score=120">High Average</Link></td><td>90th</td></tr>
+        <tr><td>1250</td><td>~117</td><td><Link to="/iq-score-interpreter?score=115">High Average</Link></td><td>87th</td></tr>
+        <tr><td>1200</td><td>~115</td><td><Link to="/iq-score-interpreter?score=115">High Average</Link></td><td>84th</td></tr>
+        <tr><td>1150</td><td>~112</td><td><Link to="/iq-score-interpreter?score=110">High Average</Link></td><td>79th</td></tr>
+        <tr><td>1100</td><td>~110</td><td><Link to="/iq-score-interpreter?score=110">High Average</Link></td><td>75th</td></tr>
+        <tr><td>1050</td><td>~107</td><td><Link to="/iq-score-interpreter?score=105">Average</Link></td><td>68th</td></tr>
+        <tr><td>1000</td><td>~104</td><td><Link to="/iq-score-interpreter?score=105">Average</Link></td><td>61st</td></tr>
+        <tr><td>950</td><td>~101</td><td><Link to="/iq-score-interpreter?score=100">Average</Link></td><td>53rd</td></tr>
+        <tr><td>900</td><td>~98</td><td><Link to="/iq-score-interpreter?score=100">Average</Link></td><td>45th</td></tr>
+        <tr><td>850</td><td>~95</td><td><Link to="/iq-score-interpreter?score=95">Average</Link></td><td>37th</td></tr>
+        <tr><td>800</td><td>~92</td><td><Link to="/iq-score-interpreter?score=90">Average</Link></td><td>30th</td></tr>
       </tbody>
     </table>
 
@@ -179,13 +179,13 @@ const SATtoIQ = () => (
     <h3>What IQ is a 1500 SAT score?</h3>
     <p>
       A 1500 SAT roughly corresponds to an IQ of approximately 130–135, placing you in the{" "}
-      <Link to="/is-130-iq-good">gifted range</Link>.
+      <Link to="/iq-score-interpreter?score=130">gifted range</Link>.
     </p>
 
     <h3>What IQ is a 1200 SAT score?</h3>
     <p>
       A 1200 SAT roughly corresponds to an IQ of approximately 113–117, placing you in the{" "}
-      <Link to="/is-115-iq-good">high average range</Link>.
+      <Link to="/iq-score-interpreter?score=115">high average range</Link>.
     </p>
 
     <h3>Is the SAT an IQ test?</h3>
